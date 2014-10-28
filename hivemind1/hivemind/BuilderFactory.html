@@ -1,0 +1,1130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Apache Forrest" name="Generator">
+<meta name="Forrest-version" content="0.8-dev">
+<meta name="Forrest-skin-name" content="pelt">
+<title>hivemind.BuilderFactory Service</title>
+<link type="text/css" href="../skin/basic.css" rel="stylesheet">
+<link media="screen" type="text/css" href="../skin/screen.css" rel="stylesheet">
+<link media="print" type="text/css" href="../skin/print.css" rel="stylesheet">
+<link type="text/css" href="../skin/profile.css" rel="stylesheet">
+<script src="../skin/getBlank.js" language="javascript" type="text/javascript"></script><script src="../skin/getMenu.js" language="javascript" type="text/javascript"></script><script src="../skin/fontsize.js" language="javascript" type="text/javascript"></script>
+<link rel="shortcut icon" href="../">
+</head>
+<body onload="init()"><div style="background: red"><h1>2009/04/15 - Apache HiveMind has been retired. </h1><h2>For more information, please explore the <a href="http://attic.apache.org/">Attic</a>. </h2></div>
+<script type="text/javascript">ndeSetTextSize();</script>
+<div id="top">
+<!--+
+    |breadtrail
+    +-->
+<div class="breadtrail">
+<a href="http://jakarta.apache.org/">Jakarta</a> &gt; <a href="http://jakarta.apache.org/hivemind/">HiveMind</a><script src="../skin/breadcrumbs.js" language="JavaScript" type="text/javascript"></script>
+</div>
+<!--+
+    |header
+    +-->
+<div class="header">
+<!--+
+    |start group logo
+    +-->
+<div class="grouplogo">
+<a href="http://jakarta.apache.org/hivemind/"><img class="logoImage" alt="HiveMind" src="../images/HiveMind-Logo.png" title="HiveMind Services and Configuration Microkernel"></a>
+</div>
+<!--+
+    |end group logo
+    +-->
+<!--+
+    |start Project Logo
+    +-->
+<div class="projectlogoA1">
+<a href="http://jakarta.apache.org/"><img class="logoImage" alt="Jakarta" src="../images/jakarta-logo.gif" title="Apache Jakarta"></a>
+</div>
+<!--+
+    |end Project Logo
+    +-->
+<!--+
+    |start Tabs
+    +-->
+<ul id="tabs">
+<li>
+<a class="base-not-selected" href="../index.html">HiveMind Project</a>
+</li>
+<li class="current">
+<a class="base-selected" href="../hivemind/index.html">Module: hivemind</a>
+</li>
+<li>
+<a class="base-not-selected" href="../hivemind-lib/index.html">Module: hivemind-lib</a>
+</li>
+<li>
+<a class="base-not-selected" href="../hivemind-jmx/index.html">Module: hivemind-jmx</a>
+</li>
+<li>
+<a class="base-not-selected" href="../hivemind-examples/index.html">Example Code</a>
+</li>
+</ul>
+<!--+
+    |end Tabs
+    +-->
+</div>
+</div>
+<div id="main">
+<div id="publishedStrip">
+<!--+
+    |start Subtabs
+    +-->
+<div id="level2tabs"></div>
+<!--+
+    |end Endtabs
+    +-->
+<script type="text/javascript"><!--
+document.write("Last Published: " + document.lastModified);
+//  --></script>
+</div>
+<!--+
+    |breadtrail
+    +-->
+<div class="breadtrail">
+             
+             &nbsp;
+           </div>
+<!--+
+    |start Menu, mainarea
+    +-->
+<!--+
+    |start Menu
+    +-->
+<div id="menu">
+<div onclick="SwitchMenu('menu_1.1', '../skin/')" id="menu_1.1Title" class="menutitle">HiveMind</div>
+<div id="menu_1.1" class="menuitemgroup">
+<div class="menuitem">
+<a href="../index.html">Overview</a>
+</div>
+<div onclick="SwitchMenu('menu_1.1.2', '../skin/')" id="menu_1.1.2Title" class="menutitle">Reference</div>
+<div id="menu_1.1.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="../services.html">Services</a>
+</div>
+<div class="menuitem">
+<a href="../configurations.html">Configurations</a>
+</div>
+<div class="menuitem">
+<a href="../hivedoc.html">HiveDoc</a>
+</div>
+<div class="menuitem">
+<a href="../descriptor.html">Module  Descriptor</a>
+</div>
+<div class="menuitem">
+<a href="../rules.html">Contribution Processing Rules</a>
+</div>
+<div class="menuitem">
+<a href="../dependencies.html">Dependencies</a>
+</div>
+<div class="menuitem">
+<a href="../conditional.html">Conditional Contributions</a>
+</div>
+<div class="menuitem">
+<a href="../serializing.html">Serializing Services</a>
+</div>
+<div class="menuitem">
+<a href="../instance-initialization.html">Instance Initialization</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.1.3', '../skin/')" id="menu_1.1.3Title" class="menutitle">Project Information</div>
+<div id="menu_1.1.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="../changes.html">Change Log</a>
+</div>
+<div class="menuitem">
+<a href="../todo.html">TODO</a>
+</div>
+<div class="menuitem">
+<a href="http://jakarta.apache.org/site/mail2.html#HiveMind">Mailing Lists</a>
+</div>
+<div class="menuitem">
+<a href="../downloads.html">Downloads</a>
+</div>
+<div class="menuitem">
+<a href="http://issues.apache.org/jira/secure/BrowseProject.jspa?id=10500">Bugs</a>
+</div>
+<div class="menuitem">
+<a href="../subversion.html">Subversion Access</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.1.4', '../skin/')" id="menu_1.1.4Title" class="menutitle">Tutorials and Information</div>
+<div id="menu_1.1.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="../bootstrap.html">Bootstrapping the Registry</a>
+</div>
+<div class="menuitem">
+<a href="../ioc.html">Inversion Of Control</a>
+</div>
+<div class="menuitem">
+<a href="../localization.html">Localization</a>
+</div>
+<div class="menuitem">
+<a href="../multithreading.html">Multi-Threading</a>
+</div>
+<div class="menuitem">
+<a href="../filter.html">Servlets</a>
+</div>
+<div class="menuitem">
+<a href="../override.html">Overriding Services</a>
+</div>
+<div class="menuitem">
+<a href="../groovy.html">Groovy Support</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.1.5', '../skin/')" id="menu_1.1.5Title" class="menutitle">Reports</div>
+<div id="menu_1.1.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="../license-report.html">License</a>
+</div>
+<div class="menuitem">
+<a href="../hivedocs/index.html">HiveDoc</a>
+</div>
+<div class="menuitem">
+<a href="../developers.html">Developers</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_selected_1.2', '../skin/')" id="menu_selected_1.2Title" class="menutitle" style="background-image: url('../skin/images/chapter_open.gif');">Framework</div>
+<div id="menu_selected_1.2" class="selectedmenuitemgroup" style="display: block;">
+<div class="menuitem">
+<a href="../hivemind/index.html">Overview</a>
+</div>
+<div onclick="SwitchMenu('menu_selected_1.2.2', '../skin/')" id="menu_selected_1.2.2Title" class="menutitle" style="background-image: url('../skin/images/chapter_open.gif');">Services</div>
+<div id="menu_selected_1.2.2" class="selectedmenuitemgroup" style="display: block;">
+<div class="menupage">
+<div class="menupagetitle">BuilderFactory</div>
+</div>
+<div class="menuitem">
+<a href="../hivemind/LoggingInterceptor.html">LoggingInterceptor</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/ShutdownCoordinator.html">ShutdownCoordinator</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/ThreadLocale.html">ThreadLocale</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/ThreadLocalStorage.html">ThreadLocalStorage</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.2.3', '../skin/')" id="menu_1.2.3Title" class="menutitle">Configurations</div>
+<div id="menu_1.2.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind/ApplicationDefaults.html">ApplicationDefaults</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/EagerLoad.html">EagerLoad</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/FactoryDefaults.html">FactoryDefaults</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/ObjectProviders.html">ObjectProviders</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/ServiceModels.html">ServiceModels</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/SymbolSources.html">SymbolSources</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/Translators.html">Translators</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.2.4', '../skin/')" id="menu_1.2.4Title" class="menutitle">Ant Tasks</div>
+<div id="menu_1.2.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind/ant/ConstructRegistry.html">ConstructRegistry</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/ant/ManifestClassPath.html">ManifestClassPath</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.2.5', '../skin/')" id="menu_1.2.5Title" class="menutitle">Reports</div>
+<div id="menu_1.2.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind/junit-report.html">JUnit Tests</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/apidocs/index.html">JavaDoc</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/clover/index.html">Clover Code Coverage</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.3', '../skin/')" id="menu_1.3Title" class="menutitle">Library</div>
+<div id="menu_1.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind-lib/index.html">Overview</a>
+</div>
+<div onclick="SwitchMenu('menu_1.3.2', '../skin/')" id="menu_1.3.2Title" class="menutitle">Services</div>
+<div id="menu_1.3.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind-lib/BeanFactoryBuilder.html">BeanFactoryBuilder</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/ChainBuilder.html">ChainBuilder</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/ChainFactory.html">ChainFactory</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/DefaultImplementationBuilder.html">DefaultImplementationBuilder</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/EJBProxyFactory.html">EJBProxyFactory</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/MethodInterceptorFactory.html">MethodInterceptorFactory</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/NameLookup.html">NameLookup</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/PlaceholderFactory.html">PlaceholderFactory</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/PipelineFactory.html">PipelineFactory</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/RemoteExceptionCoordinator.html">RemoteExceptionCoordinator</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/ServicePropertyFactory.html">ServicePropertyFactory</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/SpringLookupFactory.html">SpringLookupFactory</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/StrategyFactory.html">StrategyFactory</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.3.3', '../skin/')" id="menu_1.3.3Title" class="menutitle">Reports</div>
+<div id="menu_1.3.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind-lib/junit-report.html">JUnit Tests</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/apidocs/index.html">JavaDoc</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/clover/index.html">Clover Code Coverage</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.4', '../skin/')" id="menu_1.4Title" class="menutitle">JMX</div>
+<div id="menu_1.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind-jmx/index.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-jmx/quickstart.html">Quickstart</a>
+</div>
+<div onclick="SwitchMenu('menu_1.4.3', '../skin/')" id="menu_1.4.3Title" class="menutitle">Setup</div>
+<div id="menu_1.4.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind-jmx/setupOverview.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-jmx/setupJMXImplementation.html">JMX Implementation</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-jmx/setupMBeanServer.html">MBeanServer</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-jmx/setupConnectors.html">Connectors</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.4.4', '../skin/')" id="menu_1.4.4Title" class="menutitle">Usage</div>
+<div id="menu_1.4.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind-jmx/manageServices.html">Manage Services</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-jmx/measurePerformance.html">Measure Performance</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-jmx/monitorServices.html">Monitor Services</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-jmx/manageLog4j.html">Manage Log4J</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.4.5', '../skin/')" id="menu_1.4.5Title" class="menutitle">Advanced Topics</div>
+<div id="menu_1.4.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind-jmx/multipleApps.html">Multiple Applications in Server</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.4.6', '../skin/')" id="menu_1.4.6Title" class="menutitle">Reports</div>
+<div id="menu_1.4.6" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind-jmx/junit-report.html">JUnit Tests</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-jmx/apidocs/index.html">JavaDoc</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-jmx/clover/index.html">Clover Code Coverage</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.5', '../skin/')" id="menu_1.5Title" class="menutitle">Example Code</div>
+<div id="menu_1.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind-examples/index.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-examples/calc.html">Calculator</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-examples/panorama.html">Panorama Startup</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-examples/logging.html">Logging Interceptor</a>
+</div>
+<div onclick="SwitchMenu('menu_1.5.5', '../skin/')" id="menu_1.5.5Title" class="menutitle">Reports</div>
+<div id="menu_1.5.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind-examples/junit-report.html">JUnit Tests</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-examples/apidocs/index.html">JavaDoc</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-examples/hivedocs/index.html">HiveDoc</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-examples/clover/index.html">Clover Code Coverage</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.6', '../skin/')" id="menu_1.6Title" class="menutitle">Other Resources</div>
+<div id="menu_1.6" class="menuitemgroup">
+<div class="menuitem">
+<a href="http://wiki.apache.org/jakarta-hivemind/">HiveMind Wiki</a>
+</div>
+<div class="menuitem">
+<a href="http://howardlewisship.com/blog/">Tapestry and HiveMind Blog</a>
+</div>
+<div class="menuitem">
+<a href="http://hivetranse.sourceforge.net/">HiveMind Utilities</a>
+</div>
+<div class="menuitem">
+<a href="http://www.theserverside.com/articles/article.tss?l=HivemindBuzz">HiveMind article on TheServerSide</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.7', '../skin/')" id="menu_1.7Title" class="menutitle">Related Projects</div>
+<div id="menu_1.7" class="menuitemgroup">
+<div class="menuitem">
+<a href="http://jakarta.apache.org/tapestry/">Tapestry</a>
+</div>
+<div class="menuitem">
+<a href="http://www.springframework.org">Spring</a>
+</div>
+</div>
+<div id="credit"></div>
+<div id="roundbottom">
+<img style="display: none" class="corner" height="15" width="15" alt="" src="../skin/images/rc-b-l-15-1body-2menu-3menu.png"></div>
+<!--+
+  |alternative credits
+  +-->
+<div id="credit2"></div>
+</div>
+<!--+
+    |end Menu
+    +-->
+<!--+
+    |start content
+    +-->
+<div id="content">
+<div class="trail">Font size: 
+	          &nbsp;<input value="Reset" class="resetfont" title="Reset text" onclick="ndeSetTextSize('reset'); return false;" type="button">      
+	          &nbsp;<input value="-a" class="smallerfont" title="Shrink text" onclick="ndeSetTextSize('decr'); return false;" type="button">
+	          &nbsp;<input value="+a" class="biggerfont" title="Enlarge text" onclick="ndeSetTextSize('incr'); return false;" type="button">
+</div>
+<h1>hivemind.BuilderFactory Service</h1>
+<div id="minitoc-area">
+<ul class="minitoc">
+<li>
+<a href="#construct">construct</a>
+</li>
+<li>
+<a href="#Autowiring">Autowiring</a>
+</li>
+<li>
+<a href="#Constructor+Parameter+Elements">Constructor Parameter Elements</a>
+</li>
+<li>
+<a href="#Service+Property+Configuring+Elements">Service Property Configuring Elements</a>
+<ul class="minitoc">
+<li>
+<a href="#event-listener">event-listener</a>
+</li>
+<li>
+<a href="#set">set</a>
+</li>
+<li>
+<a href="#set-configuration">set-configuration</a>
+</li>
+<li>
+<a href="#set-object">set-object</a>
+</li>
+<li>
+<a href="#set-resource">set-resource</a>
+</li>
+<li>
+<a href="#set-service">set-service</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+		
+<p>The <a href="../hivedocs/service/hivemind.BuilderFactory.html">
+			BuilderFactory</a> service is a service implementation factory ... a
+			service that is used to construct other services.</p>
+		
+<p>The builder factory takes a single parameter element (usually with nested elements):</p>
+		
+<pre class="code">
+&lt;construct
+    class="..." autowire-services="..." log-property="..." messages-property="..."
+    service-id-property="..." initialize-method="..." error-log-property="..."
+    error-handler-property="..." class-resolver-property="..."&gt;
+    
+    &lt;log/&gt;
+    &lt;messages/&gt;
+    &lt;service-id/&gt;
+    &lt;error-handler/&gt;
+    &lt;error-log/&gt;
+    &lt;class-resolver/&gt;
+    &lt;string&gt;  ... &lt;/string&gt;
+    &lt;boolean&gt; ... &lt;/boolean&gt;
+    &lt;configuration&gt; ... &lt;/configuration&gt;
+    &lt;int&gt; ... &lt;/int&gt;
+    &lt;long&gt; ... &lt;/long&gt;
+    &lt;resource&gt; ... &lt;/resource&gt;
+    &lt;service&gt; ... &lt;/service&gt;
+    &lt;object&gt; ... &lt;/object&gt;
+    &lt;null/&gt;
+    
+    &lt;event-listener service-id="..." event-type-name="..."/&gt;
+    &lt;set property="..." value="..."/&gt;
+    &lt;set-configuration property="..." configuration-id="..."/&gt;
+    &lt;set-resource property="..." path="..."/&gt;
+    &lt;set-service property="..." service-id="..."/&gt;
+    &lt;set-object property="..." value="..."/&gt;
+&lt;/construct&gt; </pre>
+		
+<p>The attributes of the <span class="codefrag">construct</span> element are used to specify
+			the implementation class and set common service properties. Nested
+			elements supply the constructor parameters and configure other specific
+			properties of the implementation (the <span class="codefrag">set-...</span> elements).</p>
+      
+      
+<div class="note">
+<div class="label">Note</div>
+<div class="content">
+     BuilderFactory is a complex tool, with support for both constructor dependency injection and
+     property dependency injection. Many of the options are rarely used; the most general purpose
+     and most frequently used are <a href="#set">set</a>, <a href="#set-object">set-object</a>
+     and <a href="#event-listener">event-listener</a> (along with
+     <a href="#Autowiring">autowiring</a>).
+      </div>
+</div>
+      
+		
+<a name="N10037"></a><a name="construct"></a>
+<h2 class="boxed">construct</h2>
+<div class="section">
+<table class="ForrestTable" cellspacing="1" cellpadding="4">
+				
+<tr>
+					
+<th colspan="1" rowspan="1">Attribute</th>
+					<th colspan="1" rowspan="1">Required ?</th>
+					<th colspan="1" rowspan="1">Description</th>
+				
+</tr>
+        
+<tr>
+          
+<td colspan="1" rowspan="1">autowire-services</td>
+          <td colspan="1" rowspan="1">no</td>
+          <td colspan="1" rowspan="1">If true (the default), then the BuilderFactory will attempt to
+            automatically wire services and some common properties to constructor parameters 
+            and to properties of the constructed implementation with setter methods (see notes below).
+            </td>
+        
+</tr>
+				
+<tr>
+					
+<td colspan="1" rowspan="1">class</td>
+					<td colspan="1" rowspan="1">yes</td>
+					<td colspan="1" rowspan="1">The fully qualified name of the class to instantiate.</td>
+				
+</tr>
+        
+<tr>
+<td colspan="1" rowspan="1">class-resolver-property</td>
+          <td colspan="1" rowspan="1">no</td>
+            <td colspan="1" rowspan="1">The property to receive the module's
+          <a href="../hivemind/apidocs/org/apache/hivemind/ClassResolver.html">ClassResolver</a>.</td>
+</tr>
+        
+<tr>
+<td colspan="1" rowspan="1">error-handler-property</td>
+          <td colspan="1" rowspan="1">no</td>
+          <td colspan="1" rowspan="1"> The name of a property to recieve the module's 
+            <a href="../hivemind/apidocs/org/apache/hivemind/ErrorHandler.html">ErrorHandler</a> instance (which is used to report recoverable 
+            errors). </td>
+          
+</tr>
+        
+<tr>
+          
+<td colspan="1" rowspan="1">error-log-property</td>
+          <td colspan="1" rowspan="1">no</td>
+          <td colspan="1" rowspan="1">The name of a property which will be assigned an <a href="../hivemind/apidocs/org/apache/hivemind/ErrorLog.html">ErrorLog</a> instance for the service. An ErrorLog is 
+            simply a wrapper around a Log and an <a href="../hivemind/apidocs/org/apache/hivemind/ErrorHandler.html">ErrorHandler</a> as is the preferred approach.</td>
+        
+</tr>          
+				
+<tr>
+					
+<td colspan="1" rowspan="1">initialize-method</td>
+					<td colspan="1" rowspan="1">no</td>
+					<td colspan="1" rowspan="1">The name of a method (public, no parameters) to invoke after the
+						service is constructed, to allow it to perform any final
+						initializion before being put into use.</td>
+				
+</tr>
+				
+<tr>
+					
+<td colspan="1" rowspan="1">log-property</td>
+					<td colspan="1" rowspan="1">no</td>
+					<td colspan="1" rowspan="1">The name of a property which will be assigned a <span class="codefrag">
+						org.apache.commons.logging.Log</span> instance for the service. The
+						Log is created from the complete service id (not the name of the
+						class). If ommitted (and autowiring is disabled), no Log will be assigned.</td>
+				
+</tr>
+				
+<tr>
+					
+<td colspan="1" rowspan="1">messages-property</td>
+					<td colspan="1" rowspan="1">no</td>
+					<td colspan="1" rowspan="1">Allows the <a href="../hivemind/apidocs/org/apache/hivemind/Messages.html">Messages</a> for the module to be assigned to a
+						property of the instance.</td>
+				
+</tr>
+				
+<tr>
+					
+<td colspan="1" rowspan="1">service-id-property</td>
+					<td colspan="1" rowspan="1">no</td>
+					<td colspan="1" rowspan="1">Allows the service id of the <em>constructed</em> service to be
+						assigned to a property of the service implementation.</td>
+				
+</tr>
+			
+</table>
+<p>The remaining elements are enclosed by the &lt;construct&gt; element,
+				and are used to supply constructor parameters and configure properties
+				of the constructed service implementation.</p>
+</div>
+    
+    
+<a name="N1010F"></a><a name="Autowiring"></a>
+<h2 class="boxed">Autowiring</h2>
+<div class="section">
+<p>
+        With <span class="codefrag">autowire-services</span> set to true the BuilderFactory can automatically both perform
+        constructor based and setter based dependency injection.  It will not only attempt to inject 
+        services but also certain common properties.  By using standard names (and standard types), 
+        the need to specify attributes <span class="codefrag">log-property</span>, <span class="codefrag">error-handler-property</span>, 
+        etc. is avoided.  Simply declaring a constructor parameter with the correct type <em>or</em> a 
+        writable property with the correct name <em>and</em> type is sufficient:
+      </p>
+<table class="ForrestTable" cellspacing="1" cellpadding="4">
+        
+<tr>
+          
+<th colspan="1" rowspan="1">Property name</th>
+          <th colspan="1" rowspan="1">Property / parameter type</th>
+        
+</tr>
+        
+<tr>
+          
+<td colspan="1" rowspan="1">classResolver</td>
+          <td colspan="1" rowspan="1"><a href="../hivemind/apidocs/org/apache/hivemind/ClassResolver.html">ClassResolver</a></td>
+        
+</tr>
+        
+<tr>
+          
+<td colspan="1" rowspan="1">errorHandler</td>
+          <td colspan="1" rowspan="1"><a href="../hivemind/apidocs/org/apache/hivemind/ErrorHandler.html">ErrorHandler</a></td>
+        
+</tr>
+        
+<tr>
+          
+<td colspan="1" rowspan="1">errorLog</td>
+          <td colspan="1" rowspan="1"><a href="../hivemind/apidocs/org/apache/hivemind/ErrorLog.html">ErrorLog</a></td>
+        
+</tr>
+        
+<tr>
+          
+<td colspan="1" rowspan="1">log</td>
+          <td colspan="1" rowspan="1">
+            <span class="codefrag">org.apache.commons.logging.Log</span>
+          </td>
+        
+</tr>
+        
+<tr>
+          
+<td colspan="1" rowspan="1">messages</td>
+          <td colspan="1" rowspan="1"><a href="../hivemind/apidocs/org/apache/hivemind/Messages.html">Messages</a></td>
+          <td colspan="1" rowspan="1"></td>
+        
+</tr>
+        
+<tr>
+          
+<td colspan="1" rowspan="1">serviceId</td>
+          <td colspan="1" rowspan="1">String</td>
+        
+</tr>
+      
+</table>
+<div class="note">
+<div class="label">Note</div>
+<div class="content">
+        The service id (last entry in above table) will <em>only</em> be automatically injected through a writable property
+        (i.e. <span class="codefrag">setServiceId(String)</span>).  This because a constructor parameter of type String
+        is far too common.
+      </div>
+</div>
+<p>
+        As noted the BuilderFactory will also inject services into the constructed service implementation. 
+        Through every constructor parameter and writable property whose type is an interface (with the exception 
+        of the common parameters / properties listed above) and hasn't been set otherwise the BuilderFactory will 
+        attempt to inject a service.  This attempt may fail if there is <em>no</em> visible service or <em>more than 
+        one</em> visible service implementing the given interface.  (Visibility is checked with respect to the module 
+        declaring the constructed service's implementation.)
+      </p>
+<p>
+        The action taken if the service injection fails (due to one of the reasons given above) depends on the type 
+        of dependency injection.  For constructor based dependency injection the BuilderFactory will try using a 
+        different constructor (see selection details below).  If no "working" constructor is found an error 
+        is logged.  For setter based dependency injection the BuilderFactory will log an error immedeately upon failed injection.
+      </p>
+<p>
+        Constructor based dependency injection is enabled with the <span class="codefrag">autowire-services</span> attribute but can be 
+        overridden by declaring any constructor parameter elements (see next section).  The constructor being used for
+        the constructor based dependency injection has to meet all of the following criteria:
+      </p>
+<ul>
+        
+<li>the constructor is declared as <span class="codefrag">public</span>
+</li>
+        
+<li>all parameter types are interfaces (including the common types listed above)</li>
+        
+<li>no two parameters are of the same type</li>
+      
+</ul>
+<p>
+        All constructors of the service implementation class meeting these criteria (the default constructor is 
+        considered as one of these) are ordered by length (given by the number of parameters) and the first of these for which 
+        every parameter type either has a matching common property or there is exactly one corresponding visible service 
+        available will be invoked.  If no such constructor can be found an error is logged.
+      </p>
+<p>
+        Autowiring may be  complicated by the fact that one module may define a service point that will tangentially affect the
+        construction of a service in another module (simply by implementing the same service interface).  In this situation, 
+        service autowiring can be turned off, by setting the <span class="codefrag">autowire-services</span> attribute to false.
+      </p>
+<p>
+       Once all properties have been set (possibly by autowiring), an initializer method will be invoked.  If the 
+       <span class="codefrag">initialize-method</span> attribute is <em>not</em> specified, and the service implementation includes a 
+       public method <span class="codefrag">initializeService()</span> (no parameters, returns void), then <span class="codefrag">initializeService()</span> 
+       will be invoked as the initializer.
+      </p>
+</div>
+    
+		
+<a name="N101D6"></a><a name="Constructor+Parameter+Elements"></a>
+<h2 class="boxed">Constructor Parameter Elements</h2>
+<div class="section">
+<p>The following table summarizes the elements which can be used to
+				specify constructor parameters for the class to instantiate. These
+				elements can be mixed freely with the properties configuring elements.
+				It is important to know that the number, type, and order of the
+				constructor parameter elements determine the constructor that will be
+				used to instantiate the implementation.</p>
+<table class="ForrestTable" cellspacing="1" cellpadding="4">
+				
+<tr>
+					
+<th colspan="1" rowspan="1">Element</th>
+					<th colspan="1" rowspan="1">Matched Parameter Type</th>
+					<th colspan="1" rowspan="1">Passed Parameter Value</th>
+				
+</tr>
+        
+<tr>
+          
+<td colspan="1" rowspan="1">error-handler</td>
+          <td colspan="1" rowspan="1"><a href="../hivemind/apidocs/org/apache/hivemind/ErrorHandler.html">ErrorHandler</a></td>
+          <td colspan="1" rowspan="1">The module's ErrorHandler, user to report recoverable errors.</td>
+        
+</tr>
+        
+<tr>
+          
+<td colspan="1" rowspan="1">error-log</td>
+          <td colspan="1" rowspan="1"><a href="../hivemind/apidocs/org/apache/hivemind/ErrorLog.html">ErrorLog</a></td>
+          <td colspan="1" rowspan="1">The service's ErrorLog, used to report recoverable errors (this is preferred 
+			over using a Log and an <a href="../hivemind/apidocs/org/apache/hivemind/ErrorHandler.html">ErrorHandler</a>).</td>
+        
+</tr>        
+				
+<tr>
+					
+<td colspan="1" rowspan="1">log</td>
+					<td colspan="1" rowspan="1">org.apache.commons.logging.Log</td>
+					<td colspan="1" rowspan="1">The Log is created from the complete service id (not the name of
+						the class) of the created service.</td>
+				
+</tr>
+				
+<tr>
+					
+<td colspan="1" rowspan="1">messages</td>
+					<td colspan="1" rowspan="1"><a href="../hivemind/apidocs/org/apache/hivemind/Messages.html">Messages</a></td>
+					<td colspan="1" rowspan="1">The <a href="../hivemind/apidocs/org/apache/hivemind/Messages.html">Messages</a> object of the invoking module.</td>
+				
+</tr>
+        
+<tr>
+          
+<td colspan="1" rowspan="1">object</td>
+          <td colspan="1" rowspan="1"><em>variable</em></td>
+          <td colspan="1" rowspan="1">As determined by the object translator, this is decidedly free-form. See <a href="../hivemind/ObjectProviders.html">hivemind.ObjectProviders</a>.</td>
+        
+</tr>
+        
+<tr>
+          
+<td colspan="1" rowspan="1">null</td>
+          <td colspan="1" rowspan="1"><em>any reference type</em></td>
+          <td colspan="1" rowspan="1">Always simply <span class="codefrag">null</span>.</td>
+        
+</tr>
+				
+<tr>
+					
+<td colspan="1" rowspan="1">service-id</td>
+					<td colspan="1" rowspan="1">java.lang.String</td>
+					<td colspan="1" rowspan="1">The service id of the <em>constructed</em> service.</td>
+				
+</tr>
+				
+<tr>
+					
+<td colspan="1" rowspan="1">string</td>
+					<td colspan="1" rowspan="1">java.lang.String</td>
+					<td colspan="1" rowspan="1">This element's content.</td>
+				
+</tr>
+				
+<tr>
+					
+<td colspan="1" rowspan="1">boolean</td>
+					<td colspan="1" rowspan="1">boolean</td>
+					<td colspan="1" rowspan="1">This element's content. Must be either "true" or "false".</td>
+				
+</tr>
+				
+<tr>
+					
+<td colspan="1" rowspan="1">configuration</td>
+					<td colspan="1" rowspan="1">java.util.List <em>or</em> java.util.Map</td>
+					<td colspan="1" rowspan="1">The List / Map of the elements of the configuration specified by this
+						element's content as a configuration id. The id can either by a
+						simple id for a configuration within the same module as the
+						constructed service, or a complete id.</td>
+				
+</tr>
+				
+<tr>
+					
+<td colspan="1" rowspan="1">int</td>
+					<td colspan="1" rowspan="1">int</td>
+					<td colspan="1" rowspan="1">This element's content parsed as an integer value.</td>
+				
+</tr>
+				
+<tr>
+					
+<td colspan="1" rowspan="1">long</td>
+					<td colspan="1" rowspan="1">long</td>
+					<td colspan="1" rowspan="1">This element's content parsed as a long value.</td>
+				
+</tr>
+				
+<tr>
+					
+<td colspan="1" rowspan="1">resource</td>
+					<td colspan="1" rowspan="1"><a href="../hivemind/apidocs/org/apache/hivemind/Resource.html">Resource</a></td>
+					<td colspan="1" rowspan="1">This element's content parsed as a path to a <a href="../hivemind/apidocs/org/apache/hivemind/Resource.html">Resource</a>, which
+						is relative to the contributing module's deployment descriptor. If
+						available, a localized version of the Resource will be selected.</td>
+				
+</tr>
+				
+<tr>
+					
+<td colspan="1" rowspan="1">service</td>
+					<td colspan="1" rowspan="1">interface corresponding to specified service</td>
+					<td colspan="1" rowspan="1">The implementation of the service with the id given in this
+						element's content. The id can either be a simple id for a service
+						within the same module as the constructed service, or a complete id.</td>
+				
+</tr>
+			
+</table>
+</div>
+		
+<a name="N10314"></a><a name="Service+Property+Configuring+Elements"></a>
+<h2 class="boxed">Service Property Configuring Elements</h2>
+<div class="section">
+<a name="N1031A"></a><a name="event-listener"></a>
+<h3 class="boxed">event-listener</h3>
+<table class="ForrestTable" cellspacing="1" cellpadding="4">
+					
+<tr>
+						
+<th colspan="1" rowspan="1">Attribute</th>
+						<th colspan="1" rowspan="1">Description</th>
+					
+</tr>
+					
+<tr>
+						
+<td colspan="1" rowspan="1">service-id</td>
+						<td colspan="1" rowspan="1">The service which produces events. The service must provide, in
+							its service interface, the necessary add and remove listener
+							methods.</td>
+					
+</tr>
+					
+<tr>
+						
+<td colspan="1" rowspan="1">name</td>
+						<td colspan="1" rowspan="1">The name of an event set to be registered. If not specified, all
+							applicable event sets are used.</td>
+					
+</tr>
+				
+</table>
+<p>If the name attribute is not specified, then BuilderFactory will
+					register for all applicable event sets. For each event set provided by
+					the specified service, BuilderFactory will check to see if the service
+					instance being constructed implements the corresponding listener
+					interface ... if so, the constructed service instance is added as a
+					listener. When the name attribute is specified, the constructed
+					service instance is registered as a listener of just that single type.</p>
+<p>Event notifications go directly to the constructed service instance;
+					they don't go through any proxies or interceptors for the service. The
+					service <em>instance</em> must implement the listener interface, the
+					constructed service's service interface <em>does not</em> have to
+					extend the listener interface. In other words, event notifications are
+					"behind the scenes", not part of the public API of the service.</p>
+<p>It is perfectly acceptible to include multiple &lt;event-listener&gt;
+					elements for a number of different event producing services.</p>
+<p>It is not enough for the event producer service to have an add
+					listener method (i.e., <span class="codefrag">
+					addPropertyChangeListener(PropertyChangeListener)</span>). To be
+					recognized as an event set, there must also be a corresponding remove
+					listener method (i.e., <span class="codefrag">
+					removePropertyChangeListener(PropertyChangeListener)</span>), even
+					though BuilderFactory does not make use of the remove method. This is
+					an offshoot of how the JavaBeans API defines event sets.</p>
+<a name="N10363"></a><a name="set"></a>
+<h3 class="boxed">set</h3>
+<table class="ForrestTable" cellspacing="1" cellpadding="4">
+					
+<tr>
+						
+<th colspan="1" rowspan="1">Attribute</th>
+						<th colspan="1" rowspan="1">Description</th>
+					
+</tr>
+					
+<tr>
+						
+<td colspan="1" rowspan="1">property</td>
+						<td colspan="1" rowspan="1">The name of the property to set.</td>
+					
+</tr>
+					
+<tr>
+						
+<td colspan="1" rowspan="1">value</td>
+						<td colspan="1" rowspan="1">A value to assigned to the property. The value will be converted
+							to an appropriate type for the property.</td>
+					
+</tr>
+				
+</table>
+<a name="N10394"></a><a name="set-configuration"></a>
+<h3 class="boxed">set-configuration</h3>
+<table class="ForrestTable" cellspacing="1" cellpadding="4">
+					
+<tr>
+						
+<th colspan="1" rowspan="1">Attribute</th>
+						<th colspan="1" rowspan="1">Description</th>
+					
+</tr>
+					
+<tr>
+						
+<td colspan="1" rowspan="1">property</td>
+						<td colspan="1" rowspan="1">The name of the property to set.</td>
+					
+</tr>
+					
+<tr>
+						
+<td colspan="1" rowspan="1">configuration-id</td>
+						<td colspan="1" rowspan="1">The id of a configuration, either a simple id for a
+							configuration within the same module as the constructed service,
+							or a complete id. The property will be assigned a <span class="codefrag">List</span>
+							or <span class="codefrag">Map</span> of the elements of the configuration.</td>
+					
+</tr>
+				
+</table>
+<a name="N103CB"></a><a name="set-object"></a>
+<h3 class="boxed">set-object</h3>
+<table class="ForrestTable" cellspacing="1" cellpadding="4">
+            
+<tr>
+<th colspan="1" rowspan="1">Attribute</th> <th colspan="1" rowspan="1">Description</th>
+</tr>
+            
+<tr>
+              
+<td colspan="1" rowspan="1">property</td>
+              <td colspan="1" rowspan="1">The name of the property to set.</td>
+            
+</tr>
+            
+<tr>
+              
+<td colspan="1" rowspan="1">value</td>
+              <td colspan="1" rowspan="1">The <em>selector</em> used to find an object value.  The selector consists of a prefix (such as 
+                "service" or "configuration"), a colon, and a <em>locator</em> whose interpretation is defined by 
+                the prefix.  For example, <span class="codefrag">service:MyService</span>.  See <a href="../hivemind/ObjectProviders.html">hivemind.ObjectProviders</a>.</td>
+            
+</tr>
+          
+</table>
+<a name="N10407"></a><a name="set-resource"></a>
+<h3 class="boxed">set-resource</h3>
+<table class="ForrestTable" cellspacing="1" cellpadding="4">
+					
+<tr>
+						
+<th colspan="1" rowspan="1">Attribute</th>
+						<th colspan="1" rowspan="1">Description</th>
+					
+</tr>
+					
+<tr>
+						
+<td colspan="1" rowspan="1">property</td>
+						<td colspan="1" rowspan="1">The name of the property to set.</td>
+					
+</tr>
+					
+<tr>
+						
+<td colspan="1" rowspan="1">path</td>
+						<td colspan="1" rowspan="1">The path to a <a href="../hivemind/apidocs/org/apache/hivemind/Resource.html">Resource</a>, relative to the contributing
+							module's deployment descriptor. If available, a localized version
+							of the Resource will be selected.</td>
+					
+</tr>
+				
+</table>
+<a name="N1043C"></a><a name="set-service"></a>
+<h3 class="boxed">set-service</h3>
+<table class="ForrestTable" cellspacing="1" cellpadding="4">
+					
+<tr>
+						
+<th colspan="1" rowspan="1">Attribute</th>
+						<th colspan="1" rowspan="1">Description</th>
+					
+</tr>
+					
+<tr>
+						
+<td colspan="1" rowspan="1">property</td>
+						<td colspan="1" rowspan="1">The name of the property to set.</td>
+					
+</tr>
+					
+<tr>
+						
+<td colspan="1" rowspan="1">service-id</td>
+						<td colspan="1" rowspan="1">The id of a service, either a simple id for a service within the
+							same module as the constructed service, or a complete id. The
+							property will be assigned the service.</td>
+					
+</tr>
+				
+</table>
+</div>
+	
+</div>
+<!--+
+    |end content
+    +-->
+<div class="clearboth">&nbsp;</div>
+</div>
+<div id="footer">
+<!--+
+    |start bottomstrip
+    +-->
+<div class="lastmodified">
+<script type="text/javascript"><!--
+document.write("Last Published: " + document.lastModified);
+//  --></script>
+</div>
+<div class="copyright">
+        Copyright &copy;
+         2005 Apache Software Foundation</div>
+<!--+
+    |end bottomstrip
+    +-->
+</div>
+</body>
+</html>

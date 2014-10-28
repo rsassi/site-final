@@ -1,0 +1,793 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Apache Forrest" name="Generator">
+<meta name="Forrest-version" content="0.7">
+<meta name="Forrest-skin-name" content="pelt">
+<title>Introduction to HiveMind</title>
+<link type="text/css" href="skin/basic.css" rel="stylesheet">
+<link media="screen" type="text/css" href="skin/screen.css" rel="stylesheet">
+<link media="print" type="text/css" href="skin/print.css" rel="stylesheet">
+<link type="text/css" href="skin/profile.css" rel="stylesheet">
+<script src="skin/getBlank.js" language="javascript" type="text/javascript"></script><script src="skin/getMenu.js" language="javascript" type="text/javascript"></script><script src="skin/fontsize.js" language="javascript" type="text/javascript"></script>
+<link rel="shortcut icon" href="">
+</head>
+<body onload="init()"><div style="background: red"><h1>2009/04/15 - Apache HiveMind has been retired. </h1><h2>For more information, please explore the <a href="http://attic.apache.org/">Attic</a>. </h2></div>
+<script type="text/javascript">ndeSetTextSize();</script>
+<div id="top">
+<div class="breadtrail">
+<a href="http://www.apache.org/">Apache</a> &gt; <a href="http://hivemind.apache.org">HiveMind</a><script src="skin/breadcrumbs.js" language="JavaScript" type="text/javascript"></script>
+</div>
+<div class="header">
+<div class="grouplogo">
+<a href="http://hivemind.apache.org"><img class="logoImage" alt="HiveMind" src="images/HiveMind-Logo.png" title="HiveMind Services and Configuration Microkernel"></a>
+</div>
+<div class="projectlogoA1">
+<a href="http://www.apache.org"><img class="logoImage" alt="Apache" src="images/asf_logo_wide.gif" title="Apache"></a>
+</div>
+<ul id="tabs">
+<li class="current">
+<a class="base-selected" href="index.html">HiveMind Project</a>
+</li>
+<li>
+<a class="base-not-selected" href="hivemind/index.html">Module: hivemind</a>
+</li>
+<li>
+<a class="base-not-selected" href="hivemind-lib/index.html">Module: hivemind-lib</a>
+</li>
+<li>
+<a class="base-not-selected" href="hivemind-jmx/index.html">Module: hivemind-jmx</a>
+</li>
+<li>
+<a class="base-not-selected" href="hivemind-examples/index.html">Example Code</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="main">
+<div id="publishedStrip">
+<div id="level2tabs"></div>
+<script type="text/javascript"><!--
+document.write("<text>Last Published:</text> " + document.lastModified);
+//  --></script>
+</div>
+<div class="breadtrail">
+             
+             &nbsp;
+           </div>
+<div id="menu">
+<div onclick="SwitchMenu('menu_selected_1.1', 'skin/')" id="menu_selected_1.1Title" class="menutitle" style="background-image: url('skin/images/chapter_open.gif');">HiveMind</div>
+<div id="menu_selected_1.1" class="selectedmenuitemgroup" style="display: block;">
+<div class="menupage">
+<div class="menupagetitle">Overview</div>
+</div>
+<div class="menuitem">
+<a href="downloads.html">Downloads</a>
+</div>
+<div onclick="SwitchMenu('menu_1.1.3', 'skin/')" id="menu_1.1.3Title" class="menutitle">Reference</div>
+<div id="menu_1.1.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="services.html">Services</a>
+</div>
+<div class="menuitem">
+<a href="configurations.html">Configurations</a>
+</div>
+<div class="menuitem">
+<a href="hivedoc.html">HiveDoc</a>
+</div>
+<div class="menuitem">
+<a href="descriptor.html">Module  Descriptor</a>
+</div>
+<div class="menuitem">
+<a href="rules.html">Contribution Processing Rules</a>
+</div>
+<div class="menuitem">
+<a href="dependencies.html">Dependencies</a>
+</div>
+<div class="menuitem">
+<a href="conditional.html">Conditional Contributions</a>
+</div>
+<div class="menuitem">
+<a href="serializing.html">Serializing Services</a>
+</div>
+<div class="menuitem">
+<a href="instance-initialization.html">Instance Initialization</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.1.4', 'skin/')" id="menu_1.1.4Title" class="menutitle">Project Information</div>
+<div id="menu_1.1.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="changes.html">Change Log</a>
+</div>
+<div class="menuitem">
+<a href="todo.html">TODO</a>
+</div>
+<div class="menuitem">
+<a href="mailinglists.html">Mailing Lists</a>
+</div>
+<div class="menuitem">
+<a href="http://issues.apache.org/jira/secure/BrowseProject.jspa?id=10500">Bugs</a>
+</div>
+<div class="menuitem">
+<a href="subversion.html">Subversion Access</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.1.5', 'skin/')" id="menu_1.1.5Title" class="menutitle">Tutorials and Information</div>
+<div id="menu_1.1.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="bootstrap.html">Bootstrapping the Registry</a>
+</div>
+<div class="menuitem">
+<a href="ioc.html">Inversion Of Control</a>
+</div>
+<div class="menuitem">
+<a href="localization.html">Localization</a>
+</div>
+<div class="menuitem">
+<a href="multithreading.html">Multi-Threading</a>
+</div>
+<div class="menuitem">
+<a href="filter.html">Servlets</a>
+</div>
+<div class="menuitem">
+<a href="override.html">Overriding Services</a>
+</div>
+<div class="menuitem">
+<a href="groovy.html">Groovy Support</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.1.6', 'skin/')" id="menu_1.1.6Title" class="menutitle">Reports</div>
+<div id="menu_1.1.6" class="menuitemgroup">
+<div class="menuitem">
+<a href="license-report.html">License</a>
+</div>
+<div class="menuitem">
+<a href="hivedocs/index.html">HiveDoc</a>
+</div>
+<div class="menuitem">
+<a href="developers.html">Developers</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.2', 'skin/')" id="menu_1.2Title" class="menutitle">Framework</div>
+<div id="menu_1.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind/index.html">Overview</a>
+</div>
+<div onclick="SwitchMenu('menu_1.2.2', 'skin/')" id="menu_1.2.2Title" class="menutitle">Services</div>
+<div id="menu_1.2.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind/BuilderFactory.html">BuilderFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/LoggingInterceptor.html">LoggingInterceptor</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/ShutdownCoordinator.html">ShutdownCoordinator</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/ThreadLocale.html">ThreadLocale</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/ThreadLocalStorage.html">ThreadLocalStorage</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.2.3', 'skin/')" id="menu_1.2.3Title" class="menutitle">Configurations</div>
+<div id="menu_1.2.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind/ApplicationDefaults.html">ApplicationDefaults</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/EagerLoad.html">EagerLoad</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/FactoryDefaults.html">FactoryDefaults</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/ObjectProviders.html">ObjectProviders</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/ServiceModels.html">ServiceModels</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/SymbolSources.html">SymbolSources</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/Translators.html">Translators</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.2.4', 'skin/')" id="menu_1.2.4Title" class="menutitle">Ant Tasks</div>
+<div id="menu_1.2.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind/ant/ConstructRegistry.html">ConstructRegistry</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/ant/ManifestClassPath.html">ManifestClassPath</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.3', 'skin/')" id="menu_1.3Title" class="menutitle">Library</div>
+<div id="menu_1.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-lib/index.html">Overview</a>
+</div>
+<div onclick="SwitchMenu('menu_1.3.2', 'skin/')" id="menu_1.3.2Title" class="menutitle">Services</div>
+<div id="menu_1.3.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-lib/BeanFactoryBuilder.html">BeanFactoryBuilder</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/ChainBuilder.html">ChainBuilder</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/ChainFactory.html">ChainFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/DefaultImplementationBuilder.html">DefaultImplementationBuilder</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/EJBProxyFactory.html">EJBProxyFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/MethodInterceptorFactory.html">MethodInterceptorFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/NameLookup.html">NameLookup</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/PlaceholderFactory.html">PlaceholderFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/PipelineFactory.html">PipelineFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/RemoteExceptionCoordinator.html">RemoteExceptionCoordinator</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/ServicePropertyFactory.html">ServicePropertyFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/SpringLookupFactory.html">SpringLookupFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/StrategyFactory.html">StrategyFactory</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.4', 'skin/')" id="menu_1.4Title" class="menutitle">JMX</div>
+<div id="menu_1.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-jmx/index.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/quickstart.html">Quickstart</a>
+</div>
+<div onclick="SwitchMenu('menu_1.4.3', 'skin/')" id="menu_1.4.3Title" class="menutitle">Setup</div>
+<div id="menu_1.4.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-jmx/setupOverview.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/setupJMXImplementation.html">JMX Implementation</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/setupMBeanServer.html">MBeanServer</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/setupConnectors.html">Connectors</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.4.4', 'skin/')" id="menu_1.4.4Title" class="menutitle">Usage</div>
+<div id="menu_1.4.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-jmx/manageServices.html">Manage Services</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/measurePerformance.html">Measure Performance</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/monitorServices.html">Monitor Services</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/manageLog4j.html">Manage Log4J</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.4.5', 'skin/')" id="menu_1.4.5Title" class="menutitle">Advanced Topics</div>
+<div id="menu_1.4.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-jmx/multipleApps.html">Multiple Applications in Server</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.5', 'skin/')" id="menu_1.5Title" class="menutitle">Example Code</div>
+<div id="menu_1.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-examples/index.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-examples/calc.html">Calculator</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-examples/panorama.html">Panorama Startup</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-examples/logging.html">Logging Interceptor</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.6', 'skin/')" id="menu_1.6Title" class="menutitle">Other Resources</div>
+<div id="menu_1.6" class="menuitemgroup">
+<div class="menuitem">
+<a href="http://wiki.apache.org/jakarta-hivemind/">HiveMind Wiki</a>
+</div>
+<div class="menuitem">
+<a href="http://howardlewisship.com/blog/">Tapestry and HiveMind Blog</a>
+</div>
+<div class="menuitem">
+<a href="http://www.theserverside.com/articles/article.tss?l=HivemindBuzz">HiveMind article on TheServerSide</a>
+</div>
+</div>
+<div id="credit"></div>
+<div id="roundbottom">
+<img style="display: none" class="corner" height="15" width="15" alt="" src="skin/images/rc-b-l-15-1body-2menu-3menu.png"></div>
+<div id="credit2"></div>
+</div>
+<div id="content">
+<div class="trail">
+<text>Font size:</text> 
+	          &nbsp;<input value="Reset" class="resetfont" title="Reset text" onclick="ndeSetTextSize('reset'); return false;" type="button">      
+	          &nbsp;<input value="-a" class="smallerfont" title="Shrink text" onclick="ndeSetTextSize('decr'); return false;" type="button">
+	          &nbsp;<input value="+a" class="biggerfont" title="Enlarge text" onclick="ndeSetTextSize('incr'); return false;" type="button">
+</div>
+<h1>Introduction to HiveMind</h1>
+<div id="minitoc-area">
+<ul class="minitoc">
+<li>
+<a href="#Status">Status</a>
+</li>
+<li>
+<a href="#Upgrade+warnings+%28release+1.0+to+release+1.1%29">Upgrade warnings (release 1.0 to release 1.1)</a>
+</li>
+<li>
+<a href="#Acknowledgments">Acknowledgments</a>
+</li>
+<li>
+<a href="#Coding">Coding</a>
+</li>
+<li>
+<a href="#Documentation">Documentation</a>
+</li>
+<li>
+<a href="#Why+should+you+use+HiveMind%3F">Why should you use HiveMind?</a>
+<ul class="minitoc">
+<li>
+<a href="#Task%3A+Log+method+entry+and+exit">Task: Log method entry and exit</a>
+<ul class="minitoc">
+<li>
+<a href="#Typical+Approach">Typical Approach</a>
+</li>
+<li>
+<a href="#HiveMind+Approach">HiveMind Approach</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#Task%3A+Reference+another+service">Task: Reference another service</a>
+<ul class="minitoc">
+<li>
+<a href="#Typical+Approach-N101EE">Typical Approach</a>
+</li>
+<li>
+<a href="#HiveMind+Approach-N10226">HiveMind Approach</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#Task%3A+Read+configuration+data">Task: Read configuration data</a>
+<ul class="minitoc">
+<li>
+<a href="#Typical+Approach-N10265">Typical Approach</a>
+</li>
+<li>
+<a href="#HiveMind+Approach-N10275">HiveMind Approach</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#Task%3A+Test+your+services">Task: Test your services</a>
+<ul class="minitoc">
+<li>
+<a href="#Typical+Approach-N102CB">Typical Approach</a>
+</li>
+<li>
+<a href="#HiveMind+Approach-N102D5">HiveMind Approach</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+		
+<p>
+<strong>HiveMind</strong> is a services and configuration microkernel:</p>
+		
+<ul>
+			
+<li>
+<strong><a href="services.html">Services</a></strong>: HiveMind
+				services are <em>POJOs</em> (Plain Old Java Objects) that can be easily
+				accessed and combined. Each service ideally defines a Java interface it
+				implements (but this is no longer mandatory). HiveMind takes care of instantiating and configuring each
+				service just as necessary. HiveMind lets services collaborate with each
+				other via <a href="ioc.html">dependency injection</a>.</li>
+			
+<li> 
+<strong><a href="configurations.html">Configuration</a></strong>: 
+				HiveMind allows you to provide complex configuration data to your
+				services in a format <em>you</em> define. HiveMind will integrate the
+				contributions of such data from multiple modules and convert it all into
+				data objects for you. HiveMind configurations allow for powerful,
+				data-driven solutions which combine seemlessly with the service
+				architecture.</li>
+			
+<li>
+<strong>Microkernel</strong>: HiveMind is a framework for creating applications, not
+				an application, or even an application server, itself. The 'core' of HiveMind
+				is the <a href="bootstrap.html">startup logic</a>
+			  that knows how to parse and understand the
+				<a href="descriptor.html">module deployment descriptors</a>, and use that
+				information to <a href="ioc.html">instantiate and initialize</a>
+				all those services and configurations.
+				</li>
+		
+</ul>
+		
+<p>In HiveMind, a service is an implementation of a Java interface. Unlike
+			other SOAs (Service Oriented Architectures, such as a SOAP, or EJBs),
+			HiveMind is explicitly about combining Java code within a single JVM.
+			HiveMind uses a <a href="descriptor.html">descriptor</a> to describe
+			different services, their lifecycles, and how they are combined. HiveMind
+			takes care of thread-safe, just-in-time creation of singleton service
+			objects so your code doesn't have to.</p>
+      
+    
+<p>
+      HiveMind sits between your application code and the underlying J2EE or other APIs:
+    </p>
+    
+    
+<div style="text-align: center;">
+<img class="figure" alt="[Framework Stack]" src="images/FrameworkStack.png"></div>
+    
+    
+<p>
+     In this diagram, the application accesses key HiveMind services (the small circles). These services
+     acts as facades; the implementations of 
+     the services are dependent on many other services, as well as configurations (the blue stacks of blocks).
+     Service implementations make use of Java and J2EE APIs, and may even "bridge" into other systems such
+     as EJB session beans.     
+    </p>
+      
+		
+<p>HiveMind is organized around <em>modules</em>: individual building
+			blocks, each providing a particular set of services and configurations.
+			Each module is deployed as its own JAR file, containing its own <a href="descriptor.html">descriptor</a>. At runtime, HiveMind combines 
+			<em>all</em> the modules and their descriptors together ... seemlessly
+			combining the services specific to your application with the services
+			provided by HiveMind and by other third-party libraries.</p>
+		
+<p>HiveMind is designed with particular attention to J2EE. Because J2EE
+			applications are multi-threaded, everything in HiveMind is thread-safe.
+			That's one less thing for you to be concerned about.</p>
+		
+<p>HiveMind allows you to create more complex applications, yet keep the
+			individual pieces (the individual services) simple and testable. HiveMind enourages the use
+      of common best practices, such as coding to interfaces, seperation of concerns, and keeping
+      code highly testable without a special container. </p>
+		
+<a name="N10063"></a><a name="Status"></a>
+<h2 class="boxed">Status</h2>
+<div class="section">
+<p>HiveMind now requires Ant 1.6.<strong>2</strong> to build.</p>
+<p>James Carman and Achim Huegen have been voted on as HiveMind committers.</p>
+<div class="frame warning">
+<div class="label">Warning</div>
+<div class="content">
+  This documentation describes HiveMind 1.1, which is currently in an late beta state.
+  You may <a href="downloads.html">download HiveMind 1.0</a> to get stable
+  features and matching documentation.
+</div>
+</div>
+<p>You can now omit the package name (generally) when specifying class name in a module descriptor.
+      The <a href="descriptor.html#module">&lt;module&gt;</a> element's package attribute provides the package name to use.</p>
+<p>
+        The locale (used for localized messages) is no longer fixed, as it was in 1.0.  You can change
+        the locale using the <a href="hivemind/ThreadLocale.html">hivemind.ThreadLocale</a> service.
+      </p>
+<p>
+        The interface for a <a href="descriptor.html#service-point">&lt;service-point&gt;</a> may now be  <a href="services.html#Bean+Services">an ordinary class, not an interface</a>. You may now
+        use HiveMind quick-and-dirty without defining an interface for each service.
+      </p>
+</div>
+    
+<a name="N10093"></a><a name="Upgrade+warnings+%28release+1.0+to+release+1.1%29"></a>
+<h2 class="boxed">Upgrade warnings (release 1.0 to release 1.1)</h2>
+<div class="section">
+<p>For the most part, code that works with HiveMind 1.0 will work with HiveMind 1.1 as well.  There have been a small number
+        of incompatible changes between releases that will not affect the vast majority of users:</p>
+<ul>
+          
+<li>The <a href="hivemind/apidocs/org/apache/hivemind/ServiceImplementationFactory.html">ServiceImplementationFactory</a> interface has been been simplified, replacing a long list of 
+            parameters with a single <a href="hivemind/apidocs/org/apache/hivemind/ServiceImplementationFactoryParameters.html">ServiceImplementationFactoryParameters</a> object.</li>
+          
+<li>The <a href="hivemind/apidocs/org/apache/hivemind/service/ClassFactory.html">ClassFactory</a>'s newClass() method has been simplified; the module parameter has been 
+            removed.</li>
+          
+<li>The module parameter has also been removed from the DefaultImplementationBuilder's 
+            buildDefaultImplementation() method.</li>
+          
+<li>The <a href="hivemind-lib/SpringLookupFactory.html">SpringLookupFactory</a> and its parameters
+            now specify a Spring BeanFactory instance, rather than a SpringBeanFactorySource.</li>
+        
+</ul>
+</div>
+		
+<a name="N100BC"></a><a name="Acknowledgments"></a>
+<h2 class="boxed">Acknowledgments</h2>
+<div class="section">
+<p>HiveMind represents a generous donation of code to the Apache Software
+				Foundation by <a class="external" href="http://www.webct.com">WebCT</a>.</p>
+<p>HiveMind originated from internal requirements for a flexible,
+				loosely-coupled configuration management and services framework for
+				WebCT's industry-leading flagship enterprise e-learning product, Vista.</p>
+<p>Several individuals in WebCT's research and development team, in
+				addition to Howard Lewis Ship, contributed to the requirements and
+				concepts behind HiveMind's initial set of functionality. These include
+				Martin Bayly, Diane Bennett, Bill Bilic, Michael Kerr, Prashant Nayak,
+				Bill Richard and Ajay Sharda. HiveMind is already in use as a
+				significant part of Vista.</p>
+</div>
+		
+<a name="N100D0"></a><a name="Coding"></a>
+<h2 class="boxed">Coding</h2>
+<div class="section">
+<p>Coding using HiveMind is designed to be as succinct and painless as
+				possible. Since services are, ultimately, simple objects (POJOs -- plain
+				old java objects) within the same JVM, all the complexity of J2EE falls
+				away ... no more JNDI lookups, no more RemoteExceptions, no more home
+				and remote interfaces. Of course, you can still use HiveMind to 
+				<a href="hivemind-lib/EJBProxyFactory.html">front your 
+				EJBs</a>, in which case the service is
+				responsible for performing the JNDI lookup and so forth (which in itself
+				has a lot of value), before forwarding the request to the EJB.</p>
+<p>In any case, the code should be short. To external objects (objects
+				that are not managed by HiveMind, such as a servlet) the code for
+				accessing a service is quite streamlined:</p>
+<pre class="java-code">
+<span class="java-type">Registry</span> registry <span class="java-operator">=</span> <span class="java-type">RegistryBuilder.</span>constructDefaultRegistry();
+<span class="java-type">MyService</span> service <span class="java-operator">=</span> (<span class="java-type">MyService)</span> registry.getService(<span class="java-literal">"com.mypackage.MyService",</span> <span class="java-type">MyService.</span><span class="java-keyword">class);</span>
+
+service.perform(...);
+</pre>
+<p>You code is responsible for:</p>
+<ul>
+				
+<li>Obtaining a reference to the Registry singleton</li>
+				
+<li>Knowing the complete id of the service to access</li>
+				
+<li>Passing in the interface class</li>
+			
+</ul>
+<p>HiveMind is responsible for:</p>
+<ul>
+				
+<li>Finding the service, creating it as needed</li>
+				
+<li>Checking the type of the service against your code's expections</li>
+				
+<li>Operating in a completely thread-safe manner</li>
+				
+<li>Reporting any errors in a useful, verbose fashion</li>
+			
+</ul>
+<div class="frame note">
+<div class="label">Note</div>
+<div class="content">
+        In the not-unusual case that only a single service within the entire Registry
+        implements a particular service interface, 
+        then you may omit the service id, i.e. <span class="codefrag">getService(MyService.class)</span>.
+      </div>
+</div>
+<p>However, a much more common case is for services to collaborate: that's
+				much simpler, since HiveMind will connect the two services together for
+				you. You'll just need to provide an instance variable and either a
+				setter method or a constructor argument.</p>
+</div>
+		
+<a name="N10131"></a><a name="Documentation"></a>
+<h2 class="boxed">Documentation</h2>
+<div class="section">
+<p>An important part of the HiveMind picture is documentation.
+				Comprehensive documentation about a HiveMind application, <a href="hivedoc.html">HiveDoc</a>, can be automatically generated by
+				your build process. This documentation lists all modules, all extension
+				points (both service and configuration), all contributions (of service
+				constructors, service interceptors and configuration elements) and cross
+				links all extension points to their contributions.</p>
+<p>Modules and extension points include a description which is
+				incorporated into the generated documentation.</p>
+<p>HiveMind is used to construct very complex systems using a large number
+				of small parts. HiveDoc is an important tool for developers to
+				understand and debug the application.</p>
+</div>
+    
+    
+<a name="N10145"></a><a name="Why+should+you+use+HiveMind%3F"></a>
+<h2 class="boxed">Why should you use HiveMind?</h2>
+<div class="section">
+<p>The concept behind HiveMind, and most other dependency-injection microkernels, is to reduce the amount of code 
+        in your application and at the same time, make your application more testable. If your applications are like my 
+        applications, there is an awful lot of code in place that deals just with creating objects and hooking them 
+        together, and reading and processing configuration files.</p>
+<p>HiveMind moves virtually all of that logic into the framework, driven by the module deployment descriptors. 
+        Inside the descriptor, you describe your services, your configuration data, and how everything is hooked 
+        together within and between modules.</p>
+<p>HiveMind can do all the grunt work for you; using HiveMind makes it so that <em>the easiest approach is also 
+        the correct approach.</em> 
+</p>
+<a name="N10157"></a><a name="Task%3A+Log+method+entry+and+exit"></a>
+<h3 class="boxed">Task: Log method entry and exit</h3>
+<a name="N1015D"></a><a name="Typical+Approach"></a>
+<h4>Typical Approach</h4>
+<pre class="java-code">
+<span class="java-keyword">public</span> <span class="java-type">String</span> myMethod(<span class="java-type">String</span> param)
+{
+  <span class="java-keyword">if</span> (LOG.isDebugEnabled()) 
+    LOG.debug(<span class="java-literal">"myMethod("</span> <span class="java-operator">+</span> param <span class="java-operator">+</span> <span class="java-literal">")");</span>
+    
+  <span class="java-type">String</span> result <span class="java-operator">=</span> <span class="java-comment">// . . . 
+</span>  
+  <span class="java-keyword">if</span> (LOG.isDebugEnabled())
+    LOG.debug(<span class="java-literal">"myMethod() returns "</span> <span class="java-operator">+</span> result); 
+    
+  <span class="java-keyword">return</span> result;
+}
+</pre>
+<p>This approach doesn't do a good or consistent job when a method has multiple return points. It also 
+            creates many more branch points within the code ... basically, a lot of clutter. Finally, it doesn't report 
+            on exceptions thrown from within the method.</p>
+<a name="N101A6"></a><a name="HiveMind+Approach"></a>
+<h4>HiveMind Approach</h4>
+<p>Let HiveMind add a <a href="hivemind/LoggingInterceptor.html"> logging interceptor</a> to your 
+            service. It will consistently log method entry and exit, and log any exceptions thrown by the method.</p>
+<p>The following descriptor snippet defines a service, provides a core service implementation (using 
+            &lt;create-instance&gt;), and adds method logging (using &lt;interceptor&gt;):</p>
+<pre class="xml-code">&lt;<span class="xml-tag">service-point </span><span class="xml-attribute">id</span>=<span class="xml-attribute-value">"MyService" </span><span class="xml-attribute">interface</span>=<span class="xml-attribute-value">"com.myco.MyServiceInterface"</span>&gt;
+  &lt;<span class="xml-tag">create-instance </span><span class="xml-attribute">class</span>=<span class="xml-attribute-value">"com.myco.impl.MyServiceImpl"</span>/&gt;
+  &lt;<span class="xml-tag">interceptor </span><span class="xml-attribute">service-id</span>=<span class="xml-attribute-value">"hivemind.LoggingInterceptor"</span>/&gt;
+&lt;/<span class="xml-tag">service-point</span>&gt;
+</pre>
+<a name="N101E8"></a><a name="Task%3A+Reference+another+service"></a>
+<h3 class="boxed">Task: Reference another service</h3>
+<a name="N101EE"></a><a name="Typical+Approach-N101EE"></a>
+<h4>Typical Approach</h4>
+<pre class="java-code">
+<span class="java-keyword">private</span> <span class="java-type">SomeOtherService</span> _otherService;
+
+<span class="java-keyword">public</span> <span class="java-type">String</span> myMethod(<span class="java-type">String</span> param)
+{
+  <span class="java-keyword">if</span> (_otherService <span class="java-operator">==</span> <span class="java-literal">null)</span>
+    _otherService <span class="java-operator">=</span> <span class="java-comment">// Lookup other service . . .
+</span>
+  _otherService.doSomething(. . .);
+  
+  . . .
+}
+</pre>
+<p>How the other service is looked up is specified to the environment; it might be a JNDI lookup for an EJB. 
+            For other microkernels, such as Avalon, there will be calls to a specific API.</p>
+<p>In addition, this code is not thread-safe; multiple threads could execute it simultaneously, causing 
+            unwanted (and possibly destructive) multiple lookups of the other service.</p>
+<a name="N10226"></a><a name="HiveMind+Approach-N10226"></a>
+<h4>HiveMind Approach</h4>
+<p>Let HiveMind assign the other service as a property. This is <a class="external" href="http://www.martinfowler.com/articles/injection.html"> dependency injection</a>. HiveMind can 
+            inject dependencies using JavaBeans properties or constructor arguments.</p>
+<pre class="java-code">
+<span class="java-keyword">private</span> <span class="java-type">SomeOtherService</span> _otherService;
+
+<span class="java-keyword">public</span> <span class="java-type">void</span> setOtherService(<span class="java-type">SomeOtherService</span> otherService)
+{
+  _otherService <span class="java-operator">=</span> otherService;
+}
+
+<span class="java-keyword">public</span> <span class="java-type">String</span> myMethod(<span class="java-type">String</span> param)
+{
+  _otherService.doSomething(. . .);
+  
+  . . .
+}
+</pre>
+<p>HiveMind uses a system of proxies to defer creation of services until actually needed. The proxy object 
+            assigned to the otherService property will cause the actual service implementation to be instantiated and 
+            configured the first time a service method is invoked ... and all of this is done in a thread-safe 
+            manner.</p>
+<a name="N1025F"></a><a name="Task%3A+Read+configuration+data"></a>
+<h3 class="boxed">Task: Read configuration data</h3>
+<a name="N10265"></a><a name="Typical+Approach-N10265"></a>
+<h4>Typical Approach</h4>
+<p>Find a properties file or XML file (on the classpath? in the filesystem?) and read it, then write code to 
+            intepret the raw data and possibly convert it to Java objects.</p>
+<p>The lack of a standard approach means that data-driven solutions are often more trouble than they are 
+            worth, leading to code bloat and a loss of flexibility.</p>
+<p>Even when XML files are used for configuration, the code that reads the content is often inefficient, 
+            incompletely tested, and lacking the kind of error detection built into HiveMind.</p>
+<a name="N10275"></a><a name="HiveMind+Approach-N10275"></a>
+<h4>HiveMind Approach</h4>
+<pre class="java-code">
+<span class="java-keyword">private</span> <span class="java-type">List</span> _configuration;
+
+<span class="java-keyword">public</span> <span class="java-type">void</span> setConfiguration(<span class="java-type">List</span> configuration)
+{
+  _configuration <span class="java-operator">=</span> configuration;
+}
+
+<span class="java-keyword">public</span> <span class="java-type">void</span> myMethod()
+{
+  <span class="java-type">Iterator</span> i <span class="java-operator">=</span> _configuration.iterator();
+  <span class="java-keyword">while</span> (i.hasNext())
+  {
+    <span class="java-type">MyConfigItem</span> item <span class="java-operator">=</span> (<span class="java-type">MyConfigItem)</span>i.next();
+    
+    item.doStuff(. . .);
+  }
+}
+</pre>
+<p>HiveMind will set the <span class="codefrag">configuration</span> property from a <a href="configurations.html">configuration point</a> you specify. The objects in the list are constructed 
+            from configuration point contributions and converted, by HiveMind, into objects. As with services, a 
+            thread-safe, just-in-time conversion takes place.</p>
+<p>The type and number of extension points and how and when your code makes use of them is entirely up to 
+            you, configured in the module deployment descriptor.</p>
+<a name="N102C5"></a><a name="Task%3A+Test+your+services"></a>
+<h3 class="boxed">Task: Test your services</h3>
+<a name="N102CB"></a><a name="Typical+Approach-N102CB"></a>
+<h4>Typical Approach</h4>
+<p>In complex environments, such as EJB containers, you will often have to deploy your code and then test it 
+            from the outside. EJB code in particular is hard to test because collaborating EJBs make use of JNDI to 
+            access each other. It is very difficult to "stub out" part of the overall application for testing 
+            purposes.</p>
+<a name="N102D5"></a><a name="HiveMind+Approach-N102D5"></a>
+<h4>HiveMind Approach</h4>
+<p>Making code testable is a key concern of HiveMind, and shows up in its general testing strategy:</p>
+<ul>
+            
+<li>Because HiveMind services are simply POJOs, your unit tests can simply instantiate them directly.</li>
+            
+<li>HiveMind services are always identified by <em>interface</em>, so it's easy to provide a mocked-up 
+              implementation of the interface.</li>
+            
+<li>Services collaborate via <a href="ioc.html">dependency injection</a>, so it's easy for a unit 
+              test to wire a service to real or mock implementations of collaborating services.</li>
+            
+<li>Because configuration data is just lists of Java objects, unit tests can easily create objects suitable 
+              for testing.</li>
+          
+</ul>
+</div>
+	
+</div>
+<div class="clearboth">&nbsp;</div>
+</div>
+<div id="footer">
+<div class="lastmodified">
+<script type="text/javascript"><!--
+document.write("<text>Last Published:</text> " + document.lastModified);
+//  --></script>
+</div>
+<div class="copyright">
+        Copyright &copy;
+         2005 Apache Software Foundation</div>
+<div id="logos"></div>
+</div>
+</body>
+</html>

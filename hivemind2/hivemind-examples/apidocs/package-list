@@ -1,0 +1,9 @@
+org.apache.examples
+org.apache.examples.annotations.calculator
+org.apache.examples.annotations.panorama
+org.apache.examples.impl
+org.apache.examples.panorama.discussions
+org.apache.examples.panorama.mail
+org.apache.examples.panorama.startup
+org.apache.examples.panorama.startup.impl
+org.apache.examples.setters

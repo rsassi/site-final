@@ -1,0 +1,478 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Apache Forrest" name="Generator">
+<meta name="Forrest-version" content="0.7">
+<meta name="Forrest-skin-name" content="pelt">
+<title>Library Dependencies</title>
+<link type="text/css" href="skin/basic.css" rel="stylesheet">
+<link media="screen" type="text/css" href="skin/screen.css" rel="stylesheet">
+<link media="print" type="text/css" href="skin/print.css" rel="stylesheet">
+<link type="text/css" href="skin/profile.css" rel="stylesheet">
+<script src="skin/getBlank.js" language="javascript" type="text/javascript"></script><script src="skin/getMenu.js" language="javascript" type="text/javascript"></script><script src="skin/fontsize.js" language="javascript" type="text/javascript"></script>
+<link rel="shortcut icon" href="">
+</head>
+<body onload="init()"><div style="background: red"><h1>2009/04/15 - Apache HiveMind has been retired. </h1><h2>For more information, please explore the <a href="http://attic.apache.org/">Attic</a>. </h2></div>
+<script type="text/javascript">ndeSetTextSize();</script>
+<div id="top">
+<div class="breadtrail">
+<a href="http://www.apache.org/">Apache</a> &gt; <a href="http://hivemind.apache.org">HiveMind</a><script src="skin/breadcrumbs.js" language="JavaScript" type="text/javascript"></script>
+</div>
+<div class="header">
+<div class="grouplogo">
+<a href="http://hivemind.apache.org"><img class="logoImage" alt="HiveMind" src="images/HiveMind-Logo.png" title="HiveMind Services and Configuration Microkernel"></a>
+</div>
+<div class="projectlogoA1">
+<a href="http://www.apache.org"><img class="logoImage" alt="Apache" src="images/asf_logo_wide.gif" title="Apache"></a>
+</div>
+<ul id="tabs">
+<li class="current">
+<a class="base-selected" href="index.html">HiveMind Project</a>
+</li>
+<li>
+<a class="base-not-selected" href="hivemind/index.html">Module: hivemind</a>
+</li>
+<li>
+<a class="base-not-selected" href="hivemind-lib/index.html">Module: hivemind-lib</a>
+</li>
+<li>
+<a class="base-not-selected" href="hivemind-jmx/index.html">Module: hivemind-jmx</a>
+</li>
+<li>
+<a class="base-not-selected" href="hivemind-examples/index.html">Example Code</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="main">
+<div id="publishedStrip">
+<div id="level2tabs"></div>
+<script type="text/javascript"><!--
+document.write("<text>Last Published:</text> " + document.lastModified);
+//  --></script>
+</div>
+<div class="breadtrail">
+             
+             &nbsp;
+           </div>
+<div id="menu">
+<div onclick="SwitchMenu('menu_selected_1.1', 'skin/')" id="menu_selected_1.1Title" class="menutitle" style="background-image: url('skin/images/chapter_open.gif');">HiveMind</div>
+<div id="menu_selected_1.1" class="selectedmenuitemgroup" style="display: block;">
+<div class="menuitem">
+<a href="index.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="downloads.html">Downloads</a>
+</div>
+<div onclick="SwitchMenu('menu_selected_1.1.3', 'skin/')" id="menu_selected_1.1.3Title" class="menutitle" style="background-image: url('skin/images/chapter_open.gif');">Reference</div>
+<div id="menu_selected_1.1.3" class="selectedmenuitemgroup" style="display: block;">
+<div class="menuitem">
+<a href="services.html">Services</a>
+</div>
+<div class="menuitem">
+<a href="configurations.html">Configurations</a>
+</div>
+<div class="menuitem">
+<a href="hivedoc.html">HiveDoc</a>
+</div>
+<div class="menuitem">
+<a href="descriptor.html">Module  Descriptor</a>
+</div>
+<div class="menuitem">
+<a href="rules.html">Contribution Processing Rules</a>
+</div>
+<div class="menupage">
+<div class="menupagetitle">Dependencies</div>
+</div>
+<div class="menuitem">
+<a href="conditional.html">Conditional Contributions</a>
+</div>
+<div class="menuitem">
+<a href="serializing.html">Serializing Services</a>
+</div>
+<div class="menuitem">
+<a href="instance-initialization.html">Instance Initialization</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.1.4', 'skin/')" id="menu_1.1.4Title" class="menutitle">Project Information</div>
+<div id="menu_1.1.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="changes.html">Change Log</a>
+</div>
+<div class="menuitem">
+<a href="todo.html">TODO</a>
+</div>
+<div class="menuitem">
+<a href="mailinglists.html">Mailing Lists</a>
+</div>
+<div class="menuitem">
+<a href="http://issues.apache.org/jira/secure/BrowseProject.jspa?id=10500">Bugs</a>
+</div>
+<div class="menuitem">
+<a href="subversion.html">Subversion Access</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.1.5', 'skin/')" id="menu_1.1.5Title" class="menutitle">Tutorials and Information</div>
+<div id="menu_1.1.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="bootstrap.html">Bootstrapping the Registry</a>
+</div>
+<div class="menuitem">
+<a href="ioc.html">Inversion Of Control</a>
+</div>
+<div class="menuitem">
+<a href="localization.html">Localization</a>
+</div>
+<div class="menuitem">
+<a href="multithreading.html">Multi-Threading</a>
+</div>
+<div class="menuitem">
+<a href="filter.html">Servlets</a>
+</div>
+<div class="menuitem">
+<a href="override.html">Overriding Services</a>
+</div>
+<div class="menuitem">
+<a href="groovy.html">Groovy Support</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.1.6', 'skin/')" id="menu_1.1.6Title" class="menutitle">Reports</div>
+<div id="menu_1.1.6" class="menuitemgroup">
+<div class="menuitem">
+<a href="license-report.html">License</a>
+</div>
+<div class="menuitem">
+<a href="hivedocs/index.html">HiveDoc</a>
+</div>
+<div class="menuitem">
+<a href="developers.html">Developers</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.2', 'skin/')" id="menu_1.2Title" class="menutitle">Framework</div>
+<div id="menu_1.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind/index.html">Overview</a>
+</div>
+<div onclick="SwitchMenu('menu_1.2.2', 'skin/')" id="menu_1.2.2Title" class="menutitle">Services</div>
+<div id="menu_1.2.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind/BuilderFactory.html">BuilderFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/LoggingInterceptor.html">LoggingInterceptor</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/ShutdownCoordinator.html">ShutdownCoordinator</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/ThreadLocale.html">ThreadLocale</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/ThreadLocalStorage.html">ThreadLocalStorage</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.2.3', 'skin/')" id="menu_1.2.3Title" class="menutitle">Configurations</div>
+<div id="menu_1.2.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind/ApplicationDefaults.html">ApplicationDefaults</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/EagerLoad.html">EagerLoad</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/FactoryDefaults.html">FactoryDefaults</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/ObjectProviders.html">ObjectProviders</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/ServiceModels.html">ServiceModels</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/SymbolSources.html">SymbolSources</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/Translators.html">Translators</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.2.4', 'skin/')" id="menu_1.2.4Title" class="menutitle">Ant Tasks</div>
+<div id="menu_1.2.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind/ant/ConstructRegistry.html">ConstructRegistry</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/ant/ManifestClassPath.html">ManifestClassPath</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.3', 'skin/')" id="menu_1.3Title" class="menutitle">Library</div>
+<div id="menu_1.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-lib/index.html">Overview</a>
+</div>
+<div onclick="SwitchMenu('menu_1.3.2', 'skin/')" id="menu_1.3.2Title" class="menutitle">Services</div>
+<div id="menu_1.3.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-lib/BeanFactoryBuilder.html">BeanFactoryBuilder</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/ChainBuilder.html">ChainBuilder</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/ChainFactory.html">ChainFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/DefaultImplementationBuilder.html">DefaultImplementationBuilder</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/EJBProxyFactory.html">EJBProxyFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/MethodInterceptorFactory.html">MethodInterceptorFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/NameLookup.html">NameLookup</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/PlaceholderFactory.html">PlaceholderFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/PipelineFactory.html">PipelineFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/RemoteExceptionCoordinator.html">RemoteExceptionCoordinator</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/ServicePropertyFactory.html">ServicePropertyFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/SpringLookupFactory.html">SpringLookupFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/StrategyFactory.html">StrategyFactory</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.4', 'skin/')" id="menu_1.4Title" class="menutitle">JMX</div>
+<div id="menu_1.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-jmx/index.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/quickstart.html">Quickstart</a>
+</div>
+<div onclick="SwitchMenu('menu_1.4.3', 'skin/')" id="menu_1.4.3Title" class="menutitle">Setup</div>
+<div id="menu_1.4.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-jmx/setupOverview.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/setupJMXImplementation.html">JMX Implementation</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/setupMBeanServer.html">MBeanServer</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/setupConnectors.html">Connectors</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.4.4', 'skin/')" id="menu_1.4.4Title" class="menutitle">Usage</div>
+<div id="menu_1.4.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-jmx/manageServices.html">Manage Services</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/measurePerformance.html">Measure Performance</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/monitorServices.html">Monitor Services</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/manageLog4j.html">Manage Log4J</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.4.5', 'skin/')" id="menu_1.4.5Title" class="menutitle">Advanced Topics</div>
+<div id="menu_1.4.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-jmx/multipleApps.html">Multiple Applications in Server</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.5', 'skin/')" id="menu_1.5Title" class="menutitle">Example Code</div>
+<div id="menu_1.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-examples/index.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-examples/calc.html">Calculator</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-examples/panorama.html">Panorama Startup</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-examples/logging.html">Logging Interceptor</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.6', 'skin/')" id="menu_1.6Title" class="menutitle">Other Resources</div>
+<div id="menu_1.6" class="menuitemgroup">
+<div class="menuitem">
+<a href="http://wiki.apache.org/jakarta-hivemind/">HiveMind Wiki</a>
+</div>
+<div class="menuitem">
+<a href="http://howardlewisship.com/blog/">Tapestry and HiveMind Blog</a>
+</div>
+<div class="menuitem">
+<a href="http://www.theserverside.com/articles/article.tss?l=HivemindBuzz">HiveMind article on TheServerSide</a>
+</div>
+</div>
+<div id="credit"></div>
+<div id="roundbottom">
+<img style="display: none" class="corner" height="15" width="15" alt="" src="skin/images/rc-b-l-15-1body-2menu-3menu.png"></div>
+<div id="credit2"></div>
+</div>
+<div id="content">
+<div class="trail">
+<text>Font size:</text> 
+	          &nbsp;<input value="Reset" class="resetfont" title="Reset text" onclick="ndeSetTextSize('reset'); return false;" type="button">      
+	          &nbsp;<input value="-a" class="smallerfont" title="Shrink text" onclick="ndeSetTextSize('decr'); return false;" type="button">
+	          &nbsp;<input value="+a" class="biggerfont" title="Enlarge text" onclick="ndeSetTextSize('incr'); return false;" type="button">
+</div>
+<h1>Library Dependencies</h1>
+
+
+<p>HiveMind has a number of dependencies on other open-source frameworks. The 
+  <a class="external" href="http://ant.apache.org/">Ant</a> build files for HiveMind will automatically download dependencies from 
+  the <a class="external" href="http://maven.apache.org/">Maven</a> repository on <a class="external" href="http://www.ibiblio.org/maven/">ibiblio</a>.</p>
+  
+
+<div class="frame warning">
+<div class="label">Warning</div>
+<div class="content"> Occasionally, HiveMind outstrips the availability of JAR versions on ibiblio.com. If a version of a JAR is 
+  not available, you will need to locate and download the other package's distribution, extract the necessary JAR file 
+  (and occasionally rename it), and copy it into ext-package/lib. The build scripts will pick up the file from there. 
+  </div>
+</div>
+  
+  
+<table class="ForrestTable" cellspacing="1" cellpadding="4">
+    
+<tr>
+      
+<th colspan="1" rowspan="1">File</th>
+      <th colspan="1" rowspan="1">Name</th>
+      <th colspan="1" rowspan="1">Notes</th>
+    
+</tr>
+    
+<tr>
+      
+<td colspan="1" rowspan="1">commons-logging-1.0.3.jar</td>
+      <td colspan="1" rowspan="1">
+        <a class="external" href="http://jakarta.apache.org/commons/logging/">
+          Commons-Logging</a>
+      </td>
+      <td colspan="1" rowspan="1"></td>
+    
+</tr>
+    
+<tr>
+      
+<td colspan="1" rowspan="1">easymock-1.1.jar</td>
+      <td colspan="1" rowspan="1">
+        <a class="external" href="http://www.easymock.org/">EasyMock testing framework</a>
+      </td>
+      <td colspan="1" rowspan="1">Only needed by <a href="hivemind/apidocs/org/apache/hivemind/test/HiveMindTestCase.html">HiveMindTestCase</a>, which exists as the basis for your own tests.</td>
+    
+</tr>
+    
+<tr>
+      
+<td colspan="1" rowspan="1">groovy-all-1.0-beta-10.jar</td>
+      <td colspan="1" rowspan="1"><a class="external" href="http://groovy.codehaus.org/">Groovy</a></td>
+      <td colspan="1" rowspan="1">Used by the <a href="hivemind-lib/apidocs/org/apache/hivemind/lib/groovy/GroovyModuleDescriptorProvider.html">GroovyModuleDescriptorProvider</a> to support Groovy module descriptors.</td>
+    
+</tr>
+    
+<tr>
+      
+<td colspan="1" rowspan="1">jboss-j2ee-3.2.1.jar</td>
+      <td colspan="1" rowspan="1">
+        <a class="external" href="http://jboss.org/">JBoss J2EE Server</a>
+      </td>
+      <td colspan="1" rowspan="1">Used by some services of the HiveMind library. No dependencies on JBoss itself, just on the 
+        <span class="codefrag">javax.ejb</span> package.</td>
+    
+</tr>
+    
+<tr>
+      
+<td colspan="1" rowspan="1">javassist-3.0.jar</td>
+      <td colspan="1" rowspan="1">
+        <a class="external" href="http://www.jboss.org/products/javassist">Javassist bytecode 
+          library</a>
+      </td>
+      <td colspan="1" rowspan="1"></td>
+    
+</tr>
+    
+<tr>
+      
+<td colspan="1" rowspan="1">oro-2.0.6.jar</td>
+      <td colspan="1" rowspan="1">
+        <a class="external" href="http://jakarta.apache.org/oro/">ORO Regular 
+          Expressions</a>
+      </td>
+      <td colspan="1" rowspan="1"></td>
+    
+</tr>
+    
+<tr>
+      
+<td colspan="1" rowspan="1">spring-full-1.0.1.jar</td>
+      <td colspan="1" rowspan="1"><a class="external" href="http://www.springframework.org">Spring</a></td>
+      <td colspan="1" rowspan="1">Used by the <a href="hivemind-lib/SpringLookupFactory.html">hivemind.lib.SpringLookupFactory</a> 
+        service.</td>
+    
+</tr>
+  
+</table>
+  
+  
+<p> Typically, all you need is the HiveMind libraries, Javassist, ORO and commons-logging. Your EJB container will 
+    provide the <span class="codefrag">javax.ejb</span> classes. Obviously, you should include Spring if your are using Spring, and 
+    EasyMock if you are writing tests using the <span class="codefrag">HiveMindTestCase</span> base class. </p>
+  
+  
+<p>
+    In most cases, HiveMind has been built against a "handy" version; in all likelyhood you can vary
+    the exact version of a dependency to suite your existing environment. Just remember to write
+    some tests!
+  </p>
+  
+  
+<div class="frame note">
+<div class="label">Note</div>
+<div class="content">
+    HiveMind is explicitly designed to be used with JDK 1.3 and above. It uses no features from JDK 1.4
+    that aren't also available on JDK 1.3.
+  </div>
+</div>
+
+	
+</div>
+<div class="clearboth">&nbsp;</div>
+</div>
+<div id="footer">
+<div class="lastmodified">
+<script type="text/javascript"><!--
+document.write("<text>Last Published:</text> " + document.lastModified);
+//  --></script>
+</div>
+<div class="copyright">
+        Copyright &copy;
+         2005 Apache Software Foundation</div>
+</div>
+</body>
+</html>

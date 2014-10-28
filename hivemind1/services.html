@@ -1,0 +1,889 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Apache Forrest" name="Generator">
+<meta name="Forrest-version" content="0.7">
+<meta name="Forrest-skin-name" content="pelt">
+<title>HiveMind Services</title>
+<link type="text/css" href="skin/basic.css" rel="stylesheet">
+<link media="screen" type="text/css" href="skin/screen.css" rel="stylesheet">
+<link media="print" type="text/css" href="skin/print.css" rel="stylesheet">
+<link type="text/css" href="skin/profile.css" rel="stylesheet">
+<script src="skin/getBlank.js" language="javascript" type="text/javascript"></script><script src="skin/getMenu.js" language="javascript" type="text/javascript"></script><script src="skin/fontsize.js" language="javascript" type="text/javascript"></script>
+<link rel="shortcut icon" href="">
+</head>
+<body onload="init()"><div style="background: red"><h1>2009/04/15 - Apache HiveMind has been retired. </h1><h2>For more information, please explore the <a href="http://attic.apache.org/">Attic</a>. </h2></div>
+<script type="text/javascript">ndeSetTextSize();</script>
+<div id="top">
+<div class="breadtrail">
+<a href="http://www.apache.org/">Apache</a> &gt; <a href="http://hivemind.apache.org">HiveMind</a><script src="skin/breadcrumbs.js" language="JavaScript" type="text/javascript"></script>
+</div>
+<div class="header">
+<div class="grouplogo">
+<a href="http://hivemind.apache.org"><img class="logoImage" alt="HiveMind" src="images/HiveMind-Logo.png" title="HiveMind Services and Configuration Microkernel"></a>
+</div>
+<div class="projectlogoA1">
+<a href="http://www.apache.org"><img class="logoImage" alt="Apache" src="images/asf_logo_wide.gif" title="Apache"></a>
+</div>
+<ul id="tabs">
+<li class="current">
+<a class="base-selected" href="index.html">HiveMind Project</a>
+</li>
+<li>
+<a class="base-not-selected" href="hivemind/index.html">Module: hivemind</a>
+</li>
+<li>
+<a class="base-not-selected" href="hivemind-lib/index.html">Module: hivemind-lib</a>
+</li>
+<li>
+<a class="base-not-selected" href="hivemind-jmx/index.html">Module: hivemind-jmx</a>
+</li>
+<li>
+<a class="base-not-selected" href="hivemind-examples/index.html">Example Code</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="main">
+<div id="publishedStrip">
+<div id="level2tabs"></div>
+<script type="text/javascript"><!--
+document.write("<text>Last Published:</text> " + document.lastModified);
+//  --></script>
+</div>
+<div class="breadtrail">
+             
+             &nbsp;
+           </div>
+<div id="menu">
+<div onclick="SwitchMenu('menu_selected_1.1', 'skin/')" id="menu_selected_1.1Title" class="menutitle" style="background-image: url('skin/images/chapter_open.gif');">HiveMind</div>
+<div id="menu_selected_1.1" class="selectedmenuitemgroup" style="display: block;">
+<div class="menuitem">
+<a href="index.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="downloads.html">Downloads</a>
+</div>
+<div onclick="SwitchMenu('menu_selected_1.1.3', 'skin/')" id="menu_selected_1.1.3Title" class="menutitle" style="background-image: url('skin/images/chapter_open.gif');">Reference</div>
+<div id="menu_selected_1.1.3" class="selectedmenuitemgroup" style="display: block;">
+<div class="menupage">
+<div class="menupagetitle">Services</div>
+</div>
+<div class="menuitem">
+<a href="configurations.html">Configurations</a>
+</div>
+<div class="menuitem">
+<a href="hivedoc.html">HiveDoc</a>
+</div>
+<div class="menuitem">
+<a href="descriptor.html">Module  Descriptor</a>
+</div>
+<div class="menuitem">
+<a href="rules.html">Contribution Processing Rules</a>
+</div>
+<div class="menuitem">
+<a href="dependencies.html">Dependencies</a>
+</div>
+<div class="menuitem">
+<a href="conditional.html">Conditional Contributions</a>
+</div>
+<div class="menuitem">
+<a href="serializing.html">Serializing Services</a>
+</div>
+<div class="menuitem">
+<a href="instance-initialization.html">Instance Initialization</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.1.4', 'skin/')" id="menu_1.1.4Title" class="menutitle">Project Information</div>
+<div id="menu_1.1.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="changes.html">Change Log</a>
+</div>
+<div class="menuitem">
+<a href="todo.html">TODO</a>
+</div>
+<div class="menuitem">
+<a href="mailinglists.html">Mailing Lists</a>
+</div>
+<div class="menuitem">
+<a href="http://issues.apache.org/jira/secure/BrowseProject.jspa?id=10500">Bugs</a>
+</div>
+<div class="menuitem">
+<a href="subversion.html">Subversion Access</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.1.5', 'skin/')" id="menu_1.1.5Title" class="menutitle">Tutorials and Information</div>
+<div id="menu_1.1.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="bootstrap.html">Bootstrapping the Registry</a>
+</div>
+<div class="menuitem">
+<a href="ioc.html">Inversion Of Control</a>
+</div>
+<div class="menuitem">
+<a href="localization.html">Localization</a>
+</div>
+<div class="menuitem">
+<a href="multithreading.html">Multi-Threading</a>
+</div>
+<div class="menuitem">
+<a href="filter.html">Servlets</a>
+</div>
+<div class="menuitem">
+<a href="override.html">Overriding Services</a>
+</div>
+<div class="menuitem">
+<a href="groovy.html">Groovy Support</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.1.6', 'skin/')" id="menu_1.1.6Title" class="menutitle">Reports</div>
+<div id="menu_1.1.6" class="menuitemgroup">
+<div class="menuitem">
+<a href="license-report.html">License</a>
+</div>
+<div class="menuitem">
+<a href="hivedocs/index.html">HiveDoc</a>
+</div>
+<div class="menuitem">
+<a href="developers.html">Developers</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.2', 'skin/')" id="menu_1.2Title" class="menutitle">Framework</div>
+<div id="menu_1.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind/index.html">Overview</a>
+</div>
+<div onclick="SwitchMenu('menu_1.2.2', 'skin/')" id="menu_1.2.2Title" class="menutitle">Services</div>
+<div id="menu_1.2.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind/BuilderFactory.html">BuilderFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/LoggingInterceptor.html">LoggingInterceptor</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/ShutdownCoordinator.html">ShutdownCoordinator</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/ThreadLocale.html">ThreadLocale</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/ThreadLocalStorage.html">ThreadLocalStorage</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.2.3', 'skin/')" id="menu_1.2.3Title" class="menutitle">Configurations</div>
+<div id="menu_1.2.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind/ApplicationDefaults.html">ApplicationDefaults</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/EagerLoad.html">EagerLoad</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/FactoryDefaults.html">FactoryDefaults</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/ObjectProviders.html">ObjectProviders</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/ServiceModels.html">ServiceModels</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/SymbolSources.html">SymbolSources</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/Translators.html">Translators</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.2.4', 'skin/')" id="menu_1.2.4Title" class="menutitle">Ant Tasks</div>
+<div id="menu_1.2.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind/ant/ConstructRegistry.html">ConstructRegistry</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/ant/ManifestClassPath.html">ManifestClassPath</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.3', 'skin/')" id="menu_1.3Title" class="menutitle">Library</div>
+<div id="menu_1.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-lib/index.html">Overview</a>
+</div>
+<div onclick="SwitchMenu('menu_1.3.2', 'skin/')" id="menu_1.3.2Title" class="menutitle">Services</div>
+<div id="menu_1.3.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-lib/BeanFactoryBuilder.html">BeanFactoryBuilder</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/ChainBuilder.html">ChainBuilder</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/ChainFactory.html">ChainFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/DefaultImplementationBuilder.html">DefaultImplementationBuilder</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/EJBProxyFactory.html">EJBProxyFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/MethodInterceptorFactory.html">MethodInterceptorFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/NameLookup.html">NameLookup</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/PlaceholderFactory.html">PlaceholderFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/PipelineFactory.html">PipelineFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/RemoteExceptionCoordinator.html">RemoteExceptionCoordinator</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/ServicePropertyFactory.html">ServicePropertyFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/SpringLookupFactory.html">SpringLookupFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/StrategyFactory.html">StrategyFactory</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.4', 'skin/')" id="menu_1.4Title" class="menutitle">JMX</div>
+<div id="menu_1.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-jmx/index.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/quickstart.html">Quickstart</a>
+</div>
+<div onclick="SwitchMenu('menu_1.4.3', 'skin/')" id="menu_1.4.3Title" class="menutitle">Setup</div>
+<div id="menu_1.4.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-jmx/setupOverview.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/setupJMXImplementation.html">JMX Implementation</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/setupMBeanServer.html">MBeanServer</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/setupConnectors.html">Connectors</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.4.4', 'skin/')" id="menu_1.4.4Title" class="menutitle">Usage</div>
+<div id="menu_1.4.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-jmx/manageServices.html">Manage Services</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/measurePerformance.html">Measure Performance</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/monitorServices.html">Monitor Services</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/manageLog4j.html">Manage Log4J</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.4.5', 'skin/')" id="menu_1.4.5Title" class="menutitle">Advanced Topics</div>
+<div id="menu_1.4.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-jmx/multipleApps.html">Multiple Applications in Server</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.5', 'skin/')" id="menu_1.5Title" class="menutitle">Example Code</div>
+<div id="menu_1.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-examples/index.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-examples/calc.html">Calculator</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-examples/panorama.html">Panorama Startup</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-examples/logging.html">Logging Interceptor</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.6', 'skin/')" id="menu_1.6Title" class="menutitle">Other Resources</div>
+<div id="menu_1.6" class="menuitemgroup">
+<div class="menuitem">
+<a href="http://wiki.apache.org/jakarta-hivemind/">HiveMind Wiki</a>
+</div>
+<div class="menuitem">
+<a href="http://howardlewisship.com/blog/">Tapestry and HiveMind Blog</a>
+</div>
+<div class="menuitem">
+<a href="http://www.theserverside.com/articles/article.tss?l=HivemindBuzz">HiveMind article on TheServerSide</a>
+</div>
+</div>
+<div id="credit"></div>
+<div id="roundbottom">
+<img style="display: none" class="corner" height="15" width="15" alt="" src="skin/images/rc-b-l-15-1body-2menu-3menu.png"></div>
+<div id="credit2"></div>
+</div>
+<div id="content">
+<div class="trail">
+<text>Font size:</text> 
+	          &nbsp;<input value="Reset" class="resetfont" title="Reset text" onclick="ndeSetTextSize('reset'); return false;" type="button">      
+	          &nbsp;<input value="-a" class="smallerfont" title="Shrink text" onclick="ndeSetTextSize('decr'); return false;" type="button">
+	          &nbsp;<input value="+a" class="biggerfont" title="Enlarge text" onclick="ndeSetTextSize('incr'); return false;" type="button">
+</div>
+<h1>HiveMind Services</h1>
+<div id="minitoc-area">
+<ul class="minitoc">
+<li>
+<a href="#Defining+Services">Defining Services</a>
+</li>
+<li>
+<a href="#Extending+Services">Extending Services</a>
+<ul class="minitoc">
+<li>
+<a href="#Service+Constructors">Service Constructors</a>
+</li>
+<li>
+<a href="#Implementation+Factories">Implementation Factories</a>
+</li>
+<li>
+<a href="#Interceptor+Contributions">Interceptor Contributions</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#A+short+example">A short example</a>
+</li>
+<li>
+<a href="#Singleton+Service+Model">Singleton Service Model</a>
+</li>
+<li>
+<a href="#Primitive+Service+Model">Primitive Service Model</a>
+</li>
+<li>
+<a href="#Threaded+Service+Model">Threaded Service Model</a>
+</li>
+<li>
+<a href="#Pooled+Service+Model">Pooled Service Model</a>
+</li>
+<li>
+<a href="#Service+Lifecycle">Service Lifecycle</a>
+</li>
+<li>
+<a href="#Services+and+Events">Services and Events</a>
+</li>
+<li>
+<a href="#Bean+Services">Bean Services</a>
+</li>
+<li>
+<a href="#Frequently+Asked+Questions">Frequently Asked Questions</a>
+</li>
+</ul>
+</div>
+		
+<p>In HiveMind, a service is simply an object that implements a particular
+			interface, the <em>service interface</em> (see <a href="#Bean+Services">this note</a>). You supply the service
+			interface (packaged as part of a module). You supply the core
+			implementation of the interface (in the same module, or in a different
+			module). At runtime, HiveMind puts it all together.</p>
+		
+<p>HiveMind defines four service models: primitive, singleton, threaded and
+			pooled. In the primitive and singleton models, each service will
+			ultimately be just a single object instance. In the threaded and pooled
+			models, there may be many instances simultaneously, one for each thread.</p>
+		
+<p>Unlike EJBs, there's no concept of location transparency: services are
+			always local to the same JVM. Unlike XML-based web services, there's no
+			concept of language transparency: services are always expressed in terms
+			of Java interfaces. Unlike JMX or Jini, there's no concept of hot-loading
+			of services. HiveMind is kept deliberately simple, yet still very
+			powerful, so that your code is kept simple.</p>
+		
+<a name="N1001D"></a><a name="Defining+Services"></a>
+<h2 class="boxed">Defining Services</h2>
+<div class="section">
+<p>A service definition begins with a Java interface, the service
+				interface. Any interface will do, HiveMind doesn't care, and there's no
+				base HiveMind interface.</p>
+<p>A module descriptor may include <a href="descriptor.html#service-point">&lt;service-point&gt;</a> elements to define
+				services. A module may contain any number of services.</p>
+<p>Each &lt;service-point&gt; establishes an id for the service and defines the
+				interface for the service. An example is provided later in this
+				document.</p>
+<p>HiveMind is responsible for supplying the service implementation as
+				needed; in most cases, the service implementation is an additional Java
+				class which implements the service interface. HiveMind will instantiate
+				the class and configure it as needed. The exact timing is determined
+				by the service implementation's service model:</p>
+<ul>
+				
+<li>
+<strong>primitive</strong> : the service is constructed on first
+					reference</li>
+				
+<li>
+<strong>singleton</strong> : the service is not constructed until a
+					method of the service interface is invoked</li>
+				
+<li>
+<strong>threaded</strong> : invoking a service method constructs and
+					binds an instance of the service to the current thread</li>
+				
+<li>
+<strong>pooled</strong> : as with threaded, but service
+					implementations are stored in a pool when unbound from a thread for
+					future use in other threads.</li>
+			
+</ul>
+<p>Additional service models can be defined via the hivemind.ServiceModels
+				configuration point.</p>
+<p>HiveMind uses a system of <em>proxies</em> for most of the service
+				models (all except the primitive service model, which primarily exists
+				to bootstrap the core HiveMind services used by other services). Proxies
+				are objects that implement the service interface and take care of
+				details such as constructing the actual implementation of a service on
+				the fly. These lifecycle issues are kept hidden from your code behind
+				the proxies.</p>
+<p>A service definition may include <em>service contributions</em>, or may
+				leave that for another module.</p>
+<p>Ultimately, a service will consist of a core implementation (a Java
+				object that implements the service interface) and, optionally, any
+				number of interceptors. Interceptors sit between the core implementation
+				and the client, and add functionality to the core implementation such as
+				logging, security, transaction demarcation or performance monitoring.
+				Interceptors are yet more objects that implement the service interface.</p>
+<p>Instantiating the core service implementation, configuring it, and
+				wrapping it with any interceptors is referred to as <em>constructing the
+				service</em>. Typically, a service proxy will be created first. The
+				first time that a service method is invoked on the proxy, the service
+				implementation is instantiated and configured, and any interceptors for
+				the service are created.</p>
+</div>
+		
+<a name="N10063"></a><a name="Extending+Services"></a>
+<h2 class="boxed">Extending Services</h2>
+<div class="section">
+<p>Any module may contribute to any service extension point. An <a href="descriptor.html#implementation">&lt;implementation&gt;</a>
+				element contains these contributions. Contributions take three forms:</p>
+<ul>
+				
+<li>Service constructors: <ul> 
+<li>
+<a href="descriptor.html#create-instance">&lt;create-instance&gt;</a> to instantiate an
+					instance of a Java class as the implementation</li> 
+<li>
+<a href="descriptor.html#invoke-factory">&lt;invoke-factory&gt;</a>
+					to have another service create the implementation</li> 
+</ul> 
+</li>
+				
+<li>
+<a href="descriptor.html#interceptor">&lt;interceptor&gt;</a> to add additional logic to a core implementation</li>
+			
+</ul>
+<a name="N1008B"></a><a name="Service+Constructors"></a>
+<h3 class="boxed">Service Constructors</h3>
+<p>A service constructor is used to instantiate a Java class as the core
+					implementation instance for the service.</p>
+<p>There are two forms of service constructors: instance creators and
+					implementation factories.</p>
+<p>An instance creator is represented by a <a href="descriptor.html#create-instance">&lt;create-instance&gt;</a> element. It
+					includes a class attribute, the Java class to instantiate.</p>
+<p>An implementation factory is represented by a <a href="descriptor.html#invoke-factory">&lt;invoke-factory&gt;</a> 
+					element. It includes a service-id attribute, the id of a service
+					implementation factory service (which implements the <a href="hivemind/apidocs/org/apache/hivemind/ServiceImplementationFactory.html">ServiceImplementationFactory</a>
+					interface). The most common example is the <a href="hivemind/BuilderFactory.html">hivemind.BuilderFactory</a> 
+					service.</p>
+<a name="N100AE"></a><a name="Implementation+Factories"></a>
+<h3 class="boxed">Implementation Factories</h3>
+<p>An implementation factory is used to create a core implementation for
+					a service at runtime.</p>
+<p>Often, the factory will need some additional configuration
+					information. For example, the <a href="hivemind-lib/EJBProxyFactory.html">hivemind.lib.EJBProxyFactory</a>
+				  service uses its parameters to
+					identify the JNDI name of the EJB's home interface, as well as the
+					home interface class itself.</p>
+<p>Parameters to factory services are the XML elements enclosed by the &lt;invoke-factory&gt;
+					element. Much like a configuration contribution, these parameters are
+					converted from XML into Java objects before being provided to the
+					factory.</p>
+<p>The most common service factory is <a href="hivemind/BuilderFactory.html">hivemind.BuilderFactory</a>. It is
+					used to construct a service and then set properties of the service
+					implementation object.</p>
+<a name="N100C9"></a><a name="Interceptor+Contributions"></a>
+<h3 class="boxed">Interceptor Contributions</h3>
+<p>An interceptor contribution is represented by an <a href="descriptor.html#interceptor">&lt;interceptor&gt;</a> 
+					element. The service-id attribute identifies a service interceptor
+					factory service: a service that implements the <a href="hivemind/apidocs/org/apache/hivemind/ServiceInterceptorFactory.html">ServiceInterceptorFactory</a>
+					interface.</p>
+<p>An interceptor factory knows how to create an object that implements
+					an arbitrary interface (the interface being defined by the service
+					extension point), adding new functionality. For example, the <a href="hivemind/LoggingInterceptor.html">hivemind.LoggingInterceptor</a>
+					factory creates an instance that logs entry and exit to each method.</p>
+<p>The factory shouldn't care what the service interface itself is ...
+					it should adapt to whatever interface is defined by the service
+					extension point it will create an interceptor for.</p>
+<p>A service extension point may have any number of interceptor
+					contributions. If the order in which interceptors are applied is
+					important, then the optional <span class="codefrag">before</span> and <span class="codefrag">after</span>
+					attributes can be specified.  The value of the <span class="codefrag">before</span> and <span class="codefrag">after</span>
+					attributes must be a comm-separated list of interceptor names (name defaults to the 
+					service factory id which created the interceptor if none is provided).</p>
+<div style="text-align: center;">
+<img class="figure" alt="A Stack of Interceptors" src="images/InterceptorStack.png"></div>
+<p>In this example, it was desired that any method logging occur first,
+					before the other interceptors. This ensures that the time taken to log
+					method entry and exit is not included in the performance statistics
+					(gathered by the performance interceptor). To ensure that the logging
+					interceptor is the first, or earliest interceptor, the special value 
+					<span class="codefrag">*</span> (rather than a list of interceptor service ids) is
+					given for its <span class="codefrag">before</span> attribute (within the <a href="descriptor.html#interceptor">&lt;interceptor&gt;</a> 
+					element). This forces the logging interceptor to the front of the list
+					(however, only a single interceptor may be so designated).</p>
+<p>Likewise, the security checks should occur last, after logging and
+					after performance; this is accomplished by setting the <span class="codefrag">after</span>
+					attribute to <span class="codefrag">*</span>. The performance interceptor naturally
+					falls between the two.</p>
+<p>This is about as complex as an interceptor stack is likely to grow.
+					However, through the use of explicit dependencies, almost any
+					arrangement of interceptors is possible ... even when different
+					modules contribute the interceptors.</p>
+<p>Interceptors implement the <span class="codefrag">toString()</span> method to provide
+					a useful identification for the interceptor, for example: <br> 
+            
+<span class="codefrag">&lt;Iterceptor: hivemind.LoggingInterceptor for
+					com.myco.MyService(com.myco.MyServiceInterface)&gt;</span> 
+</p>
+<p>This string identifies the interceptor service factory
+					(hivemind.LoggingInterceptor), the service extension point
+					(com.myco.MyService) and the service interface
+					(com.myco.MyServiceInterface).</p>
+<div class="frame warning">
+<div class="label">Warning</div>
+<div class="content">
+          If <span class="codefrag">toString()</span> is part of the service interface (really,
+					a very rare case), then the interceptor <em>does not</em> override the
+					service implementation's method. However, this is not a recommended practice.
+        </div>
+</div>
+</div>
+		
+<a name="N10129"></a><a name="A+short+example"></a>
+<h2 class="boxed">A short example</h2>
+<div class="section">
+<p>As an example, let's create an interface with a single method, used to
+				add together two numbers.</p>
+<pre class="code">
+package com.myco.mypackage;
+
+public interface Adder
+{
+  public int add(int arg1, int arg2);
+}
+</pre>
+<p>We could define many methods, and the methods could throw exceptions.
+				Once more, HiveMind doesn't care.</p>
+<p>We need to create a module to contain this service. We'll create a
+				simple HiveMind deployment descriptor. This is an XML file, named
+				hivemodule.xml, that must be included in the module's META-INF
+				directory.</p>
+<pre class="code">
+&lt;?xml version="1.0"?&gt;      
+&lt;module id="com.myco.mypackage" version="1.0.0"&gt;
+  &lt;service-point id="Adder" interface="Adder"/&gt;
+&lt;/module&gt;</pre>
+<p>The complete id for this service is <span class="codefrag">com.myco.mypackage.Adder</span>
+				, formed from the module id and the service id. Commonly, the service id
+				will exactly match the complete name of the service interface, but this
+				is not required.</p>
+<p>Normally, the &lt;service-point&gt; would contain a <a href="descriptor.html#create-instance">&lt;create-instance&gt;</a> or <a href="descriptor.html#invoke-factory">&lt;invoke-factory&gt;</a>
+				element, used to create the core implementation. For this example, we'll
+				create a second module that provides the implementation. First we'll
+				define the implementation class.</p>
+<pre class="code">
+package com.myco.mypackage.impl;
+
+import com.myco.mypackage.Adder;
+
+public class AdderImpl implements Adder
+{
+  public int add(int arg1, int arg2)
+  {
+    return arg1 + arg2;
+  }
+}
+</pre>
+<p>That's what we meant by a POJO. We'll create a second module to provide
+				this implementation.</p>
+<pre class="code">
+&lt;?xml version="1.0"?&gt;
+&lt;module id="com.myco.mypackage.impl" version="1.0.0"&gt;
+  &lt;implementation service-id="com.myco.mypackage.Adder"&gt;
+    &lt;create-instance class="AdderImpl"/&gt;
+  &lt;/implementation&gt;
+&lt;/module&gt;</pre>
+<p>The runtime code to access the service is very streamlined:</p>
+<pre class="code">
+Registry registry = . . .
+Adder service = (Adder) registry.getService("com.myco.mypackage.Adder", Adder.class);  
+int sum = service.add(4, 7);
+</pre>
+<p>Another module may provide an interceptor:</p>
+<pre class="code">
+&lt;?xml version="1.0"?&gt;
+&lt;module id="com.myco.anotherpackage" version="1.0.0"&gt;
+  &lt;implementation service-id="com.myco.mypackage.Adder"&gt;
+    &lt;interceptor service-id="hivemind.LoggingInterceptor"/&gt;
+  &lt;/implementation&gt;
+&lt;/module&gt;
+</pre>
+<p>Here the Logging interceptor is applied to the service extension point.
+				The interceptor will be inserted between the client code and the core
+				implementation. The client in the code example won't get an instance of
+				the AdderImpl class, it will get an instance of the interceptor, which
+				internally invokes methods on the AdderImpl instance. Because we code
+				against interfaces instead of implementations, the client code neither
+				knows nor cares about this.</p>
+</div>
+		
+<a name="N1016E"></a><a name="Singleton+Service+Model"></a>
+<h2 class="boxed">Singleton Service Model</h2>
+<div class="section">
+<p>Constructing a service can be somewhat expensive; it involves
+				instantiating a core service implementation, configuring its properties
+				(some of which may also be services), and building the stack of
+				interceptors for the service. Although HiveMind encourages you to define
+				your application in terms of a large number of small, simple, testable
+				services, it is also desirable to avoid a cascade of unnecessary object
+				creation due to the dependencies between services.</p>
+<p>To resolve this, HiveMind defers the actual creation of services by
+				default. This is controled by the <span class="codefrag">model</span> attribute of the 
+        <a href="descriptor.html#create-instance">&lt;create-instance&gt;</a> or <a href="descriptor.html#invoke-factory">&lt;invoke-factory&gt;</a>
+				elements; the default model is <strong>singleton</strong>.</p>
+<p>When a service is first requested a <em>proxy</em> for the service is
+				created. This proxy implements the same service interface as the actual
+				service and, the first time a method of the service interface is
+				invoked, will force the construction of the actual service (with the
+				core service implementation, interceptors, references to other services,
+				and so forth).</p>
+<p>In certain cases (including many of the fundamental services provided
+				by HiveMind) this behavior is not desired; in those cases, the <strong>
+				primitive</strong> service model is specified. In addition, there is
+				rarely a need to defer service implementation or service interceptor
+				factory services.</p>
+</div>
+		
+<a name="N10195"></a><a name="Primitive+Service+Model"></a>
+<h2 class="boxed">Primitive Service Model</h2>
+<div class="section">
+<p>The simplest service model is the <strong>primitive</strong> service model; in this model the service is 
+        constructed on first reference. This is appropriate for services such as service factories and interceptor 
+        factories, and for several of the basic services provided in the <a href="hivedocs/module/hivemind.html">hivemind module</a>.</p>
+<p> There is rarely a need to use this service model in your own code. It exists primarily to support the 
+        services in the hivemind module itself (the implementation of the singleton service model is dependent on 
+        several services that use the primitive service model). </p>
+</div>    
+		
+<a name="N101A9"></a><a name="Threaded+Service+Model"></a>
+<h2 class="boxed">Threaded Service Model</h2>
+<div class="section">
+<p>In general, singleton services (using the singleton or primitive
+				service models) should be sufficient. In some cases, the service may
+				need to keep some specific state. State and multithreading don't mix, so
+				the <strong>threaded</strong> service model constructs, as needed, a
+				service instance for the current thread. Once constructed, the service
+				instance stays bound to the thread until it is discarded. The particular
+				service implementation is exclusive to the thread and is only accessible
+				from that thread.</p>
+<p>The threaded service model uses a special proxy class (fabricated at
+				runtime) to support this behavior; the proxy may be shared between
+				threads but methods invoked on the proxy are redirected to the private
+				service implementation bound to the thread. Binding of a service
+				implementation to a thread occurs automatically, the first time a
+				service method is invoked.</p>
+<p>The service instance is discarded when notified to cleanup; this is
+				controlled by the hivemind.ThreadEventNotifier service. If your
+				application has any threaded services, you are responsible for invoking
+				the <span class="codefrag">fireThreadCleanup()</span> method of the service.</p>
+<p>A core implementation may implement the <a href="hivemind/apidocs/org/apache/hivemind/Discardable.html">Discardable</a> interface. If so,
+				it will receive a notification as the service instance is discarded.</p>
+<p>HiveMind includes a <a href="filter.html">servlet filter</a> to
+				take care creating the Registry and managing the ThreadEventNotifier
+				service.</p>
+</div>
+		
+<a name="N101CD"></a><a name="Pooled+Service+Model"></a>
+<h2 class="boxed">Pooled Service Model</h2>
+<div class="section">
+<p>The pooled service model is very similar to the threaded model, in that
+				a service implementation will be exclusively bound to a particular
+				thread (until the thread is cleaned up). Unlike the threaded model, the
+				service is not discarded; instead it is stored into a pool for later
+				reuse with the same or a different thread.</p>
+<p>As with the threaded model, all of this binding and unbinding is hidden
+				behind a dynamically fabricated proxy class.</p>
+<p>Core service implementations may implement the <a href="hivemind/apidocs/org/apache/hivemind/events/RegistryShutdownListener.html">RegistryShutdownListener</a>
+				interface to receive a callback for final cleanups (as with the
+				singleton and deferred service models).</p>
+<p>In addition, a service may implement the <a href="hivemind/apidocs/org/apache/hivemind/PoolManageable.html">PoolManageable</a> interface to
+				receive callbacks specific to the pooled service. The service is
+				notified when it is activated (bound to a thread) and deactivated
+				(unbound from the thread and returned to the pool).</p>
+</div>
+		
+<a name="N101E8"></a><a name="Service+Lifecycle"></a>
+<h2 class="boxed">Service Lifecycle</h2>
+<div class="section">
+<p>As discussed, the service model determines when a service is
+				instantiated. In many cases, the service needs to know when it has been
+				created (to perform any final initializations) or when the Registry has
+				been shut down.</p>
+<p>A core service implementation may also implement the <a href="hivemind/apidocs/org/apache/hivemind/events/RegistryShutdownListener.html">RegistryShutdownListener</a>
+				interface. When a Registry is <a href="hivemind/apidocs/org/apache/hivemind/Registry.html#shutdown()">shutdown</a>, the <span class="codefrag">
+				registryDidShutdown()</span> method is invoked on all services (and many
+				other objects, such as proxies). The order in which these notifications
+				occur is not defined. A service may release any resources it may hold at
+				this time. It should not invoke methods on other service interfaces.</p>
+<p>The threaded service model does <strong>not</strong> register services
+				for Registry shutdown notification; regardless of whether the core
+				service implementation implements the RegistryShutdownListener interface
+				or not. Instead, the core service implementation should implement the 
+				<a href="hivemind/apidocs/org/apache/hivemind/Discardable.html">Discardable</a> interface, to
+				be informed when a service bound to a thread is discarded.</p>
+<p>It is preferred that, whenever possible, services use the singleton
+				service model (the default) and not the primitive model. All the service
+				models (except for the primitive service model) expose a <strong>proxy</strong>
+				object (implementing the service interface) to client code (included
+				other services). These proxies are aware of when the Registry is
+				shutdown and will throw an exception when a service method is invoked on
+				them.</p>
+</div>
+		
+<a name="N10210"></a><a name="Services+and+Events"></a>
+<h2 class="boxed">Services and Events</h2>
+<div class="section">
+<p>It is fairly common that some services will produce events and other
+				services will consume events. The use of the <a href="hivemind/BuilderFactory.html">hivemind.BuilderFactory</a> 
+				to construct a service simplifies this, using the <span class="codefrag">&lt; 
+				event-listener&gt;</span> element. The BuilderFactory can register a 
+				<em>core service implementation</em> (not the service itself!) as a <em>
+				listener</em> of events produced by some other service.</p>
+<p>The producing service must include a matched pair of listener
+				registration methods, i.e., both <span class="codefrag">addFooListener()</span> and 
+				<span class="codefrag">removeFooListener()</span>. Note that only the <em>implementation
+				class</em> must implement the listener interface; the service interface
+				does not have to extend the listener interface. The core service
+				implementation is registered directly with the producer service,
+				bypassing any interceptors or proxies.</p>
+</div>
+    
+<a name="N10233"></a><a name="Bean+Services"></a>
+<h2 class="boxed">Bean Services</h2>
+<div class="section">
+<p>In HiveMind 1.0, you always must have a service <em>interface</em>.  Starting in HiveMind 1.1, the
+  interface attribute of the <a href="descriptor.html#service-point">&lt;service-point&gt;</a> descriptor element can be a simple class as well.</p>
+<p>
+The class you specify must have a public, no-arguments constructor.  Your service constructor
+(<a href="descriptor.html#create-instance">&lt;create-instance&gt;</a> or <a href="descriptor.html#invoke-factory">&lt;invoke-factory&gt;</a>) should create an instance of the specified interface class (or a subclass).    
+  </p>
+<p>
+  This represents a "quick and dirty" approach to HiveMind.  Some features of HiveMind, particularily
+  specialized service implementation factories, may not be compatible with bean services ... they are designed
+  for interface services.
+</p>
+</div>
+		
+<a name="N10252"></a><a name="Frequently+Asked+Questions"></a>
+<h2 class="boxed">Frequently Asked Questions</h2>
+<div class="section">
+<ul>
+				
+<li>
+<strong>Why do I pass the interface class to getService()</strong>? 
+					<p>This is to add an additional level of error checking and reporting.
+					HiveMind knows, from the module descriptors, the interface provided by
+					the service extension point, but it can't tell if <em>you</em> know
+					that. By passing in the interface you'll cast the returned service to,
+					HiveMind can verify that you won't get a ClassCastException. Instead,
+					it throws an exception with more details (the service extension point
+					id, the actual interface provided, and the interface you passed it).</p>
+</li>
+				
+<li>
+					
+<strong>What if no module provides a core implementation of the
+						service?</strong>
+					
+<p>HiveMind checks for a service constructor when the registry itself
+						is assembled. If a service extension point has no service
+						constructor, an error is logged (identifying the extension point
+						id). In addition, <span class="codefrag">getService()</span> will throw an
+						ApplicationRuntimeException.</p>
+				
+</li>
+				
+<li>
+					
+<strong>What if I need to do some initializations in my service?</strong>
+					
+<p>If you have additional initializations that can't occur inside your
+						core service implementation's constructor (for instance, if the
+						initializations are based on properties set after the service
+						implementation object is instantiated), then your class should use
+						the <a href="hivemind/BuilderFactory.html">hivemind.BuilderFactory</a> to invoke an initializer method.</p>
+				
+</li>
+				
+<li>
+					
+<strong>What if I don't invoke Registry.cleanupThread()?</strong>
+					
+<p>Then service implementations bound to the current thread stay
+						bound. When the thread is next used to process a request, the same
+						services, in whatever state they were left in, will be used. This
+						may not be desirable in a servlet or Tapestry application, as some
+						state from a client may be left inside the services, and a different
+						client may be associated with the thread in later executions.</p>
+				
+</li>
+				
+<li>
+					
+<strong>What if I want my service to be created early, not just when
+						needed?</strong>
+					
+<p>Contribute your service into the <a href="hivemind/EagerLoad.html">hivemind.EagerLoad</a> 
+						configuration; this will force HiveMind to instantiate the service
+						on startup. This is often used when developing an application, so
+						that configuration errors are caught early; it may also be useful
+						when a service should be instantiated to listen for events from some
+						other service.</p>
+				
+</li>
+			
+</ul>
+</div>
+	
+</div>
+<div class="clearboth">&nbsp;</div>
+</div>
+<div id="footer">
+<div class="lastmodified">
+<script type="text/javascript"><!--
+document.write("<text>Last Published:</text> " + document.lastModified);
+//  --></script>
+</div>
+<div class="copyright">
+        Copyright &copy;
+         2005 Apache Software Foundation</div>
+</div>
+</body>
+</html>

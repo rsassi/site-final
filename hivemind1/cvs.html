@@ -1,0 +1,260 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Apache Forrest" name="Generator">
+<meta name="Forrest-version" content="0.7-dev">
+<meta name="Forrest-skin-name" content="pelt">
+<title>CVS Access</title>
+<link type="text/css" href="skin/basic.css" rel="stylesheet">
+<link media="screen" type="text/css" href="skin/screen.css" rel="stylesheet">
+<link media="print" type="text/css" href="skin/print.css" rel="stylesheet">
+<link type="text/css" href="skin/profile.css" rel="stylesheet">
+<script src="skin/getBlank.js" language="javascript" type="text/javascript"></script><script src="skin/getMenu.js" language="javascript" type="text/javascript"></script><script src="skin/fontsize.js" language="javascript" type="text/javascript"></script>
+<link rel="shortcut icon" href="">
+</head>
+<body onload="init()"><div style="background: red"><h1>2009/04/15 - Apache HiveMind has been retired. </h1><h2>For more information, please explore the <a href="http://attic.apache.org/">Attic</a>. </h2></div>
+<script type="text/javascript">ndeSetTextSize();</script>
+<div id="top">
+<!--+
+    |breadtrail
+    +-->
+<div class="breadtrail">
+<a href="http://jakarta.apache.org/">Jakarta</a> &gt; <a href="http://jakarta.apache.org/hivemind/">HiveMind</a><script src="skin/breadcrumbs.js" language="JavaScript" type="text/javascript"></script>
+</div>
+<!--+
+    |header
+    +-->
+<div class="header">
+<!--+
+    |start group logo
+    +-->
+<div class="grouplogo">
+<a href="http://jakarta.apache.org/hivemind/"><img class="logoImage" alt="HiveMind" src="images/HiveMind-Logo.png" title="HiveMind Services and Configuration Microkernel"></a>
+</div>
+<!--+
+    |end group logo
+    +-->
+<!--+
+    |start Project Logo
+    +-->
+<div class="projectlogoA1">
+<a href="http://jakarta.apache.org/"><img class="logoImage" alt="Jakarta" src="images/jakarta-logo.gif" title="Apache Jakarta"></a>
+</div>
+<!--+
+    |end Project Logo
+    +-->
+<!--+
+    |start Tabs
+    +-->
+<ul id="tabs">
+<li class="current">
+<a class="base-selected" href="index.html">HiveMind Project</a>
+</li>
+<li>
+<a class="base-not-selected" href="hivemind/index.html">Module: hivemind</a>
+</li>
+<li>
+<a class="base-not-selected" href="hivemind-lib/index.html">Module: hivemind-lib</a>
+</li>
+<li>
+<a class="base-not-selected" href="hivemind-jmx/index.html">Module: hivemind-jmx</a>
+</li>
+<li>
+<a class="base-not-selected" href="hivemind-examples/index.html">Example Code</a>
+</li>
+</ul>
+<!--+
+    |end Tabs
+    +-->
+</div>
+</div>
+<div id="main">
+<div id="publishedStrip">
+<!--+
+    |start Subtabs
+    +-->
+<div id="level2tabs"></div>
+<!--+
+    |end Endtabs
+    +-->
+<script type="text/javascript" language="JavaScript"><!--
+              document.write("Published: " + document.lastModified);
+              //  --></script>
+</div>
+<!--+
+    |breadtrail
+    +-->
+<div class="breadtrail">
+             
+             &nbsp;
+           </div>
+<!--+
+    |start Menu, mainarea
+    +-->
+<!--+
+    |start Menu
+    +-->
+<div id="menu">
+<div onclick="SwitchMenu('menu_1.1', 'skin/')" id="menu_1.1Title" class="menutitle">Reference</div>
+<div id="menu_1.1" class="menuitemgroup">
+<div class="menuitem">
+<a href="services.html">Services</a>
+</div>
+<div class="menuitem">
+<a href="configurations.html">Configurations</a>
+</div>
+<div class="menuitem">
+<a href="hivedoc.html">HiveDoc</a>
+</div>
+<div class="menuitem">
+<a href="descriptor.html">Module  Descriptor</a>
+</div>
+<div class="menuitem">
+<a href="rules.html">Contribution Processing Rules</a>
+</div>
+<div class="menuitem">
+<a href="dependencies.html">Dependencies</a>
+</div>
+<div class="menuitem">
+<a href="conditional.html">Conditional Contributions</a>
+</div>
+<div class="menuitem">
+<a href="serializing.html">Serializing Services</a>
+</div>
+<div class="menuitem">
+<a href="instance-initialization.html">Instance Initialization</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_selected_1.2', 'skin/')" id="menu_selected_1.2Title" class="menutitle" style="background-image: url('skin/images/chapter_open.gif');">Project Information</div>
+<div id="menu_selected_1.2" class="selectedmenuitemgroup" style="display: block;">
+<div class="menuitem">
+<a href="changes.html">Change Log</a>
+</div>
+<div class="menuitem">
+<a href="todo.html">TODO</a>
+</div>
+<div class="menuitem">
+<a href="http://jakarta.apache.org/site/mail2.html#HiveMind">Mailing Lists</a>
+</div>
+<div class="menuitem">
+<a href="downloads.html">Downloads</a>
+</div>
+<div class="menuitem">
+<a href="http://issues.apache.org/jira/secure/BrowseProject.jspa?id=10500">Bugs</a>
+</div>
+<div class="menupage">
+<div class="menupagetitle">CVS Access</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.3', 'skin/')" id="menu_1.3Title" class="menutitle">Tutorials and Information</div>
+<div id="menu_1.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="bootstrap.html">Bootstrapping the Registry</a>
+</div>
+<div class="menuitem">
+<a href="ioc.html">Inversion Of Control</a>
+</div>
+<div class="menuitem">
+<a href="localization.html">Localization</a>
+</div>
+<div class="menuitem">
+<a href="multithreading.html">Multi-Threading</a>
+</div>
+<div class="menuitem">
+<a href="filter.html">Servlets</a>
+</div>
+<div class="menuitem">
+<a href="override.html">Overriding Services</a>
+</div>
+<div class="menuitem">
+<a href="groovy.html">Groovy Support</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.4', 'skin/')" id="menu_1.4Title" class="menutitle">Reports</div>
+<div id="menu_1.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="license-report.html">License</a>
+</div>
+<div class="menuitem">
+<a href="hivedocs/index.html">HiveDoc</a>
+</div>
+<div class="menuitem">
+<a href="developers.html">Developers</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.5', 'skin/')" id="menu_1.5Title" class="menutitle">Other Resources</div>
+<div id="menu_1.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="http://wiki.apache.org/jakarta-hivemind/">HiveMind Wiki</a>
+</div>
+<div class="menuitem">
+<a href="http://howardlewisship.com/blog/">Tapestry and HiveMind Blog</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.6', 'skin/')" id="menu_1.6Title" class="menutitle">Related Projects</div>
+<div id="menu_1.6" class="menuitemgroup">
+<div class="menuitem">
+<a href="http://jakarta.apache.org/tapestry/">Tapestry</a>
+</div>
+<div class="menuitem">
+<a href="http://www.springframework.org">Spring</a>
+</div>
+</div>
+<div id="credit"></div>
+<div id="roundbottom">
+<img style="display: none" class="corner" height="15" width="15" alt="" src="skin/images/rc-b-l-15-1body-2menu-3menu.png"></div>
+<!--+
+  |alternative credits
+  +-->
+</div>
+<!--+
+    |end Menu
+    +-->
+<!--+
+    |start content
+    +-->
+<div id="content">
+<div class="trail">
+	        Font size: 
+	          &nbsp;<input value="Reset" class="resetfont" title="Reset text" onclick="ndeSetTextSize('reset'); return false;" type="button">      
+	          &nbsp;<input value="-a" class="smallerfont" title="Shrink text" onclick="ndeSetTextSize('decr'); return false;" type="button">
+	          &nbsp;<input value="+a" class="biggerfont" title="Enlarge text" onclick="ndeSetTextSize('incr'); return false;" type="button">
+</div>
+<h1>CVS Access</h1>
+    
+<p>Anonymous CVS access is available as:</p>
+    
+<pre class="code">
+:pserver:anoncvs@cvs.apache.org:/home/cvspublic  </pre>
+    
+<p>The module name is <span class="codefrag">jakarta-hivemind</span>. </p>
+    
+<p>In addition, the <a class="external" href="http://cvs.apache.org/viewcvs.cgi/jakarta-hivemind/">CVS repository may be browsed 
+      online</a>.  <a href="http://jakarta.apache.org/site/cvsindex.html ">More documentation</a> about
+      accessing Apache software using CVS is available.</p>
+  
+</div>
+<!--+
+    |end content
+    +-->
+<div class="clearboth">&nbsp;</div>
+</div>
+<div id="footer">
+<!--+
+    |start bottomstrip
+    +-->
+<div class="lastmodified">
+<script type="text/javascript"><!--
+document.write("Last Published: " + document.lastModified);
+//  --></script>
+</div>
+<div class="copyright">
+        Copyright &copy;
+         2005 2005 Apache Software Foundation</div>
+<!--+
+    |end bottomstrip
+    +-->
+</div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="../hivemind.css">
+<title>HiveMind Registry -  Configuration Point panorama.startup.Startup</title>
+</head>
+<body><div style="background: red"><h1>2009/04/15 - Apache HiveMind has been retired. </h1><h2>For more information, please explore the <a href="http://attic.apache.org/">Attic</a>. </h2></div>
+<div class="title"> Module <a href="../module/panorama.startup.html">panorama.startup</a>
+</div>
+<div class="center-nav">
+<a href="../index.html">Back to master index</a>
+</div>
+<hr>
+<table class="top-level-object" cellspacing="0">
+<tr>
+<th class="object-id"><img src="../public.png" width="20" height="20" alt="[public]"> Configuration Point panorama.startup.Startup</th><th>Occurs:</th><td> unbounded </td>
+</tr>
+<tr>
+<th colspan="2">Schema:</th><td><a href="../schema/panorama.startup.Tasks.html">panorama.startup.Tasks</a></td>
+</tr>
+<tr>
+<th class="section" colspan="3"> Contribution from module <a href="../module/panorama.discussions.html">panorama.discussions</a></th>
+</tr>
+<tr>
+<td colspan="3" class="container">
+<div class="xml">
+     &lt;static-task <span class="attribute">after</span>="<span class="attribute-value">mail</span>"
+       <span class="attribute">class</span>="<span class="attribute-value">DiscussionsStartup</span>"
+       <span class="attribute">id</span>="<span class="attribute-value">discussions</span>"
+       <span class="attribute">title</span>="<span class="attribute-value">Discussions</span>"
+       /&gt; </div>
+</td>
+</tr>
+<tr>
+<th class="section" colspan="3"> Contribution from module <a href="../module/panorama.mail.html">panorama.mail</a></th>
+</tr>
+<tr>
+<td colspan="3" class="container">
+<div class="xml">
+     &lt;task <span class="attribute">executable</span>="<span class="attribute-value">service:MailStartup</span>"
+       <span class="attribute">id</span>="<span class="attribute-value">mail</span>"
+       <span class="attribute">title</span>="<span class="attribute-value">Mail</span>"
+       /&gt; </div>
+</td>
+</tr>
+</table>
+<hr>
+<div class="title"> Module <a href="../module/panorama.startup.html">panorama.startup</a>
+</div>
+<div class="center-nav">
+<a href="../index.html">Back to master index</a>
+</div>
+</body>
+</html>

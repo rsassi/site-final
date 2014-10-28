@@ -1,0 +1,273 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+
+
+
+<html>
+  <head>
+    <title>HiveMind Framework -
+      hivemind.LoggingInterceptor Service</title>
+    <style type="text/css" media="all">
+      @import url("./css/maven-base.css");
+      @import url("./css/maven-theme.css");
+      @import url("./css/site.css");
+    </style>
+    <link rel="stylesheet" href="./css/print.css" type="text/css" media="print" />
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+                </head>
+  <body class="composite"><div style="background: red"><h1>2009/04/15 - Apache HiveMind has been retired. </h1><h2>For more information, please explore the <a href="http://attic.apache.org/">Attic</a>. </h2></div>
+    <div id="banner">
+                  <a href="http://hivemind.apache.org/" id="bannerLeft">
+
+                                            <img src="../images/hivemind_banner.png" alt="" />
+
+            </a>
+                        <a href="http://www.apache.org" id="bannerRight">
+
+                                            <img src="../images/asf_logo_wide.gif" alt="" />
+
+            </a>
+            <div class="clear">
+        <hr/>
+      </div>
+    </div>
+    <div id="breadcrumbs">
+
+
+
+
+
+
+
+            <div class="xleft">
+        Last Published: 21 Feb 2007
+                      </div>
+            <div class="xright">      <a href="../index.html">HiveMind 2 Project</a>
+          |
+          <a href="../hivemind-framework">Framework</a>
+          |
+          <a href="../hivemind-xml">XML</a>
+          |
+          <a href="../hivemind-annotations">Annotations</a>
+          |
+          <a href="../hivemind-lib">Library</a>
+          |
+          <a href="../hivemind-jmx">JMX</a>
+
+
+
+
+
+
+
+  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+    <div id="leftColumn">
+      <div id="navcolumn">
+
+
+
+
+
+
+
+                   <h5>Quick Links</h5>
+        <ul>
+
+    <li class="none">
+              <a href="../index.html">Project Home</a>
+        </li>
+
+    <li class="none">
+              <a href="http://hivemind.apache.org/download.html">Download</a>
+        </li>
+
+    <li class="none">
+              <a href="http://cwiki.apache.org/HIVEMIND2/">Wiki</a>
+        </li>
+          </ul>
+          <h5>HiveMind Framework</h5>
+        <ul>
+
+    <li class="none">
+              <a href="index.html">Introduction</a>
+        </li>
+
+    <li class="none">
+              <a href="ApplicationDefaults.html">ApplicationDefaults</a>
+        </li>
+
+    <li class="none">
+              <a href="BuilderFactory.html">BuilderFactory</a>
+        </li>
+
+    <li class="none">
+              <a href="EagerLoad.html">EagerLoad</a>
+        </li>
+
+    <li class="none">
+              <a href="FactoryDefaults.html">FactoryDefaults</a>
+        </li>
+
+    <li class="none">
+              <strong>LoggingInterceptor</strong>
+        </li>
+
+    <li class="none">
+              <a href="ObjectProviders.html">ObjectProviders</a>
+        </li>
+
+    <li class="none">
+              <a href="ServiceModels.html">ServiceModels</a>
+        </li>
+
+    <li class="none">
+              <a href="ShutdownCoordinator.html">ShutdownCoordinator</a>
+        </li>
+
+    <li class="none">
+              <a href="SymbolSources.html">SymbolSources</a>
+        </li>
+
+    <li class="none">
+              <a href="ThreadLocale.html">ThreadLocale</a>
+        </li>
+
+    <li class="none">
+              <a href="ThreadLocalStorage.html">ThreadLocalStorage</a>
+        </li>
+
+    <li class="none">
+              <a href="Translators.html">Translators</a>
+        </li>
+          </ul>
+          <h5>Project Documentation</h5>
+        <ul>
+
+
+
+
+
+
+
+        <li class="collapsed">
+              <a href="project-info.html">Project Information</a>
+              </li>
+
+
+
+
+
+
+
+        <li class="collapsed">
+              <a href="project-reports.html">Project Reports</a>
+              </li>
+          </ul>
+                                       <a href="http://maven.apache.org/" title="Built by Maven" id="poweredBy">
+            <img alt="Built by Maven" src="./images/logos/maven-feather.png"></img>
+          </a>
+
+
+
+
+
+
+
+        </div>
+    </div>
+    <div id="bodyColumn">
+      <div id="contentBox">
+
+
+
+
+
+
+      <p>
+The
+<a href="hivedocs/service/hivemind.LoggingInterceptor.html">LoggingInterceptor</a>
+service is used to add logging capability to a service, i.e.:
+</p>
+
+
+      <div class="source"><pre>
+&lt;interceptor service-id=&quot;hivemind.LoggingInterceptor&quot;&gt;
+  &lt;include method=&quot;...&quot;/&gt;
+  &lt;exclude method=&quot;...&quot;/&gt;
+&lt;/interceptor&gt;</pre></div>
+
+
+<p>
+The service make take parameters (which control which methods will be logged).
+</p>
+
+<p>
+The logging interceptor uses a <code>Log</code>  derived from the service id (of
+the service to which logging is being added).
+</p>
+
+<p>
+The service logs, at debug level, the following events:
+</p>
+
+<ul>
+<li>Method entry (with parameters)</li>
+<li>Method exit (with return value, if applicable)</li>
+<li>Thrown exceptions (checked and runtime)</li>
+</ul>
+
+
+
+By default, the interceptor will log all methods. By supplying parameters to the interceptor,
+you can control exactly
+which methods should be logged.  The <code>include</code> and <code>exclude</code> parameter
+elements specify methods to be included (logged) and excluded (not logged).
+The <code>method</code> attribute is a
+<em>method pattern</em>, a string used to match methods based on name, number of parameters, or type
+of parameters; see  the
+<a href="apidocs/org/apache/hivemind/methodmatch/MethodMatcher.html">MethodMatcher</a> class for more details.
+
+
+
+A method which does not match any supplied pattern <em>will</em> be logged.
+
+
+
+
+
+
+
+      </div>
+    </div>
+    <div class="clear">
+      <hr/>
+    </div>
+    <div id="footer">
+      <div class="xright">&#169;
+          2003-2007
+
+          Apache Software Foundation
+
+
+
+
+
+
+
+  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+  </body>
+</html>

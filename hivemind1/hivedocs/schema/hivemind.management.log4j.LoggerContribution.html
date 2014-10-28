@@ -1,0 +1,87 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="../hivemind.css">
+<title>HiveMind Registry -  Schema hivemind.management.log4j.LoggerContribution</title>
+</head>
+<body><div style="background: red"><h1>2009/04/15 - Apache HiveMind has been retired. </h1><h2>For more information, please explore the <a href="http://attic.apache.org/">Attic</a>. </h2></div>
+<div class="title"> Module <a href="../module/hivemind.management.log4j.html">hivemind.management.log4j</a>
+</div>
+<div class="center-nav">
+<a href="../index.html">Back to master index</a>
+</div>
+<hr>
+<table class="top-level-object" cellspacing="0">
+<tr>
+<th class="object-id" colspan="3"><img src="../public.png" width="20" height="20" alt="[public]"> Schema hivemind.management.log4j.LoggerContribution</th>
+</tr>
+<tr>
+<td class="container" colspan="3">
+<table class="nested-object" cellspacing="0">
+<tr>
+<th class="object-id" colspan="3"> Element &lt;logger&gt; </th>
+</tr>
+<tr>
+<td class="description" colspan="3">Identifies Loggers.</td>
+</tr>
+<tr>
+<th class="sub-id">Attribute name (required) </th><th> Translator: </th><td><a href="../config/hivemind.Translators.html">string</a></td>
+</tr>
+<tr>
+<td class="description" colspan="3">Name of the logger. '*' can be used as wildcard for matching
+		a group of Loggers</td>
+</tr>
+<tr>
+<th colspan="3" class="section">Conversion Rules</th>
+</tr>
+<tr>
+<td colspan="3" class="container">
+<div class="xml">
+     &lt;create-object <span class="attribute">class</span>="<span class="attribute-value">LoggerContribution</span>"
+       /&gt; <br>
+     &lt;read-attribute <span class="attribute">attribute</span>="<span class="attribute-value">name</span>"
+       <span class="attribute">property</span>="<span class="attribute-value">loggerPattern</span>"
+       /&gt; <br>
+     &lt;invoke-parent <span class="attribute">method</span>="<span class="attribute-value">addElement</span>"
+       /&gt; </div>
+</td>
+</tr>
+<tr>
+<th colspan="3" class="section">References</th>
+</tr>
+<tr>
+<td colspan="3" class="container">
+<table cellspacing="0" class="layout">
+<tr>
+<td>
+<table class="summary" cellspacing="0">
+<tr>
+<th> Configurations </th>
+</tr>
+<tr>
+<td><a href="../config/hivemind.management.log4j.ManagedLog4jLoggers.html">hivemind.management.log4j.ManagedLog4jLoggers</a></td>
+</tr>
+<tr>
+<td><a href="../config/hivemind.management.log4j.ManagedLog4jLoggers.html">hivemind.management.log4j.ManagedLog4jLoggers</a></td>
+</tr>
+<tr>
+<td><a href="../config/hivemind.management.log4j.ManagedLog4jLoggers.html">hivemind.management.log4j.ManagedLog4jLoggers</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr>
+<div class="title"> Module <a href="../module/hivemind.management.log4j.html">hivemind.management.log4j</a>
+</div>
+<div class="center-nav">
+<a href="../index.html">Back to master index</a>
+</div>
+</body>
+</html>

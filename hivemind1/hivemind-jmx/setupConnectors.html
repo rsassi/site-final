@@ -1,0 +1,601 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Apache Forrest" name="Generator">
+<meta name="Forrest-version" content="0.8-dev">
+<meta name="Forrest-skin-name" content="pelt">
+<title>Setup JMX Connectors</title>
+<link type="text/css" href="../skin/basic.css" rel="stylesheet">
+<link media="screen" type="text/css" href="../skin/screen.css" rel="stylesheet">
+<link media="print" type="text/css" href="../skin/print.css" rel="stylesheet">
+<link type="text/css" href="../skin/profile.css" rel="stylesheet">
+<script src="../skin/getBlank.js" language="javascript" type="text/javascript"></script><script src="../skin/getMenu.js" language="javascript" type="text/javascript"></script><script src="../skin/fontsize.js" language="javascript" type="text/javascript"></script>
+<link rel="shortcut icon" href="../">
+</head>
+<body onload="init()"><div style="background: red"><h1>2009/04/15 - Apache HiveMind has been retired. </h1><h2>For more information, please explore the <a href="http://attic.apache.org/">Attic</a>. </h2></div>
+<script type="text/javascript">ndeSetTextSize();</script>
+<div id="top">
+<!--+
+    |breadtrail
+    +-->
+<div class="breadtrail">
+<a href="http://jakarta.apache.org/">Jakarta</a> &gt; <a href="http://jakarta.apache.org/hivemind/">HiveMind</a><script src="../skin/breadcrumbs.js" language="JavaScript" type="text/javascript"></script>
+</div>
+<!--+
+    |header
+    +-->
+<div class="header">
+<!--+
+    |start group logo
+    +-->
+<div class="grouplogo">
+<a href="http://jakarta.apache.org/hivemind/"><img class="logoImage" alt="HiveMind" src="../images/HiveMind-Logo.png" title="HiveMind Services and Configuration Microkernel"></a>
+</div>
+<!--+
+    |end group logo
+    +-->
+<!--+
+    |start Project Logo
+    +-->
+<div class="projectlogoA1">
+<a href="http://jakarta.apache.org/"><img class="logoImage" alt="Jakarta" src="../images/jakarta-logo.gif" title="Apache Jakarta"></a>
+</div>
+<!--+
+    |end Project Logo
+    +-->
+<!--+
+    |start Tabs
+    +-->
+<ul id="tabs">
+<li>
+<a class="base-not-selected" href="../index.html">HiveMind Project</a>
+</li>
+<li>
+<a class="base-not-selected" href="../hivemind/index.html">Module: hivemind</a>
+</li>
+<li>
+<a class="base-not-selected" href="../hivemind-lib/index.html">Module: hivemind-lib</a>
+</li>
+<li class="current">
+<a class="base-selected" href="../hivemind-jmx/index.html">Module: hivemind-jmx</a>
+</li>
+<li>
+<a class="base-not-selected" href="../hivemind-examples/index.html">Example Code</a>
+</li>
+</ul>
+<!--+
+    |end Tabs
+    +-->
+</div>
+</div>
+<div id="main">
+<div id="publishedStrip">
+<!--+
+    |start Subtabs
+    +-->
+<div id="level2tabs"></div>
+<!--+
+    |end Endtabs
+    +-->
+<script type="text/javascript"><!--
+document.write("Last Published: " + document.lastModified);
+//  --></script>
+</div>
+<!--+
+    |breadtrail
+    +-->
+<div class="breadtrail">
+             
+             &nbsp;
+           </div>
+<!--+
+    |start Menu, mainarea
+    +-->
+<!--+
+    |start Menu
+    +-->
+<div id="menu">
+<div onclick="SwitchMenu('menu_1.1', '../skin/')" id="menu_1.1Title" class="menutitle">HiveMind</div>
+<div id="menu_1.1" class="menuitemgroup">
+<div class="menuitem">
+<a href="../index.html">Overview</a>
+</div>
+<div onclick="SwitchMenu('menu_1.1.2', '../skin/')" id="menu_1.1.2Title" class="menutitle">Reference</div>
+<div id="menu_1.1.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="../services.html">Services</a>
+</div>
+<div class="menuitem">
+<a href="../configurations.html">Configurations</a>
+</div>
+<div class="menuitem">
+<a href="../hivedoc.html">HiveDoc</a>
+</div>
+<div class="menuitem">
+<a href="../descriptor.html">Module  Descriptor</a>
+</div>
+<div class="menuitem">
+<a href="../rules.html">Contribution Processing Rules</a>
+</div>
+<div class="menuitem">
+<a href="../dependencies.html">Dependencies</a>
+</div>
+<div class="menuitem">
+<a href="../conditional.html">Conditional Contributions</a>
+</div>
+<div class="menuitem">
+<a href="../serializing.html">Serializing Services</a>
+</div>
+<div class="menuitem">
+<a href="../instance-initialization.html">Instance Initialization</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.1.3', '../skin/')" id="menu_1.1.3Title" class="menutitle">Project Information</div>
+<div id="menu_1.1.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="../changes.html">Change Log</a>
+</div>
+<div class="menuitem">
+<a href="../todo.html">TODO</a>
+</div>
+<div class="menuitem">
+<a href="http://jakarta.apache.org/site/mail2.html#HiveMind">Mailing Lists</a>
+</div>
+<div class="menuitem">
+<a href="../downloads.html">Downloads</a>
+</div>
+<div class="menuitem">
+<a href="http://issues.apache.org/jira/secure/BrowseProject.jspa?id=10500">Bugs</a>
+</div>
+<div class="menuitem">
+<a href="../subversion.html">Subversion Access</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.1.4', '../skin/')" id="menu_1.1.4Title" class="menutitle">Tutorials and Information</div>
+<div id="menu_1.1.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="../bootstrap.html">Bootstrapping the Registry</a>
+</div>
+<div class="menuitem">
+<a href="../ioc.html">Inversion Of Control</a>
+</div>
+<div class="menuitem">
+<a href="../localization.html">Localization</a>
+</div>
+<div class="menuitem">
+<a href="../multithreading.html">Multi-Threading</a>
+</div>
+<div class="menuitem">
+<a href="../filter.html">Servlets</a>
+</div>
+<div class="menuitem">
+<a href="../override.html">Overriding Services</a>
+</div>
+<div class="menuitem">
+<a href="../groovy.html">Groovy Support</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.1.5', '../skin/')" id="menu_1.1.5Title" class="menutitle">Reports</div>
+<div id="menu_1.1.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="../license-report.html">License</a>
+</div>
+<div class="menuitem">
+<a href="../hivedocs/index.html">HiveDoc</a>
+</div>
+<div class="menuitem">
+<a href="../developers.html">Developers</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.2', '../skin/')" id="menu_1.2Title" class="menutitle">Framework</div>
+<div id="menu_1.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind/index.html">Overview</a>
+</div>
+<div onclick="SwitchMenu('menu_1.2.2', '../skin/')" id="menu_1.2.2Title" class="menutitle">Services</div>
+<div id="menu_1.2.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind/BuilderFactory.html">BuilderFactory</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/LoggingInterceptor.html">LoggingInterceptor</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/ShutdownCoordinator.html">ShutdownCoordinator</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/ThreadLocale.html">ThreadLocale</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/ThreadLocalStorage.html">ThreadLocalStorage</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.2.3', '../skin/')" id="menu_1.2.3Title" class="menutitle">Configurations</div>
+<div id="menu_1.2.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind/ApplicationDefaults.html">ApplicationDefaults</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/EagerLoad.html">EagerLoad</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/FactoryDefaults.html">FactoryDefaults</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/ObjectProviders.html">ObjectProviders</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/ServiceModels.html">ServiceModels</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/SymbolSources.html">SymbolSources</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/Translators.html">Translators</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.2.4', '../skin/')" id="menu_1.2.4Title" class="menutitle">Ant Tasks</div>
+<div id="menu_1.2.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind/ant/ConstructRegistry.html">ConstructRegistry</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/ant/ManifestClassPath.html">ManifestClassPath</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.2.5', '../skin/')" id="menu_1.2.5Title" class="menutitle">Reports</div>
+<div id="menu_1.2.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind/junit-report.html">JUnit Tests</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/apidocs/index.html">JavaDoc</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/clover/index.html">Clover Code Coverage</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.3', '../skin/')" id="menu_1.3Title" class="menutitle">Library</div>
+<div id="menu_1.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind-lib/index.html">Overview</a>
+</div>
+<div onclick="SwitchMenu('menu_1.3.2', '../skin/')" id="menu_1.3.2Title" class="menutitle">Services</div>
+<div id="menu_1.3.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind-lib/BeanFactoryBuilder.html">BeanFactoryBuilder</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/ChainBuilder.html">ChainBuilder</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/ChainFactory.html">ChainFactory</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/DefaultImplementationBuilder.html">DefaultImplementationBuilder</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/EJBProxyFactory.html">EJBProxyFactory</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/MethodInterceptorFactory.html">MethodInterceptorFactory</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/NameLookup.html">NameLookup</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/PlaceholderFactory.html">PlaceholderFactory</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/PipelineFactory.html">PipelineFactory</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/RemoteExceptionCoordinator.html">RemoteExceptionCoordinator</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/ServicePropertyFactory.html">ServicePropertyFactory</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/SpringLookupFactory.html">SpringLookupFactory</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/StrategyFactory.html">StrategyFactory</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.3.3', '../skin/')" id="menu_1.3.3Title" class="menutitle">Reports</div>
+<div id="menu_1.3.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind-lib/junit-report.html">JUnit Tests</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/apidocs/index.html">JavaDoc</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/clover/index.html">Clover Code Coverage</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_selected_1.4', '../skin/')" id="menu_selected_1.4Title" class="menutitle" style="background-image: url('../skin/images/chapter_open.gif');">JMX</div>
+<div id="menu_selected_1.4" class="selectedmenuitemgroup" style="display: block;">
+<div class="menuitem">
+<a href="../hivemind-jmx/index.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-jmx/quickstart.html">Quickstart</a>
+</div>
+<div onclick="SwitchMenu('menu_selected_1.4.3', '../skin/')" id="menu_selected_1.4.3Title" class="menutitle" style="background-image: url('../skin/images/chapter_open.gif');">Setup</div>
+<div id="menu_selected_1.4.3" class="selectedmenuitemgroup" style="display: block;">
+<div class="menuitem">
+<a href="../hivemind-jmx/setupOverview.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-jmx/setupJMXImplementation.html">JMX Implementation</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-jmx/setupMBeanServer.html">MBeanServer</a>
+</div>
+<div class="menupage">
+<div class="menupagetitle">Connectors</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.4.4', '../skin/')" id="menu_1.4.4Title" class="menutitle">Usage</div>
+<div id="menu_1.4.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind-jmx/manageServices.html">Manage Services</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-jmx/measurePerformance.html">Measure Performance</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-jmx/monitorServices.html">Monitor Services</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-jmx/manageLog4j.html">Manage Log4J</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.4.5', '../skin/')" id="menu_1.4.5Title" class="menutitle">Advanced Topics</div>
+<div id="menu_1.4.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind-jmx/multipleApps.html">Multiple Applications in Server</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.4.6', '../skin/')" id="menu_1.4.6Title" class="menutitle">Reports</div>
+<div id="menu_1.4.6" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind-jmx/junit-report.html">JUnit Tests</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-jmx/apidocs/index.html">JavaDoc</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-jmx/clover/index.html">Clover Code Coverage</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.5', '../skin/')" id="menu_1.5Title" class="menutitle">Example Code</div>
+<div id="menu_1.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind-examples/index.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-examples/calc.html">Calculator</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-examples/panorama.html">Panorama Startup</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-examples/logging.html">Logging Interceptor</a>
+</div>
+<div onclick="SwitchMenu('menu_1.5.5', '../skin/')" id="menu_1.5.5Title" class="menutitle">Reports</div>
+<div id="menu_1.5.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind-examples/junit-report.html">JUnit Tests</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-examples/apidocs/index.html">JavaDoc</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-examples/hivedocs/index.html">HiveDoc</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-examples/clover/index.html">Clover Code Coverage</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.6', '../skin/')" id="menu_1.6Title" class="menutitle">Other Resources</div>
+<div id="menu_1.6" class="menuitemgroup">
+<div class="menuitem">
+<a href="http://wiki.apache.org/jakarta-hivemind/">HiveMind Wiki</a>
+</div>
+<div class="menuitem">
+<a href="http://howardlewisship.com/blog/">Tapestry and HiveMind Blog</a>
+</div>
+<div class="menuitem">
+<a href="http://hivetranse.sourceforge.net/">HiveMind Utilities</a>
+</div>
+<div class="menuitem">
+<a href="http://www.theserverside.com/articles/article.tss?l=HivemindBuzz">HiveMind article on TheServerSide</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.7', '../skin/')" id="menu_1.7Title" class="menutitle">Related Projects</div>
+<div id="menu_1.7" class="menuitemgroup">
+<div class="menuitem">
+<a href="http://jakarta.apache.org/tapestry/">Tapestry</a>
+</div>
+<div class="menuitem">
+<a href="http://www.springframework.org">Spring</a>
+</div>
+</div>
+<div id="credit"></div>
+<div id="roundbottom">
+<img style="display: none" class="corner" height="15" width="15" alt="" src="../skin/images/rc-b-l-15-1body-2menu-3menu.png"></div>
+<!--+
+  |alternative credits
+  +-->
+<div id="credit2"></div>
+</div>
+<!--+
+    |end Menu
+    +-->
+<!--+
+    |start content
+    +-->
+<div id="content">
+<div class="trail">Font size: 
+	          &nbsp;<input value="Reset" class="resetfont" title="Reset text" onclick="ndeSetTextSize('reset'); return false;" type="button">      
+	          &nbsp;<input value="-a" class="smallerfont" title="Shrink text" onclick="ndeSetTextSize('decr'); return false;" type="button">
+	          &nbsp;<input value="+a" class="biggerfont" title="Enlarge text" onclick="ndeSetTextSize('incr'); return false;" type="button">
+</div>
+<h1>Setup JMX Connectors</h1>
+<div id="minitoc-area">
+<ul class="minitoc">
+<li>
+<a href="#HTML+Adaptors">HTML Adaptors</a>
+<ul class="minitoc">
+<li>
+<a href="#MX4J+HTML+Adaptor">MX4J HTML Adaptor</a>
+</li>
+<li>
+<a href="#SUN+RI+HTML+Adaptor">SUN RI HTML Adaptor</a>
+</li>
+<li>
+<a href="#J2SE+1.5+and+HTML+Adaptors">J2SE 1.5 and HTML Adaptors</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#JSR+160+connectors">JSR 160 connectors</a>
+</li>
+<li>
+<a href="#J2SE+1.5+local+connector">J2SE 1.5 local connector</a>
+</li>
+</ul>
+</div>
+  	
+<p>
+  		Finally you have to decide how you want to access the management
+  		functionality of your application. The JMX specification calls
+  		the responsible components connectors and protocol adaptors.
+  		The HTML protocol adaptors have the big advantage, that no 
+  		additional management console is needed. All that is needed is 
+  		a web browser.<br>
+  		HiveMind offers preconfigured services for the most common
+  		connectors.
+  	</p>
+		
+<a name="N10012"></a><a name="HTML+Adaptors"></a>
+<h2 class="boxed">HTML Adaptors</h2>
+<div class="section">
+<p>HTML Adaptors are provide by MX4J and Sun RI.
+			</p>
+<a name="N1001B"></a><a name="MX4J+HTML+Adaptor"></a>
+<h3 class="boxed">MX4J HTML Adaptor</h3>
+<p>Enable the MX4J HTML Adaptor by including these lines in 
+					your descriptor:
+				</p>
+<pre class="code">
+&lt;contribution configuration-id="hivemind.management.MBeans"&gt;
+   &lt;mbean service-id="hivemind.management.connector.MX4JHttpAdaptorMBean" 
+          start-method="start" /&gt;
+&lt;/contribution&gt;</pre>
+<p>By default the adaptor listens on port 9000 for incoming
+					HTTP request and renders a HTML user interface.<br>
+					To change the port, modify the symbol "management.http.Port":
+				</p>
+<pre class="code">
+&lt;contribution configuration-id="hivemind.ApplicationDefaults"&gt;
+  &lt;default symbol="management.http.Port" value="9001" /&gt;
+&lt;/contribution&gt;</pre>
+<a name="N10032"></a><a name="SUN+RI+HTML+Adaptor"></a>
+<h3 class="boxed">SUN RI HTML Adaptor</h3>
+<p>Enable the SUN HTML Adaptor by including these lines in 
+					your descriptor:
+				</p>
+<pre class="code">
+&lt;contribution configuration-id="hivemind.management.MBeans"&gt;
+   &lt;mbean service-id="hivemind.management.connector.SunHttpAdaptorMBean" 
+          start-method="start" /&gt;
+&lt;/contribution&gt;</pre>
+<p>The default port and configuration of the port correspond
+					to the MX4J description above.
+				</p>
+<a name="N10043"></a><a name="J2SE+1.5+and+HTML+Adaptors"></a>
+<h3 class="boxed">J2SE 1.5 and HTML Adaptors</h3>
+<p>There is no HTTP Adaptor provided with J2SE 1.5. 
+					But you can combine the MX4J or Sun RI HTTP Adaptors with 
+					J2SE 1.5. Just include the xxx-tools.jar in the classpath 
+					and setup the adaptor like described above.
+				</p>
+</div>
+		
+<a name="N1004E"></a><a name="JSR+160+connectors"></a>
+<h2 class="boxed">JSR 160 connectors</h2>
+<div class="section">
+<p>JSR 160 connectors allow the remote management of the application using any 
+				management console that supports that standard (like JConsole, MC4J). 
+				The connectors are created by a standardized api so there are no implementation 
+				specific MBeans like with HTTP Adaptors. <br>
+				The standard allows use of different protocols for the remote management (which
+				must be supported by both the JMX implementation and the management console). 
+				Most common is a RMI protocol and this is what HiveMind uses by default. 
+				The protocol requires a running RMI Registry. <br>
+				Add these lines:
+			</p>
+<pre class="code">
+&lt;contribution configuration-id="hivemind.management.MBeans"&gt;
+   &lt;mbean service-id="hivemind.management.connector.NamingServiceMBean" 
+      start-method="start" /&gt;
+   &lt;mbean service-id="hivemind.management.connector.JMXConnectorServerMBean" 
+      start-method="start" /&gt;
+&lt;/contribution&gt;</pre>
+<p>Now you can connect to the application with jconsole or MC4J 
+					using this url: service:jmx:rmi://localhost/jndi/rmi://localhost:1099/jmx .
+				</p>
+<p>You can change RMI port and the service url this way:
+				</p>
+<pre class="code">
+&lt;contribution configuration-id="hivemind.ApplicationDefaults"&gt;
+  &lt;default symbol="management.namingservice.port" value="1099" /&gt;
+  &lt;default symbol="management.jmxconnector.ServiceUrl" 
+      value="service:jmx:rmi://localhost/jndi/rmi://localhost:1099/jmx" /&gt;
+&lt;/contribution&gt;</pre>
+</div>
+		
+<a name="N1006A"></a><a name="J2SE+1.5+local+connector"></a>
+<h2 class="boxed">J2SE 1.5 local connector</h2>
+<div class="section">
+<p>Local management with jconsole is possible without adding any connector, if
+				your application runs on J2SE 1.5. Simply set the 
+				system property com.sun.management.jmxremote before launching your app:
+			</p>
+<pre class="code">
+java -Dcom.sun.management.jmxremote ...</pre>
+</div>
+  
+</div>
+<!--+
+    |end content
+    +-->
+<div class="clearboth">&nbsp;</div>
+</div>
+<div id="footer">
+<!--+
+    |start bottomstrip
+    +-->
+<div class="lastmodified">
+<script type="text/javascript"><!--
+document.write("Last Published: " + document.lastModified);
+//  --></script>
+</div>
+<div class="copyright">
+        Copyright &copy;
+         2005 Apache Software Foundation</div>
+<!--+
+    |end bottomstrip
+    +-->
+</div>
+</body>
+</html>

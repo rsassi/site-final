@@ -1,0 +1,700 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Apache Forrest" name="Generator">
+<meta name="Forrest-version" content="0.7">
+<meta name="Forrest-skin-name" content="pelt">
+<title>Configuration Points</title>
+<link type="text/css" href="skin/basic.css" rel="stylesheet">
+<link media="screen" type="text/css" href="skin/screen.css" rel="stylesheet">
+<link media="print" type="text/css" href="skin/print.css" rel="stylesheet">
+<link type="text/css" href="skin/profile.css" rel="stylesheet">
+<script src="skin/getBlank.js" language="javascript" type="text/javascript"></script><script src="skin/getMenu.js" language="javascript" type="text/javascript"></script><script src="skin/fontsize.js" language="javascript" type="text/javascript"></script>
+<link rel="shortcut icon" href="">
+</head>
+<body onload="init()"><div style="background: red"><h1>2009/04/15 - Apache HiveMind has been retired. </h1><h2>For more information, please explore the <a href="http://attic.apache.org/">Attic</a>. </h2></div>
+<script type="text/javascript">ndeSetTextSize();</script>
+<div id="top">
+<div class="breadtrail">
+<a href="http://www.apache.org/">Apache</a> &gt; <a href="http://hivemind.apache.org">HiveMind</a><script src="skin/breadcrumbs.js" language="JavaScript" type="text/javascript"></script>
+</div>
+<div class="header">
+<div class="grouplogo">
+<a href="http://hivemind.apache.org"><img class="logoImage" alt="HiveMind" src="images/HiveMind-Logo.png" title="HiveMind Services and Configuration Microkernel"></a>
+</div>
+<div class="projectlogoA1">
+<a href="http://www.apache.org"><img class="logoImage" alt="Apache" src="images/asf_logo_wide.gif" title="Apache"></a>
+</div>
+<ul id="tabs">
+<li class="current">
+<a class="base-selected" href="index.html">HiveMind Project</a>
+</li>
+<li>
+<a class="base-not-selected" href="hivemind/index.html">Module: hivemind</a>
+</li>
+<li>
+<a class="base-not-selected" href="hivemind-lib/index.html">Module: hivemind-lib</a>
+</li>
+<li>
+<a class="base-not-selected" href="hivemind-jmx/index.html">Module: hivemind-jmx</a>
+</li>
+<li>
+<a class="base-not-selected" href="hivemind-examples/index.html">Example Code</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="main">
+<div id="publishedStrip">
+<div id="level2tabs"></div>
+<script type="text/javascript"><!--
+document.write("<text>Last Published:</text> " + document.lastModified);
+//  --></script>
+</div>
+<div class="breadtrail">
+             
+             &nbsp;
+           </div>
+<div id="menu">
+<div onclick="SwitchMenu('menu_selected_1.1', 'skin/')" id="menu_selected_1.1Title" class="menutitle" style="background-image: url('skin/images/chapter_open.gif');">HiveMind</div>
+<div id="menu_selected_1.1" class="selectedmenuitemgroup" style="display: block;">
+<div class="menuitem">
+<a href="index.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="downloads.html">Downloads</a>
+</div>
+<div onclick="SwitchMenu('menu_selected_1.1.3', 'skin/')" id="menu_selected_1.1.3Title" class="menutitle" style="background-image: url('skin/images/chapter_open.gif');">Reference</div>
+<div id="menu_selected_1.1.3" class="selectedmenuitemgroup" style="display: block;">
+<div class="menuitem">
+<a href="services.html">Services</a>
+</div>
+<div class="menupage">
+<div class="menupagetitle">Configurations</div>
+</div>
+<div class="menuitem">
+<a href="hivedoc.html">HiveDoc</a>
+</div>
+<div class="menuitem">
+<a href="descriptor.html">Module  Descriptor</a>
+</div>
+<div class="menuitem">
+<a href="rules.html">Contribution Processing Rules</a>
+</div>
+<div class="menuitem">
+<a href="dependencies.html">Dependencies</a>
+</div>
+<div class="menuitem">
+<a href="conditional.html">Conditional Contributions</a>
+</div>
+<div class="menuitem">
+<a href="serializing.html">Serializing Services</a>
+</div>
+<div class="menuitem">
+<a href="instance-initialization.html">Instance Initialization</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.1.4', 'skin/')" id="menu_1.1.4Title" class="menutitle">Project Information</div>
+<div id="menu_1.1.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="changes.html">Change Log</a>
+</div>
+<div class="menuitem">
+<a href="todo.html">TODO</a>
+</div>
+<div class="menuitem">
+<a href="mailinglists.html">Mailing Lists</a>
+</div>
+<div class="menuitem">
+<a href="http://issues.apache.org/jira/secure/BrowseProject.jspa?id=10500">Bugs</a>
+</div>
+<div class="menuitem">
+<a href="subversion.html">Subversion Access</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.1.5', 'skin/')" id="menu_1.1.5Title" class="menutitle">Tutorials and Information</div>
+<div id="menu_1.1.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="bootstrap.html">Bootstrapping the Registry</a>
+</div>
+<div class="menuitem">
+<a href="ioc.html">Inversion Of Control</a>
+</div>
+<div class="menuitem">
+<a href="localization.html">Localization</a>
+</div>
+<div class="menuitem">
+<a href="multithreading.html">Multi-Threading</a>
+</div>
+<div class="menuitem">
+<a href="filter.html">Servlets</a>
+</div>
+<div class="menuitem">
+<a href="override.html">Overriding Services</a>
+</div>
+<div class="menuitem">
+<a href="groovy.html">Groovy Support</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.1.6', 'skin/')" id="menu_1.1.6Title" class="menutitle">Reports</div>
+<div id="menu_1.1.6" class="menuitemgroup">
+<div class="menuitem">
+<a href="license-report.html">License</a>
+</div>
+<div class="menuitem">
+<a href="hivedocs/index.html">HiveDoc</a>
+</div>
+<div class="menuitem">
+<a href="developers.html">Developers</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.2', 'skin/')" id="menu_1.2Title" class="menutitle">Framework</div>
+<div id="menu_1.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind/index.html">Overview</a>
+</div>
+<div onclick="SwitchMenu('menu_1.2.2', 'skin/')" id="menu_1.2.2Title" class="menutitle">Services</div>
+<div id="menu_1.2.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind/BuilderFactory.html">BuilderFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/LoggingInterceptor.html">LoggingInterceptor</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/ShutdownCoordinator.html">ShutdownCoordinator</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/ThreadLocale.html">ThreadLocale</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/ThreadLocalStorage.html">ThreadLocalStorage</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.2.3', 'skin/')" id="menu_1.2.3Title" class="menutitle">Configurations</div>
+<div id="menu_1.2.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind/ApplicationDefaults.html">ApplicationDefaults</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/EagerLoad.html">EagerLoad</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/FactoryDefaults.html">FactoryDefaults</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/ObjectProviders.html">ObjectProviders</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/ServiceModels.html">ServiceModels</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/SymbolSources.html">SymbolSources</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/Translators.html">Translators</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.2.4', 'skin/')" id="menu_1.2.4Title" class="menutitle">Ant Tasks</div>
+<div id="menu_1.2.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind/ant/ConstructRegistry.html">ConstructRegistry</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/ant/ManifestClassPath.html">ManifestClassPath</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.3', 'skin/')" id="menu_1.3Title" class="menutitle">Library</div>
+<div id="menu_1.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-lib/index.html">Overview</a>
+</div>
+<div onclick="SwitchMenu('menu_1.3.2', 'skin/')" id="menu_1.3.2Title" class="menutitle">Services</div>
+<div id="menu_1.3.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-lib/BeanFactoryBuilder.html">BeanFactoryBuilder</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/ChainBuilder.html">ChainBuilder</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/ChainFactory.html">ChainFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/DefaultImplementationBuilder.html">DefaultImplementationBuilder</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/EJBProxyFactory.html">EJBProxyFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/MethodInterceptorFactory.html">MethodInterceptorFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/NameLookup.html">NameLookup</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/PlaceholderFactory.html">PlaceholderFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/PipelineFactory.html">PipelineFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/RemoteExceptionCoordinator.html">RemoteExceptionCoordinator</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/ServicePropertyFactory.html">ServicePropertyFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/SpringLookupFactory.html">SpringLookupFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/StrategyFactory.html">StrategyFactory</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.4', 'skin/')" id="menu_1.4Title" class="menutitle">JMX</div>
+<div id="menu_1.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-jmx/index.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/quickstart.html">Quickstart</a>
+</div>
+<div onclick="SwitchMenu('menu_1.4.3', 'skin/')" id="menu_1.4.3Title" class="menutitle">Setup</div>
+<div id="menu_1.4.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-jmx/setupOverview.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/setupJMXImplementation.html">JMX Implementation</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/setupMBeanServer.html">MBeanServer</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/setupConnectors.html">Connectors</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.4.4', 'skin/')" id="menu_1.4.4Title" class="menutitle">Usage</div>
+<div id="menu_1.4.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-jmx/manageServices.html">Manage Services</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/measurePerformance.html">Measure Performance</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/monitorServices.html">Monitor Services</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/manageLog4j.html">Manage Log4J</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.4.5', 'skin/')" id="menu_1.4.5Title" class="menutitle">Advanced Topics</div>
+<div id="menu_1.4.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-jmx/multipleApps.html">Multiple Applications in Server</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.5', 'skin/')" id="menu_1.5Title" class="menutitle">Example Code</div>
+<div id="menu_1.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-examples/index.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-examples/calc.html">Calculator</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-examples/panorama.html">Panorama Startup</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-examples/logging.html">Logging Interceptor</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.6', 'skin/')" id="menu_1.6Title" class="menutitle">Other Resources</div>
+<div id="menu_1.6" class="menuitemgroup">
+<div class="menuitem">
+<a href="http://wiki.apache.org/jakarta-hivemind/">HiveMind Wiki</a>
+</div>
+<div class="menuitem">
+<a href="http://howardlewisship.com/blog/">Tapestry and HiveMind Blog</a>
+</div>
+<div class="menuitem">
+<a href="http://www.theserverside.com/articles/article.tss?l=HivemindBuzz">HiveMind article on TheServerSide</a>
+</div>
+</div>
+<div id="credit"></div>
+<div id="roundbottom">
+<img style="display: none" class="corner" height="15" width="15" alt="" src="skin/images/rc-b-l-15-1body-2menu-3menu.png"></div>
+<div id="credit2"></div>
+</div>
+<div id="content">
+<div class="trail">
+<text>Font size:</text> 
+	          &nbsp;<input value="Reset" class="resetfont" title="Reset text" onclick="ndeSetTextSize('reset'); return false;" type="button">      
+	          &nbsp;<input value="-a" class="smallerfont" title="Shrink text" onclick="ndeSetTextSize('decr'); return false;" type="button">
+	          &nbsp;<input value="+a" class="biggerfont" title="Enlarge text" onclick="ndeSetTextSize('incr'); return false;" type="button">
+</div>
+<h1>Configuration Points</h1>
+<div id="minitoc-area">
+<ul class="minitoc">
+<li>
+<a href="#Defining+a+Configuration+Point">Defining a Configuration Point</a>
+</li>
+<li>
+<a href="#Accessing+Configuration+Points">Accessing Configuration Points</a>
+</li>
+<li>
+<a href="#Lazy+Loading">Lazy Loading</a>
+</li>
+<li>
+<a href="#Substitution+Symbols">Substitution Symbols</a>
+</li>
+<li>
+<a href="#Frequently+Asked+Questions">Frequently Asked Questions</a>
+</li>
+</ul>
+</div>
+		
+<p>A central concept in HiveMind is <em>configuration extension points</em>.
+			Once you have a set of services, it's natural to want to configure those
+			services. In HiveMind, a configuration point contains an unordered collection of
+			<em>elements</em>. Each element is contributed by a module ... any module
+			may make contributions to any configuration point visible to it.</p>
+		
+<p>There is no explicit connection between a service and a configuration
+			point, though it is often the case that a service and a configuration
+			point will be similarily named (or even identically named; services and
+			configuration points are in seperate namespaces). Any relationship between
+			a service and an configuration point is explicit only in code ... the
+			service may be configured with the elements of a configuration point and
+			operate on those elements in some way.</p>
+		
+<a name="N10019"></a><a name="Defining+a+Configuration+Point"></a>
+<h2 class="boxed">Defining a Configuration Point</h2>
+<div class="section">
+<p>A module may include <a href="descriptor.html#configuration-point">&lt;configuration-point&gt;</a> elements to define new
+				configuration points. A configuration point may specify the expected, or
+				allowed, number of contributions:</p>
+<ul>
+				
+<li>Zero or one</li>
+				
+<li>Zero or more (the default)</li>
+				
+<li>At least one</li>
+				
+<li>Exactly one</li>
+			
+</ul>
+<p>At runtime, the number of actual contributions is checked against the
+				constraint and an error is reported if the number doesn't match.</p>
+<a name="N10038"></a><a name="Defining+the+Contribution+Format"></a>
+<h3 class="boxed">Defining the Contribution Format</h3>
+<p>A significant portion of an configuration point is the <a href="descriptor.html#schema">&lt;schema&gt;</a> 
+					element ... this is used to define the format of contributions that
+					may be made inside <a href="descriptor.html#contribution">&lt;contribution&gt;</a> elements. Contributions take the
+					form of XML elements and attributes, the &lt;schema&gt; element identifies
+					which elements and which attributes and provides rules that transform
+					the contributions into Java objects.</p>
+<p>This is very important: what gets fed into an configuration point (in
+					the form of contributed &lt;contribution&gt;s) is XML. What comes out on
+					the other side is a collection of configured Java objects. Without these XML
+					transformation rules, it would be necessary to write Java code to walk
+					the tree of XML elements and attributes to create the Java objects;
+					instead this is done inside the module deployment descriptor, by
+					specifying a &lt;schema&gt; for the configuration point, and providing
+					rules for processing each contributed element.</p>
+<p>If a contribution by a &lt;contribution&gt; element is invalid, then a runtime
+					error is logged and the contribution is ignored. The runtime error
+					will identify the exact location (the file, line number and column
+					number) of the contribution so you can go fix it.</p>
+<p>The <a href="descriptor.html#schema">&lt;schema&gt;</a> element contains <a href="descriptor.html#element">&lt;element&gt;</a> elements to describe the XML
+					elements that may be contributed. &lt;element&gt;s contain <a href="descriptor.html#attribute">&lt;attribute&gt;</a>s to
+					define the attributes allowed for those elements. &lt;element&gt;s also
+					contain <a href="descriptor.html#conversion">&lt;conversion&gt;</a> (or <a href="descriptor.html#rules">&lt;rules&gt;</a>) used to convert the contributed XML into 
+					Java objects.</p>
+<p>Here's an example from the HiveMind test suite. The <span class="codefrag">Datum</span>
+					class defines two properties: <span class="codefrag">key</span> and <span class="codefrag">value</span>.</p>
+<pre class="code">
+&lt;configuration-point id="Simple"&gt;
+  &lt;schema&gt;
+    &lt;element name="datum"&gt;
+      &lt;attribute name="key" required="true"/&gt;
+      &lt;attribute name="value" required="true"/&gt;
+
+      &lt;conversion class="hivemind.test.config.impl.Datum"/&gt;
+    &lt;/element&gt;
+  &lt;/schema&gt;
+&lt;/configuration-point&gt;
+
+&lt;contribution configuration-id="Simple"&gt;
+  &lt;datum key="key1" value="value1"/&gt;
+  &lt;datum key="key2" value="value2"/&gt;
+&lt;/contribution&gt;</pre>
+<p>The <a href="descriptor.html#conversion">&lt;conversion&gt;</a> element creates an instance of the <span class="codefrag">Datum</span> 
+					class, and initializes its properties from the attributes of the contributed
+					element (the <span class="codefrag">datum</span> and its <span class="codefrag">key</span> and <span class="codefrag">
+					value</span> attributes). For more complex data, the <a href="descriptor.html#map">&lt;map&gt;</a> and <a href="descriptor.html#rules">&lt;rules&gt;</a>
+					elements add power (and complexity).</p>
+<p>This extra work in the module descriptor eliminates a large amount of
+					custom Java code that would otherwise be necessary to walk the XML
+					contributions tree and convert elements and attributes into objects
+					and properties. Yes, you could do this in your own code ... but would
+					you really include all the error checking that HiveMind does? Or the
+					line-precise error reporting? Would you bother to create unit tests
+					for all the failure conditions?</p>
+<p>Using HiveMind allows you to write the schema and rules and know that
+					the conversion from XML to Java objects is done uniformly, efficiently
+					and robustly.</p>
+<p>The end result of this mechanism is very concise, readable
+					contributions (as shown by the &lt;contribution&gt; in the example).</p>
+<p>In addition, it is common for multiple configuration points to share
+					the exact same schema. By assigning an id attribute to a &lt;schema&gt; 
+					element, you may reference the same schema for multiple configuration
+					points. For example, the <a href="hivemind/FactoryDefaults.html">hivemind.FactoryDefaults</a> and <a href="hivemind/ApplicationDefaults.html">hivemind.ApplicationDefaults</a>
+					configuration points use the same schema. The HiveMind module
+					deployment descriptor accomplishes this by defining a schema for one
+					configuration point, then referencing it from another:</p>
+<pre class="code">
+&lt;schema id="Defaults"&gt;
+  &lt;element name="default"&gt;
+    . . .
+  &lt;/element&gt;
+&lt;/schema&gt;
+
+&lt;configuration-point id="FactoryDefaults" schema-id="Defaults"/&gt;</pre>
+<p>Like service points and configuration points, schemas may be
+					referenced within a single module using an unqualified id, or
+					referenced between modules using a fully qualified id (that is,
+					prefixed with the module's id).</p>
+</div>
+
+		
+<a name="N100AE"></a><a name="Accessing+Configuration+Points"></a>
+<h2 class="boxed">Accessing Configuration Points</h2>
+<div class="section">
+<p>The central purpose of configurations is to configure services.  Thus
+				the most common way of accessing a configuration is having it directly 
+				injected into a service implementation by the <a href="hivemind/BuilderFactory.html">hivemind.BuilderFactory</a>. 
+				A configuration can be injected into a writable property (or also a 
+				constructor parameter) of type <span class="codefrag">List</span> or <span class="codefrag">Map</span>.</p>
+<p>Assume we have a service <em>SimpleService</em> which we would like to 
+				configure with the <em>Simple</em> configuration from the previous example. 
+				All we have to do is to define a setter on the service implementation class 
+				(for example with signature <span class="codefrag">setData(List)</span>) and declare the 
+				service and its implementation in the module descriptor accordingly:</p>
+<pre class="code">
+&lt;service-point id="SimpleService" interface="hivemind.test.services.SimpleService"&gt;
+  &lt;invoke-factory&gt;
+    &lt;construct class="hivemind.test.services.impl.SimpleServiceImpl"&gt;
+      &lt;set-configuration property="data" configuration-id="Simple"/&gt;
+    &lt;/construct&gt;
+  &lt;/invoke-factory&gt;
+&lt;/service-point&gt;</pre>
+<p>The collection of configuration elements is always injected as an 
+				<em>unmodifiable</em> collection. An empty list / map may be injected, 
+				but never <span class="codefrag">null</span>.</p>
+<p>The order of the elements in the list is not defined. If order is
+				important, you should create a new (modifiable) list from the injected
+				list and sort it.</p>
+<p>Note that the elements in the list are no longer the XML elements and
+				attributes that were contributed, the rules provided in the
+				configuration point's <a href="descriptor.html#schema">&lt;schema&gt;</a> are used to convert the contributed XML
+				into Java objects.</p>
+<div class="frame note">
+<div class="label">Note</div>
+<div class="content">Although it is possible to access configurations via the Registry (via 
+				its <span class="codefrag">getConfiguration(String)</span> method),
+				it is often not a good idea. It is unlikely that you want the
+				information contained in a configuration as an unordered list. A best
+				practice is to always access the configuration through a service, which
+				can organize and validate the data in the configuration.</div>
+</div>
+<a name="N100EA"></a><a name="Accessing+Configurations+as+a+Map"></a>
+<h3 class="boxed">Accessing Configurations as a Map</h3>
+<p>As mentioned it is also possible to have the configuration contributions 
+					injected as a Map.  This requires the schema to define the attribute of 
+					the top-level elements which should be used as the key for the elements 
+					in the map.  This is specified using &lt;element&gt;'s <span class="codefrag">key-attribute</span> 
+					attribute. The identified key attribute is implicitly marked as 
+					<em>required</em> and <em>unique</em>.</p>
+<p>So the previous configuration point <em>Simple</em> can also be defined as 
+					follows:</p>
+<pre class="code">
+&lt;configuration-point id="Simple"&gt;
+  &lt;schema&gt;
+    &lt;element name="datum" key-attribute="key"&gt;
+      &lt;attribute name="key"/&gt;
+      &lt;attribute name="value" required="true"/&gt;
+
+      &lt;rules&gt;
+        &lt;push-attribute attribute="value"/&gt;
+        &lt;invoke-parent method="addElement"/&gt;
+      &lt;/rules&gt;
+    &lt;/element&gt;
+  &lt;/schema&gt;
+&lt;/configuration-point&gt;</pre>
+<p>The resulting configuration point is now accessible as a Map, where the 
+					translated value of the <span class="codefrag">key</span> attribute is the key and the 
+					translated value of the <span class="codefrag">value</span> attribute is the value of the 
+					Map.Entry elements.</p>
+<div class="frame note">
+<div class="label">Note</div>
+<div class="content">It is also possible to access the elements of this configuration point as 
+					a List, but the elements therein are now the objects (in this case Strings) 
+					created by the &lt;push-attribute&gt; rule.</div>
+</div>
+</div>
+		
+<a name="N10114"></a><a name="Lazy+Loading"></a>
+<h2 class="boxed">Lazy Loading</h2>
+<div class="section">
+<p>At application startup, all the module deployment descriptors are
+				located and parsed and in-memory objects created. Validations (such as
+				having the correct number of contributions) occur at this stage.</p>
+<p>The list of elements for a configuration point is not created until
+				a service implementation, into which the configuration is being injected, 
+				is constructed or until the first call to 
+				<span class="codefrag">Registry.getConfiguration()</span> for that configuration point.</p>
+<p>In fact, it is not created even then. When the element list for an
+				configuration point is first accessed, what's returned is not <em>really</em>
+				the list of elements; it's a proxy, a stand-in for the real data. The
+				actual elements are not converted until they are actually needed, in
+				much the same way that the creation of services is deferred.</p>
+<p>In general, you will never know (or need to know) this; when you access
+				the <span class="codefrag">size()</span> of the list or <span class="codefrag">get()</span> any of its
+				elements, the conversion of contributions into Java objects will be
+				triggered, and those Java objects will be returned in the list.</p>
+<p>If there are minor errors in the contribution, then you may see errors
+				logged; if the &lt;contribution&gt; contributions are singificantly
+				malformed, HiveMind may be unable to recover and will throw a runtime
+				exception.</p>
+</div>
+		
+<a name="N10136"></a><a name="Substitution+Symbols"></a>
+<h2 class="boxed">Substitution Symbols</h2>
+<div class="section">
+<p>The information provided by HiveMind module descriptors is entirely
+				static, but in some cases, some aspects of the configuration should be
+				dynamic. For example, a database URL or an e-mail address may not be
+				known until runtime (a sophisticated application may have an installer
+				which collects this information).</p>
+<p>HiveMind supports this notion through <em>substitution symbols</em>.
+				These are references to values that are supplied at runtime.
+				Substitution symbols can appear inside literal values ... both as XML
+				attributes, and as character data inside XML elements.</p>
+<p>Example:</p>
+<pre class="code">
+&lt;contribution configuration-id="com.myco.MyConfig"&gt;
+  &lt;value&gt; dir/foo.txt &lt;/value&gt;
+  &lt;value&gt; ${config.dir}/${config.file} &lt;/value&gt;
+&lt;/contribution&gt;</pre>
+<p>This example contributes two elements to the <span class="codefrag">com.myco.MyConfig</span>
+				configuration point. The first contribution is simply the text <span class="codefrag">
+				dir/foo.txt</span>. In the second contribution, the content contains
+				substitution symbols (which use a syntax derived from the <a class="external" href="http://ant.apache.org/">Ant</a> build tool). Symbol
+				substitution occurs <em>before</em> <a href="descriptor.html#schema">&lt;schema&gt;</a> rules are executed, so the 
+				<span class="codefrag">config.dir</span> and <span class="codefrag">config.file</span> symbols will be
+				converted to strings first, then whatever rules are in place to convert
+				the <span class="codefrag">value</span> element into a Java object will be executed.</p>
+<div class="frame note">
+<div class="label">Note</div>
+<div class="content">
+          If you contribute text that includes symbols that you do <strong>not</strong> want to be expanded
+          then you must add an extra dollar sign to the false symbol.  This is to support legacy data that was
+          already using the HiveMind symbol notation for its own, internal purposes.  For example, <span class="codefrag">foo $${bar} baz</span> will be
+          expanded into the text <span class="codefrag">foo ${bar} baz</span>.
+        </div>
+</div>
+<a name="N10175"></a><a name="Symbol+Sources"></a>
+<h3 class="boxed">Symbol Sources</h3>
+<p>This begs the question: where do symbol values come from? The answser
+					is application dependent. HiveMind itself defines a configuration
+					configuration point for this purpose: <a href="hivemind/SymbolSources.html">hivemind.SymbolSources</a>. 
+					Contributions to this configuration
+					point define new objects that can provide values for symbols, and
+					identify the order in which these objects should be consulted.</p>
+<p>If at runtime none of the configured SymbolSources provides a value
+					for a given symbol then HiveMind will leave the reference to that
+					symbol <em>as is</em>, including the surrounding <span class="codefrag">${</span> and 
+					<span class="codefrag">}</span>. Additionally an error will be logged.</p>
+</div>
+		
+<a name="N10190"></a><a name="Frequently+Asked+Questions"></a>
+<h2 class="boxed">Frequently Asked Questions</h2>
+<div class="section">
+<ul>
+				
+<li>
+					
+<strong>Are the any default implementations of SymbolSource?</strong>
+					
+<p>There is now an configuration point for setting factory defaults: 
+						<a href="hivemind/FactoryDefaults.html">hivemind.FactoryDefaults</a>
+						. A second configuration point, for application defaults, overrides
+						the factory defaults: <a href="hivemind/ApplicationDefaults.html">hivemind.ApplicationDefaults</a>.</p>
+					
+<p> 
+<a href="hivemind/apidocs/org/apache/hivemind/impl/SystemPropertiesSymbolSource.html">
+						SystemPropertiesSymbolSource</a> is a one-line implementation
+						that allows access to system properties as substitution symbols.
+						Note that this configuration is <em>not</em> loaded by default.</p>
+					
+<p>Additional implementations may follow in the future.</p>
+				
+</li>
+				
+<li>
+					
+<strong>What's all this about schemas and rules?</strong>
+					
+<p>A central goal of HiveMind is to reduce code clutter. If
+						configuration point contributions are just strings (in a .properties
+						file) or just XML, that puts a lot of burden on the developer whose
+						code <em>reads</em> the configuration to then massage it into useful
+						objects. That kind of ad-hoc code is notoriously buggy; in HiveMind
+						it is almost entirely absent. Instead, all the XML parsing occurs
+						inside HiveMind, which uses the schema and rules to validate and
+						convert the XML contributions into Java objects.</p>
+					
+<p>You can omit the schema, in which case the elements are left as XML
+						(instances of <a href="hivemind/apidocs/org/apache/hivemind/Element.html">Element</a>) and your code is responsible for walking
+						the elements and attributes ... but why bother? Far easier to let
+						HiveMind do the conversions and validations.</p>
+				
+</li>
+				
+<li>
+					
+<strong>How do I know if the element list is a proxy or not?</strong>
+					
+<p>Basically, you can't, short of performing an <span class="codefrag">instanceof</span>
+						check. There isn't any need to tell the difference between the
+						deferred proxy to the element list and the actual element list; they
+						are both immutable and both behave identically.</p>
+				
+</li>
+			
+</ul>
+</div>
+	
+</div>
+<div class="clearboth">&nbsp;</div>
+</div>
+<div id="footer">
+<div class="lastmodified">
+<script type="text/javascript"><!--
+document.write("<text>Last Published:</text> " + document.lastModified);
+//  --></script>
+</div>
+<div class="copyright">
+        Copyright &copy;
+         2005 Apache Software Foundation</div>
+</div>
+</body>
+</html>

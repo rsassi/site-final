@@ -1,0 +1,7 @@
+org.apache.examples
+org.apache.examples.impl
+org.apache.examples.panorama.discussions
+org.apache.examples.panorama.mail
+org.apache.examples.panorama.startup
+org.apache.examples.panorama.startup.impl
+org.apache.examples.setters

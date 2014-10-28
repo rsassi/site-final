@@ -1,0 +1,317 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+
+
+
+<html>
+  <head>
+    <title>HiveMind Framework -
+      hivemind.ObjectProviders Configuration</title>
+    <style type="text/css" media="all">
+      @import url("./css/maven-base.css");
+      @import url("./css/maven-theme.css");
+      @import url("./css/site.css");
+    </style>
+    <link rel="stylesheet" href="./css/print.css" type="text/css" media="print" />
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+                </head>
+  <body class="composite"><div style="background: red"><h1>2009/04/15 - Apache HiveMind has been retired. </h1><h2>For more information, please explore the <a href="http://attic.apache.org/">Attic</a>. </h2></div>
+    <div id="banner">
+                  <a href="http://hivemind.apache.org/" id="bannerLeft">
+
+                                            <img src="../images/hivemind_banner.png" alt="" />
+
+            </a>
+                        <a href="http://www.apache.org" id="bannerRight">
+
+                                            <img src="../images/asf_logo_wide.gif" alt="" />
+
+            </a>
+            <div class="clear">
+        <hr/>
+      </div>
+    </div>
+    <div id="breadcrumbs">
+
+
+
+
+
+
+
+            <div class="xleft">
+        Last Published: 21 Feb 2007
+                      </div>
+            <div class="xright">      <a href="../index.html">HiveMind 2 Project</a>
+          |
+          <a href="../hivemind-framework">Framework</a>
+          |
+          <a href="../hivemind-xml">XML</a>
+          |
+          <a href="../hivemind-annotations">Annotations</a>
+          |
+          <a href="../hivemind-lib">Library</a>
+          |
+          <a href="../hivemind-jmx">JMX</a>
+
+
+
+
+
+
+
+  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+    <div id="leftColumn">
+      <div id="navcolumn">
+
+
+
+
+
+
+
+                   <h5>Quick Links</h5>
+        <ul>
+
+    <li class="none">
+              <a href="../index.html">Project Home</a>
+        </li>
+
+    <li class="none">
+              <a href="http://hivemind.apache.org/download.html">Download</a>
+        </li>
+
+    <li class="none">
+              <a href="http://cwiki.apache.org/HIVEMIND2/">Wiki</a>
+        </li>
+          </ul>
+          <h5>HiveMind Framework</h5>
+        <ul>
+
+    <li class="none">
+              <a href="index.html">Introduction</a>
+        </li>
+
+    <li class="none">
+              <a href="ApplicationDefaults.html">ApplicationDefaults</a>
+        </li>
+
+    <li class="none">
+              <a href="BuilderFactory.html">BuilderFactory</a>
+        </li>
+
+    <li class="none">
+              <a href="EagerLoad.html">EagerLoad</a>
+        </li>
+
+    <li class="none">
+              <a href="FactoryDefaults.html">FactoryDefaults</a>
+        </li>
+
+    <li class="none">
+              <a href="LoggingInterceptor.html">LoggingInterceptor</a>
+        </li>
+
+    <li class="none">
+              <strong>ObjectProviders</strong>
+        </li>
+
+    <li class="none">
+              <a href="ServiceModels.html">ServiceModels</a>
+        </li>
+
+    <li class="none">
+              <a href="ShutdownCoordinator.html">ShutdownCoordinator</a>
+        </li>
+
+    <li class="none">
+              <a href="SymbolSources.html">SymbolSources</a>
+        </li>
+
+    <li class="none">
+              <a href="ThreadLocale.html">ThreadLocale</a>
+        </li>
+
+    <li class="none">
+              <a href="ThreadLocalStorage.html">ThreadLocalStorage</a>
+        </li>
+
+    <li class="none">
+              <a href="Translators.html">Translators</a>
+        </li>
+          </ul>
+          <h5>Project Documentation</h5>
+        <ul>
+
+
+
+
+
+
+
+        <li class="collapsed">
+              <a href="project-info.html">Project Information</a>
+              </li>
+
+
+
+
+
+
+
+        <li class="collapsed">
+              <a href="project-reports.html">Project Reports</a>
+              </li>
+          </ul>
+                                       <a href="http://maven.apache.org/" title="Built by Maven" id="poweredBy">
+            <img alt="Built by Maven" src="./images/logos/maven-feather.png"></img>
+          </a>
+
+
+
+
+
+
+
+        </div>
+    </div>
+    <div id="bodyColumn">
+      <div id="contentBox">
+
+
+
+
+      <p>The <a href="hivedocs/config/hivemind.ObjectProviders.html">ObjectProviders</a>
+      configuration drives the <code>object</code> translator. Contributions
+      define an object <em>provider</em> in terms of a prefix (such as <code>service</code>)
+      and a service that implements the <code>ObjectProvider</code> interface.
+      </p>
+
+      <p>
+      Object <em>providers</em> exist to support <em>object references</em>.  Object references
+      are a way to contribute objects that may be references to services, or to other objects, or may even be created
+      on the spot.  This is often used with the <a href="site:hivemind.BuilderFactory">hivemind.BuilderFactory</a>'s &lt;set-object&gt; element.
+    </p>
+
+
+      <p>
+      An object reference consists of a <em>prefix</em> and a <em>locator</em> seperated by a colon.  The interpretation of
+      the locator is different for each provider.  The prefix determines which provider will be utilized to interpret the
+      locator.
+    </p>
+
+
+      <p>The contribution format defines the name and class for each service
+      model:</p>
+
+      <div class="source"><pre>
+&lt;provider prefix=&quot;...&quot; service-id=&quot;...&quot;/&gt; </pre></div>
+  <p>Prefixes must be unique.</p>
+
+  <p>
+    The following default prefixes are available:
+  </p>
+
+  <table class="bodyTable">
+    <tr class="a">
+      <th>Prefix</th>
+      <th>Descripton</th>
+      <th>Example</th>
+    </tr>
+
+    <tr class="b">
+      <td>bean</td>
+      <td>The locator is a <a href="../hivemind-lib/apidocs/org/apache/hivemind/lib/BeanFactory.html">BeanFactory</a> locator, consisting of the id of a BeanFactory service, a colon,
+        and an optional initializer for the bean.
+        </td>
+        <td>
+          bean:ValidatorFactory:string,required
+        </td>
+    </tr>
+
+    <tr class="a">
+      <td>class</td>
+      <td>The locator is a class name. It may be a partial class name, with the package name
+        provided by the contributing module.</td>
+        <td>class:java.util.List</td>
+    </tr>
+
+    <tr class="b">
+      <td>configuration</td>
+      <td>The locator is the id of a configuration.</td>
+      <td>
+        configuration:MyConfiguration
+      </td>
+    </tr>
+
+    <tr class="a">
+      <td>instance</td>
+      <td>The locator is a class name, which must have a public no arguments contructor.
+        You may use <a href="site:instance-initialization">instance initializer</a> syntax.</td>
+      <td>
+        instance:com.example.MyObject
+      </td>
+    </tr>
+
+    <tr class="b">
+      <td>service</td>
+      <td>The locator is the id of a service.</td>
+      <td>service:MyService</td>
+    </tr>
+
+    <tr class="a">
+      <td>service-property</td>
+      <td>The locator provides a service id and a property name (provided by that service), seperated with a colon.</td>
+      <td>
+        service-property:MyService:activeRequest
+      </td>
+    </tr>
+
+    <tr class="b">
+      <td>spring</td>
+      <td>The locator is the name of a bean within a Spring BeanFactory.</td>
+      <td>spring:MyBean</td>
+    </tr>
+
+  </table>
+
+ <p><strong>Note:</strong><br></br>
+ The bean: and spring: prefixes are provided by the HiveMind library (not the base framework).
+ </p>
+
+
+
+      </div>
+    </div>
+    <div class="clear">
+      <hr/>
+    </div>
+    <div id="footer">
+      <div class="xright">&#169;
+          2003-2007
+
+          Apache Software Foundation
+
+
+
+
+
+
+
+  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,125 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="../hivemind.css">
+<title>HiveMind Registry -  Schema hivemind.MethodFilter</title>
+</head>
+<body><div style="background: red"><h1>2009/04/15 - Apache HiveMind has been retired. </h1><h2>For more information, please explore the <a href="http://attic.apache.org/">Attic</a>. </h2></div>
+<div class="title"> Module <a href="../module/hivemind.html">hivemind</a>
+</div>
+<div class="center-nav">
+<a href="../index.html">Back to master index</a>
+</div>
+<hr>
+<table class="top-level-object" cellspacing="0">
+<tr>
+<th class="object-id" colspan="3"><img src="../public.png" width="20" height="20" alt="[public]"> Schema hivemind.MethodFilter</th>
+</tr>
+<tr>
+<td class="description" colspan="3">Used primarily as parameters to interceptor factories (such as LoggingInterceptor) to define which methods of service interface are to be included and which excluded.</td>
+</tr>
+<tr>
+<td class="container" colspan="3">
+<table class="nested-object" cellspacing="0">
+<tr>
+<th class="object-id" colspan="3"> Element &lt;include&gt; </th>
+</tr>
+<tr>
+<td class="description" colspan="3">Identifies a method, or set of methods, to be included.</td>
+</tr>
+<tr>
+<th class="sub-id">Attribute method (required) </th><th> Translator: </th><td><a href="../config/hivemind.Translators.html">string</a></td>
+</tr>
+<tr>
+<td class="description" colspan="3">A method pattern used to identify the affected methods.</td>
+</tr>
+<tr>
+<th colspan="3" class="section">Conversion Rules</th>
+</tr>
+<tr>
+<td colspan="3" class="container">
+<div class="xml">
+     &lt;create-object <span class="attribute">class</span>="<span class="attribute-value">service.MethodContribution,include</span>"
+       /&gt; <br>
+     &lt;read-attribute <span class="attribute">attribute</span>="<span class="attribute-value">method</span>"
+       <span class="attribute">property</span>="<span class="attribute-value">methodPattern</span>"
+       /&gt; <br>
+     &lt;invoke-parent <span class="attribute">method</span>="<span class="attribute-value">addElement</span>"
+       /&gt; </div>
+</td>
+</tr>
+<tr>
+<th class="object-id" colspan="3"> Element &lt;exclude&gt; </th>
+</tr>
+<tr>
+<td class="description" colspan="3">Identifies a method, or set of methods, to be excluded.</td>
+</tr>
+<tr>
+<th class="sub-id">Attribute method (required) </th><th> Translator: </th><td><a href="../config/hivemind.Translators.html">string</a></td>
+</tr>
+<tr>
+<td class="description" colspan="3">A method pattern used to identify the affected methods.</td>
+</tr>
+<tr>
+<th colspan="3" class="section">Conversion Rules</th>
+</tr>
+<tr>
+<td colspan="3" class="container">
+<div class="xml">
+     &lt;create-object <span class="attribute">class</span>="<span class="attribute-value">service.MethodContribution</span>"
+       /&gt; <br>
+     &lt;read-attribute <span class="attribute">attribute</span>="<span class="attribute-value">method</span>"
+       <span class="attribute">property</span>="<span class="attribute-value">methodPattern</span>"
+       /&gt; <br>
+     &lt;invoke-parent <span class="attribute">method</span>="<span class="attribute-value">addElement</span>"
+       /&gt; </div>
+</td>
+</tr>
+<tr>
+<th colspan="3" class="section">References</th>
+</tr>
+<tr>
+<td colspan="3" class="container">
+<table cellspacing="0" class="layout">
+<tr>
+<td>
+<table class="summary" cellspacing="0">
+<tr>
+<th> Services </th>
+</tr>
+<tr>
+<td><a href="../service/hivemind.LoggingInterceptor.html">hivemind.LoggingInterceptor</a></td>
+</tr>
+<tr>
+<td><a href="../service/hivemind.LoggingInterceptor.html">hivemind.LoggingInterceptor</a></td>
+</tr>
+<tr>
+<td><a href="../service/hivemind.LoggingInterceptor.html">hivemind.LoggingInterceptor</a></td>
+</tr>
+<tr>
+<td><a href="../service/hivemind.management.PerformanceMonitorFactory.html">hivemind.management.PerformanceMonitorFactory</a></td>
+</tr>
+<tr>
+<td><a href="../service/hivemind.management.PerformanceMonitorFactory.html">hivemind.management.PerformanceMonitorFactory</a></td>
+</tr>
+<tr>
+<td><a href="../service/hivemind.management.PerformanceMonitorFactory.html">hivemind.management.PerformanceMonitorFactory</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr>
+<div class="title"> Module <a href="../module/hivemind.html">hivemind</a>
+</div>
+<div class="center-nav">
+<a href="../index.html">Back to master index</a>
+</div>
+</body>
+</html>

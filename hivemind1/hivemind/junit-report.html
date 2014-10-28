@@ -1,0 +1,6762 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Apache Forrest" name="Generator">
+<meta name="Forrest-version" content="0.8-dev">
+<meta name="Forrest-skin-name" content="pelt">
+<title>JUnit Test Report</title>
+<link type="text/css" href="../skin/basic.css" rel="stylesheet">
+<link media="screen" type="text/css" href="../skin/screen.css" rel="stylesheet">
+<link media="print" type="text/css" href="../skin/print.css" rel="stylesheet">
+<link type="text/css" href="../skin/profile.css" rel="stylesheet">
+<script src="../skin/getBlank.js" language="javascript" type="text/javascript"></script><script src="../skin/getMenu.js" language="javascript" type="text/javascript"></script><script src="../skin/fontsize.js" language="javascript" type="text/javascript"></script>
+<link rel="shortcut icon" href="../">
+</head>
+<body onload="init()"><div style="background: red"><h1>2009/04/15 - Apache HiveMind has been retired. </h1><h2>For more information, please explore the <a href="http://attic.apache.org/">Attic</a>. </h2></div>
+<script type="text/javascript">ndeSetTextSize();</script>
+<div id="top">
+<!--+
+    |breadtrail
+    +-->
+<div class="breadtrail">
+<a href="http://jakarta.apache.org/">Jakarta</a> &gt; <a href="http://jakarta.apache.org/hivemind/">HiveMind</a><script src="../skin/breadcrumbs.js" language="JavaScript" type="text/javascript"></script>
+</div>
+<!--+
+    |header
+    +-->
+<div class="header">
+<!--+
+    |start group logo
+    +-->
+<div class="grouplogo">
+<a href="http://jakarta.apache.org/hivemind/"><img class="logoImage" alt="HiveMind" src="../images/HiveMind-Logo.png" title="HiveMind Services and Configuration Microkernel"></a>
+</div>
+<!--+
+    |end group logo
+    +-->
+<!--+
+    |start Project Logo
+    +-->
+<div class="projectlogoA1">
+<a href="http://jakarta.apache.org/"><img class="logoImage" alt="Jakarta" src="../images/jakarta-logo.gif" title="Apache Jakarta"></a>
+</div>
+<!--+
+    |end Project Logo
+    +-->
+<!--+
+    |start Tabs
+    +-->
+<ul id="tabs">
+<li>
+<a class="base-not-selected" href="../index.html">HiveMind Project</a>
+</li>
+<li class="current">
+<a class="base-selected" href="../hivemind/index.html">Module: hivemind</a>
+</li>
+<li>
+<a class="base-not-selected" href="../hivemind-lib/index.html">Module: hivemind-lib</a>
+</li>
+<li>
+<a class="base-not-selected" href="../hivemind-jmx/index.html">Module: hivemind-jmx</a>
+</li>
+<li>
+<a class="base-not-selected" href="../hivemind-examples/index.html">Example Code</a>
+</li>
+</ul>
+<!--+
+    |end Tabs
+    +-->
+</div>
+</div>
+<div id="main">
+<div id="publishedStrip">
+<!--+
+    |start Subtabs
+    +-->
+<div id="level2tabs"></div>
+<!--+
+    |end Endtabs
+    +-->
+<script type="text/javascript"><!--
+document.write("Last Published: " + document.lastModified);
+//  --></script>
+</div>
+<!--+
+    |breadtrail
+    +-->
+<div class="breadtrail">
+             
+             &nbsp;
+           </div>
+<!--+
+    |start Menu, mainarea
+    +-->
+<!--+
+    |start Menu
+    +-->
+<div id="menu">
+<div onclick="SwitchMenu('menu_1.1', '../skin/')" id="menu_1.1Title" class="menutitle">HiveMind</div>
+<div id="menu_1.1" class="menuitemgroup">
+<div class="menuitem">
+<a href="../index.html">Overview</a>
+</div>
+<div onclick="SwitchMenu('menu_1.1.2', '../skin/')" id="menu_1.1.2Title" class="menutitle">Reference</div>
+<div id="menu_1.1.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="../services.html">Services</a>
+</div>
+<div class="menuitem">
+<a href="../configurations.html">Configurations</a>
+</div>
+<div class="menuitem">
+<a href="../hivedoc.html">HiveDoc</a>
+</div>
+<div class="menuitem">
+<a href="../descriptor.html">Module  Descriptor</a>
+</div>
+<div class="menuitem">
+<a href="../rules.html">Contribution Processing Rules</a>
+</div>
+<div class="menuitem">
+<a href="../dependencies.html">Dependencies</a>
+</div>
+<div class="menuitem">
+<a href="../conditional.html">Conditional Contributions</a>
+</div>
+<div class="menuitem">
+<a href="../serializing.html">Serializing Services</a>
+</div>
+<div class="menuitem">
+<a href="../instance-initialization.html">Instance Initialization</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.1.3', '../skin/')" id="menu_1.1.3Title" class="menutitle">Project Information</div>
+<div id="menu_1.1.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="../changes.html">Change Log</a>
+</div>
+<div class="menuitem">
+<a href="../todo.html">TODO</a>
+</div>
+<div class="menuitem">
+<a href="http://jakarta.apache.org/site/mail2.html#HiveMind">Mailing Lists</a>
+</div>
+<div class="menuitem">
+<a href="../downloads.html">Downloads</a>
+</div>
+<div class="menuitem">
+<a href="http://issues.apache.org/jira/secure/BrowseProject.jspa?id=10500">Bugs</a>
+</div>
+<div class="menuitem">
+<a href="../subversion.html">Subversion Access</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.1.4', '../skin/')" id="menu_1.1.4Title" class="menutitle">Tutorials and Information</div>
+<div id="menu_1.1.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="../bootstrap.html">Bootstrapping the Registry</a>
+</div>
+<div class="menuitem">
+<a href="../ioc.html">Inversion Of Control</a>
+</div>
+<div class="menuitem">
+<a href="../localization.html">Localization</a>
+</div>
+<div class="menuitem">
+<a href="../multithreading.html">Multi-Threading</a>
+</div>
+<div class="menuitem">
+<a href="../filter.html">Servlets</a>
+</div>
+<div class="menuitem">
+<a href="../override.html">Overriding Services</a>
+</div>
+<div class="menuitem">
+<a href="../groovy.html">Groovy Support</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.1.5', '../skin/')" id="menu_1.1.5Title" class="menutitle">Reports</div>
+<div id="menu_1.1.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="../license-report.html">License</a>
+</div>
+<div class="menuitem">
+<a href="../hivedocs/index.html">HiveDoc</a>
+</div>
+<div class="menuitem">
+<a href="../developers.html">Developers</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_selected_1.2', '../skin/')" id="menu_selected_1.2Title" class="menutitle" style="background-image: url('../skin/images/chapter_open.gif');">Framework</div>
+<div id="menu_selected_1.2" class="selectedmenuitemgroup" style="display: block;">
+<div class="menuitem">
+<a href="../hivemind/index.html">Overview</a>
+</div>
+<div onclick="SwitchMenu('menu_1.2.2', '../skin/')" id="menu_1.2.2Title" class="menutitle">Services</div>
+<div id="menu_1.2.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind/BuilderFactory.html">BuilderFactory</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/LoggingInterceptor.html">LoggingInterceptor</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/ShutdownCoordinator.html">ShutdownCoordinator</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/ThreadLocale.html">ThreadLocale</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/ThreadLocalStorage.html">ThreadLocalStorage</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.2.3', '../skin/')" id="menu_1.2.3Title" class="menutitle">Configurations</div>
+<div id="menu_1.2.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind/ApplicationDefaults.html">ApplicationDefaults</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/EagerLoad.html">EagerLoad</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/FactoryDefaults.html">FactoryDefaults</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/ObjectProviders.html">ObjectProviders</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/ServiceModels.html">ServiceModels</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/SymbolSources.html">SymbolSources</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/Translators.html">Translators</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.2.4', '../skin/')" id="menu_1.2.4Title" class="menutitle">Ant Tasks</div>
+<div id="menu_1.2.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind/ant/ConstructRegistry.html">ConstructRegistry</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/ant/ManifestClassPath.html">ManifestClassPath</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_selected_1.2.5', '../skin/')" id="menu_selected_1.2.5Title" class="menutitle" style="background-image: url('../skin/images/chapter_open.gif');">Reports</div>
+<div id="menu_selected_1.2.5" class="selectedmenuitemgroup" style="display: block;">
+<div class="menupage">
+<div class="menupagetitle">JUnit Tests</div>
+</div>
+<div class="menuitem">
+<a href="../hivemind/apidocs/index.html">JavaDoc</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/clover/index.html">Clover Code Coverage</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.3', '../skin/')" id="menu_1.3Title" class="menutitle">Library</div>
+<div id="menu_1.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind-lib/index.html">Overview</a>
+</div>
+<div onclick="SwitchMenu('menu_1.3.2', '../skin/')" id="menu_1.3.2Title" class="menutitle">Services</div>
+<div id="menu_1.3.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind-lib/BeanFactoryBuilder.html">BeanFactoryBuilder</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/ChainBuilder.html">ChainBuilder</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/ChainFactory.html">ChainFactory</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/DefaultImplementationBuilder.html">DefaultImplementationBuilder</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/EJBProxyFactory.html">EJBProxyFactory</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/MethodInterceptorFactory.html">MethodInterceptorFactory</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/NameLookup.html">NameLookup</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/PlaceholderFactory.html">PlaceholderFactory</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/PipelineFactory.html">PipelineFactory</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/RemoteExceptionCoordinator.html">RemoteExceptionCoordinator</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/ServicePropertyFactory.html">ServicePropertyFactory</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/SpringLookupFactory.html">SpringLookupFactory</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/StrategyFactory.html">StrategyFactory</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.3.3', '../skin/')" id="menu_1.3.3Title" class="menutitle">Reports</div>
+<div id="menu_1.3.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind-lib/junit-report.html">JUnit Tests</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/apidocs/index.html">JavaDoc</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/clover/index.html">Clover Code Coverage</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.4', '../skin/')" id="menu_1.4Title" class="menutitle">JMX</div>
+<div id="menu_1.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind-jmx/index.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-jmx/quickstart.html">Quickstart</a>
+</div>
+<div onclick="SwitchMenu('menu_1.4.3', '../skin/')" id="menu_1.4.3Title" class="menutitle">Setup</div>
+<div id="menu_1.4.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind-jmx/setupOverview.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-jmx/setupJMXImplementation.html">JMX Implementation</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-jmx/setupMBeanServer.html">MBeanServer</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-jmx/setupConnectors.html">Connectors</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.4.4', '../skin/')" id="menu_1.4.4Title" class="menutitle">Usage</div>
+<div id="menu_1.4.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind-jmx/manageServices.html">Manage Services</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-jmx/measurePerformance.html">Measure Performance</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-jmx/monitorServices.html">Monitor Services</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-jmx/manageLog4j.html">Manage Log4J</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.4.5', '../skin/')" id="menu_1.4.5Title" class="menutitle">Advanced Topics</div>
+<div id="menu_1.4.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind-jmx/multipleApps.html">Multiple Applications in Server</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.4.6', '../skin/')" id="menu_1.4.6Title" class="menutitle">Reports</div>
+<div id="menu_1.4.6" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind-jmx/junit-report.html">JUnit Tests</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-jmx/apidocs/index.html">JavaDoc</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-jmx/clover/index.html">Clover Code Coverage</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.5', '../skin/')" id="menu_1.5Title" class="menutitle">Example Code</div>
+<div id="menu_1.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind-examples/index.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-examples/calc.html">Calculator</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-examples/panorama.html">Panorama Startup</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-examples/logging.html">Logging Interceptor</a>
+</div>
+<div onclick="SwitchMenu('menu_1.5.5', '../skin/')" id="menu_1.5.5Title" class="menutitle">Reports</div>
+<div id="menu_1.5.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind-examples/junit-report.html">JUnit Tests</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-examples/apidocs/index.html">JavaDoc</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-examples/hivedocs/index.html">HiveDoc</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-examples/clover/index.html">Clover Code Coverage</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.6', '../skin/')" id="menu_1.6Title" class="menutitle">Other Resources</div>
+<div id="menu_1.6" class="menuitemgroup">
+<div class="menuitem">
+<a href="http://wiki.apache.org/jakarta-hivemind/">HiveMind Wiki</a>
+</div>
+<div class="menuitem">
+<a href="http://howardlewisship.com/blog/">Tapestry and HiveMind Blog</a>
+</div>
+<div class="menuitem">
+<a href="http://hivetranse.sourceforge.net/">HiveMind Utilities</a>
+</div>
+<div class="menuitem">
+<a href="http://www.theserverside.com/articles/article.tss?l=HivemindBuzz">HiveMind article on TheServerSide</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.7', '../skin/')" id="menu_1.7Title" class="menutitle">Related Projects</div>
+<div id="menu_1.7" class="menuitemgroup">
+<div class="menuitem">
+<a href="http://jakarta.apache.org/tapestry/">Tapestry</a>
+</div>
+<div class="menuitem">
+<a href="http://www.springframework.org">Spring</a>
+</div>
+</div>
+<div id="credit"></div>
+<div id="roundbottom">
+<img style="display: none" class="corner" height="15" width="15" alt="" src="../skin/images/rc-b-l-15-1body-2menu-3menu.png"></div>
+<!--+
+  |alternative credits
+  +-->
+<div id="credit2"></div>
+</div>
+<!--+
+    |end Menu
+    +-->
+<!--+
+    |start content
+    +-->
+<div id="content">
+<div class="trail">Font size: 
+	          &nbsp;<input value="Reset" class="resetfont" title="Reset text" onclick="ndeSetTextSize('reset'); return false;" type="button">      
+	          &nbsp;<input value="-a" class="smallerfont" title="Shrink text" onclick="ndeSetTextSize('decr'); return false;" type="button">
+	          &nbsp;<input value="+a" class="biggerfont" title="Enlarge text" onclick="ndeSetTextSize('incr'); return false;" type="button">
+</div>
+<h1>JUnit Test Report</h1>
+<div id="minitoc-area">
+<ul class="minitoc">
+<li>
+<a href="#Test+Suite+Summary">Test Suite Summary</a>
+</li>
+<li>
+<a href="#JUnit+Test+Details">JUnit Test Details</a>
+</li>
+</ul>
+</div>
+
+<a name="N1000C"></a><a name="Test+Suite+Summary"></a>
+<h2 class="boxed">Test Suite Summary</h2>
+<div class="section">
+<p>
+
+<strong>627 tests total. </strong>
+
+</p>
+<table class="ForrestTable" cellspacing="1" cellpadding="4">
+
+<tr>
+
+<th colspan="1" rowspan="1">TestCase</th>
+<th colspan="1" rowspan="1">Tests</th>
+<th colspan="1" rowspan="1">Time</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#hivemind.test.TestContains">hivemind.test.TestContains</a>
+</td>
+<td colspan="1" rowspan="1">6</td>
+<td colspan="1" rowspan="1">1.14</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#hivemind.test.TestDependency">hivemind.test.TestDependency</a>
+</td>
+<td colspan="1" rowspan="1">3</td>
+<td colspan="1" rowspan="1">0.30</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#hivemind.test.TestHiveMindFindLocation">hivemind.test.TestHiveMindFindLocation</a>
+</td>
+<td colspan="1" rowspan="1">7</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#hivemind.test.TestLocation">hivemind.test.TestLocation</a>
+</td>
+<td colspan="1" rowspan="1">11</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#hivemind.test.TestMisc">hivemind.test.TestMisc</a>
+</td>
+<td colspan="1" rowspan="1">9</td>
+<td colspan="1" rowspan="1">0.03</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#hivemind.test.TestRegistryBuilder">hivemind.test.TestRegistryBuilder</a>
+</td>
+<td colspan="1" rowspan="1">4</td>
+<td colspan="1" rowspan="1">0.30</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#hivemind.test.TestServicesByInterface">hivemind.test.TestServicesByInterface</a>
+</td>
+<td colspan="1" rowspan="1">3</td>
+<td colspan="1" rowspan="1">0.28</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#hivemind.test.TestSubModule">hivemind.test.TestSubModule</a>
+</td>
+<td colspan="1" rowspan="1">2</td>
+<td colspan="1" rowspan="1">0.20</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#hivemind.test.ant.TestConstructRegistry">hivemind.test.ant.TestConstructRegistry</a>
+</td>
+<td colspan="1" rowspan="1">6</td>
+<td colspan="1" rowspan="1">0.19</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#hivemind.test.ant.TestManifestClassPath">hivemind.test.ant.TestManifestClassPath</a>
+</td>
+<td colspan="1" rowspan="1">6</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#hivemind.test.config.TestConfigurationPoint">hivemind.test.config.TestConfigurationPoint</a>
+</td>
+<td colspan="1" rowspan="1">23</td>
+<td colspan="1" rowspan="1">1.77</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#hivemind.test.config.TestConversion">hivemind.test.config.TestConversion</a>
+</td>
+<td colspan="1" rowspan="1">6</td>
+<td colspan="1" rowspan="1">0.42</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#hivemind.test.config.TestUniqueElementAttribute">hivemind.test.config.TestUniqueElementAttribute</a>
+</td>
+<td colspan="1" rowspan="1">3</td>
+<td colspan="1" rowspan="1">0.20</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#hivemind.test.impl.TestRegistryAssemblyImpl">hivemind.test.impl.TestRegistryAssemblyImpl</a>
+</td>
+<td colspan="1" rowspan="1">1</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#hivemind.test.parse.TestDescriptorParser">hivemind.test.parse.TestDescriptorParser</a>
+</td>
+<td colspan="1" rowspan="1">33</td>
+<td colspan="1" rowspan="1">0.08</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#hivemind.test.parse.TestModuleDescriptor">hivemind.test.parse.TestModuleDescriptor</a>
+</td>
+<td colspan="1" rowspan="1">1</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#hivemind.test.parse.TestToString">hivemind.test.parse.TestToString</a>
+</td>
+<td colspan="1" rowspan="1">1</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#hivemind.test.rules.TestBooleanTranslator">hivemind.test.rules.TestBooleanTranslator</a>
+</td>
+<td colspan="1" rowspan="1">2</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#hivemind.test.rules.TestConfigurationTranslator">hivemind.test.rules.TestConfigurationTranslator</a>
+</td>
+<td colspan="1" rowspan="1">4</td>
+<td colspan="1" rowspan="1">0.22</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#hivemind.test.rules.TestConvertInitializer">hivemind.test.rules.TestConvertInitializer</a>
+</td>
+<td colspan="1" rowspan="1">4</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#hivemind.test.rules.TestEnumerationTranslator">hivemind.test.rules.TestEnumerationTranslator</a>
+</td>
+<td colspan="1" rowspan="1">5</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#hivemind.test.rules.TestInstanceTranslator">hivemind.test.rules.TestInstanceTranslator</a>
+</td>
+<td colspan="1" rowspan="1">6</td>
+<td colspan="1" rowspan="1">0.05</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#hivemind.test.rules.TestInvokeParentRule">hivemind.test.rules.TestInvokeParentRule</a>
+</td>
+<td colspan="1" rowspan="1">3</td>
+<td colspan="1" rowspan="1">0.11</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#hivemind.test.rules.TestPushAttributeRule">hivemind.test.rules.TestPushAttributeRule</a>
+</td>
+<td colspan="1" rowspan="1">1</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#hivemind.test.rules.TestPushContentRule">hivemind.test.rules.TestPushContentRule</a>
+</td>
+<td colspan="1" rowspan="1">1</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#hivemind.test.rules.TestServicePointTranslator">hivemind.test.rules.TestServicePointTranslator</a>
+</td>
+<td colspan="1" rowspan="1">1</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#hivemind.test.rules.TestSetModule">hivemind.test.rules.TestSetModule</a>
+</td>
+<td colspan="1" rowspan="1">1</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#hivemind.test.rules.TestSetPropertyRule">hivemind.test.rules.TestSetPropertyRule</a>
+</td>
+<td colspan="1" rowspan="1">1</td>
+<td colspan="1" rowspan="1">0.08</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#hivemind.test.rules.TestSmartTranslator">hivemind.test.rules.TestSmartTranslator</a>
+</td>
+<td colspan="1" rowspan="1">9</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#hivemind.test.services.TestBuilderFactory">hivemind.test.services.TestBuilderFactory</a>
+</td>
+<td colspan="1" rowspan="1">17</td>
+<td colspan="1" rowspan="1">0.72</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#hivemind.test.services.TestEagerLoader">hivemind.test.services.TestEagerLoader</a>
+</td>
+<td colspan="1" rowspan="1">5</td>
+<td colspan="1" rowspan="1">0.28</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#hivemind.test.services.TestEventLinker">hivemind.test.services.TestEventLinker</a>
+</td>
+<td colspan="1" rowspan="1">7</td>
+<td colspan="1" rowspan="1">0.08</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#hivemind.test.services.TestMethodSignature">hivemind.test.services.TestMethodSignature</a>
+</td>
+<td colspan="1" rowspan="1">14</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#hivemind.test.services.TestPooledServiceModel">hivemind.test.services.TestPooledServiceModel</a>
+</td>
+<td colspan="1" rowspan="1">2</td>
+<td colspan="1" rowspan="1">0.20</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#hivemind.test.services.TestServices">hivemind.test.services.TestServices</a>
+</td>
+<td colspan="1" rowspan="1">13</td>
+<td colspan="1" rowspan="1">1.06</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#hivemind.test.services.TestShutdown">hivemind.test.services.TestShutdown</a>
+</td>
+<td colspan="1" rowspan="1">5</td>
+<td colspan="1" rowspan="1">0.31</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#hivemind.test.services.TestStartup">hivemind.test.services.TestStartup</a>
+</td>
+<td colspan="1" rowspan="1">2</td>
+<td colspan="1" rowspan="1">0.12</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#hivemind.test.services.TestThreadedModel">hivemind.test.services.TestThreadedModel</a>
+</td>
+<td colspan="1" rowspan="1">4</td>
+<td colspan="1" rowspan="1">0.26</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#hivemind.test.services.TestThreadEventNotifier">hivemind.test.services.TestThreadEventNotifier</a>
+</td>
+<td colspan="1" rowspan="1">4</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#hivemind.test.services.TestThreadLocalStorage">hivemind.test.services.TestThreadLocalStorage</a>
+</td>
+<td colspan="1" rowspan="1">4</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.TestApplicationRuntimeException">org.apache.hivemind.TestApplicationRuntimeException</a>
+</td>
+<td colspan="1" rowspan="1">2</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.TestBeanService">org.apache.hivemind.TestBeanService</a>
+</td>
+<td colspan="1" rowspan="1">5</td>
+<td colspan="1" rowspan="1">0.42</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.TestDefense">org.apache.hivemind.TestDefense</a>
+</td>
+<td colspan="1" rowspan="1">5</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.TestOccurances">org.apache.hivemind.TestOccurances</a>
+</td>
+<td colspan="1" rowspan="1">5</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.TestThreadLocale">org.apache.hivemind.TestThreadLocale</a>
+</td>
+<td colspan="1" rowspan="1">2</td>
+<td colspan="1" rowspan="1">0.12</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.conditional.TestEvaluationContext">org.apache.hivemind.conditional.TestEvaluationContext</a>
+</td>
+<td colspan="1" rowspan="1">2</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.conditional.TestEvaluators">org.apache.hivemind.conditional.TestEvaluators</a>
+</td>
+<td colspan="1" rowspan="1">9</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.conditional.TestLexer">org.apache.hivemind.conditional.TestLexer</a>
+</td>
+<td colspan="1" rowspan="1">5</td>
+<td colspan="1" rowspan="1">0.09</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.conditional.TestNode">org.apache.hivemind.conditional.TestNode</a>
+</td>
+<td colspan="1" rowspan="1">2</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.conditional.TestParser">org.apache.hivemind.conditional.TestParser</a>
+</td>
+<td colspan="1" rowspan="1">9</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.conditional.TestToken">org.apache.hivemind.conditional.TestToken</a>
+</td>
+<td colspan="1" rowspan="1">3</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.impl.TestDefaultClassResolver">org.apache.hivemind.impl.TestDefaultClassResolver</a>
+</td>
+<td colspan="1" rowspan="1">9</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.impl.TestErrorHandler">org.apache.hivemind.impl.TestErrorHandler</a>
+</td>
+<td colspan="1" rowspan="1">4</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.impl.TestInvokeFactoryServiceConstructor">org.apache.hivemind.impl.TestInvokeFactoryServiceConstructor</a>
+</td>
+<td colspan="1" rowspan="1">1</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.impl.TestJavaTypeUtils">org.apache.hivemind.impl.TestJavaTypeUtils</a>
+</td>
+<td colspan="1" rowspan="1">6</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.impl.TestMessageFinder">org.apache.hivemind.impl.TestMessageFinder</a>
+</td>
+<td colspan="1" rowspan="1">2</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.impl.TestMessageFormatter">org.apache.hivemind.impl.TestMessageFormatter</a>
+</td>
+<td colspan="1" rowspan="1">1</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.impl.TestMethodIterator">org.apache.hivemind.impl.TestMethodIterator</a>
+</td>
+<td colspan="1" rowspan="1">5</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.impl.TestModule">org.apache.hivemind.impl.TestModule</a>
+</td>
+<td colspan="1" rowspan="1">4</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.impl.TestRegistryImpl">org.apache.hivemind.impl.TestRegistryImpl</a>
+</td>
+<td colspan="1" rowspan="1">1</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.impl.TestRegistryInfrastructure">org.apache.hivemind.impl.TestRegistryInfrastructure</a>
+</td>
+<td colspan="1" rowspan="1">7</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.impl.TestRegistryInfrastructureConstructor">org.apache.hivemind.impl.TestRegistryInfrastructureConstructor</a>
+</td>
+<td colspan="1" rowspan="1">6</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.impl.TestSchemaProcessor">org.apache.hivemind.impl.TestSchemaProcessor</a>
+</td>
+<td colspan="1" rowspan="1">6</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.impl.TestServiceImplementationFactoryParametersImpl">org.apache.hivemind.impl.TestServiceImplementationFactoryParametersImpl</a>
+</td>
+<td colspan="1" rowspan="1">1</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.impl.TestServiceInterceptorContributionImpl">org.apache.hivemind.impl.TestServiceInterceptorContributionImpl</a>
+</td>
+<td colspan="1" rowspan="1">2</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.impl.TestServiceModelThreading">org.apache.hivemind.impl.TestServiceModelThreading</a>
+</td>
+<td colspan="1" rowspan="1">4</td>
+<td colspan="1" rowspan="1">0.53</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.impl.TestServicePoint">org.apache.hivemind.impl.TestServicePoint</a>
+</td>
+<td colspan="1" rowspan="1">5</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.impl.TestSymbolExpander">org.apache.hivemind.impl.TestSymbolExpander</a>
+</td>
+<td colspan="1" rowspan="1">10</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.impl.TestTranslatorManager">org.apache.hivemind.impl.TestTranslatorManager</a>
+</td>
+<td colspan="1" rowspan="1">1</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.impl.TestVisibility">org.apache.hivemind.impl.TestVisibility</a>
+</td>
+<td colspan="1" rowspan="1">9</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.impl.servicemodel.TestRegistryShutdownListenerServices">org.apache.hivemind.impl.servicemodel.TestRegistryShutdownListenerServices</a>
+</td>
+<td colspan="1" rowspan="1">7</td>
+<td colspan="1" rowspan="1">0.72</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.internal.ser.TestServiceSerializationHelper">org.apache.hivemind.internal.ser.TestServiceSerializationHelper</a>
+</td>
+<td colspan="1" rowspan="1">3</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.methodmatch.TestMethodFilters">org.apache.hivemind.methodmatch.TestMethodFilters</a>
+</td>
+<td colspan="1" rowspan="1">11</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.methodmatch.TestMethodMatcher">org.apache.hivemind.methodmatch.TestMethodMatcher</a>
+</td>
+<td colspan="1" rowspan="1">7</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.methodmatch.TestMethodPatternParser">org.apache.hivemind.methodmatch.TestMethodPatternParser</a>
+</td>
+<td colspan="1" rowspan="1">12</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.order.TestOrderer">org.apache.hivemind.order.TestOrderer</a>
+</td>
+<td colspan="1" rowspan="1">15</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.parse.TestXmlResourceProcessor">org.apache.hivemind.parse.TestXmlResourceProcessor</a>
+</td>
+<td colspan="1" rowspan="1">1</td>
+<td colspan="1" rowspan="1">2.38</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.schema.rules.TestCreateObjectRule">org.apache.hivemind.schema.rules.TestCreateObjectRule</a>
+</td>
+<td colspan="1" rowspan="1">1</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.schema.rules.TestIdTranslators">org.apache.hivemind.schema.rules.TestIdTranslators</a>
+</td>
+<td colspan="1" rowspan="1">4</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.schema.rules.TestNumericTranslators">org.apache.hivemind.schema.rules.TestNumericTranslators</a>
+</td>
+<td colspan="1" rowspan="1">18</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.service.impl.TestBuilderFactory">org.apache.hivemind.service.impl.TestBuilderFactory</a>
+</td>
+<td colspan="1" rowspan="1">2</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.service.impl.TestBuilderPropertyFacet">org.apache.hivemind.service.impl.TestBuilderPropertyFacet</a>
+</td>
+<td colspan="1" rowspan="1">2</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.service.impl.TestClassFab">org.apache.hivemind.service.impl.TestClassFab</a>
+</td>
+<td colspan="1" rowspan="1">18</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.service.impl.TestClassFabUtils">org.apache.hivemind.service.impl.TestClassFabUtils</a>
+</td>
+<td colspan="1" rowspan="1">3</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.service.impl.TestInterfaceFab">org.apache.hivemind.service.impl.TestInterfaceFab</a>
+</td>
+<td colspan="1" rowspan="1">4</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.service.impl.TestInterfaceSynthesizer">org.apache.hivemind.service.impl.TestInterfaceSynthesizer</a>
+</td>
+<td colspan="1" rowspan="1">4</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.service.impl.TestLoggingInterceptorFactory">org.apache.hivemind.service.impl.TestLoggingInterceptorFactory</a>
+</td>
+<td colspan="1" rowspan="1">1</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.service.impl.TestObjectProviders">org.apache.hivemind.service.impl.TestObjectProviders</a>
+</td>
+<td colspan="1" rowspan="1">7</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.service.impl.TestObjectTranslator">org.apache.hivemind.service.impl.TestObjectTranslator</a>
+</td>
+<td colspan="1" rowspan="1">4</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.servlet.TestHiveMindFilter">org.apache.hivemind.servlet.TestHiveMindFilter</a>
+</td>
+<td colspan="1" rowspan="1">6</td>
+<td colspan="1" rowspan="1">0.28</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.test.TestAggregateArgumentsMatcher">org.apache.hivemind.test.TestAggregateArgumentsMatcher</a>
+</td>
+<td colspan="1" rowspan="1">2</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.test.TestArrayMatcher">org.apache.hivemind.test.TestArrayMatcher</a>
+</td>
+<td colspan="1" rowspan="1">4</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.test.TestMockClass">org.apache.hivemind.test.TestMockClass</a>
+</td>
+<td colspan="1" rowspan="1">2</td>
+<td colspan="1" rowspan="1">0.14</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.test.TestRegexpMatcher">org.apache.hivemind.test.TestRegexpMatcher</a>
+</td>
+<td colspan="1" rowspan="1">2</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.util.TestBodyBuilder">org.apache.hivemind.util.TestBodyBuilder</a>
+</td>
+<td colspan="1" rowspan="1">11</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.util.TestClasspathResource">org.apache.hivemind.util.TestClasspathResource</a>
+</td>
+<td colspan="1" rowspan="1">13</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.util.TestConstructorUtils">org.apache.hivemind.util.TestConstructorUtils</a>
+</td>
+<td colspan="1" rowspan="1">1</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.util.TestContextResource">org.apache.hivemind.util.TestContextResource</a>
+</td>
+<td colspan="1" rowspan="1">5</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.util.TestEventListenerList">org.apache.hivemind.util.TestEventListenerList</a>
+</td>
+<td colspan="1" rowspan="1">7</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.util.TestFileResource">org.apache.hivemind.util.TestFileResource</a>
+</td>
+<td colspan="1" rowspan="1">9</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.util.TestIdUtils">org.apache.hivemind.util.TestIdUtils</a>
+</td>
+<td colspan="1" rowspan="1">5</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.util.TestInstanceCreationUtils">org.apache.hivemind.util.TestInstanceCreationUtils</a>
+</td>
+<td colspan="1" rowspan="1">4</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.util.TestLocalizedContextResourceFinder">org.apache.hivemind.util.TestLocalizedContextResourceFinder</a>
+</td>
+<td colspan="1" rowspan="1">4</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.util.TestLocalizedNameGenerator">org.apache.hivemind.util.TestLocalizedNameGenerator</a>
+</td>
+<td colspan="1" rowspan="1">6</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.util.TestPropertyUtils">org.apache.hivemind.util.TestPropertyUtils</a>
+</td>
+<td colspan="1" rowspan="1">22</td>
+<td colspan="1" rowspan="1">0.05</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.util.TestShutdownCoordinator">org.apache.hivemind.util.TestShutdownCoordinator</a>
+</td>
+<td colspan="1" rowspan="1">3</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.util.TestStringUtils">org.apache.hivemind.util.TestStringUtils</a>
+</td>
+<td colspan="1" rowspan="1">11</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<a href="#org.apache.hivemind.util.TestToStringBuilder">org.apache.hivemind.util.TestToStringBuilder</a>
+</td>
+<td colspan="1" rowspan="1">13</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">
+<strong>** Total</strong>
+</td>
+<td colspan="1" rowspan="1">
+<strong>627</strong>
+</td>
+<td colspan="1" rowspan="1">
+<strong>13.75</strong>
+</td>
+
+</tr>
+
+</table>
+</div>
+
+<a name="N10991"></a><a name="JUnit+Test+Details"></a>
+<h2 class="boxed">JUnit Test Details</h2>
+<div class="section">
+<table class="ForrestTable" cellspacing="1" cellpadding="4">
+
+<tr>
+
+<th colspan="1" rowspan="1">Test</th>
+<th colspan="1" rowspan="1">Time</th>
+
+</tr>
+
+<a name="hivemind.test.TestContains"></a>
+<tr id="hivemind.test.TestContains">
+
+<th colspan="2" rowspan="1">hivemind.test.TestContains</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testConfiguration</td>
+<td colspan="1" rowspan="1">0.41</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testConfigurationFailure</td>
+<td colspan="1" rowspan="1">0.14</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testService</td>
+<td colspan="1" rowspan="1">0.11</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testServiceFailure</td>
+<td colspan="1" rowspan="1">0.12</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testUniqueService</td>
+<td colspan="1" rowspan="1">0.09</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testUniqueServiceFailure</td>
+<td colspan="1" rowspan="1">0.11</td>
+
+</tr>
+
+<a name="hivemind.test.TestDependency"></a>
+<tr id="hivemind.test.TestDependency">
+
+<th colspan="2" rowspan="1">hivemind.test.TestDependency</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testMissingRequiredModule</td>
+<td colspan="1" rowspan="1">0.12</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testDependencyWithoutVersion</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testVersionMismatch</td>
+<td colspan="1" rowspan="1">0.11</td>
+
+</tr>
+
+<a name="hivemind.test.TestHiveMindFindLocation"></a>
+<tr id="hivemind.test.TestHiveMindFindLocation">
+
+<th colspan="2" rowspan="1">hivemind.test.TestHiveMindFindLocation</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testEmpty</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testAllNull</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testOrdering</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testLocatable</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNullLocatable</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testSkipOther</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testToLocationStringNull</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<a name="hivemind.test.TestLocation"></a>
+<tr id="hivemind.test.TestLocation">
+
+<th colspan="2" rowspan="1">hivemind.test.TestLocation</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNoNumbers</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testToStringShort</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testWithLine</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testWithNumbers</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testToStringLong</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testEqualsBare</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testEqualsLineNo</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testEqualsFull</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testHashCodeBare</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testHashCodeLineNo</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testHashCodeFull</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="hivemind.test.TestMisc"></a>
+<tr id="hivemind.test.TestMisc">
+
+<th colspan="2" rowspan="1">hivemind.test.TestMisc</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testApplicationRuntimeExceptionGetComponent</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testApplicationRuntimeExceptionThrowableConstructor</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testExtensionImplGetElementsEmpty</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testInvokeFactoryServiceConstructorAccessors</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testCreateClassServiceConstructorAccessors</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testCreateClassServiceConstructorTwice</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testCreateInstanceWithInitializer</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testCreateClassServiceConstructorFailure</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testSystemPropertiesSymbolSource</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="hivemind.test.TestRegistryBuilder"></a>
+<tr id="hivemind.test.TestRegistryBuilder">
+
+<th colspan="2" rowspan="1">hivemind.test.TestRegistryBuilder</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testLookup</td>
+<td colspan="1" rowspan="1">0.09</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testConstructDefaultRegistry</td>
+<td colspan="1" rowspan="1">0.09</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testDuplicateModuleId</td>
+<td colspan="1" rowspan="1">0.05</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testDuplicateExtensionPoints</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<a name="hivemind.test.TestServicesByInterface"></a>
+<tr id="hivemind.test.TestServicesByInterface">
+
+<th colspan="2" rowspan="1">hivemind.test.TestServicesByInterface</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testUniqueGetServiceByInterface</td>
+<td colspan="1" rowspan="1">0.08</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNonExistentGetServiceByInterface</td>
+<td colspan="1" rowspan="1">0.08</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testMultipleExistentGetServiceByInterface</td>
+<td colspan="1" rowspan="1">0.12</td>
+
+</tr>
+
+<a name="hivemind.test.TestSubModule"></a>
+<tr id="hivemind.test.TestSubModule">
+
+<th colspan="2" rowspan="1">hivemind.test.TestSubModule</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNestedSubModule</td>
+<td colspan="1" rowspan="1">0.08</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testMissingSubModule</td>
+<td colspan="1" rowspan="1">0.12</td>
+
+</tr>
+
+<a name="hivemind.test.ant.TestConstructRegistry"></a>
+<tr id="hivemind.test.ant.TestConstructRegistry">
+
+<th colspan="2" rowspan="1">hivemind.test.ant.TestConstructRegistry</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNoFile</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNoDescriptors</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testBasic</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testLocalRefs</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testUptoDate</td>
+<td colspan="1" rowspan="1">0.08</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testJars</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<a name="hivemind.test.ant.TestManifestClassPath"></a>
+<tr id="hivemind.test.ant.TestManifestClassPath">
+
+<th colspan="2" rowspan="1">hivemind.test.ant.TestManifestClassPath</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testEmpty</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testSimple</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testDirectory</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testDirectoryInClasspath</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNoProperty</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNoClasspath</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="hivemind.test.config.TestConfigurationPoint"></a>
+<tr id="hivemind.test.config.TestConfigurationPoint">
+
+<th colspan="2" rowspan="1">hivemind.test.config.TestConfigurationPoint</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testEmpty</td>
+<td colspan="1" rowspan="1">0.11</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testSimple</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNullElement</td>
+<td colspan="1" rowspan="1">0.11</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testAttributeDefaults</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNested</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testStructured</td>
+<td colspan="1" rowspan="1">0.09</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testSetParent</td>
+<td colspan="1" rowspan="1">0.08</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testBooleanTranslator</td>
+<td colspan="1" rowspan="1">0.09</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testIntTranslator</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testInstanceTranslator</td>
+<td colspan="1" rowspan="1">0.11</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testSymbols</td>
+<td colspan="1" rowspan="1">0.08</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNoSchema</td>
+<td colspan="1" rowspan="1">0.09</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testLocalized</td>
+<td colspan="1" rowspan="1">0.08</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testElementsProxyList</td>
+<td colspan="1" rowspan="1">0.09</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testTooFew</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testTooMany</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testBadAttributes</td>
+<td colspan="1" rowspan="1">0.11</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testBadElement</td>
+<td colspan="1" rowspan="1">0.05</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testCustomRule</td>
+<td colspan="1" rowspan="1">0.08</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testCustomRuleFailure</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testResourceTranslator</td>
+<td colspan="1" rowspan="1">0.09</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testShutdown</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testUnknownContribution</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<a name="hivemind.test.config.TestConversion"></a>
+<tr id="hivemind.test.config.TestConversion">
+
+<th colspan="2" rowspan="1">hivemind.test.config.TestConversion</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testBasics</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testParentMethod</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testPropertyNameDefaultsToAttributeName</td>
+<td colspan="1" rowspan="1">0.05</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testComplexAttributeName</td>
+<td colspan="1" rowspan="1">0.09</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testExtraAttributeNames</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testDuplicateAttribute</td>
+<td colspan="1" rowspan="1">0.09</td>
+
+</tr>
+
+<a name="hivemind.test.config.TestUniqueElementAttribute"></a>
+<tr id="hivemind.test.config.TestUniqueElementAttribute">
+
+<th colspan="2" rowspan="1">hivemind.test.config.TestUniqueElementAttribute</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testUniquenessViolated</td>
+<td colspan="1" rowspan="1">0.05</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testFalseUniqueAttributeConstraint</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNoUniqueAttributeConstraint</td>
+<td colspan="1" rowspan="1">0.09</td>
+
+</tr>
+
+<a name="hivemind.test.impl.TestRegistryAssemblyImpl"></a>
+<tr id="hivemind.test.impl.TestRegistryAssemblyImpl">
+
+<th colspan="2" rowspan="1">hivemind.test.impl.TestRegistryAssemblyImpl</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testAddPostProcessor</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="hivemind.test.parse.TestDescriptorParser"></a>
+<tr id="hivemind.test.parse.TestDescriptorParser">
+
+<th colspan="2" rowspan="1">hivemind.test.parse.TestDescriptorParser</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testBadElement</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testModuleAttributes</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testConfigurationPointAttributes</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testContributionAttributes</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testContributionElements</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testServicePoint</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testImplementation</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testConfigurationPointSchema</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testBadElementAttributeKey</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testRules</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testParametersSchema</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testDuplicateContributionsSchema</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testDuplicateParametersSchema</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testDependency</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testBadAttribute</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testMissingAttribute</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testBadConfigurationId</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testBadModuleId</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testBadVersion</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testSchemaDescription</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testEmbeddedConfigSchema</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testEmbeddedParametersSchema</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testSetPropertyRule</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testPushAttributeRule</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testPushContentRule</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testPrivateServicePoint</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testPrivateConfigurationPoint</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testPrivateSchema</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testContributionIf</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testImplementationIf</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testModuleWithPackage</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testInterfaceNameQualifiedToModulePackage</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNoInterface</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="hivemind.test.parse.TestModuleDescriptor"></a>
+<tr id="hivemind.test.parse.TestModuleDescriptor">
+
+<th colspan="2" rowspan="1">hivemind.test.parse.TestModuleDescriptor</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testAddDupeSchema</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="hivemind.test.parse.TestToString"></a>
+<tr id="hivemind.test.parse.TestToString">
+
+<th colspan="2" rowspan="1">hivemind.test.parse.TestToString</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testToString</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="hivemind.test.rules.TestBooleanTranslator"></a>
+<tr id="hivemind.test.rules.TestBooleanTranslator">
+
+<th colspan="2" rowspan="1">hivemind.test.rules.TestBooleanTranslator</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNull</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testInitializer</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="hivemind.test.rules.TestConfigurationTranslator"></a>
+<tr id="hivemind.test.rules.TestConfigurationTranslator">
+
+<th colspan="2" rowspan="1">hivemind.test.rules.TestConfigurationTranslator</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNull</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testConfigurationTranslator</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testFailure</td>
+<td colspan="1" rowspan="1">0.11</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testMappedConfigurationTranslator</td>
+<td colspan="1" rowspan="1">0.05</td>
+
+</tr>
+
+<a name="hivemind.test.rules.TestConvertInitializer"></a>
+<tr id="hivemind.test.rules.TestConvertInitializer">
+
+<th colspan="2" rowspan="1">hivemind.test.rules.TestConvertInitializer</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testEmpty</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testSimple</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testFailure</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testComplex</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="hivemind.test.rules.TestEnumerationTranslator"></a>
+<tr id="hivemind.test.rules.TestEnumerationTranslator">
+
+<th colspan="2" rowspan="1">hivemind.test.rules.TestEnumerationTranslator</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNull</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testMatch</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testBadClass</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testUnrecognizedValue</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testBadField</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="hivemind.test.rules.TestInstanceTranslator"></a>
+<tr id="hivemind.test.rules.TestInstanceTranslator">
+
+<th colspan="2" rowspan="1">hivemind.test.rules.TestInstanceTranslator</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNull</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testInitializer</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testBadClass</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testPrivateObject</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testWrongType</td>
+<td colspan="1" rowspan="1">0.05</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testClassTranslator</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="hivemind.test.rules.TestInvokeParentRule"></a>
+<tr id="hivemind.test.rules.TestInvokeParentRule">
+
+<th colspan="2" rowspan="1">hivemind.test.rules.TestInvokeParentRule</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testInvokeFailure</td>
+<td colspan="1" rowspan="1">0.09</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNullParameter</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testGetMethod</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="hivemind.test.rules.TestPushAttributeRule"></a>
+<tr id="hivemind.test.rules.TestPushAttributeRule">
+
+<th colspan="2" rowspan="1">hivemind.test.rules.TestPushAttributeRule</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testPushAttributeRule</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="hivemind.test.rules.TestPushContentRule"></a>
+<tr id="hivemind.test.rules.TestPushContentRule">
+
+<th colspan="2" rowspan="1">hivemind.test.rules.TestPushContentRule</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testPushContentRule</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="hivemind.test.rules.TestServicePointTranslator"></a>
+<tr id="hivemind.test.rules.TestServicePointTranslator">
+
+<th colspan="2" rowspan="1">hivemind.test.rules.TestServicePointTranslator</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testServicePointTranslator</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="hivemind.test.rules.TestSetModule"></a>
+<tr id="hivemind.test.rules.TestSetModule">
+
+<th colspan="2" rowspan="1">hivemind.test.rules.TestSetModule</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testSetModuleRule</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="hivemind.test.rules.TestSetPropertyRule"></a>
+<tr id="hivemind.test.rules.TestSetPropertyRule">
+
+<th colspan="2" rowspan="1">hivemind.test.rules.TestSetPropertyRule</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testSuccess</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<a name="hivemind.test.rules.TestSmartTranslator"></a>
+<tr id="hivemind.test.rules.TestSmartTranslator">
+
+<th colspan="2" rowspan="1">hivemind.test.rules.TestSmartTranslator</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testInt</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNullInput</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testBlankInput</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testDefault</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testDouble</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testString</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testObjectAsString</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testStringWithNoEditor</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNoEditor</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<a name="hivemind.test.services.TestBuilderFactory"></a>
+<tr id="hivemind.test.services.TestBuilderFactory">
+
+<th colspan="2" rowspan="1">hivemind.test.services.TestBuilderFactory</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testInitializer</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testSmartFacet</td>
+<td colspan="1" rowspan="1">0.11</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testInitializeMethodFailure</td>
+<td colspan="1" rowspan="1">0.08</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testBuilderErrorHandlerFacet</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testSetErrorHandler</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testConstructErrorHandler</td>
+<td colspan="1" rowspan="1">0.12</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testBuilderClassResolverFacet</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testSetClassResolver</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testConstructClassResolver</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testAutowire</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testAutowireInitializer</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testAutowireServices</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testAutowireServicesFailure</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testAutowireConstructor</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testAutowireConstructorFailure</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testSetObject</td>
+<td colspan="1" rowspan="1">0.11</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testAutowireService</td>
+<td colspan="1" rowspan="1">0.05</td>
+
+</tr>
+
+<a name="hivemind.test.services.TestEagerLoader"></a>
+<tr id="hivemind.test.services.TestEagerLoader">
+
+<th colspan="2" rowspan="1">hivemind.test.services.TestEagerLoader</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testEagerLoaderImpl</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testEagerLoadSingleton</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testEagerLoadPrimitive</td>
+<td colspan="1" rowspan="1">0.09</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testEagerLoadThreaded</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testEagerLoadPooled</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<a name="hivemind.test.services.TestEventLinker"></a>
+<tr id="hivemind.test.services.TestEventLinker">
+
+<th colspan="2" rowspan="1">hivemind.test.services.TestEventLinker</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNoName</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNameMatch</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNoMatch</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNoMatchingName</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testIncompatible</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNoProducer</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testInsideBuilderFactory</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<a name="hivemind.test.services.TestMethodSignature"></a>
+<tr id="hivemind.test.services.TestMethodSignature">
+
+<th colspan="2" rowspan="1">hivemind.test.services.TestMethodSignature</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testToString</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testEqualsAndHashCode</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testEqualsAndHashCodeWithNulls</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testEqualsNameMismatch</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testParametersMismatch</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testEqualsNull</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testEqualsNonMethodSignature</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testGetUniqueId</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testOverridingSigTypeMismatch</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testOverridingSigNameMismatch</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testOverridingSigParametersMismatch</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testOverridingSig</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testOverridingSigShortcut</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testMultipleExceptionsToMatch</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="hivemind.test.services.TestPooledServiceModel"></a>
+<tr id="hivemind.test.services.TestPooledServiceModel">
+
+<th colspan="2" rowspan="1">hivemind.test.services.TestPooledServiceModel</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testManaged</td>
+<td colspan="1" rowspan="1">0.08</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testUnmanaged</td>
+<td colspan="1" rowspan="1">0.12</td>
+
+</tr>
+
+<a name="hivemind.test.services.TestServices"></a>
+<tr id="hivemind.test.services.TestServices">
+
+<th colspan="2" rowspan="1">hivemind.test.services.TestServices</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testSimple</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testToString</td>
+<td colspan="1" rowspan="1">0.08</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testComplex</td>
+<td colspan="1" rowspan="1">0.05</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testCache</td>
+<td colspan="1" rowspan="1">0.12</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testInterceptorSort</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testLogging</td>
+<td colspan="1" rowspan="1">0.08</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testLoggingMethodFilters</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testRecursiveService</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testServiceTranslator</td>
+<td colspan="1" rowspan="1">0.12</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testBuilderAccess</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testBuilderAccessFailure</td>
+<td colspan="1" rowspan="1">0.08</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testConstructorFactory</td>
+<td colspan="1" rowspan="1">0.16</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testArrayResult</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<a name="hivemind.test.services.TestShutdown"></a>
+<tr id="hivemind.test.services.TestShutdown">
+
+<th colspan="2" rowspan="1">hivemind.test.services.TestShutdown</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testShutdownSingleton</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testRegistryShutdownUnrepeatable</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testShutdownThreaded</td>
+<td colspan="1" rowspan="1">0.08</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testSingletonCore</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testPrimitiveCore</td>
+<td colspan="1" rowspan="1">0.05</td>
+
+</tr>
+
+<a name="hivemind.test.services.TestStartup"></a>
+<tr id="hivemind.test.services.TestStartup">
+
+<th colspan="2" rowspan="1">hivemind.test.services.TestStartup</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testStartupImpl</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testStartupContribution</td>
+<td colspan="1" rowspan="1">0.12</td>
+
+</tr>
+
+<a name="hivemind.test.services.TestThreadedModel"></a>
+<tr id="hivemind.test.services.TestThreadedModel">
+
+<th colspan="2" rowspan="1">hivemind.test.services.TestThreadedModel</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testSingleThread</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testThreaded</td>
+<td colspan="1" rowspan="1">0.08</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testIgnoreRegistyShutdownListener</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testDiscardable</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<a name="hivemind.test.services.TestThreadEventNotifier"></a>
+<tr id="hivemind.test.services.TestThreadEventNotifier">
+
+<th colspan="2" rowspan="1">hivemind.test.services.TestThreadEventNotifier</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testAdd</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testRemove</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNotifierClearsListenerListAfterFire</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testListenerThrowsException</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="hivemind.test.services.TestThreadLocalStorage"></a>
+<tr id="hivemind.test.services.TestThreadLocalStorage">
+
+<th colspan="2" rowspan="1">hivemind.test.services.TestThreadLocalStorage</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testGetEmpty</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testPutGet</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testClear</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testClearNull</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.TestApplicationRuntimeException"></a>
+<tr id="org.apache.hivemind.TestApplicationRuntimeException">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.TestApplicationRuntimeException</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testToStringNoLocation</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testToStringWithLocation</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.TestBeanService"></a>
+<tr id="org.apache.hivemind.TestBeanService">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.TestBeanService</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testSimple</td>
+<td colspan="1" rowspan="1">0.16</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testThreaded</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testFactory</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testPooled</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testAutowireBeanServiceProperty</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<a name="org.apache.hivemind.TestDefense"></a>
+<tr id="org.apache.hivemind.TestDefense">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.TestDefense</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNotNull</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testIsNull</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testCorrectType</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testIncorrectType</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testIncorrectTypeWithArrays</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.TestOccurances"></a>
+<tr id="org.apache.hivemind.TestOccurances">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.TestOccurances</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNone</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testOnePlus</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testRequired</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testUnbounded</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testOptional</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.TestThreadLocale"></a>
+<tr id="org.apache.hivemind.TestThreadLocale">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.TestThreadLocale</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testThreadSpecific</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testResetOnThreadCleanup</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<a name="org.apache.hivemind.conditional.TestEvaluationContext"></a>
+<tr id="org.apache.hivemind.conditional.TestEvaluationContext">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.conditional.TestEvaluationContext</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testClass</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testProperty</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.conditional.TestEvaluators"></a>
+<tr id="org.apache.hivemind.conditional.TestEvaluators">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.conditional.TestEvaluators</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testPropertyEvaluator</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testClassNameEvaluator</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNotEvaluator</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testAndEvaluatorTrue</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testAndEvaluatorShortcicuit</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testAndEvaluatorFalse</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testOrEvaluatorTrue</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testOrEvaluatorShortcicuit</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testOrEvaluatorFalse</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.conditional.TestLexer"></a>
+<tr id="org.apache.hivemind.conditional.TestLexer">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.conditional.TestLexer</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testKeywords</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testComplexSymbol</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testParens</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testInvalidCharacter</td>
+<td colspan="1" rowspan="1">0.08</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testSymbolAtEnd</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.conditional.TestNode"></a>
+<tr id="org.apache.hivemind.conditional.TestNode">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.conditional.TestNode</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testConstructorAndGetters</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testEvaluate</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.conditional.TestParser"></a>
+<tr id="org.apache.hivemind.conditional.TestParser">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.conditional.TestParser</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testSingleTerm</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testExtraToken</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testTermAsExpression</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNot</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testMissingToken</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testWrongToken</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testWrongTokenInTerm</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testAnd</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testOr</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.conditional.TestToken"></a>
+<tr id="org.apache.hivemind.conditional.TestToken">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.conditional.TestToken</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testTokenTypeToString</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testTokenToStringNoValue</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testTokenToString</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.impl.TestDefaultClassResolver"></a>
+<tr id="org.apache.hivemind.impl.TestDefaultClassResolver">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.impl.TestDefaultClassResolver</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testDefaultClassLoader</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testGetResource</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testFindClassSuccess</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testFindClassFailure</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testFindClassPrimitive</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testCheckClassExists</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testCheckClassMissing</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testFindClassArray</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testFindPrimitiveArray</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.impl.TestErrorHandler"></a>
+<tr id="org.apache.hivemind.impl.TestErrorHandler">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.impl.TestErrorHandler</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testDefaultErrorHandlerWithLocation</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testDefaultErrorHandlerWithNoLocation</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testStrictErrorHandler</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testStrictErrorHandlerWithLocation</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.impl.TestInvokeFactoryServiceConstructor"></a>
+<tr id="org.apache.hivemind.impl.TestInvokeFactoryServiceConstructor">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.impl.TestInvokeFactoryServiceConstructor</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testWrongNumberOfParameters</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.impl.TestJavaTypeUtils"></a>
+<tr id="org.apache.hivemind.impl.TestJavaTypeUtils">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.impl.TestJavaTypeUtils</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNonArrayUnchanged</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testPrimitiveArray</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testObjectArray</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testPrimitiveMultiArray</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testObjectMultiArray</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testGetPrimitive</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.impl.TestMessageFinder"></a>
+<tr id="org.apache.hivemind.impl.TestMessageFinder">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.impl.TestMessageFinder</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testLocaleOverridesBase</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testLocaleDoeNotObscureBase</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.impl.TestMessageFormatter"></a>
+<tr id="org.apache.hivemind.impl.TestMessageFormatter">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.impl.TestMessageFormatter</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testWithNoPackage</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<a name="org.apache.hivemind.impl.TestMethodIterator"></a>
+<tr id="org.apache.hivemind.impl.TestMethodIterator">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.impl.TestMethodIterator</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testToString</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNormal</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testInherited</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testFiltersFuplication</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testFilterInheritedMethods</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.impl.TestModule"></a>
+<tr id="org.apache.hivemind.impl.TestModule">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.impl.TestModule</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testGetServiceByInterface</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testResolveType</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testResolveTypeCache</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testResolveTypeFailure</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.impl.TestRegistryImpl"></a>
+<tr id="org.apache.hivemind.impl.TestRegistryImpl">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.impl.TestRegistryImpl</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testGetModuleMessages</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<a name="org.apache.hivemind.impl.TestRegistryInfrastructure"></a>
+<tr id="org.apache.hivemind.impl.TestRegistryInfrastructure">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.impl.TestRegistryInfrastructure</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testGetMissingExtensionPoint</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testGetUnqualifiedServicePoint</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testGetServiceIdsNoServices</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testGetServiceIdsInterfaceNotFound</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testGetServiceIds</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testDoubleStartup</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testUnknownServiceModelFactory</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.impl.TestRegistryInfrastructureConstructor"></a>
+<tr id="org.apache.hivemind.impl.TestRegistryInfrastructureConstructor">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.impl.TestRegistryInfrastructureConstructor</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testFound</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNotVisible</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNotFound</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testConditionalExpressionTrue</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testConditionalExpressionFalse</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testConditionalExpressionError</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.impl.TestSchemaProcessor"></a>
+<tr id="org.apache.hivemind.impl.TestSchemaProcessor">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.impl.TestSchemaProcessor</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testGetContentTranslator</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testGetContentTranslatorUnspecified</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testGetAttributeTranslator</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testStackEmpty</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testKeyedElement</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testUniqueElement</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.impl.TestServiceImplementationFactoryParametersImpl"></a>
+<tr id="org.apache.hivemind.impl.TestServiceImplementationFactoryParametersImpl">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.impl.TestServiceImplementationFactoryParametersImpl</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testGetFirstParameter</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.impl.TestServiceInterceptorContributionImpl"></a>
+<tr id="org.apache.hivemind.impl.TestServiceInterceptorContributionImpl">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.impl.TestServiceInterceptorContributionImpl</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNameDefault</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNameOverride</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.impl.TestServiceModelThreading"></a>
+<tr id="org.apache.hivemind.impl.TestServiceModelThreading">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.impl.TestServiceModelThreading</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testThreaded</td>
+<td colspan="1" rowspan="1">0.17</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testPooled</td>
+<td colspan="1" rowspan="1">0.12</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testPrimitive</td>
+<td colspan="1" rowspan="1">0.12</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testSingleton</td>
+<td colspan="1" rowspan="1">0.11</td>
+
+</tr>
+
+<a name="org.apache.hivemind.impl.TestServicePoint"></a>
+<tr id="org.apache.hivemind.impl.TestServicePoint">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.impl.TestServicePoint</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testUnknownInterfaceClass</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testDefaultInterceptorOrdering</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testCustomInterceptorOrdering</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testInterceptorOrderingByName</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testResultNotAssignableToServiceInterface</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<a name="org.apache.hivemind.impl.TestSymbolExpander"></a>
+<tr id="org.apache.hivemind.impl.TestSymbolExpander">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.impl.TestSymbolExpander</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testSimple</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNoSymbols</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testFalseStart</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNestedBraces</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testEmptySymbol</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testTrailingDollar</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testEndsWithPartialSymbol</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testMissingSymbol</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testEscaped</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testEscapedAtStart</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.impl.TestTranslatorManager"></a>
+<tr id="org.apache.hivemind.impl.TestTranslatorManager">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.impl.TestTranslatorManager</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNoClassOrService</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.impl.TestVisibility"></a>
+<tr id="org.apache.hivemind.impl.TestVisibility">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.impl.TestVisibility</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testPublicConfigurationVisibleToOtherModule</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testPublicConfigurationVisibleToApplication</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testPrivateConfigurationInvisibleToOtherModule</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testPrivateConfigurationInvisibleToApplication</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testGetServiceNotVisibleToApplication</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testGetServiceNotVisibleToModule</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testGetConfigurationNotVisibleToModule</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testGetServiceMatchesPublicOnly</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testContributionToNonVisibleConfigurationPoint</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<a name="org.apache.hivemind.impl.servicemodel.TestRegistryShutdownListenerServices"></a>
+<tr id="org.apache.hivemind.impl.servicemodel.TestRegistryShutdownListenerServices">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.impl.servicemodel.TestRegistryShutdownListenerServices</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testPrimitive</td>
+<td colspan="1" rowspan="1">0.12</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testSingleton</td>
+<td colspan="1" rowspan="1">0.12</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testPooledCalled</td>
+<td colspan="1" rowspan="1">0.12</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testSingletonBeanRegistryShutdownListener</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testThreadedBeanRegistryShutdownListener</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testPooledBeanRegistryShutdownListener</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testPrimitiveBeanRegistryShutdownListener</td>
+<td colspan="1" rowspan="1">0.16</td>
+
+</tr>
+
+<a name="org.apache.hivemind.internal.ser.TestServiceSerializationHelper"></a>
+<tr id="org.apache.hivemind.internal.ser.TestServiceSerializationHelper">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.internal.ser.TestServiceSerializationHelper</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testGetNoSupport</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testStore</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testIntegration</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<a name="org.apache.hivemind.methodmatch.TestMethodFilters"></a>
+<tr id="org.apache.hivemind.methodmatch.TestMethodFilters">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.methodmatch.TestMethodFilters</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testExactNameFilter</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNamePrefixFilter</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNameSuffixFilter</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testInfixNameFilter</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testParameterCountFilter</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testParameterFilterIntArg</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testParameterFilterIntegerArg</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testParameterFilterArrayArg</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testParameterFilterScalarArrayArg</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testCompositeFilter</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testMatchAllFilter</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.methodmatch.TestMethodMatcher"></a>
+<tr id="org.apache.hivemind.methodmatch.TestMethodMatcher">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.methodmatch.TestMethodMatcher</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testEmpty</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testMatch</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNoMatch</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNoMatchReturnsDefault</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testMatchPriority</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testParseException</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testParseExceptionWithLocation</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.methodmatch.TestMethodPatternParser"></a>
+<tr id="org.apache.hivemind.methodmatch.TestMethodPatternParser">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.methodmatch.TestMethodPatternParser</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testCount</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testEmpty</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testExactName</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testInvalidName</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testInvalidParams</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testInvalidParamCount</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testMatchAll</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNameMissing</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testParameterTypes</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testPrefix</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testSubstring</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testSuffix</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.order.TestOrderer"></a>
+<tr id="org.apache.hivemind.order.TestOrderer">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.order.TestOrderer</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNoDependencies</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testPrereq</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testPostreq</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testPrePostreq</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testUnknownPrereq</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testUnknownPostreq</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testCyclePre</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testCyclePost</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testDupe</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testPreStar</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testPreStartDupe</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testPostStar</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testPostStarDupe</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNoObjects</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testException</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.parse.TestXmlResourceProcessor"></a>
+<tr id="org.apache.hivemind.parse.TestXmlResourceProcessor">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.parse.TestXmlResourceProcessor</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testMissingURLResource</td>
+<td colspan="1" rowspan="1">2.38</td>
+
+</tr>
+
+<a name="org.apache.hivemind.schema.rules.TestCreateObjectRule"></a>
+<tr id="org.apache.hivemind.schema.rules.TestCreateObjectRule">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.schema.rules.TestCreateObjectRule</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testCreateWithInitializer</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.schema.rules.TestIdTranslators"></a>
+<tr id="org.apache.hivemind.schema.rules.TestIdTranslators">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.schema.rules.TestIdTranslators</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNullId</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNonNullId</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNullList</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNonNullList</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.schema.rules.TestNumericTranslators"></a>
+<tr id="org.apache.hivemind.schema.rules.TestNumericTranslators">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.schema.rules.TestNumericTranslators</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testIntTranslator</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testIntDefault</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testIntLow</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testIntHigh</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testIntDefaultValue</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testIntInvalid</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testLongTranslator</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testLongDefault</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testLongLow</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testLongHigh</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testLongDefaultValue</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testLongInvalid</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testDoubleTranslator</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testDoubleDefault</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testDoubleLow</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testDoubleHigh</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testDoubleDefaultValue</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testDoubleInvalid</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.service.impl.TestBuilderFactory"></a>
+<tr id="org.apache.hivemind.service.impl.TestBuilderFactory">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.service.impl.TestBuilderFactory</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testErrorInInitializer</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testListPropertyAutowire</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<a name="org.apache.hivemind.service.impl.TestBuilderPropertyFacet"></a>
+<tr id="org.apache.hivemind.service.impl.TestBuilderPropertyFacet">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.service.impl.TestBuilderPropertyFacet</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testCachingOfTranslatedValues</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testAssignableFromBadValue</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.service.impl.TestClassFab"></a>
+<tr id="org.apache.hivemind.service.impl.TestClassFab">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.service.impl.TestClassFab</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testToString</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testCreateBean</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testConstructor</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testConstructorFromBaseClass</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testInvalidSuperClass</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testAddInterface</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testSubclassFromFinal</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testInPackage</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testBadMethodBody</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testGetMethodFab</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testExtendMethod</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testExtendMethodAlterReturn</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testExtendMethodFailure</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testDupeMethodAdd</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testBadConstructor</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testCatchException</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testBadCatch</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testInvalidField</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.service.impl.TestClassFabUtils"></a>
+<tr id="org.apache.hivemind.service.impl.TestClassFabUtils">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.service.impl.TestClassFabUtils</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testGetInstanceClassName</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testAddNoOpMethod</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testGenerateClassName</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.service.impl.TestInterfaceFab"></a>
+<tr id="org.apache.hivemind.service.impl.TestInterfaceFab">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.service.impl.TestInterfaceFab</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testAddInterface</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testCreateEmptyInterface</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testAddMethod</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testDuplicateInterface</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.service.impl.TestInterfaceSynthesizer"></a>
+<tr id="org.apache.hivemind.service.impl.TestInterfaceSynthesizer">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.service.impl.TestInterfaceSynthesizer</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testSimple</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testExtendingInterface</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testExtendingSubInterface</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testIgnoreStaticAndPrivateMethods</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.service.impl.TestLoggingInterceptorFactory"></a>
+<tr id="org.apache.hivemind.service.impl.TestLoggingInterceptorFactory">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.service.impl.TestLoggingInterceptorFactory</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testLoggingOverProxy</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<a name="org.apache.hivemind.service.impl.TestObjectProviders"></a>
+<tr id="org.apache.hivemind.service.impl.TestObjectProviders">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.service.impl.TestObjectProviders</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testServiceObjectProvider</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testConfigurationObjectProvider</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testInstanceProvider</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testInstanceProviderFailure</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testServicePropertyObjectProvider</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testServicePropertyObjectProviderWithInvalidLocator</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testClassProvider</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.service.impl.TestObjectTranslator"></a>
+<tr id="org.apache.hivemind.service.impl.TestObjectTranslator">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.service.impl.TestObjectTranslator</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testSuccess</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNullInput</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testBadLocator</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testUnknownPrefix</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.servlet.TestHiveMindFilter"></a>
+<tr id="org.apache.hivemind.servlet.TestHiveMindFilter">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.servlet.TestHiveMindFilter</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testBasic</td>
+<td colspan="1" rowspan="1">0.09</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testShutdown</td>
+<td colspan="1" rowspan="1">0.11</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testLoadsFromWebInf</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testExceptionInInit</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testDestroyWithoutRepository</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testFilterWithoutRepository</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.test.TestAggregateArgumentsMatcher"></a>
+<tr id="org.apache.hivemind.test.TestAggregateArgumentsMatcher">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.test.TestAggregateArgumentsMatcher</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testOutOfRange</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testCompareNull</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.test.TestArrayMatcher"></a>
+<tr id="org.apache.hivemind.test.TestArrayMatcher">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.test.TestArrayMatcher</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testMatch</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testActualIsNull</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testWrongElementCount</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testMismatch</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.test.TestMockClass"></a>
+<tr id="org.apache.hivemind.test.TestMockClass">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.test.TestMockClass</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testMockForClass</td>
+<td colspan="1" rowspan="1">0.14</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testPlaceholder</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.test.TestRegexpMatcher"></a>
+<tr id="org.apache.hivemind.test.TestRegexpMatcher">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.test.TestRegexpMatcher</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testMatching</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testBadPattern</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.util.TestBodyBuilder"></a>
+<tr id="org.apache.hivemind.util.TestBodyBuilder">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.util.TestBodyBuilder</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testBasic</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNested</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testClear</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testQuoted</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testAddln</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testAddPattern1</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testAddlnPattern1</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testAddPattern2</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testAddlnPattern2</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testAddPattern3</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testAddlnPattern3</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.util.TestClasspathResource"></a>
+<tr id="org.apache.hivemind.util.TestClasspathResource">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.util.TestClasspathResource</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testEqualsNull</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testClasspathEquals</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testClasspathRelativeSameResource</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testClasspathRelativeSameFolder</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testClasspathRelative</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testClasspathAbsolute</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testClasspathLocalize</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testClasspathLocalizeMissing</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testClasspathLocalizeDefault</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testClasspathLocalizeNull</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testClasspathRelativeSamePath</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testTrailingSlash</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testLocalizeExtensionless</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.util.TestConstructorUtils"></a>
+<tr id="org.apache.hivemind.util.TestConstructorUtils">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.util.TestConstructorUtils</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testInvocationTargetException</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.util.TestContextResource"></a>
+<tr id="org.apache.hivemind.util.TestContextResource">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.util.TestContextResource</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testConstructor</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testLocalizationExists</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testLocalizationSame</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testLocalizationMissing</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testGetRelativeResource</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.util.TestEventListenerList"></a>
+<tr id="org.apache.hivemind.util.TestEventListenerList">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.util.TestEventListenerList</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testBasic</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testEmptyList</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testLateAdd</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testLateRemove</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testRemoveMissing</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testIteratorRemoveFailure</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testOutOfMemoryError</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.util.TestFileResource"></a>
+<tr id="org.apache.hivemind.util.TestFileResource">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.util.TestFileResource</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testToString</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testLocalizationMissing</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testFindLocalization</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNoLocalization</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testExisting</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testMissing</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testCreateWithLocale</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testGetLocalization</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testExtensionLess</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.util.TestIdUtils"></a>
+<tr id="org.apache.hivemind.util.TestIdUtils">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.util.TestIdUtils</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testQualifyId</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testQualifiedId</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testQualifyList</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testQualifyListStar</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testQualifyListNull</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.util.TestInstanceCreationUtils"></a>
+<tr id="org.apache.hivemind.util.TestInstanceCreationUtils">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.util.TestInstanceCreationUtils</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testSimple</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testFailure</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testComplex</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testSetLocation</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.util.TestLocalizedContextResourceFinder"></a>
+<tr id="org.apache.hivemind.util.TestLocalizedContextResourceFinder">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.util.TestLocalizedContextResourceFinder</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testFound</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNotFound</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNotFoundException</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testExtensionlessResource</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.util.TestLocalizedNameGenerator"></a>
+<tr id="org.apache.hivemind.util.TestLocalizedNameGenerator">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.util.TestLocalizedNameGenerator</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testBasic</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNoCountry</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testVariantWithoutCountry</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNullLocale</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNullSuffix</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testForException</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.util.TestPropertyUtils"></a>
+<tr id="org.apache.hivemind.util.TestPropertyUtils">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.util.TestPropertyUtils</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNull</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testRead</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testWrite</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testMissingProperty</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testReadOnly</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testWriteOnly</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testReadFailure</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testWriteFailure</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testIntrospectFailure</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testGetPropertyType</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testIsReadable</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testIsWriteable</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testGetReadable</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testGetWriteable</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testGetPropertyAdaptor</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testSmartWrite</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testSmartWriteWrapper</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testSmartWriteFailure</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testSmartWriteNoPropertyEditor</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testConfigureProperties</td>
+<td colspan="1" rowspan="1">0.02</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testConfigureBooleanProperty</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testConfigureMultipleProperties</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.util.TestShutdownCoordinator"></a>
+<tr id="org.apache.hivemind.util.TestShutdownCoordinator">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.util.TestShutdownCoordinator</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testShutdownCoordinator</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testShutdownCoordinatorService</td>
+<td colspan="1" rowspan="1">0.06</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testShutdownFailure</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.util.TestStringUtils"></a>
+<tr id="org.apache.hivemind.util.TestStringUtils">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.util.TestStringUtils</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testCapitalize</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testCapitalizeEmpty</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testCapitalizeNull</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testSplit</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testSplitSingle</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testSplitNull</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testSplitEmpty</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testSplitTrailingComma</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testJoin</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testJoinNull</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testJoinEmpty</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<a name="org.apache.hivemind.util.TestToStringBuilder"></a>
+<tr id="org.apache.hivemind.util.TestToStringBuilder">
+
+<th colspan="2" rowspan="1">org.apache.hivemind.util.TestToStringBuilder</th>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testSimple</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testNull</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testWithHashCode</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testSetDefault</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testAppendString</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testAppendNullString</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testAppendTwo</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testAppendObject</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testAppendNullObject</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testAppendBoolean</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testAppendByte</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testAppendShort</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+<tr>
+
+<td colspan="1" rowspan="1">testAppendInt</td>
+<td colspan="1" rowspan="1">0.00</td>
+
+</tr>
+
+</table>
+</div>
+
+</div>
+<!--+
+    |end content
+    +-->
+<div class="clearboth">&nbsp;</div>
+</div>
+<div id="footer">
+<!--+
+    |start bottomstrip
+    +-->
+<div class="lastmodified">
+<script type="text/javascript"><!--
+document.write("Last Published: " + document.lastModified);
+//  --></script>
+</div>
+<div class="copyright">
+        Copyright &copy;
+         2005 Apache Software Foundation</div>
+<!--+
+    |end bottomstrip
+    +-->
+</div>
+</body>
+</html>

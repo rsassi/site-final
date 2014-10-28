@@ -1,0 +1,8 @@
+org.apache.hivemind.lib
+org.apache.hivemind.lib.chain
+org.apache.hivemind.lib.factory
+org.apache.hivemind.lib.groovy
+org.apache.hivemind.lib.impl
+org.apache.hivemind.lib.pipeline
+org.apache.hivemind.lib.strategy
+org.apache.hivemind.lib.util

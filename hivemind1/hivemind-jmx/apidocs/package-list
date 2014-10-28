@@ -1,0 +1,4 @@
+org.apache.hivemind.management
+org.apache.hivemind.management.impl
+org.apache.hivemind.management.log4j
+org.apache.hivemind.management.mbeans

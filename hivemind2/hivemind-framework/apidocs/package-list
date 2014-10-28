@@ -1,0 +1,15 @@
+org.apache.hivemind
+org.apache.hivemind.definition
+org.apache.hivemind.definition.impl
+org.apache.hivemind.events
+org.apache.hivemind.impl
+org.apache.hivemind.impl.servicemodel
+org.apache.hivemind.internal
+org.apache.hivemind.internal.ser
+org.apache.hivemind.methodmatch
+org.apache.hivemind.order
+org.apache.hivemind.service
+org.apache.hivemind.service.impl
+org.apache.hivemind.servlet
+org.apache.hivemind.test
+org.apache.hivemind.util

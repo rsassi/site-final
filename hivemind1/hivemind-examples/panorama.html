@@ -1,0 +1,1283 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Apache Forrest" name="Generator">
+<meta name="Forrest-version" content="0.8-dev">
+<meta name="Forrest-skin-name" content="pelt">
+<title>Panorama Startup</title>
+<link type="text/css" href="../skin/basic.css" rel="stylesheet">
+<link media="screen" type="text/css" href="../skin/screen.css" rel="stylesheet">
+<link media="print" type="text/css" href="../skin/print.css" rel="stylesheet">
+<link type="text/css" href="../skin/profile.css" rel="stylesheet">
+<script src="../skin/getBlank.js" language="javascript" type="text/javascript"></script><script src="../skin/getMenu.js" language="javascript" type="text/javascript"></script><script src="../skin/fontsize.js" language="javascript" type="text/javascript"></script>
+<link rel="shortcut icon" href="../">
+</head>
+<body onload="init()"><div style="background: red"><h1>2009/04/15 - Apache HiveMind has been retired. </h1><h2>For more information, please explore the <a href="http://attic.apache.org/">Attic</a>. </h2></div>
+<script type="text/javascript">ndeSetTextSize();</script>
+<div id="top">
+<!--+
+    |breadtrail
+    +-->
+<div class="breadtrail">
+<a href="http://jakarta.apache.org/">Jakarta</a> &gt; <a href="http://jakarta.apache.org/hivemind/">HiveMind</a><script src="../skin/breadcrumbs.js" language="JavaScript" type="text/javascript"></script>
+</div>
+<!--+
+    |header
+    +-->
+<div class="header">
+<!--+
+    |start group logo
+    +-->
+<div class="grouplogo">
+<a href="http://jakarta.apache.org/hivemind/"><img class="logoImage" alt="HiveMind" src="../images/HiveMind-Logo.png" title="HiveMind Services and Configuration Microkernel"></a>
+</div>
+<!--+
+    |end group logo
+    +-->
+<!--+
+    |start Project Logo
+    +-->
+<div class="projectlogoA1">
+<a href="http://jakarta.apache.org/"><img class="logoImage" alt="Jakarta" src="../images/jakarta-logo.gif" title="Apache Jakarta"></a>
+</div>
+<!--+
+    |end Project Logo
+    +-->
+<!--+
+    |start Tabs
+    +-->
+<ul id="tabs">
+<li>
+<a class="base-not-selected" href="../index.html">HiveMind Project</a>
+</li>
+<li>
+<a class="base-not-selected" href="../hivemind/index.html">Module: hivemind</a>
+</li>
+<li>
+<a class="base-not-selected" href="../hivemind-lib/index.html">Module: hivemind-lib</a>
+</li>
+<li>
+<a class="base-not-selected" href="../hivemind-jmx/index.html">Module: hivemind-jmx</a>
+</li>
+<li class="current">
+<a class="base-selected" href="../hivemind-examples/index.html">Example Code</a>
+</li>
+</ul>
+<!--+
+    |end Tabs
+    +-->
+</div>
+</div>
+<div id="main">
+<div id="publishedStrip">
+<!--+
+    |start Subtabs
+    +-->
+<div id="level2tabs"></div>
+<!--+
+    |end Endtabs
+    +-->
+<script type="text/javascript"><!--
+document.write("Last Published: " + document.lastModified);
+//  --></script>
+</div>
+<!--+
+    |breadtrail
+    +-->
+<div class="breadtrail">
+             
+             &nbsp;
+           </div>
+<!--+
+    |start Menu, mainarea
+    +-->
+<!--+
+    |start Menu
+    +-->
+<div id="menu">
+<div onclick="SwitchMenu('menu_1.1', '../skin/')" id="menu_1.1Title" class="menutitle">HiveMind</div>
+<div id="menu_1.1" class="menuitemgroup">
+<div class="menuitem">
+<a href="../index.html">Overview</a>
+</div>
+<div onclick="SwitchMenu('menu_1.1.2', '../skin/')" id="menu_1.1.2Title" class="menutitle">Reference</div>
+<div id="menu_1.1.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="../services.html">Services</a>
+</div>
+<div class="menuitem">
+<a href="../configurations.html">Configurations</a>
+</div>
+<div class="menuitem">
+<a href="../hivedoc.html">HiveDoc</a>
+</div>
+<div class="menuitem">
+<a href="../descriptor.html">Module  Descriptor</a>
+</div>
+<div class="menuitem">
+<a href="../rules.html">Contribution Processing Rules</a>
+</div>
+<div class="menuitem">
+<a href="../dependencies.html">Dependencies</a>
+</div>
+<div class="menuitem">
+<a href="../conditional.html">Conditional Contributions</a>
+</div>
+<div class="menuitem">
+<a href="../serializing.html">Serializing Services</a>
+</div>
+<div class="menuitem">
+<a href="../instance-initialization.html">Instance Initialization</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.1.3', '../skin/')" id="menu_1.1.3Title" class="menutitle">Project Information</div>
+<div id="menu_1.1.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="../changes.html">Change Log</a>
+</div>
+<div class="menuitem">
+<a href="../todo.html">TODO</a>
+</div>
+<div class="menuitem">
+<a href="http://jakarta.apache.org/site/mail2.html#HiveMind">Mailing Lists</a>
+</div>
+<div class="menuitem">
+<a href="../downloads.html">Downloads</a>
+</div>
+<div class="menuitem">
+<a href="http://issues.apache.org/jira/secure/BrowseProject.jspa?id=10500">Bugs</a>
+</div>
+<div class="menuitem">
+<a href="../subversion.html">Subversion Access</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.1.4', '../skin/')" id="menu_1.1.4Title" class="menutitle">Tutorials and Information</div>
+<div id="menu_1.1.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="../bootstrap.html">Bootstrapping the Registry</a>
+</div>
+<div class="menuitem">
+<a href="../ioc.html">Inversion Of Control</a>
+</div>
+<div class="menuitem">
+<a href="../localization.html">Localization</a>
+</div>
+<div class="menuitem">
+<a href="../multithreading.html">Multi-Threading</a>
+</div>
+<div class="menuitem">
+<a href="../filter.html">Servlets</a>
+</div>
+<div class="menuitem">
+<a href="../override.html">Overriding Services</a>
+</div>
+<div class="menuitem">
+<a href="../groovy.html">Groovy Support</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.1.5', '../skin/')" id="menu_1.1.5Title" class="menutitle">Reports</div>
+<div id="menu_1.1.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="../license-report.html">License</a>
+</div>
+<div class="menuitem">
+<a href="../hivedocs/index.html">HiveDoc</a>
+</div>
+<div class="menuitem">
+<a href="../developers.html">Developers</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.2', '../skin/')" id="menu_1.2Title" class="menutitle">Framework</div>
+<div id="menu_1.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind/index.html">Overview</a>
+</div>
+<div onclick="SwitchMenu('menu_1.2.2', '../skin/')" id="menu_1.2.2Title" class="menutitle">Services</div>
+<div id="menu_1.2.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind/BuilderFactory.html">BuilderFactory</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/LoggingInterceptor.html">LoggingInterceptor</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/ShutdownCoordinator.html">ShutdownCoordinator</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/ThreadLocale.html">ThreadLocale</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/ThreadLocalStorage.html">ThreadLocalStorage</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.2.3', '../skin/')" id="menu_1.2.3Title" class="menutitle">Configurations</div>
+<div id="menu_1.2.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind/ApplicationDefaults.html">ApplicationDefaults</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/EagerLoad.html">EagerLoad</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/FactoryDefaults.html">FactoryDefaults</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/ObjectProviders.html">ObjectProviders</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/ServiceModels.html">ServiceModels</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/SymbolSources.html">SymbolSources</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/Translators.html">Translators</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.2.4', '../skin/')" id="menu_1.2.4Title" class="menutitle">Ant Tasks</div>
+<div id="menu_1.2.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind/ant/ConstructRegistry.html">ConstructRegistry</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/ant/ManifestClassPath.html">ManifestClassPath</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.2.5', '../skin/')" id="menu_1.2.5Title" class="menutitle">Reports</div>
+<div id="menu_1.2.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind/junit-report.html">JUnit Tests</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/apidocs/index.html">JavaDoc</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/clover/index.html">Clover Code Coverage</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.3', '../skin/')" id="menu_1.3Title" class="menutitle">Library</div>
+<div id="menu_1.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind-lib/index.html">Overview</a>
+</div>
+<div onclick="SwitchMenu('menu_1.3.2', '../skin/')" id="menu_1.3.2Title" class="menutitle">Services</div>
+<div id="menu_1.3.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind-lib/BeanFactoryBuilder.html">BeanFactoryBuilder</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/ChainBuilder.html">ChainBuilder</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/ChainFactory.html">ChainFactory</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/DefaultImplementationBuilder.html">DefaultImplementationBuilder</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/EJBProxyFactory.html">EJBProxyFactory</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/MethodInterceptorFactory.html">MethodInterceptorFactory</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/NameLookup.html">NameLookup</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/PlaceholderFactory.html">PlaceholderFactory</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/PipelineFactory.html">PipelineFactory</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/RemoteExceptionCoordinator.html">RemoteExceptionCoordinator</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/ServicePropertyFactory.html">ServicePropertyFactory</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/SpringLookupFactory.html">SpringLookupFactory</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/StrategyFactory.html">StrategyFactory</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.3.3', '../skin/')" id="menu_1.3.3Title" class="menutitle">Reports</div>
+<div id="menu_1.3.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind-lib/junit-report.html">JUnit Tests</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/apidocs/index.html">JavaDoc</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/clover/index.html">Clover Code Coverage</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.4', '../skin/')" id="menu_1.4Title" class="menutitle">JMX</div>
+<div id="menu_1.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind-jmx/index.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-jmx/quickstart.html">Quickstart</a>
+</div>
+<div onclick="SwitchMenu('menu_1.4.3', '../skin/')" id="menu_1.4.3Title" class="menutitle">Setup</div>
+<div id="menu_1.4.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind-jmx/setupOverview.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-jmx/setupJMXImplementation.html">JMX Implementation</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-jmx/setupMBeanServer.html">MBeanServer</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-jmx/setupConnectors.html">Connectors</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.4.4', '../skin/')" id="menu_1.4.4Title" class="menutitle">Usage</div>
+<div id="menu_1.4.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind-jmx/manageServices.html">Manage Services</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-jmx/measurePerformance.html">Measure Performance</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-jmx/monitorServices.html">Monitor Services</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-jmx/manageLog4j.html">Manage Log4J</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.4.5', '../skin/')" id="menu_1.4.5Title" class="menutitle">Advanced Topics</div>
+<div id="menu_1.4.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind-jmx/multipleApps.html">Multiple Applications in Server</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.4.6', '../skin/')" id="menu_1.4.6Title" class="menutitle">Reports</div>
+<div id="menu_1.4.6" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind-jmx/junit-report.html">JUnit Tests</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-jmx/apidocs/index.html">JavaDoc</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-jmx/clover/index.html">Clover Code Coverage</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_selected_1.5', '../skin/')" id="menu_selected_1.5Title" class="menutitle" style="background-image: url('../skin/images/chapter_open.gif');">Example Code</div>
+<div id="menu_selected_1.5" class="selectedmenuitemgroup" style="display: block;">
+<div class="menuitem">
+<a href="../hivemind-examples/index.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-examples/calc.html">Calculator</a>
+</div>
+<div class="menupage">
+<div class="menupagetitle">Panorama Startup</div>
+</div>
+<div class="menuitem">
+<a href="../hivemind-examples/logging.html">Logging Interceptor</a>
+</div>
+<div onclick="SwitchMenu('menu_1.5.5', '../skin/')" id="menu_1.5.5Title" class="menutitle">Reports</div>
+<div id="menu_1.5.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind-examples/junit-report.html">JUnit Tests</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-examples/apidocs/index.html">JavaDoc</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-examples/hivedocs/index.html">HiveDoc</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-examples/clover/index.html">Clover Code Coverage</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.6', '../skin/')" id="menu_1.6Title" class="menutitle">Other Resources</div>
+<div id="menu_1.6" class="menuitemgroup">
+<div class="menuitem">
+<a href="http://wiki.apache.org/jakarta-hivemind/">HiveMind Wiki</a>
+</div>
+<div class="menuitem">
+<a href="http://howardlewisship.com/blog/">Tapestry and HiveMind Blog</a>
+</div>
+<div class="menuitem">
+<a href="http://hivetranse.sourceforge.net/">HiveMind Utilities</a>
+</div>
+<div class="menuitem">
+<a href="http://www.theserverside.com/articles/article.tss?l=HivemindBuzz">HiveMind article on TheServerSide</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.7', '../skin/')" id="menu_1.7Title" class="menutitle">Related Projects</div>
+<div id="menu_1.7" class="menuitemgroup">
+<div class="menuitem">
+<a href="http://jakarta.apache.org/tapestry/">Tapestry</a>
+</div>
+<div class="menuitem">
+<a href="http://www.springframework.org">Spring</a>
+</div>
+</div>
+<div id="credit"></div>
+<div id="roundbottom">
+<img style="display: none" class="corner" height="15" width="15" alt="" src="../skin/images/rc-b-l-15-1body-2menu-3menu.png"></div>
+<!--+
+  |alternative credits
+  +-->
+<div id="credit2"></div>
+</div>
+<!--+
+    |end Menu
+    +-->
+<!--+
+    |start content
+    +-->
+<div id="content">
+<div class="trail">Font size: 
+	          &nbsp;<input value="Reset" class="resetfont" title="Reset text" onclick="ndeSetTextSize('reset'); return false;" type="button">      
+	          &nbsp;<input value="-a" class="smallerfont" title="Shrink text" onclick="ndeSetTextSize('decr'); return false;" type="button">
+	          &nbsp;<input value="+a" class="biggerfont" title="Enlarge text" onclick="ndeSetTextSize('incr'); return false;" type="button">
+</div>
+<h1>Panorama Startup</h1>
+<div id="minitoc-area">
+<ul class="minitoc">
+<li>
+<a href="#Enter+HiveMind">Enter HiveMind</a>
+</li>
+<li>
+<a href="#Startup+task+schema">Startup task schema</a>
+</li>
+<li>
+<a href="#Startup+Service">Startup Service</a>
+</li>
+<li>
+<a href="#Implementation">Implementation</a>
+<ul class="minitoc">
+<li>
+<a href="#Executable.java">Executable.java</a>
+</li>
+<li>
+<a href="#Task.java">Task.java</a>
+</li>
+<li>
+<a href="#ExecuteStatic.java">ExecuteStatic.java</a>
+</li>
+<li>
+<a href="#TaskExecutor.java">TaskExecutor.java</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#Unit+Testing">Unit Testing</a>
+</li>
+</ul>
+</div>
+<p>
+Panorama is a disguised version of
+<a class="external" href="http://www.webct.com/">WebCT</a>'s <strong>Vista</strong> application.  Vista is
+a truly massive web application, consisting of thousands of Java classes and JSPs and hundreds of EJBs. Vista is
+organized as a large number of somewhat interrelated <em>tools</em> with an underlying substrate of <em>services</em>.
+In fact, HiveMind was originally created to manage the complexity of Vista.
+</p>
+<div class="note">
+<div class="label">Note</div>
+<div class="content">
+The reality is that Vista, a commercial project, has continued with an older version of HiveMind. Panorama
+is based on original code in Vista, but has been altered to take advantage of many features available
+in more recent versions of HiveMind. Keeping the names seperate keeps us honest about the differences between a
+product actually in production (Vista) versus an idealized version used for demonstration and tutorial purposes (Panorama).
+</div>
+</div>
+<p>
+With all these interrelated tools and services, the simple act of starting up the application was complex.  Many
+tools and services have <em>startup operations</em>, things that need to occur when the application first starts
+up within the application server. For example, the help service reads and caches help text stored within the database.
+The mail service creates periodic jobs to peform database garbage collection of deleted mail items.  All told, Vista had
+over 40 different tasks to perform at startup ... many with subtle dependencies (such as the mail tool
+needing the job scheduler service to be up and running).
+</p>
+<p>
+The <em>legacy</em> version of Vista startup consisted of a WebLogic startup class that invoked a 
+central stateless session EJB. The startup EJB was responsible for performing all 40+ startup tasks ... typically
+by invoking a public static method of a class related to the tool.
+</p>
+<p>
+This was problematic for several reasons. It created a dependency on WebLogic to manage startup (really, a minor consideration,
+but one nonetheless). More importantly, it created an unnecessary binding between the startup EJB and all the other code
+in all the other tools. These unwanted dependencies created ripple effects throughout the code base that impacted
+refactored efforts, and caused deployment problems that complicated the build (requiring the duplication of
+many common classes inside the startup EJB's JAR, to resolve runtime classloader dependencies).
+</p>
+<div class="note">
+<div class="label">Note</div>
+<div class="content">
+It's all about class loaders. The class loader that loaded the startup EJB didn't have visibility to the contents
+of the other EJB JARs deployed within the Vista EAR. To satisfy WebLogic's ejbc command (EJB JAR packaging tool),
+and to succesfully locate the classes at runtime, it was necessary to duplicate many classes from the other EJB JARs into the startup EJB JAR.
+With HiveMind, this issue goes away, since the module deployment descriptors store the class <em>name</em>, and the
+<em>servlet thread's context class loader</em> is used to resolve that name ... and <em>it</em> has visibility
+to all the classes in all the EJB JARs.
+</div>
+</div>
+<a name="N10030"></a><a name="Enter+HiveMind"></a>
+<h2 class="boxed">Enter HiveMind</h2>
+<div class="section">
+<p>
+HiveMind's ultimate purpose was to simplify all aspects of Vista development and create a simpler, faster,
+more robust development environment. The first step on this journey, a trial step, was to rationalize the startup process.
+</p>
+<p>
+Each startup task would be given a unique id, a title and a set of <em>dependencies</em> (on other tasks). How
+the task actually operated was left quite abstract ... with careful support for supporting the existing legacy approach
+(public static methods). What would change would be how these tasks were executed.
+</p>
+<p>
+The advantage of HiveMind is that each <em>module</em> can contribute as many or as few startup tasks
+as necessary into the Startup configuration point as needed. This allows the startup logic to be
+properly <em>encapsulated</em> in the module. The startup logic can be easily changed without affecting
+other modules, and without having to change any single contentious resource (such as the legacy approach's
+startup EJB).
+</p>
+</div>
+<a name="N10043"></a><a name="Startup+task+schema"></a>
+<h2 class="boxed">Startup task schema</h2>
+<div class="section">
+<p>
+The schema for startup tasks contributions must support the explicit ordering of execution based on dependencies.
+With HiveMind, there's no telling in what order modules will be processed, and so no telling in what order
+contributions will appear within a configuration point ... so it is necessary to make ordering explicit
+by giving each task a unique id, and listing dependencies (the ids of tasks that must precede, or must
+follow, any single task).
+</p>
+<p>
+Special consideration was given to supporting legacy startup code in the tools and services; code that stays
+in the form of a public static method.  As HiveMind is adopted, these static methods will go away, and be replaced
+with either HiveMind services, or simple objects. In the very long term, much of this startup logic will become uncessary,
+as more of the system will be implemented using HiveMind services, which will lazily initialize just as needed.
+</p>
+<p>
+The schema definition (with desriptions removed, for compactness) follows:
+</p>
+<pre class="xml-code">&lt;<span class="xml-tag">schema </span><span class="xml-attribute">id</span>=<span class="xml-attribute-value">"Tasks"</span>&gt;
+  &lt;<span class="xml-tag">element </span><span class="xml-attribute">name</span>=<span class="xml-attribute-value">"task"</span>&gt;
+    &lt;<span class="xml-tag">attribute </span><span class="xml-attribute">name</span>=<span class="xml-attribute-value">"title" </span><span class="xml-attribute">required</span>=<span class="xml-attribute-value">"true"</span>/&gt;
+    &lt;<span class="xml-tag">attribute </span><span class="xml-attribute">name</span>=<span class="xml-attribute-value">"id" </span><span class="xml-attribute">required</span>=<span class="xml-attribute-value">"true"</span>/&gt;
+    &lt;<span class="xml-tag">attribute </span><span class="xml-attribute">name</span>=<span class="xml-attribute-value">"before"</span>/&gt;
+    &lt;<span class="xml-tag">attribute </span><span class="xml-attribute">name</span>=<span class="xml-attribute-value">"after"</span>/&gt;      
+    &lt;<span class="xml-tag">attribute </span><span class="xml-attribute">name</span>=<span class="xml-attribute-value">"executable" </span><span class="xml-attribute">required</span>=<span class="xml-attribute-value">"true" </span><span class="xml-attribute">translator</span>=<span class="xml-attribute-value">"object"</span>/&gt;
+      
+    &lt;<span class="xml-tag">conversion </span><span class="xml-attribute">class</span>=<span class="xml-attribute-value">"impl.Task"</span>/&gt;
+  &lt;/<span class="xml-tag">element</span>&gt;
+  
+  &lt;<span class="xml-tag">element </span><span class="xml-attribute">name</span>=<span class="xml-attribute-value">"static-task"</span>&gt;
+    &lt;<span class="xml-tag">attribute </span><span class="xml-attribute">name</span>=<span class="xml-attribute-value">"title" </span><span class="xml-attribute">required</span>=<span class="xml-attribute-value">"true"</span>/&gt;
+    &lt;<span class="xml-tag">attribute </span><span class="xml-attribute">name</span>=<span class="xml-attribute-value">"id" </span><span class="xml-attribute">required</span>=<span class="xml-attribute-value">"true"</span>/&gt;
+    &lt;<span class="xml-tag">attribute </span><span class="xml-attribute">name</span>=<span class="xml-attribute-value">"before"</span>/&gt;
+    &lt;<span class="xml-tag">attribute </span><span class="xml-attribute">name</span>=<span class="xml-attribute-value">"after"</span>/&gt;           
+    &lt;<span class="xml-tag">attribute </span><span class="xml-attribute">name</span>=<span class="xml-attribute-value">"class" </span><span class="xml-attribute">translator</span>=<span class="xml-attribute-value">"class" </span><span class="xml-attribute">required</span>=<span class="xml-attribute-value">"true"</span>/&gt;
+    &lt;<span class="xml-tag">attribute </span><span class="xml-attribute">name</span>=<span class="xml-attribute-value">"method"</span>/&gt;
+      
+    &lt;<span class="xml-tag">rules</span>&gt;
+      &lt;<span class="xml-tag">create-object </span><span class="xml-attribute">class</span>=<span class="xml-attribute-value">"impl.Task"</span>/&gt;
+      &lt;<span class="xml-tag">invoke-parent </span><span class="xml-attribute">method</span>=<span class="xml-attribute-value">"addElement"</span>/&gt;
+        
+      &lt;<span class="xml-tag">read-attribute </span><span class="xml-attribute">attribute</span>=<span class="xml-attribute-value">"id" </span><span class="xml-attribute">property</span>=<span class="xml-attribute-value">"id"</span>/&gt;
+      &lt;<span class="xml-tag">read-attribute </span><span class="xml-attribute">attribute</span>=<span class="xml-attribute-value">"title" </span><span class="xml-attribute">property</span>=<span class="xml-attribute-value">"title"</span>/&gt;
+      &lt;<span class="xml-tag">read-attribute </span><span class="xml-attribute">attribute</span>=<span class="xml-attribute-value">"before" </span><span class="xml-attribute">property</span>=<span class="xml-attribute-value">"before"</span>/&gt;
+      &lt;<span class="xml-tag">read-attribute </span><span class="xml-attribute">attribute</span>=<span class="xml-attribute-value">"after" </span><span class="xml-attribute">property</span>=<span class="xml-attribute-value">"after"</span>/&gt;
+        
+      &lt;<span class="xml-tag">create-object </span><span class="xml-attribute">class</span>=<span class="xml-attribute-value">"impl.ExecuteStatic"</span>/&gt;
+      &lt;<span class="xml-tag">invoke-parent </span><span class="xml-attribute">method</span>=<span class="xml-attribute-value">"setExecutable"</span>/&gt;
+        
+      &lt;<span class="xml-tag">read-attribute </span><span class="xml-attribute">attribute</span>=<span class="xml-attribute-value">"class" </span><span class="xml-attribute">property</span>=<span class="xml-attribute-value">"targetClass"</span>/&gt;
+      &lt;<span class="xml-tag">read-attribute </span><span class="xml-attribute">attribute</span>=<span class="xml-attribute-value">"method" </span><span class="xml-attribute">property</span>=<span class="xml-attribute-value">"methodName"</span>/&gt;       
+    &lt;/<span class="xml-tag">rules</span>&gt;
+  &lt;/<span class="xml-tag">element</span>&gt;
+&lt;/<span class="xml-tag">schema</span>&gt;
+</pre>
+<div class="note">
+<div class="label">Note</div>
+<div class="content">
+For more details, see <a href="hivedocs/schema/panorama.startup.Tasks.html">the HiveDoc for
+  the Tasks schema</a>.  Also, class names are abbreviated in excerpts throughout
+  this document (see the description of the package attribute of the <a href="../descriptor.html#module">&lt;module&gt;</a> element).
+</div>
+</div>
+<p>
+This schema supports contributions in two formats.  The first format allows an arbitrary object or 
+service to be contributed:
+</p>
+<pre class="code">
+&lt;task id="mail" title="Mail" executable="service:MailStartup"/&gt;</pre>
+<p>
+The <span class="codefrag">executable</span> attribute is converted into an object or service; here the <span class="codefrag">service:</span>
+prefix indicates that the rest of the string, <span class="codefrag">MailStartup</span>, is a service id
+(other prefixes are defined by the <a href="../hivemind/ObjectProviders.html">hivemind.ObjectProviders</a> configuration). If this task
+has dependencies, the <span class="codefrag">before</span> and <span class="codefrag">after</span> attributes can be specified as well.
+</p>
+<p>
+To support legacy code, a second option, <span class="codefrag">static-task</span>, is provided:
+</p>
+<pre class="code">
+&lt;static-task id="discussions" title="Discussions" after="mail" class="DiscussionsStartup"/&gt;</pre>
+<p>
+The <span class="codefrag">static-task</span> element duplicates the <span class="codefrag">id</span>, <span class="codefrag">title</span>,
+<span class="codefrag">before</span> and <span class="codefrag">after</span> attributes, but replaces <span class="codefrag">executable</span>
+with <span class="codefrag">class</span> (the name of the class containing the method) and
+<span class="codefrag">method</span> (the name of the method to invoke, defaulting to "init").
+</p>
+</div>
+<a name="N1021F"></a><a name="Startup+Service"></a>
+<h2 class="boxed">Startup Service</h2>
+<div class="section">
+<p>
+  The schema just defines what contributions <em>look like</em> and how they are converted
+  to objects; we need to define a Startup configuration point using the schema, and
+  a Startup service that uses the configuration point.
+</p>
+<pre class="xml-code">&lt;<span class="xml-tag">configuration-point </span><span class="xml-attribute">id</span>=<span class="xml-attribute-value">"Startup" </span><span class="xml-attribute">schema-id</span>=<span class="xml-attribute-value">"Tasks"</span>/&gt;
+
+&lt;<span class="xml-tag">service-point </span><span class="xml-attribute">id</span>=<span class="xml-attribute-value">"Startup" </span><span class="xml-attribute">interface</span>=<span class="xml-attribute-value">"java.lang.Runnable"</span>&gt;
+  &lt;<span class="xml-tag">invoke-factory</span>&gt;
+    &lt;<span class="xml-tag">construct </span><span class="xml-attribute">class</span>=<span class="xml-attribute-value">"impl.TaskExecutor"</span>&gt;
+      &lt;<span class="xml-tag">set-configuration </span><span class="xml-attribute">property</span>=<span class="xml-attribute-value">"tasks" </span><span class="xml-attribute">configuration-id</span>=<span class="xml-attribute-value">"Startup"</span>/&gt;
+    &lt;/<span class="xml-tag">construct</span>&gt;
+  &lt;/<span class="xml-tag">invoke-factory</span>&gt;
+&lt;/<span class="xml-tag">service-point</span>&gt;
+
+&lt;<span class="xml-tag">contribution </span><span class="xml-attribute">id</span>=<span class="xml-attribute-value">"hivemind.Startup"</span>&gt;
+  &lt;<span class="xml-tag">startup </span><span class="xml-attribute">object</span>=<span class="xml-attribute-value">"service:Startup"</span>/&gt;
+&lt;/<span class="xml-tag">contribution</span>&gt;
+</pre>
+<p>
+The <span class="codefrag">hivemind.Startup</span> configuration point is used to ensure that the Panorama Startup service is
+executed when the Registry itself is constructed.
+</p>
+</div>
+<a name="N1029B"></a><a name="Implementation"></a>
+<h2 class="boxed">Implementation</h2>
+<div class="section">
+<p>
+All that remains is the implementations of the service and task classes.
+</p>
+<a name="N102A1"></a><a name="Executable.java"></a>
+<h3 class="boxed">Executable.java</h3>
+<pre class="java-code">
+<span class="java-comment">// Copyright 2005 The Apache Software Foundation
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+</span>
+<span class="java-keyword">package</span> org.apache.examples.panorama.startup;
+
+<span class="java-javadoc-comment">/**
+ * Much like {</span><span class="java-javadoc-tag">@link</span><span class="java-javadoc-comment"> java.lang.Runnable}, but allows the caller
+ * to handle any exceptions thrown.
+ *
+ * </span><span class="java-javadoc-tag">@author</span><span class="java-javadoc-comment"> Howard Lewis Ship
+ */</span>
+<span class="java-keyword">public</span> <span class="java-keyword">interface</span> <span class="java-type">Executable</span>
+{
+    <span class="java-keyword">public</span> <span class="java-type">void</span> execute() <span class="java-keyword">throws</span> <span class="java-type">Exception;</span>
+}
+</pre>
+<p>
+The Executable interface is implemented by tasks, and by services or other objects that need to
+be executed.  It <span class="codefrag">throws Exception</span> so that exception catching and reporting can be
+centralized inside the Startup service.
+</p>
+<a name="N102E0"></a><a name="Task.java"></a>
+<h3 class="boxed">Task.java</h3>
+<pre class="java-code">
+<span class="java-comment">// Copyright 2004, 2005 The Apache Software Foundation
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+</span>
+<span class="java-keyword">package</span> org.apache.examples.panorama.startup.impl;
+
+<span class="java-keyword">import</span> org.apache.hivemind.impl.<span class="java-type">BaseLocatable;</span>
+
+<span class="java-keyword">import</span> org.apache.examples.panorama.startup.<span class="java-type">Executable;</span>
+
+<span class="java-javadoc-comment">/**
+ * An operation that may be executed. A Task exists to wrap an
+ * {</span><span class="java-javadoc-tag">@link</span><span class="java-javadoc-comment"> org.apache.examples.panorama.startup.Executable} object with a title and ordering information (id, after,
+ * before).
+ * 
+ * </span><span class="java-javadoc-tag">@author</span><span class="java-javadoc-comment"> Howard Lewis Ship
+ */</span>
+<span class="java-keyword">public</span> <span class="java-keyword">class</span> <span class="java-type">Task</span> <span class="java-keyword">extends</span> <span class="java-type">BaseLocatable</span> <span class="java-keyword">implements</span> <span class="java-type">Executable</span>
+{
+    <span class="java-keyword">private</span> <span class="java-type">String</span> _id;
+
+    <span class="java-keyword">private</span> <span class="java-type">String</span> _title;
+
+    <span class="java-keyword">private</span> <span class="java-type">String</span> _after;
+
+    <span class="java-keyword">private</span> <span class="java-type">String</span> _before;
+
+    <span class="java-keyword">private</span> <span class="java-type">Executable</span> _executable;
+
+    <span class="java-keyword">public</span> <span class="java-type">String</span> getBefore()
+    {
+        <span class="java-keyword">return</span> _before;
+    }
+
+    <span class="java-keyword">public</span> <span class="java-type">String</span> getId()
+    {
+        <span class="java-keyword">return</span> _id;
+    }
+
+    <span class="java-keyword">public</span> <span class="java-type">String</span> getAfter()
+    {
+        <span class="java-keyword">return</span> _after;
+    }
+
+    <span class="java-keyword">public</span> <span class="java-type">String</span> getTitle()
+    {
+        <span class="java-keyword">return</span> _title;
+    }
+
+    <span class="java-keyword">public</span> <span class="java-type">void</span> setExecutable(<span class="java-type">Executable</span> executable)
+    {
+        _executable <span class="java-operator">=</span> executable;
+    }
+
+    <span class="java-keyword">public</span> <span class="java-type">void</span> setBefore(<span class="java-type">String</span> string)
+    {
+        _before <span class="java-operator">=</span> string;
+    }
+
+    <span class="java-keyword">public</span> <span class="java-type">void</span> setId(<span class="java-type">String</span> string)
+    {
+        _id <span class="java-operator">=</span> string;
+    }
+
+    <span class="java-keyword">public</span> <span class="java-type">void</span> setAfter(<span class="java-type">String</span> string)
+    {
+        _after <span class="java-operator">=</span> string;
+    }
+
+    <span class="java-keyword">public</span> <span class="java-type">void</span> setTitle(<span class="java-type">String</span> string)
+    {
+        _title <span class="java-operator">=</span> string;
+    }
+
+    <span class="java-javadoc-comment">/**
+     * Delegates to the {</span><span class="java-javadoc-tag">@link</span><span class="java-javadoc-comment"> #setExecutable(Executable) executable} object.
+     */</span>
+    <span class="java-keyword">public</span> <span class="java-type">void</span> execute() <span class="java-keyword">throws</span> <span class="java-type">Exception</span>
+    {
+        _executable.execute();
+    }
+
+}
+</pre>
+<p>
+The Task class is a wrapper around an Executable object; whether that's a service, some arbitrary object,
+or a StaticTask.
+</p>
+<a name="N103EE"></a><a name="ExecuteStatic.java"></a>
+<h3 class="boxed">ExecuteStatic.java</h3>
+<pre class="java-code">
+<span class="java-comment">// Copyright 2004, 2005 The Apache Software Foundation
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+</span>
+<span class="java-keyword">package</span> org.apache.examples.panorama.startup.impl;
+
+<span class="java-keyword">import</span> java.lang.reflect.<span class="java-type">Method;</span>
+
+<span class="java-keyword">import</span> org.apache.examples.panorama.startup.<span class="java-type">Executable;</span>
+
+<span class="java-javadoc-comment">/**
+ * Used to access the legacy startup code that is in the form
+ * of a public static method (usually &lt;code&gt;init()&lt;/code&gt;) on some
+ * class.
+ *
+ * </span><span class="java-javadoc-tag">@author</span><span class="java-javadoc-comment"> Howard Lewis Ship
+ */</span>
+<span class="java-keyword">public</span> <span class="java-keyword">class</span> <span class="java-type">ExecuteStatic</span> <span class="java-keyword">implements</span> <span class="java-type">Executable</span>
+{
+    <span class="java-keyword">private</span> <span class="java-type">String</span> _methodName <span class="java-operator">=</span> <span class="java-literal">"init";</span>
+    <span class="java-keyword">private</span> <span class="java-type">Class</span> _targetClass;
+
+    <span class="java-keyword">public</span> <span class="java-type">void</span> execute() <span class="java-keyword">throws</span> <span class="java-type">Exception</span>
+    {
+        <span class="java-type">Method</span> m <span class="java-operator">=</span> _targetClass.getMethod(_methodName, <span class="java-literal">null);</span>
+
+        m.invoke(<span class="java-literal">null,</span> <span class="java-literal">null);</span>
+    }
+
+    <span class="java-javadoc-comment">/**
+     * Sets the name of the method to invoke; if not set, the default is &lt;code&gt;init&lt;/code&gt;.
+     * The target class must have a public static method with that name taking no
+     * parameters.
+     */</span>
+    <span class="java-keyword">public</span> <span class="java-type">void</span> setMethodName(<span class="java-type">String</span> string)
+    {
+        _methodName <span class="java-operator">=</span> string;
+    }
+
+    <span class="java-javadoc-comment">/**
+     * Sets the class to invoke the method on.
+     */</span>
+    <span class="java-keyword">public</span> <span class="java-type">void</span> setTargetClass(<span class="java-type">Class</span> targetClass)
+    {
+        _targetClass <span class="java-operator">=</span> targetClass;
+    }
+
+}
+</pre>
+<p>
+ExecuteStatic uses Java reflection to invoke a public static method of a particular class.
+</p>
+<a name="N10490"></a><a name="TaskExecutor.java"></a>
+<h3 class="boxed">TaskExecutor.java</h3>
+<pre class="java-code">
+<span class="java-comment">// Copyright 2004, 2005 The Apache Software Foundation
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+</span>
+<span class="java-keyword">package</span> org.apache.examples.panorama.startup.impl;
+
+<span class="java-keyword">import</span> java.util.<span class="java-type">Iterator;</span>
+<span class="java-keyword">import</span> java.util.<span class="java-type">List;</span>
+
+<span class="java-keyword">import</span> org.apache.commons.logging.<span class="java-type">Log;</span>
+<span class="java-keyword">import</span> org.apache.hivemind.<span class="java-type">ErrorLog;</span>
+<span class="java-keyword">import</span> org.apache.hivemind.<span class="java-type">Messages;</span>
+<span class="java-keyword">import</span> org.apache.hivemind.order.<span class="java-type">Orderer;</span>
+
+<span class="java-javadoc-comment">/**
+ * A service that executes a series of {</span><span class="java-javadoc-tag">@link</span><span class="java-javadoc-comment"> org.apache.examples.panorama.startup.impl.Task}s. Tasks have an
+ * ordering based on pre- and post-requisites.
+ * 
+ * </span><span class="java-javadoc-tag">@author</span><span class="java-javadoc-comment"> Howard Lewis Ship
+ */</span>
+<span class="java-keyword">public</span> <span class="java-keyword">class</span> <span class="java-type">TaskExecutor</span> <span class="java-keyword">implements</span> <span class="java-type">Runnable</span>
+{
+    <span class="java-keyword">private</span> <span class="java-type">Log</span> _log;
+
+    <span class="java-keyword">private</span> <span class="java-type">ErrorLog</span> _errorLog;
+
+    <span class="java-keyword">private</span> <span class="java-type">List</span> _tasks;
+
+    <span class="java-keyword">private</span> <span class="java-type">Messages</span> _messages;
+
+    <span class="java-javadoc-comment">/**
+     * Orders the {</span><span class="java-javadoc-tag">@link</span><span class="java-javadoc-comment"> #setTasks(List) tasks} into an execution order, and executes each in turn.
+     * Logs the elapsed time, number of tasks, and the number of failures (if any).
+     */</span>
+    <span class="java-keyword">public</span> <span class="java-type">void</span> run()
+    {
+        <span class="java-type">long</span> startTime <span class="java-operator">=</span> <span class="java-type">System.</span>currentTimeMillis();
+
+        <span class="java-type">Orderer</span> orderer <span class="java-operator">=</span> <span class="java-keyword">new</span> <span class="java-type">Orderer(</span>_errorLog, task());
+
+        <span class="java-type">Iterator</span> i <span class="java-operator">=</span> _tasks.iterator();
+        <span class="java-keyword">while</span> (i.hasNext())
+        {
+            <span class="java-type">Task</span> t <span class="java-operator">=</span> (<span class="java-type">Task)</span> i.next();
+
+            orderer.add(t, t.getId(), t.getAfter(), t.getBefore());
+        }
+
+        <span class="java-type">List</span> orderedTasks <span class="java-operator">=</span> orderer.getOrderedObjects();
+
+        <span class="java-type">int</span> failures <span class="java-operator">=</span> <span class="java-literal">0;</span>
+
+        i <span class="java-operator">=</span> orderedTasks.iterator();
+        <span class="java-keyword">while</span> (i.hasNext())
+        {
+            <span class="java-type">Task</span> t <span class="java-operator">=</span> (<span class="java-type">Task)</span> i.next();
+
+            <span class="java-keyword">if</span> (<span class="java-operator">!</span>execute(t))
+                failures<span class="java-operator">++;</span>
+        }
+
+        <span class="java-type">long</span> elapsedTime <span class="java-operator">=</span> <span class="java-type">System.</span>currentTimeMillis() <span class="java-operator">-</span> startTime;
+
+        <span class="java-keyword">if</span> (failures <span class="java-operator">==</span> <span class="java-literal">0)</span>
+            _log.info(success(orderedTasks.size(), elapsedTime));
+        <span class="java-keyword">else</span>
+            _log.info(failure(failures, orderedTasks.size(), elapsedTime));
+    }
+
+    <span class="java-javadoc-comment">/**
+     * Execute a single task.
+     * 
+     * </span><span class="java-javadoc-tag">@return</span><span class="java-javadoc-comment"> true on success, false on failure
+     */</span>
+    <span class="java-keyword">private</span> <span class="java-type">boolean</span> execute(<span class="java-type">Task</span> t)
+    {
+        _log.info(executingTask(t));
+
+        <span class="java-keyword">try</span>
+        {
+            t.execute();
+
+            <span class="java-keyword">return</span> <span class="java-literal">true;</span>
+        }
+        <span class="java-keyword">catch</span> (<span class="java-type">Exception</span> ex)
+        {
+            _errorLog.error(exceptionInTask(t, ex), t.getLocation(), ex);
+
+            <span class="java-keyword">return</span> <span class="java-literal">false;</span>
+        }
+    }
+
+    <span class="java-keyword">private</span> <span class="java-type">String</span> task()
+    {
+        <span class="java-keyword">return</span> _messages.getMessage(<span class="java-literal">"task");</span>
+    }
+
+    <span class="java-keyword">private</span> <span class="java-type">String</span> executingTask(<span class="java-type">Task</span> t)
+    {
+        <span class="java-keyword">return</span> _messages.format(<span class="java-literal">"executing-task",</span> t.getTitle());
+    }
+
+    <span class="java-keyword">private</span> <span class="java-type">String</span> exceptionInTask(<span class="java-type">Task</span> t, <span class="java-type">Throwable</span> cause)
+    {
+        <span class="java-keyword">return</span> _messages.format(<span class="java-literal">"exception-in-task",</span> t.getTitle(), cause);
+    }
+
+    <span class="java-keyword">private</span> <span class="java-type">String</span> success(<span class="java-type">int</span> count, <span class="java-type">long</span> elapsedTimeMillis)
+    {
+        <span class="java-keyword">return</span> _messages.format(<span class="java-literal">"success",</span> <span class="java-keyword">new</span> <span class="java-type">Integer(</span>count), <span class="java-keyword">new</span> <span class="java-type">Long(</span>elapsedTimeMillis));
+    }
+
+    <span class="java-keyword">private</span> <span class="java-type">String</span> failure(<span class="java-type">int</span> failureCount, <span class="java-type">int</span> totalCount, <span class="java-type">long</span> elapsedTimeMillis)
+    {
+        <span class="java-keyword">return</span> _messages.format(
+                <span class="java-literal">"failure",</span>
+                <span class="java-keyword">new</span> <span class="java-type">Integer(</span>failureCount),
+                <span class="java-keyword">new</span> <span class="java-type">Integer(</span>totalCount),
+                <span class="java-keyword">new</span> <span class="java-type">Long(</span>elapsedTimeMillis));
+    }
+
+    <span class="java-keyword">public</span> <span class="java-type">void</span> setLog(<span class="java-type">Log</span> log)
+    {
+        _log <span class="java-operator">=</span> log;
+    }
+
+    <span class="java-keyword">public</span> <span class="java-type">void</span> setErrorLog(<span class="java-type">ErrorLog</span> errorLog)
+    {
+        _errorLog <span class="java-operator">=</span> errorLog;
+    }
+
+    <span class="java-keyword">public</span> <span class="java-type">void</span> setMessages(<span class="java-type">Messages</span> messages)
+    {
+        _messages <span class="java-operator">=</span> messages;
+    }
+
+    <span class="java-keyword">public</span> <span class="java-type">void</span> setTasks(<span class="java-type">List</span> list)
+    {
+        _tasks <span class="java-operator">=</span> list;
+    }
+
+}
+</pre>
+<p>
+This class is where it all comes together; it is the core service implementation for the
+<span class="codefrag">panorama.startup.Startup</span>  service.  It is constructed by the <a href="../hivemind/BuilderFactory.html">hivemind.BuilderFactory</a>, which
+autowires the <span class="codefrag">errorHandler</span>, <span class="codefrag">log</span> and <span class="codefrag">messages</span> properties, as
+well as the <span class="codefrag">tasks</span> property (which is explicitly set in the module deployment descriptor).
+</p>
+<p>
+  Most of the <span class="codefrag">run()</span> method is concerned with ordering the contributed tasks into
+  execution order and reporting the results. 
+</p>
+</div>
+<a name="N106D0"></a><a name="Unit+Testing"></a>
+<h2 class="boxed">Unit Testing</h2>
+<div class="section">
+<p>
+Unit testing in HiveMind is accomplished by <em>acting like the container</em>; that is, your code
+is responsible for instantiating the core service implementation and setting its properties.  In many cases,
+you will set the properties to mock objects ... HiveMind uses
+<a class="external" href="http://www.easymock.org/">EasyMock</a> extensively, and
+provides a base class, <span class="codefrag">HiveMindTestCase</span>, that contains much support for creating Mock controls
+and objects.
+</p>
+<a name="N106E0"></a><a name="TestTaskExcecutor.java"></a>
+<h3 class="boxed">TestTaskExcecutor.java</h3>
+<pre class="java-code">
+<span class="java-comment">// Copyright 2005 The Apache Software Foundation
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+</span>
+<span class="java-keyword">package</span> org.apache.examples.panorama.startup.impl;
+
+<span class="java-keyword">import</span> java.util.<span class="java-type">ArrayList;</span>
+<span class="java-keyword">import</span> java.util.<span class="java-type">Collections;</span>
+<span class="java-keyword">import</span> java.util.<span class="java-type">List;</span>
+<span class="java-keyword">import</span> java.util.<span class="java-type">Locale;</span>
+
+<span class="java-keyword">import</span> org.apache.commons.logging.<span class="java-type">Log;</span>
+<span class="java-keyword">import</span> org.apache.examples.panorama.startup.<span class="java-type">Executable;</span>
+<span class="java-keyword">import</span> org.apache.examples.panorama.startup.impl.<span class="java-type">Task;</span>
+<span class="java-keyword">import</span> org.apache.examples.panorama.startup.impl.<span class="java-type">TaskExecutor;</span>
+<span class="java-keyword">import</span> org.apache.hivemind.<span class="java-type">ApplicationRuntimeException;</span>
+<span class="java-keyword">import</span> org.apache.hivemind.<span class="java-type">ErrorLog;</span>
+<span class="java-keyword">import</span> org.apache.hivemind.<span class="java-type">Messages;</span>
+<span class="java-keyword">import</span> org.apache.hivemind.<span class="java-type">Resource;</span>
+<span class="java-keyword">import</span> org.apache.hivemind.impl.<span class="java-type">MessageFinderImpl;</span>
+<span class="java-keyword">import</span> org.apache.hivemind.impl.<span class="java-type">ModuleMessages;</span>
+<span class="java-keyword">import</span> org.apache.hivemind.internal.<span class="java-type">MessageFinder;</span>
+<span class="java-keyword">import</span> org.apache.hivemind.service.<span class="java-type">ThreadLocale;</span>
+<span class="java-keyword">import</span> org.apache.hivemind.service.impl.<span class="java-type">ThreadLocaleImpl;</span>
+<span class="java-keyword">import</span> org.apache.hivemind.test.<span class="java-type">AggregateArgumentsMatcher;</span>
+<span class="java-keyword">import</span> org.apache.hivemind.test.<span class="java-type">ArgumentMatcher;</span>
+<span class="java-keyword">import</span> org.apache.hivemind.test.<span class="java-type">HiveMindTestCase;</span>
+<span class="java-keyword">import</span> org.apache.hivemind.test.<span class="java-type">RegexpMatcher;</span>
+<span class="java-keyword">import</span> org.apache.hivemind.test.<span class="java-type">TypeMatcher;</span>
+<span class="java-keyword">import</span> org.apache.hivemind.util.<span class="java-type">FileResource;</span>
+<span class="java-keyword">import</span> org.easymock.<span class="java-type">MockControl;</span>
+
+
+<span class="java-javadoc-comment">/**
+ * Tests for the {</span><span class="java-javadoc-tag">@link</span><span class="java-javadoc-comment"> org.apache.examples.panorama.startup.impl.TaskExecutor} service.
+ * 
+ * </span><span class="java-javadoc-tag">@author</span><span class="java-javadoc-comment"> Howard Lewis Ship
+ */</span>
+<span class="java-keyword">public</span> <span class="java-keyword">class</span> <span class="java-type">TestTaskExecutor</span> <span class="java-keyword">extends</span> <span class="java-type">HiveMindTestCase</span>
+{
+    <span class="java-keyword">private</span> <span class="java-keyword">static</span> <span class="java-type">List</span> _tokens <span class="java-operator">=</span> <span class="java-keyword">new</span> <span class="java-type">ArrayList();</span>
+
+    <span class="java-keyword">protected</span> <span class="java-type">void</span> setUp() <span class="java-keyword">throws</span> <span class="java-type">Exception</span>
+    {
+        <span class="java-keyword">super.</span>setUp();
+
+        _tokens.clear();
+    }
+
+    <span class="java-keyword">protected</span> <span class="java-type">void</span> tearDown() <span class="java-keyword">throws</span> <span class="java-type">Exception</span>
+    {
+        <span class="java-keyword">super.</span>tearDown();
+
+        _tokens.clear();
+    }
+
+    <span class="java-keyword">public</span> <span class="java-keyword">static</span> <span class="java-type">void</span> addToken(<span class="java-type">String</span> token)
+    {
+        _tokens.add(token);
+    }
+
+    <span class="java-keyword">public</span> <span class="java-type">Messages</span> getMessages()
+    {
+        <span class="java-type">String</span> projectRoot <span class="java-operator">=</span> <span class="java-type">System.</span>getProperty(<span class="java-literal">"PROJECT_ROOT",</span> <span class="java-literal">".");</span>
+        <span class="java-type">String</span> path <span class="java-operator">=</span> projectRoot <span class="java-operator">+</span> <span class="java-literal">"/examples/src/descriptor/META-INF/panorama.startup.xml";</span>
+
+        <span class="java-type">Resource</span> r <span class="java-operator">=</span> <span class="java-keyword">new</span> <span class="java-type">FileResource(</span>path);
+        <span class="java-type">MessageFinder</span> mf <span class="java-operator">=</span> <span class="java-keyword">new</span> <span class="java-type">MessageFinderImpl(</span>r);
+        <span class="java-type">ThreadLocale</span> tl <span class="java-operator">=</span> <span class="java-keyword">new</span> <span class="java-type">ThreadLocaleImpl(Locale.</span>getDefault());
+
+        <span class="java-keyword">return</span> <span class="java-keyword">new</span> <span class="java-type">ModuleMessages(</span>mf, tl);
+    }
+
+    <span class="java-keyword">public</span> <span class="java-type">void</span> testSuccess()
+    {
+        <span class="java-type">ExecutableFixture</span> f1 <span class="java-operator">=</span> <span class="java-keyword">new</span> <span class="java-type">ExecutableFixture(</span><span class="java-literal">"f1");</span>
+
+        <span class="java-type">Task</span> t1 <span class="java-operator">=</span> <span class="java-keyword">new</span> <span class="java-type">Task();</span>
+
+        t1.setExecutable(f1);
+        t1.setId(<span class="java-literal">"first");</span>
+        t1.setAfter(<span class="java-literal">"second");</span>
+        t1.setTitle(<span class="java-literal">"Fixture #1");</span>
+
+        <span class="java-type">ExecutableFixture</span> f2 <span class="java-operator">=</span> <span class="java-keyword">new</span> <span class="java-type">ExecutableFixture(</span><span class="java-literal">"f2");</span>
+
+        <span class="java-type">Task</span> t2 <span class="java-operator">=</span> <span class="java-keyword">new</span> <span class="java-type">Task();</span>
+        t2.setExecutable(f2);
+        t2.setId(<span class="java-literal">"second");</span>
+        t2.setTitle(<span class="java-literal">"Fixture #2");</span>
+
+        <span class="java-type">List</span> tasks <span class="java-operator">=</span> <span class="java-keyword">new</span> <span class="java-type">ArrayList();</span>
+        tasks.add(t1);
+        tasks.add(t2);
+
+        <span class="java-type">MockControl</span> logControl <span class="java-operator">=</span> newControl(<span class="java-type">Log.</span><span class="java-keyword">class);</span>
+        <span class="java-type">Log</span> log <span class="java-operator">=</span> (<span class="java-type">Log)</span> logControl.getMock();
+
+        <span class="java-type">TaskExecutor</span> e <span class="java-operator">=</span> <span class="java-keyword">new</span> <span class="java-type">TaskExecutor();</span>
+
+        <span class="java-type">ErrorLog</span> errorLog <span class="java-operator">=</span> (<span class="java-type">ErrorLog)</span> newMock(<span class="java-type">ErrorLog.</span><span class="java-keyword">class);</span>
+
+        e.setErrorLog(errorLog);
+        e.setLog(log);
+        e.setMessages(getMessages());
+        e.setTasks(tasks);
+
+        <span class="java-comment">// Note the ordering; explicitly set, to check that ordering does
+</span>        <span class="java-comment">// take place.
+</span>        log.info(<span class="java-literal">"Executing task Fixture #2.");</span>
+        log.info(<span class="java-literal">"Executing task Fixture #1.");</span>
+        log.info(<span class="java-literal">"Executed 2 tasks \\(in \\d+ milliseconds\\)\\.");</span>
+        logControl.setMatcher(<span class="java-keyword">new</span> <span class="java-type">RegexpMatcher());</span>
+
+        replayControls();
+
+        e.run();
+
+        assertListsEqual(<span class="java-keyword">new</span> <span class="java-type">String[]</span>
+        { <span class="java-literal">"f2",</span> <span class="java-literal">"f1"</span> }, _tokens);
+
+        verifyControls();
+    }
+
+    <span class="java-keyword">public</span> <span class="java-type">void</span> testFailure()
+    {
+        <span class="java-type">Executable</span> f <span class="java-operator">=</span> <span class="java-keyword">new</span> <span class="java-type">Executable()</span>
+        {
+            <span class="java-keyword">public</span> <span class="java-type">void</span> execute() <span class="java-keyword">throws</span> <span class="java-type">Exception</span>
+            {
+                <span class="java-keyword">throw</span> <span class="java-keyword">new</span> <span class="java-type">ApplicationRuntimeException(</span><span class="java-literal">"Failure!");</span>
+            }
+        };
+
+        <span class="java-type">Task</span> t <span class="java-operator">=</span> <span class="java-keyword">new</span> <span class="java-type">Task();</span>
+
+        t.setExecutable(f);
+        t.setId(<span class="java-literal">"failure");</span>
+        t.setTitle(<span class="java-literal">"Failure");</span>
+
+        <span class="java-type">List</span> tasks <span class="java-operator">=</span> <span class="java-type">Collections.</span>singletonList(t);
+
+        <span class="java-type">MockControl</span> logControl <span class="java-operator">=</span> newControl(<span class="java-type">Log.</span><span class="java-keyword">class);</span>
+        <span class="java-type">Log</span> log <span class="java-operator">=</span> (<span class="java-type">Log)</span> logControl.getMock();
+
+        <span class="java-type">MockControl</span> errorLogControl <span class="java-operator">=</span> newControl(<span class="java-type">ErrorLog.</span><span class="java-keyword">class);</span>
+        <span class="java-type">ErrorLog</span> errorLog <span class="java-operator">=</span> (<span class="java-type">ErrorLog)</span> errorLogControl.getMock();
+
+        log.info(<span class="java-literal">"Executing task Failure.");</span>
+
+        errorLog.error(
+                <span class="java-literal">"Exception while executing task Failure: Failure!",</span>
+                <span class="java-literal">null,</span>
+                <span class="java-keyword">new</span> <span class="java-type">ApplicationRuntimeException(</span><span class="java-literal">""));</span>
+        errorLogControl.setMatcher(<span class="java-keyword">new</span> <span class="java-type">AggregateArgumentsMatcher(</span><span class="java-keyword">new</span> <span class="java-type">ArgumentMatcher[]</span>
+        { <span class="java-literal">null,</span> <span class="java-literal">null,</span> <span class="java-keyword">new</span> <span class="java-type">TypeMatcher()</span> }));
+
+        log.info(<span class="java-literal">"Executed one task with one failure \\(in \\d+ milliseconds\\)\\.");</span>
+        logControl.setMatcher(<span class="java-keyword">new</span> <span class="java-type">AggregateArgumentsMatcher(</span><span class="java-keyword">new</span> <span class="java-type">RegexpMatcher()));</span>
+
+        replayControls();
+
+        <span class="java-type">TaskExecutor</span> e <span class="java-operator">=</span> <span class="java-keyword">new</span> <span class="java-type">TaskExecutor();</span>
+
+        e.setErrorLog(errorLog);
+        e.setLog(log);
+        e.setMessages(getMessages());
+        e.setTasks(tasks);
+
+        e.run();
+
+        verifyControls();
+    }
+}
+</pre>
+<p>
+In this listing (which is a paired down version of the real class), you can see how 
+mock objects, including EasyMock objects, are used. The ExecutableFixture classes will invoke
+the <span class="codefrag">addToken()</span> method; the point is to provide, in the tasks List,
+those fixtures wrapped in Task objects and see that they are invoked in the correct order.
+</p>
+<p>
+We create a Mock Log object, and check that the correct messages are logged in the correct order.  Once
+we have set the expectations for all the EasyMock controls, we invoke <span class="codefrag">replayControls()</span> and
+continue with our test.  The <span class="codefrag">verifyControls()</span> method ensures that all mock objects
+have had all expected methods invoked on them.
+</p>
+<p>
+That's just <em>unit</em> testing; you always want to supplement that with <em>integration</em>
+testing ... to ensure, at the very least, that your schema is valid, the conversion rules work, and the contributions
+are correct.  However, as the <a href="clover/org/apache/examples/panorama/startup/impl/pkg-summary.html">code coverage report</a>
+  shows, you can reach very high levels of code coverage (and code <em>confidence</em>) using unit tests.
+</p>
+</div>
+</div>
+<!--+
+    |end content
+    +-->
+<div class="clearboth">&nbsp;</div>
+</div>
+<div id="footer">
+<!--+
+    |start bottomstrip
+    +-->
+<div class="lastmodified">
+<script type="text/javascript"><!--
+document.write("Last Published: " + document.lastModified);
+//  --></script>
+</div>
+<div class="copyright">
+        Copyright &copy;
+         2005 Apache Software Foundation</div>
+<!--+
+    |end bottomstrip
+    +-->
+</div>
+</body>
+</html>

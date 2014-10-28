@@ -1,0 +1,964 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Apache Forrest" name="Generator">
+<meta name="Forrest-version" content="0.7">
+<meta name="Forrest-skin-name" content="pelt">
+<title>Contribution Processing Rules</title>
+<link type="text/css" href="skin/basic.css" rel="stylesheet">
+<link media="screen" type="text/css" href="skin/screen.css" rel="stylesheet">
+<link media="print" type="text/css" href="skin/print.css" rel="stylesheet">
+<link type="text/css" href="skin/profile.css" rel="stylesheet">
+<script src="skin/getBlank.js" language="javascript" type="text/javascript"></script><script src="skin/getMenu.js" language="javascript" type="text/javascript"></script><script src="skin/fontsize.js" language="javascript" type="text/javascript"></script>
+<link rel="shortcut icon" href="">
+</head>
+<body onload="init()"><div style="background: red"><h1>2009/04/15 - Apache HiveMind has been retired. </h1><h2>For more information, please explore the <a href="http://attic.apache.org/">Attic</a>. </h2></div>
+<script type="text/javascript">ndeSetTextSize();</script>
+<div id="top">
+<div class="breadtrail">
+<a href="http://www.apache.org/">Apache</a> &gt; <a href="http://hivemind.apache.org">HiveMind</a><script src="skin/breadcrumbs.js" language="JavaScript" type="text/javascript"></script>
+</div>
+<div class="header">
+<div class="grouplogo">
+<a href="http://hivemind.apache.org"><img class="logoImage" alt="HiveMind" src="images/HiveMind-Logo.png" title="HiveMind Services and Configuration Microkernel"></a>
+</div>
+<div class="projectlogoA1">
+<a href="http://www.apache.org"><img class="logoImage" alt="Apache" src="images/asf_logo_wide.gif" title="Apache"></a>
+</div>
+<ul id="tabs">
+<li class="current">
+<a class="base-selected" href="index.html">HiveMind Project</a>
+</li>
+<li>
+<a class="base-not-selected" href="hivemind/index.html">Module: hivemind</a>
+</li>
+<li>
+<a class="base-not-selected" href="hivemind-lib/index.html">Module: hivemind-lib</a>
+</li>
+<li>
+<a class="base-not-selected" href="hivemind-jmx/index.html">Module: hivemind-jmx</a>
+</li>
+<li>
+<a class="base-not-selected" href="hivemind-examples/index.html">Example Code</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="main">
+<div id="publishedStrip">
+<div id="level2tabs"></div>
+<script type="text/javascript"><!--
+document.write("<text>Last Published:</text> " + document.lastModified);
+//  --></script>
+</div>
+<div class="breadtrail">
+             
+             &nbsp;
+           </div>
+<div id="menu">
+<div onclick="SwitchMenu('menu_selected_1.1', 'skin/')" id="menu_selected_1.1Title" class="menutitle" style="background-image: url('skin/images/chapter_open.gif');">HiveMind</div>
+<div id="menu_selected_1.1" class="selectedmenuitemgroup" style="display: block;">
+<div class="menuitem">
+<a href="index.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="downloads.html">Downloads</a>
+</div>
+<div onclick="SwitchMenu('menu_selected_1.1.3', 'skin/')" id="menu_selected_1.1.3Title" class="menutitle" style="background-image: url('skin/images/chapter_open.gif');">Reference</div>
+<div id="menu_selected_1.1.3" class="selectedmenuitemgroup" style="display: block;">
+<div class="menuitem">
+<a href="services.html">Services</a>
+</div>
+<div class="menuitem">
+<a href="configurations.html">Configurations</a>
+</div>
+<div class="menuitem">
+<a href="hivedoc.html">HiveDoc</a>
+</div>
+<div class="menuitem">
+<a href="descriptor.html">Module  Descriptor</a>
+</div>
+<div class="menupage">
+<div class="menupagetitle">Contribution Processing Rules</div>
+</div>
+<div class="menuitem">
+<a href="dependencies.html">Dependencies</a>
+</div>
+<div class="menuitem">
+<a href="conditional.html">Conditional Contributions</a>
+</div>
+<div class="menuitem">
+<a href="serializing.html">Serializing Services</a>
+</div>
+<div class="menuitem">
+<a href="instance-initialization.html">Instance Initialization</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.1.4', 'skin/')" id="menu_1.1.4Title" class="menutitle">Project Information</div>
+<div id="menu_1.1.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="changes.html">Change Log</a>
+</div>
+<div class="menuitem">
+<a href="todo.html">TODO</a>
+</div>
+<div class="menuitem">
+<a href="mailinglists.html">Mailing Lists</a>
+</div>
+<div class="menuitem">
+<a href="http://issues.apache.org/jira/secure/BrowseProject.jspa?id=10500">Bugs</a>
+</div>
+<div class="menuitem">
+<a href="subversion.html">Subversion Access</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.1.5', 'skin/')" id="menu_1.1.5Title" class="menutitle">Tutorials and Information</div>
+<div id="menu_1.1.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="bootstrap.html">Bootstrapping the Registry</a>
+</div>
+<div class="menuitem">
+<a href="ioc.html">Inversion Of Control</a>
+</div>
+<div class="menuitem">
+<a href="localization.html">Localization</a>
+</div>
+<div class="menuitem">
+<a href="multithreading.html">Multi-Threading</a>
+</div>
+<div class="menuitem">
+<a href="filter.html">Servlets</a>
+</div>
+<div class="menuitem">
+<a href="override.html">Overriding Services</a>
+</div>
+<div class="menuitem">
+<a href="groovy.html">Groovy Support</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.1.6', 'skin/')" id="menu_1.1.6Title" class="menutitle">Reports</div>
+<div id="menu_1.1.6" class="menuitemgroup">
+<div class="menuitem">
+<a href="license-report.html">License</a>
+</div>
+<div class="menuitem">
+<a href="hivedocs/index.html">HiveDoc</a>
+</div>
+<div class="menuitem">
+<a href="developers.html">Developers</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.2', 'skin/')" id="menu_1.2Title" class="menutitle">Framework</div>
+<div id="menu_1.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind/index.html">Overview</a>
+</div>
+<div onclick="SwitchMenu('menu_1.2.2', 'skin/')" id="menu_1.2.2Title" class="menutitle">Services</div>
+<div id="menu_1.2.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind/BuilderFactory.html">BuilderFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/LoggingInterceptor.html">LoggingInterceptor</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/ShutdownCoordinator.html">ShutdownCoordinator</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/ThreadLocale.html">ThreadLocale</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/ThreadLocalStorage.html">ThreadLocalStorage</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.2.3', 'skin/')" id="menu_1.2.3Title" class="menutitle">Configurations</div>
+<div id="menu_1.2.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind/ApplicationDefaults.html">ApplicationDefaults</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/EagerLoad.html">EagerLoad</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/FactoryDefaults.html">FactoryDefaults</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/ObjectProviders.html">ObjectProviders</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/ServiceModels.html">ServiceModels</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/SymbolSources.html">SymbolSources</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/Translators.html">Translators</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.2.4', 'skin/')" id="menu_1.2.4Title" class="menutitle">Ant Tasks</div>
+<div id="menu_1.2.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind/ant/ConstructRegistry.html">ConstructRegistry</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/ant/ManifestClassPath.html">ManifestClassPath</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.3', 'skin/')" id="menu_1.3Title" class="menutitle">Library</div>
+<div id="menu_1.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-lib/index.html">Overview</a>
+</div>
+<div onclick="SwitchMenu('menu_1.3.2', 'skin/')" id="menu_1.3.2Title" class="menutitle">Services</div>
+<div id="menu_1.3.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-lib/BeanFactoryBuilder.html">BeanFactoryBuilder</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/ChainBuilder.html">ChainBuilder</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/ChainFactory.html">ChainFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/DefaultImplementationBuilder.html">DefaultImplementationBuilder</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/EJBProxyFactory.html">EJBProxyFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/MethodInterceptorFactory.html">MethodInterceptorFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/NameLookup.html">NameLookup</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/PlaceholderFactory.html">PlaceholderFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/PipelineFactory.html">PipelineFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/RemoteExceptionCoordinator.html">RemoteExceptionCoordinator</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/ServicePropertyFactory.html">ServicePropertyFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/SpringLookupFactory.html">SpringLookupFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/StrategyFactory.html">StrategyFactory</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.4', 'skin/')" id="menu_1.4Title" class="menutitle">JMX</div>
+<div id="menu_1.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-jmx/index.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/quickstart.html">Quickstart</a>
+</div>
+<div onclick="SwitchMenu('menu_1.4.3', 'skin/')" id="menu_1.4.3Title" class="menutitle">Setup</div>
+<div id="menu_1.4.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-jmx/setupOverview.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/setupJMXImplementation.html">JMX Implementation</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/setupMBeanServer.html">MBeanServer</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/setupConnectors.html">Connectors</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.4.4', 'skin/')" id="menu_1.4.4Title" class="menutitle">Usage</div>
+<div id="menu_1.4.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-jmx/manageServices.html">Manage Services</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/measurePerformance.html">Measure Performance</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/monitorServices.html">Monitor Services</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/manageLog4j.html">Manage Log4J</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.4.5', 'skin/')" id="menu_1.4.5Title" class="menutitle">Advanced Topics</div>
+<div id="menu_1.4.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-jmx/multipleApps.html">Multiple Applications in Server</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.5', 'skin/')" id="menu_1.5Title" class="menutitle">Example Code</div>
+<div id="menu_1.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-examples/index.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-examples/calc.html">Calculator</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-examples/panorama.html">Panorama Startup</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-examples/logging.html">Logging Interceptor</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.6', 'skin/')" id="menu_1.6Title" class="menutitle">Other Resources</div>
+<div id="menu_1.6" class="menuitemgroup">
+<div class="menuitem">
+<a href="http://wiki.apache.org/jakarta-hivemind/">HiveMind Wiki</a>
+</div>
+<div class="menuitem">
+<a href="http://howardlewisship.com/blog/">Tapestry and HiveMind Blog</a>
+</div>
+<div class="menuitem">
+<a href="http://www.theserverside.com/articles/article.tss?l=HivemindBuzz">HiveMind article on TheServerSide</a>
+</div>
+</div>
+<div id="credit"></div>
+<div id="roundbottom">
+<img style="display: none" class="corner" height="15" width="15" alt="" src="skin/images/rc-b-l-15-1body-2menu-3menu.png"></div>
+<div id="credit2"></div>
+</div>
+<div id="content">
+<div class="trail">
+<text>Font size:</text> 
+	          &nbsp;<input value="Reset" class="resetfont" title="Reset text" onclick="ndeSetTextSize('reset'); return false;" type="button">      
+	          &nbsp;<input value="-a" class="smallerfont" title="Shrink text" onclick="ndeSetTextSize('decr'); return false;" type="button">
+	          &nbsp;<input value="+a" class="biggerfont" title="Enlarge text" onclick="ndeSetTextSize('incr'); return false;" type="button">
+</div>
+<h1>Contribution Processing Rules</h1>
+<div id="minitoc-area">
+<ul class="minitoc">
+<li>
+<a href="#Rules">Rules</a>
+<ul class="minitoc">
+<li>
+<a href="#create-object">create-object</a>
+</li>
+<li>
+<a href="#custom">custom</a>
+</li>
+<li>
+<a href="#invoke-parent">invoke-parent</a>
+</li>
+<li>
+<a href="#push-attribute">push-attribute</a>
+</li>
+<li>
+<a href="#push-content">push-content</a>
+</li>
+<li>
+<a href="#read-attribute">read-attribute</a>
+</li>
+<li>
+<a href="#read-content">read-content</a>
+</li>
+<li>
+<a href="#set-module">set-module</a>
+</li>
+<li>
+<a href="#set-parent">set-parent</a>
+</li>
+<li>
+<a href="#set-property">set-property</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#Translators">Translators</a>
+<ul class="minitoc">
+<li>
+<a href="#boolean">boolean</a>
+</li>
+<li>
+<a href="#class">class</a>
+</li>
+<li>
+<a href="#configuration">configuration</a>
+</li>
+<li>
+<a href="#double">double</a>
+</li>
+<li>
+<a href="#enumeration">enumeration</a>
+</li>
+<li>
+<a href="#id-list">id-list</a>
+</li>
+<li>
+<a href="#instance">instance</a>
+</li>
+<li>
+<a href="#int">int</a>
+</li>
+<li>
+<a href="#long">long</a>
+</li>
+<li>
+<a href="#object">object</a>
+</li>
+<li>
+<a href="#qualified-id">qualified-id</a>
+</li>
+<li>
+<a href="#resource">resource</a>
+</li>
+<li>
+<a href="#service">service</a>
+</li>
+<li>
+<a href="#service-point">service-point</a>
+</li>
+<li>
+<a href="#smart">smart</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+		
+<p>The concept of performing a rules-directed conversion of elements and
+			attributes into Java objects was pioneered (to my knowledge) in the <a class="external" href="http://jakarta.apache.org/commons/digester/">Jakarta Digester</a>
+			framework (which started inside Tomcat, moved to Struts, and is now
+			available on its own).</p>
+		
+<p>The technique is very powerful, even in the limited subset of Digester
+			provided by HiveMind (over time, the number of available rules will
+			increase).</p>
+		
+<a name="N10017"></a><a name="Rules"></a>
+<h2 class="boxed">Rules</h2>
+<div class="section">
+<p>Rules are attached to <a href="descriptor.html#element">&lt;element&gt;</a>s. Each rule object has two methods: the
+				<a href="hivemind/apidocs/org/apache/hivemind/schema/Rule.html#begin(org.apache.hivemind.schema.SchemaProcessor, org.apache.hivemind.Element)">begin()</a> method is invoked when the element is first encountered.
+				The content of the element is then processed recursively (which will
+				involve more rules). Once that completes, the <a href="hivemind/apidocs/org/apache/hivemind/schema/Rule.html#end(org.apache.hivemind.schema.SchemaProcessor, org.apache.hivemind.Element)">end()</a> method is invoked.</p>
+<p>Note: <span class="codefrag">begin()</span> is invoked in the order that rules are
+				defined within the <a href="descriptor.html#rules">&lt;rules&gt;</a> element. <span class="codefrag">end()</span> is invoked in
+				inverse order. This rarely makes any difference.</p>
+<p>Element processing is based on an object stack. Several rules will
+				manipulate the top object on the stack, setting properties based on
+				attributes or content. The <a href="rules.html#create-object">&lt;create-object&gt;</a> rule will instantiate a new
+				object at <span class="codefrag">begin()</span> and pop it off the stack at <span class="codefrag">end()</span>
+				.</p>
+<p>In several cases, rule descriptions reference the parent and child
+				objects. The top object on the stack is the child, the object beneath
+				that is the parent. The <a href="rules.html#set-parent">&lt;set-parent&gt;</a> and <a href="rules.html#invoke-parent">&lt;invoke-parent&gt;</a> rules are
+				useful for creating hierarchies of objects.</p>
+<a name="N10051"></a><a name="create-object"></a>
+<h3 class="boxed">create-object</h3>
+<p>The &lt;create-object&gt; rule is used to create a new object, which is
+					pushed onto the stack at <span class="codefrag">begin()</span>. The object is popped
+					off the stack at <span class="codefrag">end()</span>. &lt;create-object&gt; is typically
+					paired up with &lt;invoke-parent&gt; to connect the new object (as a child)
+					to a parent object.</p>
+<table class="ForrestTable" cellspacing="1" cellpadding="4">
+					
+<tr>
+						
+<th colspan="1" rowspan="1">Attribute</th>
+						<th colspan="1" rowspan="1">Type</th>
+						<th colspan="1" rowspan="1">Required ?</th>
+						<th colspan="1" rowspan="1">Description</th>
+					
+</tr>
+					
+<tr>
+						
+<td colspan="1" rowspan="1">class</td>
+						<td colspan="1" rowspan="1">string</td>
+						<td colspan="1" rowspan="1">yes</td>
+						<td colspan="1" rowspan="1">The complete class name of the object to create. The class must
+							be public, and have a no-arguments public constructor. The class name may
+              be abbreviated; it is resolved by the module containing the <a href="descriptor.html#schema">&lt;schema&gt;</a> element. 
+              You may use <a href="instance-initialization.html">instance initializer</a> syntax.</td>
+					
+</tr>
+				
+</table>
+<a name="N1009A"></a><a name="custom"></a>
+<h3 class="boxed">custom</h3>
+<p>The &lt;custom&gt; rule is used to provide a custom implementation of the 
+					<span class="codefrag">Rule</span> interface. Note that any such rules must not contain
+					any individual state, as they will be reused, possibly by multiple
+					threads.</p>
+<table class="ForrestTable" cellspacing="1" cellpadding="4">
+					
+<tr>
+						
+<th colspan="1" rowspan="1">Attribute</th>
+						<th colspan="1" rowspan="1">Type</th>
+						<th colspan="1" rowspan="1">Required ?</th>
+						<th colspan="1" rowspan="1">Description</th>
+					
+</tr>
+					
+<tr>
+						
+<td colspan="1" rowspan="1">class</td>
+						<td colspan="1" rowspan="1">string</td>
+						<td colspan="1" rowspan="1">yes</td>
+						<td colspan="1" rowspan="1">The complete class name of the class implementing the <span class="codefrag">Rule</span>
+							interface.</td>
+					
+</tr>
+				
+</table>
+<a name="N100DB"></a><a name="invoke-parent"></a>
+<h3 class="boxed">invoke-parent</h3>
+<p>The &lt;invoke-parent&gt; rule is used to connect the child (top object on
+					the stack) to its parent (the next object down). A method of the
+					parent is invoked, passing the child as a parameter. This invocation
+					occurs inside the rule's <span class="codefrag">begin()</span> method; to ensure that
+					the child object is fully configured before being added to the parent
+					place this rule after all properties of the child object have been
+					configured.</p>
+<table class="ForrestTable" cellspacing="1" cellpadding="4">
+					
+<tr>
+						
+<th colspan="1" rowspan="1">Attribute</th>
+						<th colspan="1" rowspan="1">Type</th>
+						<th colspan="1" rowspan="1">Required ?</th>
+						<th colspan="1" rowspan="1">Description</th>
+					
+</tr>
+					
+<tr>
+						
+<td colspan="1" rowspan="1">method</td>
+						<td colspan="1" rowspan="1">string</td>
+						<td colspan="1" rowspan="1">yes</td>
+						<td colspan="1" rowspan="1">The name of the method to invoke on the parent object.</td>
+					
+</tr>
+					
+<tr>
+						
+<td colspan="1" rowspan="1">depth</td>
+						<td colspan="1" rowspan="1">number</td>
+						<td colspan="1" rowspan="1">no</td>
+						<td colspan="1" rowspan="1">The depth of the parent object within the object stack. The top
+							object (the child) is at depth 0, and default depth of the parent
+							is 1.</td>
+					
+</tr>
+				
+</table>
+<div class="frame warning">
+<div class="label">Warning</div>
+<div class="content">Top level elements should include an &lt;invoke-parent&gt; rule, and
+					specify the method as <span class="codefrag">addElement</span>. This adds the created,
+					configured object to the list of contributed objects for the <a href="descriptor.html#contribution">&lt;contribution&gt;</a>
+					(or for service factories, adds the object as a parameter).</div>
+</div>
+<a name="N1013A"></a><a name="push-attribute"></a>
+<h3 class="boxed">push-attribute</h3>
+<p>The &lt;push-attribute&gt; rule reads an attribute, converts it with a
+					translator, and pushes the result onto the stack. It will typically be
+					combined with a <a href="rules.html#invoke-parent">&lt;invoke-parent&gt;</a> to get the pushed value added to the
+					configuration point elements (or to some parent object).</p>
+<table class="ForrestTable" cellspacing="1" cellpadding="4">
+					
+<tr>
+						
+<th colspan="1" rowspan="1">Attribute</th>
+						<th colspan="1" rowspan="1">Type</th>
+						<th colspan="1" rowspan="1">Required ?</th>
+						<th colspan="1" rowspan="1">Description</th>
+					
+</tr>
+					
+<tr>
+						
+<td colspan="1" rowspan="1">attribute</td>
+						<td colspan="1" rowspan="1">string</td>
+						<td colspan="1" rowspan="1">yes</td>
+						<td colspan="1" rowspan="1">The name of the attribute to read.</td>
+					
+</tr>
+				
+</table>
+<a name="N10179"></a><a name="push-content"></a>
+<h3 class="boxed">push-content</h3>
+<p>The &lt;push-content&gt; rule reads the content, converts it with the content 
+					translator, and pushes the result onto the stack. It will typically be
+					combined with a <a href="rules.html#invoke-parent">&lt;invoke-parent&gt;</a> to get the pushed value added to the
+					configuration point elements (or to some parent object).</p>
+<a name="N10187"></a><a name="read-attribute"></a>
+<h3 class="boxed">read-attribute</h3>
+<p>The &lt;read-attribute&gt; rule reads an attribute from the current
+					element, optionally translates it (from a string to some other type),
+					and then assigns the value to a property of the top object on the
+					object stack.</p>
+<table class="ForrestTable" cellspacing="1" cellpadding="4">
+					
+<tr>
+						
+<th colspan="1" rowspan="1">Attribute</th>
+						<th colspan="1" rowspan="1">Type</th>
+						<th colspan="1" rowspan="1">Required ?</th>
+						<th colspan="1" rowspan="1">Description</th>
+					
+</tr>
+					
+<tr>
+						
+<td colspan="1" rowspan="1">property</td>
+						<td colspan="1" rowspan="1">string</td>
+						<td colspan="1" rowspan="1">yes</td>
+						<td colspan="1" rowspan="1">The name of the property of the top object on the stack to
+							update.</td>
+					
+</tr>
+					
+<tr>
+						
+<td colspan="1" rowspan="1">attribute</td>
+						<td colspan="1" rowspan="1">string</td>
+						<td colspan="1" rowspan="1">yes</td>
+						<td colspan="1" rowspan="1">The name of the attribute to read.</td>
+					
+</tr>
+					
+<tr>
+						
+<td colspan="1" rowspan="1">skip-if-null</td>
+						<td colspan="1" rowspan="1">boolean</td>
+						<td colspan="1" rowspan="1">no</td>
+						<td colspan="1" rowspan="1">If "true" (the default), then an omitted attribute will be
+							ignored. If "false", the property will be updated regardless.</td>
+					
+</tr>
+           
+<tr>
+          
+<td colspan="1" rowspan="1">translator</td>
+          <td colspan="1" rowspan="1">string</td>
+          <td colspan="1" rowspan="1">no</td>
+          <td colspan="1" rowspan="1">
+            A translator that overrides the attribute's translator.
+          </td>
+        
+</tr>
+				
+</table>
+<a name="N10207"></a><a name="read-content"></a>
+<h3 class="boxed">read-content</h3>
+<p>The &lt;read-content&gt; rule is similar to <a href="rules.html#read-attribute">&lt;read-attribute&gt;</a>, except it
+					concerns the content of the current element (the text wrapped by its
+					start and end tags).</p>
+<table class="ForrestTable" cellspacing="1" cellpadding="4">
+					
+<tr>
+						
+<th colspan="1" rowspan="1">Attribute</th>
+						<th colspan="1" rowspan="1">Type</th>
+						<th colspan="1" rowspan="1">Required ?</th>
+						<th colspan="1" rowspan="1">Description</th>
+					
+</tr>
+					
+<tr>
+						
+<td colspan="1" rowspan="1">property</td>
+						<td colspan="1" rowspan="1">string</td>
+						<td colspan="1" rowspan="1">yes</td>
+						<td colspan="1" rowspan="1">The name of the property of the top object on the stack to
+							update.</td>
+					
+</tr>
+				
+</table>
+<a name="N10246"></a><a name="set-module"></a>
+<h3 class="boxed">set-module</h3>
+<p> &lt;set-module&gt; is used to set a property of the top object on the
+					stack to the module which made the contribution. This is often used
+					when some other attribute of the contribution is the name of a service
+					or configuration extension point (but it is advantageous to defer
+					access to the service or configuration). The module can be used to
+					resolve names of services or configurations that are local to the
+					contributing module.</p>
+<table class="ForrestTable" cellspacing="1" cellpadding="4">
+					
+<tr>
+						
+<th colspan="1" rowspan="1">Attribute</th>
+						<th colspan="1" rowspan="1">Type</th>
+						<th colspan="1" rowspan="1">Required ?</th>
+						<th colspan="1" rowspan="1">Description</th>
+					
+</tr>
+					
+<tr>
+						
+<td colspan="1" rowspan="1">property</td>
+						<td colspan="1" rowspan="1">string</td>
+						<td colspan="1" rowspan="1">yes</td>
+						<td colspan="1" rowspan="1">The name of the property of the top object to update with the
+							contributing module.</td>
+					
+</tr>
+				
+</table>
+<a name="N10281"></a><a name="set-parent"></a>
+<h3 class="boxed">set-parent</h3>
+<p>The &lt;set-parent&gt; rule is used to set a property of the child object
+					to parent object. This allows for backwards connections from child
+					objects to parent objects.</p>
+<table class="ForrestTable" cellspacing="1" cellpadding="4">
+					
+<tr>
+						
+<th colspan="1" rowspan="1">Attribute</th>
+						<th colspan="1" rowspan="1">Type</th>
+						<th colspan="1" rowspan="1">Required ?</th>
+						<th colspan="1" rowspan="1">Description</th>
+					
+</tr>
+					
+<tr>
+						
+<td colspan="1" rowspan="1">property</td>
+						<td colspan="1" rowspan="1">string</td>
+						<td colspan="1" rowspan="1">yes</td>
+						<td colspan="1" rowspan="1">The name of the property of the child object to set.</td>
+					
+</tr>
+				
+</table>
+<a name="N102BC"></a><a name="set-property"></a>
+<h3 class="boxed">set-property</h3>
+<p>The &lt;set-property&gt; rule is used to set a property of the top object
+					to a preset value.</p>
+<table class="ForrestTable" cellspacing="1" cellpadding="4">
+					
+<tr>
+						
+<th colspan="1" rowspan="1">Attribute</th>
+						<th colspan="1" rowspan="1">Type</th>
+						<th colspan="1" rowspan="1">Required ?</th>
+						<th colspan="1" rowspan="1">Description</th>
+					
+</tr>
+					
+<tr>
+						
+<td colspan="1" rowspan="1">property</td>
+						<td colspan="1" rowspan="1">string</td>
+						<td colspan="1" rowspan="1">yes</td>
+						<td colspan="1" rowspan="1">The name of the property of the child object to set.</td>
+					
+</tr>
+					
+<tr>
+						
+<td colspan="1" rowspan="1">value</td>
+						<td colspan="1" rowspan="1">string</td>
+						<td colspan="1" rowspan="1">yes</td>
+						<td colspan="1" rowspan="1">The value to set the proeprty to. The is interpreted as with the
+							<a href="#smart">smart translator</a>, meaning that
+							conversion to normal Java types (boolean, int, etc.) will work as
+							expected.</td>
+					
+</tr>
+				
+</table>
+</div>
+		
+    
+<a name="N10315"></a><a name="Translators"></a>
+<h2 class="boxed">Translators</h2>
+<div class="section">
+<p>Commonly, it is necessary to perform some translation or transformation of string attribute value to convert 
+        the value into some other type, such as boolean, integer or date. This can be accomplished by specifying a 
+        translator in the <a href="descriptor.html#attribute">&lt;attribute&gt;</a> element (it also applies to element content, with the 
+        <span class="codefrag">content-translator</span> attribute of the <a href="descriptor.html#element">&lt;element&gt;</a> element).</p>
+<p>A translator is an object implementing the <a href="hivemind/apidocs/org/apache/hivemind/schema/Translator.html">Translator</a> interface. The <span class="codefrag">translator</span> value 
+        specified in a rule may be either the complete class name of a class implementing the interface, or one of a 
+        number of builtin values.</p>
+<p>Translators configurations consist of a translator name, and an optional initalizer string. The initializer 
+        string is separated from the translator id by a comma, ex: <span class="codefrag">int,min=0</span> (where <span class="codefrag">min=0</span> is 
+        the initializer string). Initializer strings are generally in the format of <span class="codefrag">key=value[,key=value]*</span> 
+        ... but each Translator is free to interpret the initializer string its own way.</p>
+<p>The following sections describe the basic translators provided with the framework. You can add additional 
+        translators by contributing to the <a href="hivemind/Translators.html">hivemind.Translators</a> configuration point.</p>
+<a name="N10346"></a><a name="boolean"></a>
+<h3 class="boxed">boolean</h3>
+<p>The boolean translator converts an input string into a boolean value. "true" is translated to true, and 
+          "false" to false.</p>
+<p>A default value is used when the input is blank. Normally, this default is false, but the "default" key in 
+          the initializer can override this (i.e., <span class="codefrag">boolean,default=true</span>).</p>
+<a name="N10356"></a><a name="class"></a>
+<h3 class="boxed">class</h3>
+<p>The class translator converts a class name into a Class object. The value must 
+        be a fully qualified class name. A null input value returns null.</p>
+<div class="frame note">
+<div class="label">Note</div>
+<div class="content">This translator is hard-coded, and does not appear in the 
+          <a href="hivemind/Translators.html">hivemind.Translators</a> configuration point.</div>
+</div>
+<a name="N10367"></a><a name="configuration"></a>
+<h3 class="boxed">configuration</h3>
+<p>The configuration translator converts an input value into a configuration point id, then obtains the 
+          elements for that configuration point as a List. The id may be fully qualified, or a local id within the 
+          contributing module.</p>
+<p>A blank input value returns null.</p>
+<a name="N10374"></a><a name="double"></a>
+<h3 class="boxed">double</h3>
+<p>The double translator converts the input into an double precision floating point value. It recognizes three 
+          initializer values:</p>
+<ul>
+          
+<li>default: the default value (normally 0) to use when the input is blank</li>
+          
+<li>min: a minimum acceptible value</li>
+          
+<li>max: a maximum acceptible value</li>
+        
+</ul>
+<a name="N1038A"></a><a name="enumeration"></a>
+<h3 class="boxed">enumeration</h3>
+<p>The enumeration translator converts input strings into enumerated values. Enumeration <em>requires</em> an 
+          initializer string, with a special format: <br> 
+<span class="codefrag"> 
+          enumeration,class-name,input=field-name[,input=field-name]*</span> 
+</p>
+<p>That is, the initializer begins with the name of the class containing some number of public static fields. 
+          Input values are mapped against field names. Example: <br> 
+<span class="codefrag"> 
+          enumeration,java.lang.Boolean,yes=TRUE,no=FALSE</span> 
+</p>
+<p>If the input is null or empty, then the translator returns null.</p>
+<p>The class name for the enumeration may be abbreviated.</p>
+<a name="N103AA"></a><a name="id-list"></a>
+<h3 class="boxed">id-list</h3>
+<p>Translates a comma-seperated list of ids into a comma-seperated list of fully qualified ids (qualified 
+          against the contributing module). Alternately, passes the value <span class="codefrag">*</span> through as-is. Id lists are 
+          typically used to establish ordering of items within a list, as with <a href="descriptor.html#interceptor">&lt;interceptor&gt;</a>. </p>
+<a name="N103BB"></a><a name="instance"></a>
+<h3 class="boxed">instance</h3>
+<p>The object translator converts a fully qualified class name into an object instance. The class must 
+          implement a public no-arguments constructor.</p>
+<p>The class name may be abbreviated.</p>
+<p>
+          The instance translator may also initialize properties  using <a href="instance-initialization.html">instance initializer</a> syntax.
+          </p>
+<a name="N103CF"></a><a name="int"></a>
+<h3 class="boxed">int</h3>
+<p>The int translator converts the input into an integer value. It recognizes three initializer values:</p>
+<ul>
+          
+<li>default: the default value (normally 0) to use when the input is blank</li>
+          
+<li>min: a minimum acceptible value</li>
+          
+<li>max: a maximum acceptible value</li>
+        
+</ul>
+<div class="frame note">
+<div class="label">Note</div>
+<div class="content">This translator is hard-coded, and does not appear in the 
+          <a href="hivemind/Translators.html">hivemind.Translators</a> configuration point.</div>
+</div>
+<a name="N103EC"></a><a name="long"></a>
+<h3 class="boxed">long</h3>
+<p>The long translator converts the input into an long integer (64 bit) value. It recognizes three initializer 
+          values:</p>
+<ul>
+          
+<li>default: the default value (normally 0) to use when the input is blank</li>
+          
+<li>min: a minimum acceptible value</li>
+          
+<li>max: a maximum acceptible value</li>
+        
+</ul>
+<a name="N10402"></a><a name="object"></a>
+<h3 class="boxed">object</h3>
+<p>
+          The object translator is allows the caller to provide an object value
+          in a multitude of ways. The object translator inverts the normal roles; the caller
+          has all the power in determining how to interpret the value, and the schema
+          takes whatever value shows up.
+          The object translator is driven by the
+          <a href="hivemind/ObjectProviders.html">hivemind.ObjectProviders</a> configuration.
+        </p>
+<p>
+          Some object providers include a class name, which may be abbreviated and will be
+          resolved by the <em>contributing</em> module.
+        </p>
+<a name="N10416"></a><a name="qualified-id"></a>
+<h3 class="boxed">qualified-id</h3>
+<p>Translates an id into a fully qualified id (qualified against the contributing module's id). </p>
+<a name="N10420"></a><a name="resource"></a>
+<h3 class="boxed">resource</h3>
+<p>The resource translator is used to find a resource packaged with (or near) the module's deployment 
+          descriptor. The input value is the relative path to a file. The translator converts the input value to a 
+          <a href="hivemind/apidocs/org/apache/hivemind/Resource.html">Resource</a> for that file.</p>
+<p>If the file doesn't exist, then an error is logged. If a localization of the file exists, then the Resource 
+          for that localization is returned.</p>
+<a name="N10431"></a><a name="service"></a>
+<h3 class="boxed">service</h3>
+<p>The service translator is used to lookup a service in the registry. The input 
+        value is either a local service id from the contributing module, or a fully qualified service id.</p>
+<div class="frame note">
+<div class="label">Note</div>
+<div class="content">This translator is hard-coded, and does not appear in the 
+          <a href="hivemind/Translators.html">hivemind.Translators</a> configuration point.</div>
+</div>
+<a name="N10442"></a><a name="service-point"></a>
+<h3 class="boxed">service-point</h3>
+<p>The service translator is used to lookup a service point (not a service) in the registry. The input value is 
+          either a local service id from the contributing module, or a fully qualified service id.</p>
+<a name="N1044C"></a><a name="smart"></a>
+<h3 class="boxed">smart</h3>
+<p>The smart translator attempts an automatic conversion from a string value (the 
+        attribute value or element content) to a particular type. It determines the type from the property to which the 
+        value will be assigned. Smart translator makes use of the JavaBeans's PropertyEditor class for the conversion, 
+        which allows easy this translator to be used with most common primitive types, such as int, short and boolean. 
+        See the <a href="hivemind/apidocs/org/apache/hivemind/schema/rules/SmartTranslator.html"> SmartTranslator</a> documentation for more 
+        details.</p>
+<p>In general, the smart translator is the useful for most ordinary Java type properties, unless 
+        you want to specify range constraints.</p>
+<p>It recognizes one initializer value:</p>
+<ul> 
+<li>default: the 
+        default value to use when the input is blank</li> 
+</ul>
+<div class="frame note">
+<div class="label">Note</div>
+<div class="content">This translator is hard-coded, and does not appear in the 
+          <a href="hivemind/Translators.html">hivemind.Translators</a> configuration point.</div>
+</div>
+</div>
+		
+	
+</div>
+<div class="clearboth">&nbsp;</div>
+</div>
+<div id="footer">
+<div class="lastmodified">
+<script type="text/javascript"><!--
+document.write("<text>Last Published:</text> " + document.lastModified);
+//  --></script>
+</div>
+<div class="copyright">
+        Copyright &copy;
+         2005 Apache Software Foundation</div>
+</div>
+</body>
+</html>

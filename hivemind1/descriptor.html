@@ -1,0 +1,1319 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Apache Forrest" name="Generator">
+<meta name="Forrest-version" content="0.7">
+<meta name="Forrest-skin-name" content="pelt">
+<title>HiveMind Module Descriptor</title>
+<link type="text/css" href="skin/basic.css" rel="stylesheet">
+<link media="screen" type="text/css" href="skin/screen.css" rel="stylesheet">
+<link media="print" type="text/css" href="skin/print.css" rel="stylesheet">
+<link type="text/css" href="skin/profile.css" rel="stylesheet">
+<script src="skin/getBlank.js" language="javascript" type="text/javascript"></script><script src="skin/getMenu.js" language="javascript" type="text/javascript"></script><script src="skin/fontsize.js" language="javascript" type="text/javascript"></script>
+<link rel="shortcut icon" href="">
+</head>
+<body onload="init()"><div style="background: red"><h1>2009/04/15 - Apache HiveMind has been retired. </h1><h2>For more information, please explore the <a href="http://attic.apache.org/">Attic</a>. </h2></div>
+<script type="text/javascript">ndeSetTextSize();</script>
+<div id="top">
+<div class="breadtrail">
+<a href="http://www.apache.org/">Apache</a> &gt; <a href="http://hivemind.apache.org">HiveMind</a><script src="skin/breadcrumbs.js" language="JavaScript" type="text/javascript"></script>
+</div>
+<div class="header">
+<div class="grouplogo">
+<a href="http://hivemind.apache.org"><img class="logoImage" alt="HiveMind" src="images/HiveMind-Logo.png" title="HiveMind Services and Configuration Microkernel"></a>
+</div>
+<div class="projectlogoA1">
+<a href="http://www.apache.org"><img class="logoImage" alt="Apache" src="images/asf_logo_wide.gif" title="Apache"></a>
+</div>
+<ul id="tabs">
+<li class="current">
+<a class="base-selected" href="index.html">HiveMind Project</a>
+</li>
+<li>
+<a class="base-not-selected" href="hivemind/index.html">Module: hivemind</a>
+</li>
+<li>
+<a class="base-not-selected" href="hivemind-lib/index.html">Module: hivemind-lib</a>
+</li>
+<li>
+<a class="base-not-selected" href="hivemind-jmx/index.html">Module: hivemind-jmx</a>
+</li>
+<li>
+<a class="base-not-selected" href="hivemind-examples/index.html">Example Code</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="main">
+<div id="publishedStrip">
+<div id="level2tabs"></div>
+<script type="text/javascript"><!--
+document.write("<text>Last Published:</text> " + document.lastModified);
+//  --></script>
+</div>
+<div class="breadtrail">
+             
+             &nbsp;
+           </div>
+<div id="menu">
+<div onclick="SwitchMenu('menu_selected_1.1', 'skin/')" id="menu_selected_1.1Title" class="menutitle" style="background-image: url('skin/images/chapter_open.gif');">HiveMind</div>
+<div id="menu_selected_1.1" class="selectedmenuitemgroup" style="display: block;">
+<div class="menuitem">
+<a href="index.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="downloads.html">Downloads</a>
+</div>
+<div onclick="SwitchMenu('menu_selected_1.1.3', 'skin/')" id="menu_selected_1.1.3Title" class="menutitle" style="background-image: url('skin/images/chapter_open.gif');">Reference</div>
+<div id="menu_selected_1.1.3" class="selectedmenuitemgroup" style="display: block;">
+<div class="menuitem">
+<a href="services.html">Services</a>
+</div>
+<div class="menuitem">
+<a href="configurations.html">Configurations</a>
+</div>
+<div class="menuitem">
+<a href="hivedoc.html">HiveDoc</a>
+</div>
+<div class="menupage">
+<div class="menupagetitle">Module  Descriptor</div>
+</div>
+<div class="menuitem">
+<a href="rules.html">Contribution Processing Rules</a>
+</div>
+<div class="menuitem">
+<a href="dependencies.html">Dependencies</a>
+</div>
+<div class="menuitem">
+<a href="conditional.html">Conditional Contributions</a>
+</div>
+<div class="menuitem">
+<a href="serializing.html">Serializing Services</a>
+</div>
+<div class="menuitem">
+<a href="instance-initialization.html">Instance Initialization</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.1.4', 'skin/')" id="menu_1.1.4Title" class="menutitle">Project Information</div>
+<div id="menu_1.1.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="changes.html">Change Log</a>
+</div>
+<div class="menuitem">
+<a href="todo.html">TODO</a>
+</div>
+<div class="menuitem">
+<a href="mailinglists.html">Mailing Lists</a>
+</div>
+<div class="menuitem">
+<a href="http://issues.apache.org/jira/secure/BrowseProject.jspa?id=10500">Bugs</a>
+</div>
+<div class="menuitem">
+<a href="subversion.html">Subversion Access</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.1.5', 'skin/')" id="menu_1.1.5Title" class="menutitle">Tutorials and Information</div>
+<div id="menu_1.1.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="bootstrap.html">Bootstrapping the Registry</a>
+</div>
+<div class="menuitem">
+<a href="ioc.html">Inversion Of Control</a>
+</div>
+<div class="menuitem">
+<a href="localization.html">Localization</a>
+</div>
+<div class="menuitem">
+<a href="multithreading.html">Multi-Threading</a>
+</div>
+<div class="menuitem">
+<a href="filter.html">Servlets</a>
+</div>
+<div class="menuitem">
+<a href="override.html">Overriding Services</a>
+</div>
+<div class="menuitem">
+<a href="groovy.html">Groovy Support</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.1.6', 'skin/')" id="menu_1.1.6Title" class="menutitle">Reports</div>
+<div id="menu_1.1.6" class="menuitemgroup">
+<div class="menuitem">
+<a href="license-report.html">License</a>
+</div>
+<div class="menuitem">
+<a href="hivedocs/index.html">HiveDoc</a>
+</div>
+<div class="menuitem">
+<a href="developers.html">Developers</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.2', 'skin/')" id="menu_1.2Title" class="menutitle">Framework</div>
+<div id="menu_1.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind/index.html">Overview</a>
+</div>
+<div onclick="SwitchMenu('menu_1.2.2', 'skin/')" id="menu_1.2.2Title" class="menutitle">Services</div>
+<div id="menu_1.2.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind/BuilderFactory.html">BuilderFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/LoggingInterceptor.html">LoggingInterceptor</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/ShutdownCoordinator.html">ShutdownCoordinator</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/ThreadLocale.html">ThreadLocale</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/ThreadLocalStorage.html">ThreadLocalStorage</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.2.3', 'skin/')" id="menu_1.2.3Title" class="menutitle">Configurations</div>
+<div id="menu_1.2.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind/ApplicationDefaults.html">ApplicationDefaults</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/EagerLoad.html">EagerLoad</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/FactoryDefaults.html">FactoryDefaults</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/ObjectProviders.html">ObjectProviders</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/ServiceModels.html">ServiceModels</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/SymbolSources.html">SymbolSources</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/Translators.html">Translators</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.2.4', 'skin/')" id="menu_1.2.4Title" class="menutitle">Ant Tasks</div>
+<div id="menu_1.2.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind/ant/ConstructRegistry.html">ConstructRegistry</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/ant/ManifestClassPath.html">ManifestClassPath</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.3', 'skin/')" id="menu_1.3Title" class="menutitle">Library</div>
+<div id="menu_1.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-lib/index.html">Overview</a>
+</div>
+<div onclick="SwitchMenu('menu_1.3.2', 'skin/')" id="menu_1.3.2Title" class="menutitle">Services</div>
+<div id="menu_1.3.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-lib/BeanFactoryBuilder.html">BeanFactoryBuilder</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/ChainBuilder.html">ChainBuilder</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/ChainFactory.html">ChainFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/DefaultImplementationBuilder.html">DefaultImplementationBuilder</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/EJBProxyFactory.html">EJBProxyFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/MethodInterceptorFactory.html">MethodInterceptorFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/NameLookup.html">NameLookup</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/PlaceholderFactory.html">PlaceholderFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/PipelineFactory.html">PipelineFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/RemoteExceptionCoordinator.html">RemoteExceptionCoordinator</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/ServicePropertyFactory.html">ServicePropertyFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/SpringLookupFactory.html">SpringLookupFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/StrategyFactory.html">StrategyFactory</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.4', 'skin/')" id="menu_1.4Title" class="menutitle">JMX</div>
+<div id="menu_1.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-jmx/index.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/quickstart.html">Quickstart</a>
+</div>
+<div onclick="SwitchMenu('menu_1.4.3', 'skin/')" id="menu_1.4.3Title" class="menutitle">Setup</div>
+<div id="menu_1.4.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-jmx/setupOverview.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/setupJMXImplementation.html">JMX Implementation</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/setupMBeanServer.html">MBeanServer</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/setupConnectors.html">Connectors</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.4.4', 'skin/')" id="menu_1.4.4Title" class="menutitle">Usage</div>
+<div id="menu_1.4.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-jmx/manageServices.html">Manage Services</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/measurePerformance.html">Measure Performance</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/monitorServices.html">Monitor Services</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/manageLog4j.html">Manage Log4J</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.4.5', 'skin/')" id="menu_1.4.5Title" class="menutitle">Advanced Topics</div>
+<div id="menu_1.4.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-jmx/multipleApps.html">Multiple Applications in Server</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.5', 'skin/')" id="menu_1.5Title" class="menutitle">Example Code</div>
+<div id="menu_1.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-examples/index.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-examples/calc.html">Calculator</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-examples/panorama.html">Panorama Startup</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-examples/logging.html">Logging Interceptor</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.6', 'skin/')" id="menu_1.6Title" class="menutitle">Other Resources</div>
+<div id="menu_1.6" class="menuitemgroup">
+<div class="menuitem">
+<a href="http://wiki.apache.org/jakarta-hivemind/">HiveMind Wiki</a>
+</div>
+<div class="menuitem">
+<a href="http://howardlewisship.com/blog/">Tapestry and HiveMind Blog</a>
+</div>
+<div class="menuitem">
+<a href="http://www.theserverside.com/articles/article.tss?l=HivemindBuzz">HiveMind article on TheServerSide</a>
+</div>
+</div>
+<div id="credit"></div>
+<div id="roundbottom">
+<img style="display: none" class="corner" height="15" width="15" alt="" src="skin/images/rc-b-l-15-1body-2menu-3menu.png"></div>
+<div id="credit2"></div>
+</div>
+<div id="content">
+<div class="trail">
+<text>Font size:</text> 
+	          &nbsp;<input value="Reset" class="resetfont" title="Reset text" onclick="ndeSetTextSize('reset'); return false;" type="button">      
+	          &nbsp;<input value="-a" class="smallerfont" title="Shrink text" onclick="ndeSetTextSize('decr'); return false;" type="button">
+	          &nbsp;<input value="+a" class="biggerfont" title="Enlarge text" onclick="ndeSetTextSize('incr'); return false;" type="button">
+</div>
+<h1>HiveMind Module Descriptor</h1>
+<div id="minitoc-area">
+<ul class="minitoc">
+<li>
+<a href="#attribute">attribute</a>
+</li>
+<li>
+<a href="#configuration-point">configuration-point</a>
+</li>
+<li>
+<a href="#contribution">contribution</a>
+</li>
+<li>
+<a href="#conversion">conversion</a>
+</li>
+<li>
+<a href="#create-instance">create-instance</a>
+</li>
+<li>
+<a href="#dependency">dependency</a>
+</li>
+<li>
+<a href="#element">element</a>
+</li>
+<li>
+<a href="#implementation">implementation</a>
+</li>
+<li>
+<a href="#interceptor">interceptor</a>
+</li>
+<li>
+<a href="#invoke-factory">invoke-factory</a>
+</li>
+<li>
+<a href="#map">map</a>
+</li>
+<li>
+<a href="#module">module</a>
+</li>
+<li>
+<a href="#parameters-schema">parameters-schema</a>
+</li>
+<li>
+<a href="#rules">rules</a>
+</li>
+<li>
+<a href="#schema">schema</a>
+</li>
+<li>
+<a href="#service-point">service-point</a>
+</li>
+<li>
+<a href="#sub-module">sub-module</a>
+</li>
+</ul>
+</div>
+		
+<p>The purpose of the module descriptor is to provide a runtime and
+			compile-time description of each HiveMind module in terms of service and
+			configuration extension points and contributions to those extension
+			points.</p>
+		
+<p>The descriptor is named <span class="codefrag">hivemodule.xml</span> and is stored in the
+			META-INF directory of the module.</p>
+		
+<p>The root element of the descriptor is the <a href="descriptor.html#module">&lt;module&gt;</a> element.</p>
+		
+<a name="N1001D"></a><a name="attribute"></a>
+<h2 class="boxed">attribute</h2>
+<div class="section">
+<p>&lt;attribute&gt; is used to define an attribute within an <a href="descriptor.html#element">&lt;element&gt;</a>. Inside
+				a <a href="descriptor.html#contribution">&lt;contribution&gt;</a>, only known attributes are allowed in elements; unknown
+				attributes will be logged as an error and ignored. In addition, some
+				attributes are required; again, errors occur if the contributed element
+				does not provide a value for the attribute.</p>
+<table class="ForrestTable" cellspacing="1" cellpadding="4">
+				
+<tr>
+					
+<th colspan="1" rowspan="1">Attribute</th>
+					<th colspan="1" rowspan="1">Type</th>
+					<th colspan="1" rowspan="1">Required ?</th>
+					<th colspan="1" rowspan="1">Description</th>
+				
+</tr>
+				
+<tr>
+					
+<td colspan="1" rowspan="1">name</td>
+					<td colspan="1" rowspan="1">string</td>
+					<td colspan="1" rowspan="1">yes</td>
+					<td colspan="1" rowspan="1">The name of the attribute.</td>
+				
+</tr>
+				
+<tr>
+					
+<td colspan="1" rowspan="1">required</td>
+					<td colspan="1" rowspan="1">boolean</td>
+					<td colspan="1" rowspan="1">no</td>
+					<td colspan="1" rowspan="1">If true, the attribute must be provided in the contributed
+						configuration element. The default is false.</td>
+				
+</tr>
+				
+<tr>
+					
+<td colspan="1" rowspan="1">unique</td>
+					<td colspan="1" rowspan="1">boolean</td>
+					<td colspan="1" rowspan="1">no</td>
+					<td colspan="1" rowspan="1">If true, the attribute must contain a unique value with respect to 
+					all other contributions to the same configuration point.  The default is false.</td>
+				
+</tr>
+				
+<tr>
+					
+<td colspan="1" rowspan="1">translator</td>
+					<td colspan="1" rowspan="1">string</td>
+					<td colspan="1" rowspan="1">no</td>
+					<td colspan="1" rowspan="1">The <a href="rules.html#Translators">translator</a> 
+						configuration that is used to convert the attribute into a useable
+						type. By default, the attribute is treated as a single string.</td>
+				
+</tr>
+			
+</table>
+</div>
+		
+<a name="N100A9"></a><a name="configuration-point"></a>
+<h2 class="boxed">configuration-point</h2>
+<div class="section">
+<p>The &lt;configuration-point&gt; element defines a configuration extension
+				point.</p>
+<table class="ForrestTable" cellspacing="1" cellpadding="4">
+				
+<tr>
+					
+<th colspan="1" rowspan="1">Attribute</th>
+					<th colspan="1" rowspan="1">Type</th>
+					<th colspan="1" rowspan="1">Required ?</th>
+					<th colspan="1" rowspan="1">Description</th>
+				
+</tr>
+				
+<tr>
+					
+<td colspan="1" rowspan="1">id</td>
+					<td colspan="1" rowspan="1">string</td>
+					<td colspan="1" rowspan="1">yes</td>
+					<td colspan="1" rowspan="1">The simple id of the service extension point. The fully qualified
+						id for the extension point is created by prefixing with the module's
+						id (and a dot).</td>
+				
+</tr>
+        
+<tr>
+          
+<td colspan="1" rowspan="1">visibility</td>
+          <td colspan="1" rowspan="1"><span class="codefrag">public | private</span></td>
+          <td colspan="1" rowspan="1">no</td>
+          <td colspan="1" rowspan="1">
+            If <span class="codefrag">private</span> is specified, then the configuration point may only be referenced
+            (or contributed to) from within the same module. It will not be visible to the application
+            (via the <a href="hivemind/apidocs/org/apache/hivemind/Registry.html">Registry</a>) if private.  The default is <span class="codefrag">public</span>.
+          </td>
+        
+</tr>
+				
+<tr>
+					
+<td colspan="1" rowspan="1">occurs</td>
+					<td colspan="1" rowspan="1">
+						<span class="codefrag">unbounded | 0..1 | 1 | 1..n | none</span>
+					</td>
+					<td colspan="1" rowspan="1">no</td>
+          <td colspan="1" rowspan="1">The number of contributions allowed: <ul> 
+<li>
+<strong>unbounded</strong> (default): any number</li> 
+            
+<li>
+<strong>0..1</strong>: optional</li> 
+<li>
+<strong>1</strong> : required</li> 
+<li>
+<strong>1..n</strong>: 
+            at least one</li> 
+<li>
+<strong>none</strong>: none allowed</li> 
+</ul> 
+<div class="frame note">
+<div class="label">Note</div>
+<div class="content"> 
+<strong>none</strong> doesn't 
+            make sense for occurances to a configuration point, but does occasionally make sense for parameters to a 
+            factory. </div>
+</div> 
+</td>				
+</tr>
+				
+<tr>
+					
+<td colspan="1" rowspan="1">schema-id</td>
+					<td colspan="1" rowspan="1">string</td>
+					<td colspan="1" rowspan="1">no</td>
+					<td colspan="1" rowspan="1">Used to reference a <a href="descriptor.html#schema">&lt;schema&gt;</a> (in the same module, or a different
+						one) that defines the format of contributions into the configuration
+						point. This may be omitted, in which case the extension point will
+						contain a list of <a href="hivemind/apidocs/org/apache/hivemind/Element.html">Element</a> .</td>
+				
+</tr>
+			
+</table>
+<p>Contains: <a href="descriptor.html#schema">&lt;schema&gt;</a> 
+</p>
+<p> &lt;configuration-point&gt; only defines a configuration point, it does not
+				supply any data into that point. The &lt;contribution&gt; element is used to
+				provide such data.</p>
+</div>
+		
+<a name="N1016B"></a><a name="contribution"></a>
+<h2 class="boxed">contribution</h2>
+<div class="section">
+<p>The &lt;contribution&gt; element contributes elements to an existing
+				configuration extension point.</p>
+<table class="ForrestTable" cellspacing="1" cellpadding="4">
+				
+<tr>
+					
+<th colspan="1" rowspan="1">Attribute</th>
+					<th colspan="1" rowspan="1">Type</th>
+					<th colspan="1" rowspan="1">Required ?</th>
+					<th colspan="1" rowspan="1">Description</th>
+				
+</tr>
+				
+<tr>
+					
+<td colspan="1" rowspan="1">configuration-id</td>
+					<td colspan="1" rowspan="1">string</td>
+					<td colspan="1" rowspan="1">yes</td>
+					<td colspan="1" rowspan="1">Either the id of an <a href="descriptor.html#configuration-point">&lt;configuration-point&gt;</a> within the module, or
+						the fully qualified id of an &lt;configuration-point&gt; in another
+						module.</td>
+				
+</tr>
+        
+<tr>
+          
+<td colspan="1" rowspan="1">if</td>
+          <td colspan="1" rowspan="1">string</td>
+          <td colspan="1" rowspan="1">no</td>
+          <td colspan="1" rowspan="1">A <a href="conditional.html">conditional expression</a> controlling whether the contribution is used or ignored.</td>
+        
+</tr>
+			
+</table>
+<p>The content of the &lt;contribution&gt; consists of elements. These elements
+				are converted, in accordance with the configuration point's <a href="descriptor.html#schema">&lt;schema&gt;</a>,
+				into Java objects.</p>
+</div>
+		
+<a name="N101CC"></a><a name="conversion"></a>
+<h2 class="boxed">conversion</h2>
+<div class="section">
+<p>&lt;conversion&gt; is an alternative to <a href="descriptor.html#rules">&lt;rules&gt;</a> that is generally simpler
+				and more concise. An <a href="descriptor.html#element">&lt;element&gt;</a> should contain &lt;conversion&gt; or &lt;rules&gt; 
+				but not both.</p>
+<p> &lt;conversion&gt; is geared towards the typical case; a straight-forward
+				mapping of the element to an instance of a Java class, and a mapping of
+				the element's attributes to the properties of the Java object.</p>
+<table class="ForrestTable" cellspacing="1" cellpadding="4">
+				
+<tr>
+					
+<th colspan="1" rowspan="1">Attribute</th>
+					<th colspan="1" rowspan="1">Type</th>
+					<th colspan="1" rowspan="1">Required ?</th>
+					<th colspan="1" rowspan="1">Description</th>
+				
+</tr>
+				
+<tr>
+					
+<td colspan="1" rowspan="1">class</td>
+					<td colspan="1" rowspan="1">string</td>
+					<td colspan="1" rowspan="1">yes</td>
+					<td colspan="1" rowspan="1">The fully qualified name of a Java class to instantiate.</td>
+				
+</tr>
+				
+<tr>
+					
+<td colspan="1" rowspan="1">parent-method</td>
+					<td colspan="1" rowspan="1">string</td>
+					<td colspan="1" rowspan="1">no</td>
+					<td colspan="1" rowspan="1">The name of a method of the parent object used to add the created
+						object to the parent. The default, <span class="codefrag">addElement</span>, is
+						appropriate for top-level &lt;element&gt;s.</td>
+				
+</tr>
+			
+</table>
+<p>Contains: <a href="descriptor.html#map">&lt;map&gt;</a> 
+</p>
+<p>Each attribute will be mapped to a property. A limited amount of name
+				mangling occurs: if the attribute name contains dashes, they are
+				removed, and the character following is converted to upper case. So, an
+				attribute named "complex-attribute-name" would be mapped to a property
+				named "complexAttributeName". Only attributes identified with a <a href="descriptor.html#attribute">&lt;attribute&gt;</a>
+				element will be mapped, others will be ignored.</p>
+</div>
+		
+<a name="N1023A"></a><a name="create-instance"></a>
+<h2 class="boxed">create-instance</h2>
+<div class="section">
+<p> &lt;create-instance&gt; is used, within <a href="descriptor.html#service-point">&lt;service-point&gt;</a> and <a href="descriptor.html#implementation">&lt;implementation&gt;</a>
+				to create the core service implementation for a service by instantiating
+				a class. This is appropriate for simple services that require no
+				explicit configuration.</p>
+<table class="ForrestTable" cellspacing="1" cellpadding="4">
+				
+<tr>
+					
+<th colspan="1" rowspan="1">Attribute</th>
+					<th colspan="1" rowspan="1">Type</th>
+					<th colspan="1" rowspan="1">Required ?</th>
+					<th colspan="1" rowspan="1">Description</th>
+				
+</tr>
+				
+<tr>
+					
+<td colspan="1" rowspan="1">class</td>
+					<td colspan="1" rowspan="1">class name</td>
+					<td colspan="1" rowspan="1">yes</td>
+					<td colspan="1" rowspan="1">The class name to instantiate. May use <a href="instance-initialization.html">instance initializer</a> syntax.</td>
+				
+</tr>
+				
+<tr>
+					
+<td colspan="1" rowspan="1">model</td>
+					<td colspan="1" rowspan="1">
+						<span class="codefrag">primitive | singleton | threaded | pooled</span>
+					</td>
+					<td colspan="1" rowspan="1">no</td>
+					<td colspan="1" rowspan="1">The model used to construct and manage the service. <strong>
+						singleton</strong> is the default.</td>
+				
+</tr>
+			
+</table>
+<p>Additional service models can be defined via the hivemind.ServiceModels
+				configuration point.</p>
+</div>
+		
+<a name="N102A1"></a><a name="dependency"></a>
+<h2 class="boxed">dependency</h2>
+<div class="section">
+<p> &lt;dependency&gt; is used, within <a href="descriptor.html#module">&lt;module&gt;</a> to specify a dependency upon another
+				required module.</p>
+<table class="ForrestTable" cellspacing="1" cellpadding="4">
+				
+<tr>
+					
+<th colspan="1" rowspan="1">Attribute</th>
+					<th colspan="1" rowspan="1">Type</th>
+					<th colspan="1" rowspan="1">Required ?</th>
+					<th colspan="1" rowspan="1">Description</th>
+				
+</tr>
+				
+<tr>
+					
+<td colspan="1" rowspan="1">module-id</td>
+					<td colspan="1" rowspan="1">string</td>
+					<td colspan="1" rowspan="1">yes</td>
+					<td colspan="1" rowspan="1">The id of the required module.</td>
+				
+</tr>
+				
+<tr>
+					
+<td colspan="1" rowspan="1">version</td>
+					<td colspan="1" rowspan="1">version number</td>
+					<td colspan="1" rowspan="1">no</td>
+					<td colspan="1" rowspan="1">The version of the required module as a dotted sequence of three numbers.
+						Example: "1.0.0".  With no version specified any version of the required
+						module is matched.</td>
+				
+</tr>
+			
+</table>
+<p>In the future HiveMind will support other more sophisticated version matching
+			   types for dependencies.</p>
+</div>
+		
+<a name="N102FA"></a><a name="element"></a>
+<h2 class="boxed">element</h2>
+<div class="section">
+<p>The &lt;element&gt; element is used to define an element in a the <a href="descriptor.html#schema">&lt;schema&gt;</a>. &lt;element&gt;
+				may also be nested within another &lt;element&gt;, to indicate an element
+				that may be enclosed within another element.</p>
+<table class="ForrestTable" cellspacing="1" cellpadding="4">
+				
+<tr>
+					
+<th colspan="1" rowspan="1">Attribute</th>
+					<th colspan="1" rowspan="1">Type</th>
+					<th colspan="1" rowspan="1">Required ?</th>
+					<th colspan="1" rowspan="1">Description</th>
+				
+</tr>
+				
+<tr>
+					
+<td colspan="1" rowspan="1">name</td>
+					<td colspan="1" rowspan="1">string</td>
+					<td colspan="1" rowspan="1">yes</td>
+					<td colspan="1" rowspan="1">The name of the element.</td>
+				
+</tr>
+				
+<tr>
+					
+<td colspan="1" rowspan="1">content-translator</td>
+					<td colspan="1" rowspan="1">string</td>
+					<td colspan="1" rowspan="1">no</td>
+					<td colspan="1" rowspan="1">The <a href="rules.html#Translators">translator</a> 
+						configuration that is used to convert the element's content into a
+						useable type. By default, the content is treated as a single string.</td>
+				
+</tr>
+				
+<tr>
+					
+<td colspan="1" rowspan="1">key-attribute</td>
+					<td colspan="1" rowspan="1">string</td>
+					<td colspan="1" rowspan="1">no</td>
+					<td colspan="1" rowspan="1">The name of this element's &lt;attribute&gt; whose <em>translated</em> value will 
+					    be used as a unique key for configuration contributions corresponding to this 
+					    element.  The contributions can then be accessed in a Map using this key.  The 
+					    specified &lt;attribute&gt; is implicitly marked as <em>required</em> and 
+                        <em>unique</em>.</td>
+				
+</tr>
+			
+</table>
+<p>Contains: <a href="descriptor.html#attribute">&lt;attribute&gt;</a>, <a href="descriptor.html#conversion">&lt;conversion&gt;</a>,  <a href="descriptor.html#element">&lt;element&gt;</a>, <a href="descriptor.html#rules">&lt;rules&gt;</a> 
+</p>
+<p>Future enhancements to the HiveMind framework will include greater
+				sophistication in defining configuration content.</p>
+</div>
+		
+<a name="N1038A"></a><a name="implementation"></a>
+<h2 class="boxed">implementation</h2>
+<div class="section">
+<p>The <a href="descriptor.html#implementation">&lt;implementation&gt;</a> element contributes a core implementation or
+				interceptors to a service extension point.</p>
+<table class="ForrestTable" cellspacing="1" cellpadding="4">
+				
+<tr>
+					
+<th colspan="1" rowspan="1">Attribute</th>
+					<th colspan="1" rowspan="1">Type</th>
+					<th colspan="1" rowspan="1">Required ?</th>
+					<th colspan="1" rowspan="1">Description</th>
+				
+</tr>
+				
+<tr>
+					
+<td colspan="1" rowspan="1">service-id</td>
+					<td colspan="1" rowspan="1">string</td>
+					<td colspan="1" rowspan="1">yes</td>
+					<td colspan="1" rowspan="1">The id of the service to extend; this may be a fully qualified id,
+						or the local id of a service within the same module.</td>
+				
+</tr>
+       
+<tr>
+          
+<td colspan="1" rowspan="1">if</td>
+          <td colspan="1" rowspan="1">string</td>
+          <td colspan="1" rowspan="1">no</td>
+          <td colspan="1" rowspan="1">A <a href="conditional.html">conditional expression</a> controlling whether the contribution is used or ignored.</td>
+        
+</tr>        
+			
+</table>
+<p>Contains: <a href="descriptor.html#create-instance">&lt;create-instance&gt;</a>, <a href="descriptor.html#interceptor">&lt;interceptor&gt;</a>, <a href="descriptor.html#invoke-factory">&lt;invoke-factory&gt;</a> 
+</p>
+</div>
+		
+<a name="N103F3"></a><a name="interceptor"></a>
+<h2 class="boxed">interceptor</h2>
+<div class="section">
+<p>&lt;interceptor&gt; contributes an interceptor factory to a service
+				extension point. An interceptor factory is a service which implements
+				the <a href="hivemind/apidocs/org/apache/hivemind/ServiceInterceptorFactory.html">ServiceInterceptorFactory</a> interface.</p>
+<p>When the service is constructed, each invoked interceptor factory will
+				fabricate an interceptor class to provide additional functionality for
+				the service.</p>
+<table class="ForrestTable" cellspacing="1" cellpadding="4">
+				
+<tr>
+					
+<th colspan="1" rowspan="1">Attribute</th>
+					<th colspan="1" rowspan="1">Type</th>
+					<th colspan="1" rowspan="1">Required ?</th>
+					<th colspan="1" rowspan="1">Description</th>
+				
+</tr>
+				
+<tr>
+					
+<td colspan="1" rowspan="1">service-id</td>
+					<td colspan="1" rowspan="1">string</td>
+					<td colspan="1" rowspan="1">yes</td>
+					<td colspan="1" rowspan="1">The id of the service that will create the interceptor for the
+						service. This may be the local id of a service defined within the
+						same module, or a fully qualified id.</td>
+				
+</tr>
+				
+<tr>
+					
+<td colspan="1" rowspan="1">before</td>
+					<td colspan="1" rowspan="1">string</td>
+					<td colspan="1" rowspan="1">no</td>
+					<td colspan="1" rowspan="1">A list of interceptors whose behavior should come later in
+						execution than this interceptor.</td>
+				
+</tr>
+				
+<tr>
+					
+<td colspan="1" rowspan="1">after</td>
+					<td colspan="1" rowspan="1">string</td>
+					<td colspan="1" rowspan="1">no</td>
+					<td colspan="1" rowspan="1">A list of interceptors whose behavior should come earlier in
+						execution than this interceptor.</td>
+				
+</tr>
+				
+<tr>
+					
+<td colspan="1" rowspan="1">name</td>
+					<td colspan="1" rowspan="1">string</td>
+					<td colspan="1" rowspan="1">no</td>
+					<td colspan="1" rowspan="1">The name to use for ordering this interceptor.  Defaults to the service-id.  This
+					comes in handy when using the same factory to create multiple unique interceptors which
+					should be able to be ordered with respect to one another.</td>
+				
+</tr>
+			
+</table>
+<p>Like a service implementation factory, a service interceptor factory
+				may need parameters. As with <a href="descriptor.html#invoke-factory">&lt;invoke-factory&gt;</a>, parameters to the
+				interceptor factory are enclosed by the &lt;interceptor&gt; element. The
+				service interceptor factory will decode the parameters using the schema
+				identified by its <span class="codefrag">parameters-schema-id</span> attribute.</p>
+<p>Interceptor ordering is based on dependencies; each interceptor can
+				identify, by name, other interceptors. Interceptors in
+				the <span class="codefrag">before</span> list are deferred until after this interceptor.
+				Likewise, this interceptor is deferred until after all interceptors in
+				the <span class="codefrag">after</span> list.</p>
+<div class="frame note">
+<div class="label">Note</div>
+<div class="content">The <span class="codefrag">after</span> dependencies will look familar to anyone who
+				has used <a class="external" href="http://ant.apache.org/">Ant</a> or any version
+				of Make. <span class="codefrag">before</span> dependencies are simply the opposite.</div>
+</div>
+<p>The value for <span class="codefrag">before</span> or <span class="codefrag">after</span> is a list of
+				interceptor names seperated by commas. Service ids may be unqualified if they
+				are within the same module. Alternately, the fixed value <span class="codefrag">*</span> 
+				may be used instead of a list: this indicates that the interceptor
+				should be ordered absolutely first or absolutely last.</p>
+</div>
+		
+<a name="N104A6"></a><a name="invoke-factory"></a>
+<h2 class="boxed">invoke-factory</h2>
+<div class="section">
+<p>The &lt;invoke-factory&gt; element is used to provide a service
+				implementation for a service by invoking another service, a factory
+				service.</p>
+<table class="ForrestTable" cellspacing="1" cellpadding="4">
+				
+<tr>
+					
+<th colspan="1" rowspan="1">Attribute</th>
+					<th colspan="1" rowspan="1">Type</th>
+					<th colspan="1" rowspan="1">Required ?</th>
+					<th colspan="1" rowspan="1">Description</th>
+				
+</tr>
+				
+<tr>
+					
+<td colspan="1" rowspan="1">service-id</td>
+					<td colspan="1" rowspan="1">string</td>
+					<td colspan="1" rowspan="1">no</td>
+					<td colspan="1" rowspan="1">The id of the factory service. This may be a simple id for a
+						service within the same module, or a fully qualified service id. The default, if not
+            specified, is <a href="hivemind/BuilderFactory.html">hivemind.BuilderFactory</a>.</td>
+				
+</tr>
+				
+<tr>
+					
+<td colspan="1" rowspan="1">model</td>
+					<td colspan="1" rowspan="1">
+						<span class="codefrag">primitive | singleton | threaded | pooled</span>
+					</td>
+					<td colspan="1" rowspan="1">no</td>
+					<td colspan="1" rowspan="1">The model used to construct and manage the service. <strong>
+						singleton</strong> is the default.</td>
+				
+</tr>
+			
+</table>
+<p>A service factory defines its parameters in terms of a schema. The
+				content of the &lt;invoke-factory&gt; is converted, in accordance with the
+				factory's schema, and provided to the factory.</p>
+<div class="frame note">
+<div class="label">Note</div>
+<div class="content">
+        Additional service models can be defined via the hivemind.ServiceModels
+				configuration point.</div>
+</div>
+</div>
+		
+<a name="N10508"></a><a name="map"></a>
+<h2 class="boxed">map</h2>
+<div class="section">
+<p>The &lt;map&gt; element appears within <a href="descriptor.html#conversion">&lt;conversion&gt;</a> to override the default
+				mapping from an attribute to a property. By default, the property name
+				is expected to match the attribute name (with the name mangling
+				described in the description of <a href="descriptor.html#conversion">&lt;conversion&gt;</a>); the &lt;map&gt; element is
+				used to handle exceptions to the rule.</p>
+<table class="ForrestTable" cellspacing="1" cellpadding="4">
+				
+<tr>
+					
+<th colspan="1" rowspan="1">Attribute</th>
+					<th colspan="1" rowspan="1">Type</th>
+					<th colspan="1" rowspan="1">Required ?</th>
+					<th colspan="1" rowspan="1">Description</th>
+				
+</tr>
+				
+<tr>
+					
+<td colspan="1" rowspan="1">attribute</td>
+					<td colspan="1" rowspan="1">string</td>
+					<td colspan="1" rowspan="1">yes</td>
+					<td colspan="1" rowspan="1">The name of the attribute, which should match a name defined by an<a href="descriptor.html#attribute">&lt;attribute&gt;</a>
+						(of the enclosing <a href="descriptor.html#element">&lt;element&gt;</a>).</td>
+				
+</tr>
+				
+<tr>
+					
+<td colspan="1" rowspan="1">property</td>
+					<td colspan="1" rowspan="1">string</td>
+					<td colspan="1" rowspan="1">yes</td>
+					<td colspan="1" rowspan="1">The corresponding property (of the Java object specified by the
+						enclosing <a href="descriptor.html#conversion">&lt;conversion&gt;</a>)</td>
+				
+</tr>
+			
+</table>
+</div>
+		
+<a name="N1056E"></a><a name="module"></a>
+<h2 class="boxed">module</h2>
+<div class="section">
+<p>The &lt;module&gt; element is the root element.</p>
+<table class="ForrestTable" cellspacing="1" cellpadding="4">
+				
+<tr>
+					
+<th colspan="1" rowspan="1">Attribute</th>
+					<th colspan="1" rowspan="1">Type</th>
+					<th colspan="1" rowspan="1">Required ?</th>
+					<th colspan="1" rowspan="1">Description</th>
+				
+</tr>
+				
+<tr>
+					
+<td colspan="1" rowspan="1">id</td>
+					<td colspan="1" rowspan="1">string</td>
+					<td colspan="1" rowspan="1">yes</td>
+					<td colspan="1" rowspan="1">The id should be a dotted sequence, like a package name. In
+						general, the module id should <em>be</em> the package name.</td>
+				
+</tr>
+				
+<tr>
+					
+<td colspan="1" rowspan="1">version</td>
+					<td colspan="1" rowspan="1">version number</td>
+					<td colspan="1" rowspan="1">yes</td>
+					<td colspan="1" rowspan="1">The version of the module as a dotted sequence of three numbers.
+						Example: "1.0.0"</td>
+				
+</tr>
+        
+<tr>
+          
+<td colspan="1" rowspan="1">package</td>
+          <td colspan="1" rowspan="1">string</td>
+          <td colspan="1" rowspan="1">no</td>
+          <td colspan="1" rowspan="1">
+           The package which contains Java types within the module.  Defaults to the
+           module's id if not specified.
+          </td>
+        
+</tr>
+			
+</table>
+<p>Contains: <a href="descriptor.html#contribution">&lt;contribution&gt;</a>, <a href="descriptor.html#configuration-point">&lt;configuration-point&gt;</a>, <a href="descriptor.html#dependency">&lt;dependency&gt;</a>, <a href="descriptor.html#implementation">&lt;implementation&gt;</a>
+				, <a href="descriptor.html#service-point">&lt;service-point&gt;</a>, <a href="descriptor.html#schema">&lt;schema&gt;</a>, <a href="descriptor.html#sub-module">&lt;sub-module&gt;</a> 
+</p>
+<p>
+Every module is mapped to a <em>Java package</em>, using the package attribute (or the module's id if not specified).  When a class name
+is referenced within a module, the name will be searched for within the package if not found normally.  This applies to all contributions, etc.,
+within the module ... virtually anywhere a Java class name can be used.  Literally, if the class can't be found by the provided type, the
+module's package name is prefixed and a second search is attempted.  The interface attribute of the <a href="descriptor.html#service-point">&lt;service-point&gt;</a> element
+is slightly different.
+</p>
+</div>
+    
+<a name="N10603"></a><a name="parameters-schema"></a>
+<h2 class="boxed">parameters-schema</h2>
+<div class="section">
+<p>The &lt;parameters-schema&gt; element is identical to the <a href="descriptor.html#schema">&lt;schema&gt;</a> element, but only appears
+        inside <a href="descriptor.html#service-point">&lt;service-point&gt;</a>, to define the schema for the parameters for a service implementation factory or service interceptor factory.
+        </p>
+<div class="frame note">
+<div class="label">Note</div>
+<div class="content">This element and the owning <a href="descriptor.html#service-point">&lt;service-point&gt;</a> element's <span class="codefrag">parameters-schema-id</span> 
+        attribute are mutually exclusive.</div>
+</div>
+</div>
+    
+		
+<a name="N1061F"></a><a name="rules"></a>
+<h2 class="boxed">rules</h2>
+<div class="section">
+<p> &lt;rules&gt; is a container for element and attribute parsing rules within
+				an <a href="descriptor.html#element">&lt;element&gt;</a>. These rules are responsible for converting the contributed
+				element and its attributes into objects and object properties. The
+				available rules are <a href="rules.html">documented separately</a>
+				.</p>
+</div>
+		
+<a name="N10631"></a><a name="schema"></a>
+<h2 class="boxed">schema</h2>
+<div class="section">
+<p>The &lt;schema&gt; element is used to describe the format of element
+				contributions to an <a href="descriptor.html#configuration-point">&lt;configuration-point&gt;</a>, or parameters provided to a
+				service or interceptor factory.</p>
+<table class="ForrestTable" cellspacing="1" cellpadding="4">
+				
+<tr>
+					
+<th colspan="1" rowspan="1">Attribute</th>
+					<th colspan="1" rowspan="1">Type</th>
+					<th colspan="1" rowspan="1">Required ?</th>
+					<th colspan="1" rowspan="1">Description</th>
+				
+</tr>
+				
+<tr>
+					
+<td colspan="1" rowspan="1">id</td>
+					<td colspan="1" rowspan="1">string</td>
+					<td colspan="1" rowspan="1">yes</td>
+					<td colspan="1" rowspan="1">Assigns a local id to the schema that may be referenced elsewhere.</td>
+				
+</tr>
+        
+<tr>
+          
+<td colspan="1" rowspan="1">visibility</td>
+          <td colspan="1" rowspan="1"><span class="codefrag">public | private</span></td>
+          <td colspan="1" rowspan="1">no</td>
+          <td colspan="1" rowspan="1">
+            If <span class="codefrag">private</span> is specified, then the schema may only be referenced
+            from within the same module. The default is <span class="codefrag">public</span>.
+          </td>
+        
+</tr>        
+			
+</table>
+<p>Contains: <a href="descriptor.html#element">&lt;element&gt;</a> 
+</p>
+<p>At a future time, the &lt;schema&gt; element will be extended to provide
+				more options, to provide more precise control over the elements that may
+				be provided in an &lt;contribution&gt;. At this time, a &lt;schema&gt; is simply a
+				list of &lt;element&gt; elements.</p>
+<div class="frame warning">
+<div class="label">Warning</div>
+<div class="content">When &lt;schema&gt; appears directly within <a href="descriptor.html#configuration-point">&lt;configuration-point&gt;</a>, or &lt;parameters-schema&gt;
+				appears directly within <a href="descriptor.html#service-point">&lt;service-point&gt;</a>, then the <span class="codefrag">id</span> and <span class="codefrag">visibility</span>
+				attributes are not allowed.</div>
+</div>
+</div>
+		
+<a name="N106A9"></a><a name="service-point"></a>
+<h2 class="boxed">service-point</h2>
+<div class="section">
+<p>The &lt;service-point&gt; element defines a service extension point.</p>
+<table class="ForrestTable" cellspacing="1" cellpadding="4">
+				
+<tr>
+					
+<th colspan="1" rowspan="1">Attribute</th>
+					<th colspan="1" rowspan="1">Type</th>
+					<th colspan="1" rowspan="1">Required ?</th>
+					<th colspan="1" rowspan="1">Description</th>
+				
+</tr>
+				
+<tr>
+					
+<td colspan="1" rowspan="1">id</td>
+					<td colspan="1" rowspan="1">string</td>
+					<td colspan="1" rowspan="1">yes</td>
+					<td colspan="1" rowspan="1">The simple id of the service extension point. The fully qualified
+						id for the extension point is created by prefixing with the module's
+						id (and a dot).</td>
+				
+</tr>
+				
+<tr>
+					
+<td colspan="1" rowspan="1">interface</td>
+					<td colspan="1" rowspan="1">class name</td>
+					<td colspan="1" rowspan="1">no</td>
+					<td colspan="1" rowspan="1">The name of the Java interface 
+            (<a href="services.html#Bean+Services">or class</a>) supplied by this
+						service extension point.  If no value is provided, the interface defaults to the
+            service id (and will then be qualified by the module's package).</td>
+				
+</tr>
+        
+<tr>
+          
+<td colspan="1" rowspan="1">visibility</td>
+          <td colspan="1" rowspan="1"><span class="codefrag">public | private</span></td>
+          <td colspan="1" rowspan="1">no</td>
+          <td colspan="1" rowspan="1">
+            If <span class="codefrag">private</span> is specified, then the service may only be referenced
+            (or contributed to) from within the same module. It will not be visible to the application
+            (via the <a href="hivemind/apidocs/org/apache/hivemind/Registry.html">Registry</a>) if private.  The default is <span class="codefrag">public</span>.  It is common
+            for a module to have several public services acting as a facade over many more private services.
+          </td>
+        
+</tr>        
+				
+<tr>
+					
+<td colspan="1" rowspan="1">parameters-schema-id</td>
+					<td colspan="1" rowspan="1">string</td>
+					<td colspan="1" rowspan="1">no</td>
+					<td colspan="1" rowspan="1">Used to reference a <a href="descriptor.html#schema">&lt;schema&gt;</a> (in the same module, or a different
+						one) that defines parameters used by the service. This is used when
+						the service being defined is a <a href="hivemind/apidocs/org/apache/hivemind/ServiceImplementationFactory.html">ServiceImplementationFactory</a> or
+						a <a href="hivemind/apidocs/org/apache/hivemind/ServiceInterceptorFactory.html">ServiceInterceptorFactory</a>.</td>
+				
+</tr>
+				
+<tr>
+					
+<td colspan="1" rowspan="1">parameters-occurs</td>
+					<td colspan="1" rowspan="1">
+						<span class="codefrag">unbounded | 0..1 | 1 | 1..n | none</span>
+					</td>
+					<td colspan="1" rowspan="1">no</td>
+					<td colspan="1" rowspan="1">The number of parameter element contributions allowed: <ul> 
+<li>
+<strong>unbounded</strong>: any number</li> 
+            
+<li>
+<strong>0..1</strong>: optional</li> 
+						
+<li>
+<strong>1</strong> (default) : required</li> 
+<li>
+<strong>1..n</strong>: at
+						least one</li> 
+            
+<li>
+<strong>none</strong>: none allowed</li>
+            
+</ul>
+            
+
+            
+</td>
+            
+</tr>
+			
+</table>
+<p>Contains: <a href="descriptor.html#create-instance">&lt;create-instance&gt;</a>, <a href="descriptor.html#interceptor">&lt;interceptor&gt;</a>, <a href="descriptor.html#invoke-factory">&lt;invoke-factory&gt;</a>
+				, <a href="descriptor.html#parameters-schema">&lt;parameters-schema&gt;</a> 
+</p>
+<p>
+  If the specified interface name is unqualified (does not contain a period), then it is prefixed with the module's package  name.
+  Note that this is slightly different than how partial class names are resolved elsewhere in
+  a module descriptor.
+</p>
+</div>
+		
+<a name="N10790"></a><a name="sub-module"></a>
+<h2 class="boxed">sub-module</h2>
+<div class="section">
+<p>The &lt;sub-module&gt; element is used to identify an additional HiveMind
+				module deployment descriptor. This is used when a single JAR file
+				contains logically distinct packages, each of which should be treated as
+				an individual HiveMind module. This can also be useful as a way to
+				reduce developer conflict against a single, large, central module
+				descriptor by effectively breaking it into smaller pieces. Sub-modules
+				identified in this way must still have their own unique module id.</p>
+<table class="ForrestTable" cellspacing="1" cellpadding="4">
+				
+<tr>
+					
+<th colspan="1" rowspan="1">Attribute</th>
+					<th colspan="1" rowspan="1">Type</th>
+					<th colspan="1" rowspan="1">Required ?</th>
+					<th colspan="1" rowspan="1">Description</th>
+				
+</tr>
+				
+<tr>
+					
+<td colspan="1" rowspan="1">descriptor</td>
+					<td colspan="1" rowspan="1">string</td>
+					<td colspan="1" rowspan="1">yes</td>
+					<td colspan="1" rowspan="1">Location of the module descriptor.</td>
+				
+</tr>
+                
+<tr>
+                    
+<td colspan="1" rowspan="1">if</td>
+                    <td colspan="1" rowspan="1">string</td>
+                    <td colspan="1" rowspan="1">no</td>
+                    <td colspan="1" rowspan="1">A <a href="conditional.html">conditional expression</a> controlling whether the sub-module is included or ignored.</td>
+                
+</tr>
+			
+</table>
+<p>The descriptor should be specified as a relative path, either the name
+				of another module descriptor within the same folder, or within a child
+				folder.</p>
+</div>
+	
+</div>
+<div class="clearboth">&nbsp;</div>
+</div>
+<div id="footer">
+<div class="lastmodified">
+<script type="text/javascript"><!--
+document.write("<text>Last Published:</text> " + document.lastModified);
+//  --></script>
+</div>
+<div class="copyright">
+        Copyright &copy;
+         2005 Apache Software Foundation</div>
+</div>
+</body>
+</html>

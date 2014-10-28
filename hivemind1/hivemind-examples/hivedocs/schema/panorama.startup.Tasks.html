@@ -1,0 +1,181 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="../hivemind.css">
+<title>HiveMind Registry -  Schema panorama.startup.Tasks</title>
+</head>
+<body><div style="background: red"><h1>2009/04/15 - Apache HiveMind has been retired. </h1><h2>For more information, please explore the <a href="http://attic.apache.org/">Attic</a>. </h2></div>
+<div class="title"> Module <a href="../module/panorama.startup.html">panorama.startup</a>
+</div>
+<div class="center-nav">
+<a href="../index.html">Back to master index</a>
+</div>
+<hr>
+<table class="top-level-object" cellspacing="0">
+<tr>
+<th class="object-id" colspan="3"><img src="../public.png" width="20" height="20" alt="[public]"> Schema panorama.startup.Tasks</th>
+</tr>
+<tr>
+<td class="description" colspan="3">Defines tasks that can be executed by a task executor service.</td>
+</tr>
+<tr>
+<td class="container" colspan="3">
+<table class="nested-object" cellspacing="0">
+<tr>
+<th class="object-id" colspan="3"> Element &lt;task&gt; </th>
+</tr>
+<tr>
+<td class="description" colspan="3">A task which can invoke an object, or service, that implements Executable.</td>
+</tr>
+<tr>
+<th class="sub-id">Attribute after</th><th> Translator: </th><td><a href="../config/hivemind.Translators.html">string</a></td>
+</tr>
+<tr>
+<td class="description" colspan="3">A comma-seperated list of task ids whose execution should precede this tasks execution, 
+      or * to indicate that this task must run last.</td>
+</tr>
+<tr>
+<th class="sub-id">Attribute before</th><th> Translator: </th><td><a href="../config/hivemind.Translators.html">string</a></td>
+</tr>
+<tr>
+<td class="description" colspan="3">A comma-seperated list of task ids whose execution should follow this task, or * to indicate that this task must run first.</td>
+</tr>
+<tr>
+<th class="sub-id">Attribute executable (required) </th><th> Translator: </th><td><a href="../config/hivemind.Translators.html">object</a></td>
+</tr>
+<tr>
+<td class="description" colspan="3">An object or service that implements Executable.</td>
+</tr>
+<tr>
+<th class="sub-id">Attribute id (required) </th><th> Translator: </th><td><a href="../config/hivemind.Translators.html">string</a></td>
+</tr>
+<tr>
+<td class="description" colspan="3">A unique id for the task, which is used to set the order of execution of all tasks.</td>
+</tr>
+<tr>
+<th class="sub-id">Attribute title (required) </th><th> Translator: </th><td><a href="../config/hivemind.Translators.html">string</a></td>
+</tr>
+<tr>
+<td class="description" colspan="3">A short, user presentable description of the task, used in logging output.</td>
+</tr>
+<tr>
+<th colspan="3" class="section">Conversion Rules</th>
+</tr>
+<tr>
+<td colspan="3" class="container">
+<div class="xml">
+     &lt;conversion <span class="attribute">class</span>="<span class="attribute-value">impl.Task</span>"
+       /&gt; </div>
+</td>
+</tr>
+<tr>
+<th class="object-id" colspan="3"> Element &lt;static-task&gt; </th>
+</tr>
+<tr>
+<td class="description" colspan="3">A task which can invoke an object, or service, that implements Executable.</td>
+</tr>
+<tr>
+<th class="sub-id">Attribute after</th><th> Translator: </th><td><a href="../config/hivemind.Translators.html">string</a></td>
+</tr>
+<tr>
+<td class="description" colspan="3">A comma-seperated list of task ids whose execution should precede this tasks execution, 
+        or * to indicate that this task must run last.</td>
+</tr>
+<tr>
+<th class="sub-id">Attribute before</th><th> Translator: </th><td><a href="../config/hivemind.Translators.html">string</a></td>
+</tr>
+<tr>
+<td class="description" colspan="3">A comma-seperated list of task ids whose execution should follow this task, 
+        or * to indicate that this task must run first.</td>
+</tr>
+<tr>
+<th class="sub-id">Attribute class (required) </th><th> Translator: </th><td><a href="../config/hivemind.Translators.html">class</a></td>
+</tr>
+<tr>
+<td class="description" colspan="3">A class containing a public static method to execute.</td>
+</tr>
+<tr>
+<th class="sub-id">Attribute id (required) </th><th> Translator: </th><td><a href="../config/hivemind.Translators.html">string</a></td>
+</tr>
+<tr>
+<td class="description" colspan="3">A unique id for the task, which is used to set the order of execution of all tasks.</td>
+</tr>
+<tr>
+<th class="sub-id">Attribute method</th><th> Translator: </th><td><a href="../config/hivemind.Translators.html">string</a></td>
+</tr>
+<tr>
+<td class="description" colspan="3">The name of a public static method of the class; if not specified, 'init' is used.</td>
+</tr>
+<tr>
+<th class="sub-id">Attribute title (required) </th><th> Translator: </th><td><a href="../config/hivemind.Translators.html">string</a></td>
+</tr>
+<tr>
+<td class="description" colspan="3">A short, user presentable description of the task, used in logging output.</td>
+</tr>
+<tr>
+<th colspan="3" class="section">Conversion Rules</th>
+</tr>
+<tr>
+<td colspan="3" class="container">
+<div class="xml">
+     &lt;create-object <span class="attribute">class</span>="<span class="attribute-value">impl.Task</span>"
+       /&gt; <br>
+     &lt;invoke-parent <span class="attribute">method</span>="<span class="attribute-value">addElement</span>"
+       /&gt; <br>
+     &lt;read-attribute <span class="attribute">attribute</span>="<span class="attribute-value">id</span>"
+       <span class="attribute">property</span>="<span class="attribute-value">id</span>"
+       /&gt; <br>
+     &lt;read-attribute <span class="attribute">attribute</span>="<span class="attribute-value">title</span>"
+       <span class="attribute">property</span>="<span class="attribute-value">title</span>"
+       /&gt; <br>
+     &lt;read-attribute <span class="attribute">attribute</span>="<span class="attribute-value">before</span>"
+       <span class="attribute">property</span>="<span class="attribute-value">before</span>"
+       /&gt; <br>
+     &lt;read-attribute <span class="attribute">attribute</span>="<span class="attribute-value">after</span>"
+       <span class="attribute">property</span>="<span class="attribute-value">after</span>"
+       /&gt; <br>
+     &lt;create-object <span class="attribute">class</span>="<span class="attribute-value">impl.ExecuteStatic</span>"
+       /&gt; <br>
+     &lt;invoke-parent <span class="attribute">method</span>="<span class="attribute-value">setExecutable</span>"
+       /&gt; <br>
+     &lt;read-attribute <span class="attribute">attribute</span>="<span class="attribute-value">class</span>"
+       <span class="attribute">property</span>="<span class="attribute-value">targetClass</span>"
+       /&gt; <br>
+     &lt;read-attribute <span class="attribute">attribute</span>="<span class="attribute-value">method</span>"
+       <span class="attribute">property</span>="<span class="attribute-value">methodName</span>"
+       /&gt; </div>
+</td>
+</tr>
+<tr>
+<th colspan="3" class="section">References</th>
+</tr>
+<tr>
+<td colspan="3" class="container">
+<table cellspacing="0" class="layout">
+<tr>
+<td>
+<table class="summary" cellspacing="0">
+<tr>
+<th> Configurations </th>
+</tr>
+<tr>
+<td><a href="../config/panorama.startup.Startup.html">panorama.startup.Startup</a></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<hr>
+<div class="title"> Module <a href="../module/panorama.startup.html">panorama.startup</a>
+</div>
+<div class="center-nav">
+<a href="../index.html">Back to master index</a>
+</div>
+</body>
+</html>

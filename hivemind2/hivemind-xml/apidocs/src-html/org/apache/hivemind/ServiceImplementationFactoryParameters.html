@@ -1,0 +1,148 @@
+<HTML>
+<BODY BGCOLOR="white">
+<PRE>
+<FONT color="green">001</FONT>    // Copyright 2004, 2005 The Apache Software Foundation<a name="line.1"></a>
+<FONT color="green">002</FONT>    //<a name="line.2"></a>
+<FONT color="green">003</FONT>    // Licensed under the Apache License, Version 2.0 (the "License");<a name="line.3"></a>
+<FONT color="green">004</FONT>    // you may not use this file except in compliance with the License.<a name="line.4"></a>
+<FONT color="green">005</FONT>    // You may obtain a copy of the License at<a name="line.5"></a>
+<FONT color="green">006</FONT>    //<a name="line.6"></a>
+<FONT color="green">007</FONT>    //     http://www.apache.org/licenses/LICENSE-2.0<a name="line.7"></a>
+<FONT color="green">008</FONT>    //<a name="line.8"></a>
+<FONT color="green">009</FONT>    // Unless required by applicable law or agreed to in writing, software<a name="line.9"></a>
+<FONT color="green">010</FONT>    // distributed under the License is distributed on an "AS IS" BASIS,<a name="line.10"></a>
+<FONT color="green">011</FONT>    // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.<a name="line.11"></a>
+<FONT color="green">012</FONT>    // See the License for the specific language governing permissions and<a name="line.12"></a>
+<FONT color="green">013</FONT>    // limitations under the License.<a name="line.13"></a>
+<FONT color="green">014</FONT>    <a name="line.14"></a>
+<FONT color="green">015</FONT>    package org.apache.hivemind;<a name="line.15"></a>
+<FONT color="green">016</FONT>    <a name="line.16"></a>
+<FONT color="green">017</FONT>    import java.util.List;<a name="line.17"></a>
+<FONT color="green">018</FONT>    <a name="line.18"></a>
+<FONT color="green">019</FONT>    import org.apache.commons.logging.Log;<a name="line.19"></a>
+<FONT color="green">020</FONT>    import org.apache.hivemind.internal.Module;<a name="line.20"></a>
+<FONT color="green">021</FONT>    <a name="line.21"></a>
+<FONT color="green">022</FONT>    /**<a name="line.22"></a>
+<FONT color="green">023</FONT>     * A wrapper for the parameters needed by {@link org.apache.hivemind.ServiceImplementationFactory}.<a name="line.23"></a>
+<FONT color="green">024</FONT>     * <a name="line.24"></a>
+<FONT color="green">025</FONT>     * @author Howard M. Lewis Ship<a name="line.25"></a>
+<FONT color="green">026</FONT>     * @since 1.1<a name="line.26"></a>
+<FONT color="green">027</FONT>     */<a name="line.27"></a>
+<FONT color="green">028</FONT>    public interface ServiceImplementationFactoryParameters<a name="line.28"></a>
+<FONT color="green">029</FONT>    {<a name="line.29"></a>
+<FONT color="green">030</FONT>        /**<a name="line.30"></a>
+<FONT color="green">031</FONT>         * The fully qualified id of the service.<a name="line.31"></a>
+<FONT color="green">032</FONT>         */<a name="line.32"></a>
+<FONT color="green">033</FONT>    <a name="line.33"></a>
+<FONT color="green">034</FONT>        public String getServiceId();<a name="line.34"></a>
+<FONT color="green">035</FONT>    <a name="line.35"></a>
+<FONT color="green">036</FONT>        /**<a name="line.36"></a>
+<FONT color="green">037</FONT>         * The interface defined for the service.<a name="line.37"></a>
+<FONT color="green">038</FONT>         */<a name="line.38"></a>
+<FONT color="green">039</FONT>        public Class getServiceInterface();<a name="line.39"></a>
+<FONT color="green">040</FONT>    <a name="line.40"></a>
+<FONT color="green">041</FONT>        /**<a name="line.41"></a>
+<FONT color="green">042</FONT>         * The log used for any output related to the service (or the construction of the service).<a name="line.42"></a>
+<FONT color="green">043</FONT>         */<a name="line.43"></a>
+<FONT color="green">044</FONT>    <a name="line.44"></a>
+<FONT color="green">045</FONT>        public Log getLog();<a name="line.45"></a>
+<FONT color="green">046</FONT>    <a name="line.46"></a>
+<FONT color="green">047</FONT>        /**<a name="line.47"></a>
+<FONT color="green">048</FONT>         * An {@link ErrorLog} instance used for reporting recoverable errors related to the service (or<a name="line.48"></a>
+<FONT color="green">049</FONT>         * the construction of the service).<a name="line.49"></a>
+<FONT color="green">050</FONT>         */<a name="line.50"></a>
+<FONT color="green">051</FONT>    <a name="line.51"></a>
+<FONT color="green">052</FONT>        public ErrorLog getErrorLog();<a name="line.52"></a>
+<FONT color="green">053</FONT>    <a name="line.53"></a>
+<FONT color="green">054</FONT>        /**<a name="line.54"></a>
+<FONT color="green">055</FONT>         * The module containing the service constructor. Primarily used to locate other services (or<a name="line.55"></a>
+<FONT color="green">056</FONT>         * configurations) using simple (non-qualified) ids.<a name="line.56"></a>
+<FONT color="green">057</FONT>         */<a name="line.57"></a>
+<FONT color="green">058</FONT>        public Module getInvokingModule();<a name="line.58"></a>
+<FONT color="green">059</FONT>    <a name="line.59"></a>
+<FONT color="green">060</FONT>        /**<a name="line.60"></a>
+<FONT color="green">061</FONT>         * The parameters passed to the factory to guide the construction of the service. In most cases,<a name="line.61"></a>
+<FONT color="green">062</FONT>         * there will only be a single element in the list.<a name="line.62"></a>
+<FONT color="green">063</FONT>         * Since HiveMind 2.0 schemas and thus parameters are no longer restricted to lists <a name="line.63"></a>
+<FONT color="green">064</FONT>         * as root element. The parameters can be contained in any other type.<a name="line.64"></a>
+<FONT color="green">065</FONT>         * <a name="line.65"></a>
+<FONT color="green">066</FONT>         * @deprecated  use #getParametersContainer instead <a name="line.66"></a>
+<FONT color="green">067</FONT>         */<a name="line.67"></a>
+<FONT color="green">068</FONT>        public List getParameters();<a name="line.68"></a>
+<FONT color="green">069</FONT>        <a name="line.69"></a>
+<FONT color="green">070</FONT>        /**<a name="line.70"></a>
+<FONT color="green">071</FONT>         * The parameters passed to the factory to guide the construction of the service.<a name="line.71"></a>
+<FONT color="green">072</FONT>         * The concrete type depends on the underlying schema definition. <a name="line.72"></a>
+<FONT color="green">073</FONT>         */<a name="line.73"></a>
+<FONT color="green">074</FONT>        public Object getParametersContainer();<a name="line.74"></a>
+<FONT color="green">075</FONT>    <a name="line.75"></a>
+<FONT color="green">076</FONT>        /**<a name="line.76"></a>
+<FONT color="green">077</FONT>         * Returns the first parameter passed to the factory. Works only if the parameters<a name="line.77"></a>
+<FONT color="green">078</FONT>         * are contained in a list. If no parameters exist, returns null.<a name="line.78"></a>
+<FONT color="green">079</FONT>         */<a name="line.79"></a>
+<FONT color="green">080</FONT>        public Object getFirstParameter();<a name="line.80"></a>
+<FONT color="green">081</FONT>    <a name="line.81"></a>
+<FONT color="green">082</FONT>    }<a name="line.82"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>
+</BODY>
+</HTML>

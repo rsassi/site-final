@@ -1,0 +1,822 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Apache Forrest" name="Generator">
+<meta name="Forrest-version" content="0.8-dev">
+<meta name="Forrest-skin-name" content="pelt">
+<title>Creating a Logging Interceptor</title>
+<link type="text/css" href="../skin/basic.css" rel="stylesheet">
+<link media="screen" type="text/css" href="../skin/screen.css" rel="stylesheet">
+<link media="print" type="text/css" href="../skin/print.css" rel="stylesheet">
+<link type="text/css" href="../skin/profile.css" rel="stylesheet">
+<script src="../skin/getBlank.js" language="javascript" type="text/javascript"></script><script src="../skin/getMenu.js" language="javascript" type="text/javascript"></script><script src="../skin/fontsize.js" language="javascript" type="text/javascript"></script>
+<link rel="shortcut icon" href="../">
+</head>
+<body onload="init()"><div style="background: red"><h1>2009/04/15 - Apache HiveMind has been retired. </h1><h2>For more information, please explore the <a href="http://attic.apache.org/">Attic</a>. </h2></div>
+<script type="text/javascript">ndeSetTextSize();</script>
+<div id="top">
+<!--+
+    |breadtrail
+    +-->
+<div class="breadtrail">
+<a href="http://jakarta.apache.org/">Jakarta</a> &gt; <a href="http://jakarta.apache.org/hivemind/">HiveMind</a><script src="../skin/breadcrumbs.js" language="JavaScript" type="text/javascript"></script>
+</div>
+<!--+
+    |header
+    +-->
+<div class="header">
+<!--+
+    |start group logo
+    +-->
+<div class="grouplogo">
+<a href="http://jakarta.apache.org/hivemind/"><img class="logoImage" alt="HiveMind" src="../images/HiveMind-Logo.png" title="HiveMind Services and Configuration Microkernel"></a>
+</div>
+<!--+
+    |end group logo
+    +-->
+<!--+
+    |start Project Logo
+    +-->
+<div class="projectlogoA1">
+<a href="http://jakarta.apache.org/"><img class="logoImage" alt="Jakarta" src="../images/jakarta-logo.gif" title="Apache Jakarta"></a>
+</div>
+<!--+
+    |end Project Logo
+    +-->
+<!--+
+    |start Tabs
+    +-->
+<ul id="tabs">
+<li>
+<a class="base-not-selected" href="../index.html">HiveMind Project</a>
+</li>
+<li>
+<a class="base-not-selected" href="../hivemind/index.html">Module: hivemind</a>
+</li>
+<li>
+<a class="base-not-selected" href="../hivemind-lib/index.html">Module: hivemind-lib</a>
+</li>
+<li>
+<a class="base-not-selected" href="../hivemind-jmx/index.html">Module: hivemind-jmx</a>
+</li>
+<li class="current">
+<a class="base-selected" href="../hivemind-examples/index.html">Example Code</a>
+</li>
+</ul>
+<!--+
+    |end Tabs
+    +-->
+</div>
+</div>
+<div id="main">
+<div id="publishedStrip">
+<!--+
+    |start Subtabs
+    +-->
+<div id="level2tabs"></div>
+<!--+
+    |end Endtabs
+    +-->
+<script type="text/javascript"><!--
+document.write("Last Published: " + document.lastModified);
+//  --></script>
+</div>
+<!--+
+    |breadtrail
+    +-->
+<div class="breadtrail">
+             
+             &nbsp;
+           </div>
+<!--+
+    |start Menu, mainarea
+    +-->
+<!--+
+    |start Menu
+    +-->
+<div id="menu">
+<div onclick="SwitchMenu('menu_1.1', '../skin/')" id="menu_1.1Title" class="menutitle">HiveMind</div>
+<div id="menu_1.1" class="menuitemgroup">
+<div class="menuitem">
+<a href="../index.html">Overview</a>
+</div>
+<div onclick="SwitchMenu('menu_1.1.2', '../skin/')" id="menu_1.1.2Title" class="menutitle">Reference</div>
+<div id="menu_1.1.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="../services.html">Services</a>
+</div>
+<div class="menuitem">
+<a href="../configurations.html">Configurations</a>
+</div>
+<div class="menuitem">
+<a href="../hivedoc.html">HiveDoc</a>
+</div>
+<div class="menuitem">
+<a href="../descriptor.html">Module  Descriptor</a>
+</div>
+<div class="menuitem">
+<a href="../rules.html">Contribution Processing Rules</a>
+</div>
+<div class="menuitem">
+<a href="../dependencies.html">Dependencies</a>
+</div>
+<div class="menuitem">
+<a href="../conditional.html">Conditional Contributions</a>
+</div>
+<div class="menuitem">
+<a href="../serializing.html">Serializing Services</a>
+</div>
+<div class="menuitem">
+<a href="../instance-initialization.html">Instance Initialization</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.1.3', '../skin/')" id="menu_1.1.3Title" class="menutitle">Project Information</div>
+<div id="menu_1.1.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="../changes.html">Change Log</a>
+</div>
+<div class="menuitem">
+<a href="../todo.html">TODO</a>
+</div>
+<div class="menuitem">
+<a href="http://jakarta.apache.org/site/mail2.html#HiveMind">Mailing Lists</a>
+</div>
+<div class="menuitem">
+<a href="../downloads.html">Downloads</a>
+</div>
+<div class="menuitem">
+<a href="http://issues.apache.org/jira/secure/BrowseProject.jspa?id=10500">Bugs</a>
+</div>
+<div class="menuitem">
+<a href="../subversion.html">Subversion Access</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.1.4', '../skin/')" id="menu_1.1.4Title" class="menutitle">Tutorials and Information</div>
+<div id="menu_1.1.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="../bootstrap.html">Bootstrapping the Registry</a>
+</div>
+<div class="menuitem">
+<a href="../ioc.html">Inversion Of Control</a>
+</div>
+<div class="menuitem">
+<a href="../localization.html">Localization</a>
+</div>
+<div class="menuitem">
+<a href="../multithreading.html">Multi-Threading</a>
+</div>
+<div class="menuitem">
+<a href="../filter.html">Servlets</a>
+</div>
+<div class="menuitem">
+<a href="../override.html">Overriding Services</a>
+</div>
+<div class="menuitem">
+<a href="../groovy.html">Groovy Support</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.1.5', '../skin/')" id="menu_1.1.5Title" class="menutitle">Reports</div>
+<div id="menu_1.1.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="../license-report.html">License</a>
+</div>
+<div class="menuitem">
+<a href="../hivedocs/index.html">HiveDoc</a>
+</div>
+<div class="menuitem">
+<a href="../developers.html">Developers</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.2', '../skin/')" id="menu_1.2Title" class="menutitle">Framework</div>
+<div id="menu_1.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind/index.html">Overview</a>
+</div>
+<div onclick="SwitchMenu('menu_1.2.2', '../skin/')" id="menu_1.2.2Title" class="menutitle">Services</div>
+<div id="menu_1.2.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind/BuilderFactory.html">BuilderFactory</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/LoggingInterceptor.html">LoggingInterceptor</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/ShutdownCoordinator.html">ShutdownCoordinator</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/ThreadLocale.html">ThreadLocale</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/ThreadLocalStorage.html">ThreadLocalStorage</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.2.3', '../skin/')" id="menu_1.2.3Title" class="menutitle">Configurations</div>
+<div id="menu_1.2.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind/ApplicationDefaults.html">ApplicationDefaults</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/EagerLoad.html">EagerLoad</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/FactoryDefaults.html">FactoryDefaults</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/ObjectProviders.html">ObjectProviders</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/ServiceModels.html">ServiceModels</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/SymbolSources.html">SymbolSources</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/Translators.html">Translators</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.2.4', '../skin/')" id="menu_1.2.4Title" class="menutitle">Ant Tasks</div>
+<div id="menu_1.2.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind/ant/ConstructRegistry.html">ConstructRegistry</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/ant/ManifestClassPath.html">ManifestClassPath</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.2.5', '../skin/')" id="menu_1.2.5Title" class="menutitle">Reports</div>
+<div id="menu_1.2.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind/junit-report.html">JUnit Tests</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/apidocs/index.html">JavaDoc</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind/clover/index.html">Clover Code Coverage</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.3', '../skin/')" id="menu_1.3Title" class="menutitle">Library</div>
+<div id="menu_1.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind-lib/index.html">Overview</a>
+</div>
+<div onclick="SwitchMenu('menu_1.3.2', '../skin/')" id="menu_1.3.2Title" class="menutitle">Services</div>
+<div id="menu_1.3.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind-lib/BeanFactoryBuilder.html">BeanFactoryBuilder</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/ChainBuilder.html">ChainBuilder</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/ChainFactory.html">ChainFactory</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/DefaultImplementationBuilder.html">DefaultImplementationBuilder</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/EJBProxyFactory.html">EJBProxyFactory</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/MethodInterceptorFactory.html">MethodInterceptorFactory</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/NameLookup.html">NameLookup</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/PlaceholderFactory.html">PlaceholderFactory</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/PipelineFactory.html">PipelineFactory</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/RemoteExceptionCoordinator.html">RemoteExceptionCoordinator</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/ServicePropertyFactory.html">ServicePropertyFactory</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/SpringLookupFactory.html">SpringLookupFactory</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/StrategyFactory.html">StrategyFactory</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.3.3', '../skin/')" id="menu_1.3.3Title" class="menutitle">Reports</div>
+<div id="menu_1.3.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind-lib/junit-report.html">JUnit Tests</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/apidocs/index.html">JavaDoc</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-lib/clover/index.html">Clover Code Coverage</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.4', '../skin/')" id="menu_1.4Title" class="menutitle">JMX</div>
+<div id="menu_1.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind-jmx/index.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-jmx/quickstart.html">Quickstart</a>
+</div>
+<div onclick="SwitchMenu('menu_1.4.3', '../skin/')" id="menu_1.4.3Title" class="menutitle">Setup</div>
+<div id="menu_1.4.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind-jmx/setupOverview.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-jmx/setupJMXImplementation.html">JMX Implementation</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-jmx/setupMBeanServer.html">MBeanServer</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-jmx/setupConnectors.html">Connectors</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.4.4', '../skin/')" id="menu_1.4.4Title" class="menutitle">Usage</div>
+<div id="menu_1.4.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind-jmx/manageServices.html">Manage Services</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-jmx/measurePerformance.html">Measure Performance</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-jmx/monitorServices.html">Monitor Services</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-jmx/manageLog4j.html">Manage Log4J</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.4.5', '../skin/')" id="menu_1.4.5Title" class="menutitle">Advanced Topics</div>
+<div id="menu_1.4.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind-jmx/multipleApps.html">Multiple Applications in Server</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.4.6', '../skin/')" id="menu_1.4.6Title" class="menutitle">Reports</div>
+<div id="menu_1.4.6" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind-jmx/junit-report.html">JUnit Tests</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-jmx/apidocs/index.html">JavaDoc</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-jmx/clover/index.html">Clover Code Coverage</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_selected_1.5', '../skin/')" id="menu_selected_1.5Title" class="menutitle" style="background-image: url('../skin/images/chapter_open.gif');">Example Code</div>
+<div id="menu_selected_1.5" class="selectedmenuitemgroup" style="display: block;">
+<div class="menuitem">
+<a href="../hivemind-examples/index.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-examples/calc.html">Calculator</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-examples/panorama.html">Panorama Startup</a>
+</div>
+<div class="menupage">
+<div class="menupagetitle">Logging Interceptor</div>
+</div>
+<div onclick="SwitchMenu('menu_1.5.5', '../skin/')" id="menu_1.5.5Title" class="menutitle">Reports</div>
+<div id="menu_1.5.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="../hivemind-examples/junit-report.html">JUnit Tests</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-examples/apidocs/index.html">JavaDoc</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-examples/hivedocs/index.html">HiveDoc</a>
+</div>
+<div class="menuitem">
+<a href="../hivemind-examples/clover/index.html">Clover Code Coverage</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.6', '../skin/')" id="menu_1.6Title" class="menutitle">Other Resources</div>
+<div id="menu_1.6" class="menuitemgroup">
+<div class="menuitem">
+<a href="http://wiki.apache.org/jakarta-hivemind/">HiveMind Wiki</a>
+</div>
+<div class="menuitem">
+<a href="http://howardlewisship.com/blog/">Tapestry and HiveMind Blog</a>
+</div>
+<div class="menuitem">
+<a href="http://hivetranse.sourceforge.net/">HiveMind Utilities</a>
+</div>
+<div class="menuitem">
+<a href="http://www.theserverside.com/articles/article.tss?l=HivemindBuzz">HiveMind article on TheServerSide</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.7', '../skin/')" id="menu_1.7Title" class="menutitle">Related Projects</div>
+<div id="menu_1.7" class="menuitemgroup">
+<div class="menuitem">
+<a href="http://jakarta.apache.org/tapestry/">Tapestry</a>
+</div>
+<div class="menuitem">
+<a href="http://www.springframework.org">Spring</a>
+</div>
+</div>
+<div id="credit"></div>
+<div id="roundbottom">
+<img style="display: none" class="corner" height="15" width="15" alt="" src="../skin/images/rc-b-l-15-1body-2menu-3menu.png"></div>
+<!--+
+  |alternative credits
+  +-->
+<div id="credit2"></div>
+</div>
+<!--+
+    |end Menu
+    +-->
+<!--+
+    |start content
+    +-->
+<div id="content">
+<div class="trail">Font size: 
+	          &nbsp;<input value="Reset" class="resetfont" title="Reset text" onclick="ndeSetTextSize('reset'); return false;" type="button">      
+	          &nbsp;<input value="-a" class="smallerfont" title="Shrink text" onclick="ndeSetTextSize('decr'); return false;" type="button">
+	          &nbsp;<input value="+a" class="biggerfont" title="Enlarge text" onclick="ndeSetTextSize('incr'); return false;" type="button">
+</div>
+<h1>Creating a Logging Interceptor</h1>
+<div id="minitoc-area">
+<ul class="minitoc">
+<li>
+<a href="#The+Interceptor+Factory">The Interceptor Factory</a>
+</li>
+<li>
+<a href="#Invocation+Handler">Invocation Handler</a>
+</li>
+<li>
+<a href="#Declaring+the+interceptor+factory">Declaring the interceptor factory</a>
+</li>
+<li>
+<a href="#Using+the+interceptor">Using the interceptor</a>
+</li>
+<li>
+<a href="#Running+the+examples">Running the examples</a>
+</li>
+<li>
+<a href="#Conclusion">Conclusion</a>
+</li>
+</ul>
+</div>
+<p>
+One of the most powerful features of HiveMind is the ability to create <em>interceptors</em> for services. Interceptors
+provide additional behavior to a service, often a <em>cross-cutting concern</em> such as logging or transaction management. 
+Interceptors can be thought of as "aspect oriented programming lite".
+</p>
+<p>
+This example shows how easy it can be to create an interceptor; it creates a simplified version of the
+standard <a href="../hivemind/LoggingInterceptor.html">hivemind.LoggingInterceptor</a>.
+</p>
+<p>
+The <em>real</em> logging interceptor uses the <a class="external" href="http://www.jboss.org/products/javassist">Javassist</a>
+bytecode enhancement framework to create a new class at runtime. This has some minor advantages in terms of runtime performance,
+but is much more complicated to implement and test than this example, which uses 
+<a class="external" href="http://java.sun.com/j2se/1.3/docs/guide/reflection/proxy.html">JDK Dynamic Proxies</a>.
+</p>
+<a name="N10023"></a><a name="The+Interceptor+Factory"></a>
+<h2 class="boxed">The Interceptor Factory</h2>
+<div class="section">
+<p> Interceptors are created by interceptor factories, which are themselves HiveMind services. Interceptor factories 
+    implement the <a href="../hivemind/apidocs/org/apache/hivemind/ServiceInterceptorFactory.html">ServiceInterceptorFactory</a> interface. </p>
+<p> Our implementation is very simple: </p>
+<pre class="java-code">
+<span class="java-keyword">package</span> org.apache.examples.impl;
+
+<span class="java-keyword">import</span> java.lang.reflect.<span class="java-type">InvocationHandler;</span>
+<span class="java-keyword">import</span> java.lang.reflect.<span class="java-type">Proxy;</span>
+<span class="java-keyword">import</span> java.util.<span class="java-type">List;</span>
+
+<span class="java-keyword">import</span> org.apache.commons.logging.<span class="java-type">Log;</span>
+<span class="java-keyword">import</span> org.apache.hivemind.<span class="java-type">InterceptorStack;</span>
+<span class="java-keyword">import</span> org.apache.hivemind.<span class="java-type">ServiceInterceptorFactory;</span>
+<span class="java-keyword">import</span> org.apache.hivemind.internal.<span class="java-type">Module;</span>
+
+<span class="java-keyword">public</span> <span class="java-keyword">class</span> <span class="java-type">ProxyLoggingInterceptorFactory</span> <span class="java-keyword">implements</span> <span class="java-type">ServiceInterceptorFactory</span>
+{
+
+    <span class="java-keyword">public</span> <span class="java-type">void</span> createInterceptor(<span class="java-type">InterceptorStack</span> stack, <span class="java-type">Module</span> invokingModule, <span class="java-type">List</span> parameters)
+    {
+        <span class="java-type">Log</span> log <span class="java-operator">=</span> stack.getServiceLog();
+
+        <span class="java-type">InvocationHandler</span> handler <span class="java-operator">=</span> <span class="java-keyword">new</span> <span class="java-type">ProxyLoggingInvocationHandler(</span>log, stack.peek());
+
+        <span class="java-type">Object</span> interceptor <span class="java-operator">=</span>
+            <span class="java-type">Proxy.</span>newProxyInstance(
+                invokingModule.getClassResolver().getClassLoader(),
+                <span class="java-keyword">new</span> <span class="java-type">Class[]</span> { stack.getServiceInterface()},
+                handler);
+
+        stack.push(interceptor);
+    }
+}
+</pre>
+<p> The <span class="codefrag">createInterceptor()</span> method is passed the <a href="../hivemind/apidocs/org/apache/hivemind/InterceptorStack.html">InterceptorStack</a>, the <a href="../hivemind/apidocs/org/apache/hivemind/Module.html">Module</a> of the 
+    invoking module (the module containing the service being created), and any parameters passed to the interceptor 
+    (from inside the <a href="../descriptor.html#interceptor">&lt;interceptor&gt;</a> element). This example does not make use of parameters, but the real logging 
+    interceptor uses parameters to control which methods are, and are not, logged. </p>
+<p> An interceptor's job is to <span class="codefrag">peek()</span> at the top object on the stack and create a new object, wrapped 
+    around the top object, that provides new behavior. The top object on the stack may be the core service 
+    implementation, or it may be another interceptor ... all that's known for sure is that it implements the service 
+    interface defined by the <a href="../descriptor.html#service-point">&lt;service-point&gt;</a>. </p>
+<p> The interceptor in this case is a dynamic proxy, provided by <span class="codefrag">Proxy.newProxyInstance()</span>. The key here 
+    is the <em>invocation handler</em>, and object (described shortly) that is notified any time a method on the 
+    interceptor proxy is invoked. </p>
+<p> Once the interceptor is created, it is pushed onto the stack. More interceptors may build upon it, adding yet 
+    more behavior. </p>
+<p> In HiveMind, a single <span class="codefrag">Log</span> instance is used when constructing a service as well as by any 
+    interceptors created for the service. In other words, by enabling logging for a particular service id, you will see 
+    log events for every aspect of the construction of that particular service. If you add a logging interceptor, 
+    you'll also see method invocations. To ensure that logging takes place using the single logging instance, neither 
+    the class nor the interceptor factory is responsible for creating the logging instance ... that's the 
+    responsibility of HiveMind. The logging instance to use is provided by the <span class="codefrag">getServiceLog()</span> method of 
+    the <a href="../hivemind/apidocs/org/apache/hivemind/InterceptorStack.html">InterceptorStack</a> instance provided to the interceptor factory. </p>
+</div>
+<a name="N100F1"></a><a name="Invocation+Handler"></a>
+<h2 class="boxed">Invocation Handler</h2>
+<div class="section">
+<p>
+The invocation handler is where the intercepting really takes place; it is invoked every time a method of the
+proxy object is invoked and has a chance to add behavior before, and after (or even instead of!) invoking a method
+on the next object in the stack.  What is the "next object"?  It's the next object in the interceptor stack, and may be
+another interceptor instance, or may be the core service implementation.
+</p>
+<pre class="java-code">
+<span class="java-keyword">package</span> org.apache.examples.impl;
+
+<span class="java-keyword">import</span> java.lang.reflect.<span class="java-type">InvocationHandler;</span>
+<span class="java-keyword">import</span> java.lang.reflect.<span class="java-type">InvocationTargetException;</span>
+<span class="java-keyword">import</span> java.lang.reflect.<span class="java-type">Method;</span>
+
+<span class="java-keyword">import</span> org.apache.commons.logging.<span class="java-type">Log;</span>
+<span class="java-keyword">import</span> org.apache.hivemind.service.impl.<span class="java-type">LoggingUtils;</span>
+
+<span class="java-keyword">public</span> <span class="java-keyword">class</span> <span class="java-type">ProxyLoggingInvocationHandler</span> <span class="java-keyword">implements</span> <span class="java-type">InvocationHandler</span>
+{
+    <span class="java-keyword">private</span> <span class="java-type">Log</span> _log;
+    <span class="java-keyword">private</span> <span class="java-type">Object</span> _delegate;
+
+    <span class="java-keyword">public</span> <span class="java-type">ProxyLoggingInvocationHandler(Log</span> log, <span class="java-type">Object</span> delegate)
+    {
+        _log <span class="java-operator">=</span> log;
+        _delegate <span class="java-operator">=</span> delegate;
+    }
+
+    <span class="java-keyword">public</span> <span class="java-type">Object</span> invoke(<span class="java-type">Object</span> proxy, <span class="java-type">Method</span> method, <span class="java-type">Object[]</span> args) <span class="java-keyword">throws</span> <span class="java-type">Throwable</span>
+    {
+        <span class="java-type">boolean</span> debug <span class="java-operator">=</span> _log.isDebugEnabled();
+
+        <span class="java-keyword">if</span> (debug)
+            <span class="java-type">LoggingUtils.</span>entry(_log, method.getName(), args);
+
+        <span class="java-keyword">try</span>
+        {
+            <span class="java-type">Object</span> result <span class="java-operator">=</span> method.invoke(_delegate, args);
+
+            <span class="java-keyword">if</span> (debug)
+            {
+                <span class="java-keyword">if</span> (method.getReturnType() <span class="java-operator">==</span> <span class="java-type">void.</span><span class="java-keyword">class)</span>
+                    <span class="java-type">LoggingUtils.</span>voidExit(_log, method.getName());
+                <span class="java-keyword">else</span>
+                    <span class="java-type">LoggingUtils.</span>exit(_log, method.getName(), result);
+            }
+
+            <span class="java-keyword">return</span> result;
+        }
+        <span class="java-keyword">catch</span> (<span class="java-type">InvocationTargetException</span> ex)
+        {
+            <span class="java-type">Throwable</span> targetException <span class="java-operator">=</span> ex.getTargetException();
+
+            <span class="java-keyword">if</span> (debug)
+                <span class="java-type">LoggingUtils.</span>exception(_log, method.getName(), targetException);
+
+            <span class="java-keyword">throw</span> targetException;
+        }
+    }
+
+}
+</pre>
+<p>
+The <span class="codefrag">invoke()</span> method is the key. Using the remembered <span class="codefrag">Log</span> instance,
+and the remembered delegate object (the next object on the interceptor stack ... the object that
+was <span class="codefrag">peek()</span>-ed).  The code for actually generating the logging output is inside static
+methods of the <span class="codefrag">LoggingUtils</span> utility class -- in this way the output from this interceptor is
+identical to the output when using <a href="../hivemind/LoggingInterceptor.html">hivemind.LoggingInterceptor</a>.
+</p>
+<p>
+The <span class="codefrag">invoke()</span> method is invoked for all methods that can be invoked on the proxy ... this includes
+the methods of the service interface, but also includes <span class="codefrag">java.lang.Object</span> methods such
+as <span class="codefrag">hashCode()</span> or <span class="codefrag">toString()</span>.
+</p>
+<div class="note">
+<div class="label">Note</div>
+<div class="content">
+The <a href="../hivemind/LoggingInterceptor.html">hivemind.LoggingInterceptor</a> will typically add its own implementation of <span class="codefrag">toString()</span>, to assist
+in debugging (it clearly identifies itself as an interceptor object, and identifies the service id and service interface). 
+This proxy-based implementation does not, so invoking <span class="codefrag">toString()</span> on the proxy will end up invoking the method
+on the next object.
+</div>
+</div>
+</div>
+<a name="N10200"></a><a name="Declaring+the+interceptor+factory"></a>
+<h2 class="boxed">Declaring the interceptor factory</h2>
+<div class="section">
+<p>
+Like any other service, an service interceptor factory must appear inside a HiveMind module deployment descriptor:
+</p>
+<pre class="xml-code">&lt;<span class="xml-tag">service-point </span><span class="xml-attribute">id</span>=<span class="xml-attribute-value">"ProxyLoggingInterceptor" </span><span class="xml-attribute">interface</span>=<span class="xml-attribute-value">"org.apache.hivemind.ServiceInterceptorFactory"</span>&gt;
+  &lt;<span class="xml-tag">create-instance </span><span class="xml-attribute">class</span>=<span class="xml-attribute-value">"org.apache.examples.impl.ProxyLoggingInterceptorFactory"</span>/&gt;
+&lt;/<span class="xml-tag">service-point</span>&gt;
+</pre>
+</div>
+<a name="N1022A"></a><a name="Using+the+interceptor"></a>
+<h2 class="boxed">Using the interceptor</h2>
+<div class="section">
+<p>
+Using the interceptor is the same as using any other interceptor; the <a href="../descriptor.html#interceptor">&lt;interceptor&gt;</a> element simply has to point at the correct service:
+</p>
+<pre class="xml-code">&lt;<span class="xml-tag">module </span><span class="xml-attribute">id</span>=<span class="xml-attribute-value">"examples" </span><span class="xml-attribute">version</span>=<span class="xml-attribute-value">"1.0.0" </span><span class="xml-attribute">package</span>=<span class="xml-attribute-value">"org.apache.examples"</span>&gt;
+
+    <span class="xml-plain">. . . 
+    
+    </span>&lt;<span class="xml-tag">service-point </span><span class="xml-attribute">id</span>=<span class="xml-attribute-value">"ProxyLoggingInterceptor" </span><span class="xml-attribute">interface</span>=<span class="xml-attribute-value">"org.apache.hivemind.ServiceInterceptorFactory"</span>&gt;
+      &lt;<span class="xml-tag">create-instance </span><span class="xml-attribute">class</span>=<span class="xml-attribute-value">"impl.ProxyLoggingInterceptorFactory"</span>/&gt;
+    &lt;/<span class="xml-tag">service-point</span>&gt;
+    
+    &lt;<span class="xml-tag">service-point </span><span class="xml-attribute">id</span>=<span class="xml-attribute-value">"Target" </span><span class="xml-attribute">interface</span>=<span class="xml-attribute-value">"TargetService"</span>&gt;
+      &lt;<span class="xml-tag">create-instance </span><span class="xml-attribute">class</span>=<span class="xml-attribute-value">"impl.TargetServiceImpl"</span>/&gt;
+      &lt;<span class="xml-tag">interceptor </span><span class="xml-attribute">service-id</span>=<span class="xml-attribute-value">"ProxyLoggingInterceptor"</span>/&gt;
+    &lt;/<span class="xml-tag">service-point</span>&gt;
+&lt;/<span class="xml-tag">module</span>&gt;
+</pre>
+<p>
+The <span class="codefrag">TargetService</span> interface defines three methods used to demonstrate the logging interceptor:
+</p>
+<pre class="java-code">
+<span class="java-keyword">package</span> org.apache.examples;
+
+<span class="java-keyword">import</span> java.util.<span class="java-type">List;</span>
+
+<span class="java-keyword">public</span> <span class="java-keyword">interface</span> <span class="java-type">TargetService</span>
+{
+    <span class="java-keyword">public</span> <span class="java-type">void</span> voidMethod(<span class="java-type">String</span> string);
+
+    <span class="java-keyword">public</span> <span class="java-type">List</span> buildList(<span class="java-type">String</span> string, <span class="java-type">int</span> count);
+
+    <span class="java-keyword">public</span> <span class="java-type">void</span> exceptionThrower();
+}
+</pre>
+<p>
+The implementation class is equally inspiring:  
+</p>
+<pre class="java-code">
+<span class="java-keyword">package</span> org.apache.examples.impl;
+
+<span class="java-keyword">import</span> java.util.<span class="java-type">ArrayList;</span>
+<span class="java-keyword">import</span> java.util.<span class="java-type">List;</span>
+
+<span class="java-keyword">import</span> org.apache.hivemind.<span class="java-type">ApplicationRuntimeException;</span>
+<span class="java-keyword">import</span> org.apache.examples.<span class="java-type">TargetService;</span>
+
+<span class="java-keyword">public</span> <span class="java-keyword">class</span> <span class="java-type">TargetServiceImpl</span> <span class="java-keyword">implements</span> <span class="java-type">TargetService</span>
+{
+
+    <span class="java-keyword">public</span> <span class="java-type">void</span> voidMethod(<span class="java-type">String</span> string)
+    {
+
+    }
+
+    <span class="java-keyword">public</span> <span class="java-type">List</span> buildList(<span class="java-type">String</span> string, <span class="java-type">int</span> count)
+    {
+        <span class="java-type">List</span> result <span class="java-operator">=</span> <span class="java-keyword">new</span> <span class="java-type">ArrayList();</span>
+        
+        <span class="java-keyword">for</span> (<span class="java-type">int</span> i <span class="java-operator">=</span> <span class="java-literal">0;</span> i <span class="java-operator">&lt;</span> count; i<span class="java-operator">++)</span>
+            result.add(string);
+
+        <span class="java-keyword">return</span> result;
+    }
+
+    <span class="java-keyword">public</span> <span class="java-type">void</span> exceptionThrower()
+    {
+        <span class="java-keyword">throw</span> <span class="java-keyword">new</span> <span class="java-type">ApplicationRuntimeException(</span><span class="java-literal">"Some application exception.");</span>
+    }
+}
+</pre>
+</div>
+<a name="N10383"></a><a name="Running+the+examples"></a>
+<h2 class="boxed">Running the examples</h2>
+<div class="section">
+<p>
+From the <span class="codefrag">examples</span> directory, run <span class="codefrag">ant compile</span>, then run <span class="codefrag">ant -emacs run-logging</span>:
+</p>
+<pre class="code">
+bash-2.05b$ ant -emacs run-logging
+Buildfile: build.xml
+
+run-logging:
+Target [DEBUG] Creating SingletonProxy for service examples.Target
+
+*** Void method (no return value):
+
+Target [DEBUG] Constructing core service implementation for service examples.Target
+Target [DEBUG] Applying interceptor factory examples.ProxyLoggingInterceptor
+ProxyLoggingInterceptor [DEBUG] Creating SingletonProxy for service examples.ProxyLoggingInterceptor
+ProxyLoggingInterceptor [DEBUG] Constructing core service implementation for service examples.ProxyLoggingInterceptor
+Target [DEBUG] BEGIN voidMethod(Hello)
+Target [DEBUG] END voidMethod()
+
+*** Ordinary method (returns a List):
+
+Target [DEBUG] BEGIN buildList(HiveMind, 4)
+Target [DEBUG] END buildList() [[HiveMind, HiveMind, HiveMind, HiveMind]]
+
+*** Exception method (throws an exception):
+
+Target [DEBUG] BEGIN exceptionThrower()
+Target [DEBUG] EXCEPTION exceptionThrower() -- org.apache.hivemind.ApplicationRuntimeException
+org.apache.hivemind.ApplicationRuntimeException: Some application exception.
+        at org.apache.examples.impl.TargetServiceImpl.exceptionThrower(TargetServiceImpl.java:35)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+        at java.lang.reflect.Method.invoke(Method.java:324)
+        at org.apache.examples.impl.ProxyLoggingInvocationHandler.invoke(ProxyLoggingInvocationHandler.java:38)
+        at $Proxy0.exceptionThrower(Unknown Source)
+        at $SingletonProxy_fe67f7e0ae_12.exceptionThrower($SingletonProxy_fe67f7e0ae_12.java)
+        at org.apache.examples.LoggingMain.main(LoggingMain.java:27)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+        at java.lang.reflect.Method.invoke(Method.java:324)
+        at org.apache.tools.ant.taskdefs.ExecuteJava.run(ExecuteJava.java:193)
+        at org.apache.tools.ant.taskdefs.ExecuteJava.execute(ExecuteJava.java:130)
+        at org.apache.tools.ant.taskdefs.Java.run(Java.java:705)
+        at org.apache.tools.ant.taskdefs.Java.executeJava(Java.java:177)
+        at org.apache.tools.ant.taskdefs.Java.execute(Java.java:83)
+        at org.apache.tools.ant.UnknownElement.execute(UnknownElement.java:275)
+        at org.apache.tools.ant.Task.perform(Task.java:364)
+        at org.apache.tools.ant.Target.execute(Target.java:341)
+        at org.apache.tools.ant.Target.performTasks(Target.java:369)
+        at org.apache.tools.ant.Project.executeTarget(Project.java:1214)
+        at org.apache.tools.ant.Project.executeTargets(Project.java:1062)
+        at org.apache.tools.ant.Main.runBuild(Main.java:673)
+        at org.apache.tools.ant.Main.startAnt(Main.java:188)
+        at org.apache.tools.ant.launch.Launcher.run(Launcher.java:196)
+        at org.apache.tools.ant.launch.Launcher.main(Launcher.java:55)
+
+BUILD SUCCESSFUL
+Total time: 3 seconds
+</pre>
+<p>
+The <span class="codefrag">log4j.properties</span> file for the examples has enabled debug logging for the entire module; thus we see
+some output about the construction of the <span class="codefrag">ProxyLoggingInterceptor</span> service as it is employed to construct the 
+interceptor for the <span class="codefrag">Target</span> service.
+</p>
+</div>
+<a name="N103A0"></a><a name="Conclusion"></a>
+<h2 class="boxed">Conclusion</h2>
+<div class="section">
+<p>
+Implementing a basic interceptor using HiveMind is very simple when using JDK Dynamic Proxies. You can easily provide code that slips
+right into the calling sequence for the methods of your services with surprisingly little code. In addition, the APIs do not force you
+to use any single approach; you can use JDK proxies as here, use Javassist, or use any approach that works for you.  And because interceptor
+factories are themselves HiveMind services, you have access to the entire HiveMind environment to implement your interceptor factories.
+</p>
+</div>
+</div>
+<!--+
+    |end content
+    +-->
+<div class="clearboth">&nbsp;</div>
+</div>
+<div id="footer">
+<!--+
+    |start bottomstrip
+    +-->
+<div class="lastmodified">
+<script type="text/javascript"><!--
+document.write("Last Published: " + document.lastModified);
+//  --></script>
+</div>
+<div class="copyright">
+        Copyright &copy;
+         2005 Apache Software Foundation</div>
+<!--+
+    |end bottomstrip
+    +-->
+</div>
+</body>
+</html>

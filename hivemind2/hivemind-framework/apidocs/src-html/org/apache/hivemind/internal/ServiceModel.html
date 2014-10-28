@@ -1,0 +1,117 @@
+<HTML>
+<BODY BGCOLOR="white">
+<PRE>
+<FONT color="green">001</FONT>    // Copyright 2004, 2005 The Apache Software Foundation<a name="line.1"></a>
+<FONT color="green">002</FONT>    //<a name="line.2"></a>
+<FONT color="green">003</FONT>    // Licensed under the Apache License, Version 2.0 (the "License");<a name="line.3"></a>
+<FONT color="green">004</FONT>    // you may not use this file except in compliance with the License.<a name="line.4"></a>
+<FONT color="green">005</FONT>    // You may obtain a copy of the License at<a name="line.5"></a>
+<FONT color="green">006</FONT>    //<a name="line.6"></a>
+<FONT color="green">007</FONT>    //     http://www.apache.org/licenses/LICENSE-2.0<a name="line.7"></a>
+<FONT color="green">008</FONT>    //<a name="line.8"></a>
+<FONT color="green">009</FONT>    // Unless required by applicable law or agreed to in writing, software<a name="line.9"></a>
+<FONT color="green">010</FONT>    // distributed under the License is distributed on an "AS IS" BASIS,<a name="line.10"></a>
+<FONT color="green">011</FONT>    // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.<a name="line.11"></a>
+<FONT color="green">012</FONT>    // See the License for the specific language governing permissions and<a name="line.12"></a>
+<FONT color="green">013</FONT>    // limitations under the License.<a name="line.13"></a>
+<FONT color="green">014</FONT>    <a name="line.14"></a>
+<FONT color="green">015</FONT>    package org.apache.hivemind.internal;<a name="line.15"></a>
+<FONT color="green">016</FONT>    <a name="line.16"></a>
+<FONT color="green">017</FONT>    /**<a name="line.17"></a>
+<FONT color="green">018</FONT>     * A service model is associated with a {@link org.apache.hivemind.internal.ServicePoint} to supply<a name="line.18"></a>
+<FONT color="green">019</FONT>     * rules for the lifecycle of the service. This concerns when the service is first created and<a name="line.19"></a>
+<FONT color="green">020</FONT>     * whether it is pooled, etc. Each service extension point will have a unique instance of<a name="line.20"></a>
+<FONT color="green">021</FONT>     * ServiceModel.<a name="line.21"></a>
+<FONT color="green">022</FONT>     * <a name="line.22"></a>
+<FONT color="green">023</FONT>     * @author Howard Lewis Ship<a name="line.23"></a>
+<FONT color="green">024</FONT>     */<a name="line.24"></a>
+<FONT color="green">025</FONT>    public interface ServiceModel<a name="line.25"></a>
+<FONT color="green">026</FONT>    {<a name="line.26"></a>
+<FONT color="green">027</FONT>        public static final String PRIMITIVE = "primitive";<a name="line.27"></a>
+<FONT color="green">028</FONT>        public static final String SINGLETON = "singleton";<a name="line.28"></a>
+<FONT color="green">029</FONT>        public static final String THREADED = "threaded";<a name="line.29"></a>
+<FONT color="green">030</FONT>        public static final String POOLED = "pooled";<a name="line.30"></a>
+<FONT color="green">031</FONT>        <a name="line.31"></a>
+<FONT color="green">032</FONT>        <a name="line.32"></a>
+<FONT color="green">033</FONT>        /**<a name="line.33"></a>
+<FONT color="green">034</FONT>         * Invoked by the service extension point to obtain the service implementation. The model may<a name="line.34"></a>
+<FONT color="green">035</FONT>         * return the actual service implementation or some form of proxy.<a name="line.35"></a>
+<FONT color="green">036</FONT>         * &lt;p&gt;<a name="line.36"></a>
+<FONT color="green">037</FONT>         * This method is only invoked &lt;em&gt;once&lt;/em&gt;; the returned value is used from that point on<a name="line.37"></a>
+<FONT color="green">038</FONT>         * (in all threads, by all callers). Most models return a proxy that takes care of realizing the<a name="line.38"></a>
+<FONT color="green">039</FONT>         * service (actually creating the service, configuring it, and wrapping it with interceptors)<a name="line.39"></a>
+<FONT color="green">040</FONT>         * only when needed.<a name="line.40"></a>
+<FONT color="green">041</FONT>         */<a name="line.41"></a>
+<FONT color="green">042</FONT>    <a name="line.42"></a>
+<FONT color="green">043</FONT>        public Object getService();<a name="line.43"></a>
+<FONT color="green">044</FONT>    <a name="line.44"></a>
+<FONT color="green">045</FONT>        /**<a name="line.45"></a>
+<FONT color="green">046</FONT>         * Forces the core service implementation (and any interceptors) to be fully instantiated<a name="line.46"></a>
+<FONT color="green">047</FONT>         * immediately, rather than waiting for the first service method invocation. This is used when a<a name="line.47"></a>
+<FONT color="green">048</FONT>         * service needs to be "eagerly loaded" rather than "lazy loaded".<a name="line.48"></a>
+<FONT color="green">049</FONT>         */<a name="line.49"></a>
+<FONT color="green">050</FONT>        public void instantiateService();<a name="line.50"></a>
+<FONT color="green">051</FONT>    }<a name="line.51"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</PRE>
+</BODY>
+</HTML>

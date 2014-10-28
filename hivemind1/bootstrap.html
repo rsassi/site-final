@@ -1,0 +1,734 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="Apache Forrest" name="Generator">
+<meta name="Forrest-version" content="0.7">
+<meta name="Forrest-skin-name" content="pelt">
+<title>Bootstrapping the Registry</title>
+<link type="text/css" href="skin/basic.css" rel="stylesheet">
+<link media="screen" type="text/css" href="skin/screen.css" rel="stylesheet">
+<link media="print" type="text/css" href="skin/print.css" rel="stylesheet">
+<link type="text/css" href="skin/profile.css" rel="stylesheet">
+<script src="skin/getBlank.js" language="javascript" type="text/javascript"></script><script src="skin/getMenu.js" language="javascript" type="text/javascript"></script><script src="skin/fontsize.js" language="javascript" type="text/javascript"></script>
+<link rel="shortcut icon" href="">
+</head>
+<body onload="init()"><div style="background: red"><h1>2009/04/15 - Apache HiveMind has been retired. </h1><h2>For more information, please explore the <a href="http://attic.apache.org/">Attic</a>. </h2></div>
+<script type="text/javascript">ndeSetTextSize();</script>
+<div id="top">
+<div class="breadtrail">
+<a href="http://www.apache.org/">Apache</a> &gt; <a href="http://hivemind.apache.org">HiveMind</a><script src="skin/breadcrumbs.js" language="JavaScript" type="text/javascript"></script>
+</div>
+<div class="header">
+<div class="grouplogo">
+<a href="http://hivemind.apache.org"><img class="logoImage" alt="HiveMind" src="images/HiveMind-Logo.png" title="HiveMind Services and Configuration Microkernel"></a>
+</div>
+<div class="projectlogoA1">
+<a href="http://www.apache.org"><img class="logoImage" alt="Apache" src="images/asf_logo_wide.gif" title="Apache"></a>
+</div>
+<ul id="tabs">
+<li class="current">
+<a class="base-selected" href="index.html">HiveMind Project</a>
+</li>
+<li>
+<a class="base-not-selected" href="hivemind/index.html">Module: hivemind</a>
+</li>
+<li>
+<a class="base-not-selected" href="hivemind-lib/index.html">Module: hivemind-lib</a>
+</li>
+<li>
+<a class="base-not-selected" href="hivemind-jmx/index.html">Module: hivemind-jmx</a>
+</li>
+<li>
+<a class="base-not-selected" href="hivemind-examples/index.html">Example Code</a>
+</li>
+</ul>
+</div>
+</div>
+<div id="main">
+<div id="publishedStrip">
+<div id="level2tabs"></div>
+<script type="text/javascript"><!--
+document.write("<text>Last Published:</text> " + document.lastModified);
+//  --></script>
+</div>
+<div class="breadtrail">
+             
+             &nbsp;
+           </div>
+<div id="menu">
+<div onclick="SwitchMenu('menu_selected_1.1', 'skin/')" id="menu_selected_1.1Title" class="menutitle" style="background-image: url('skin/images/chapter_open.gif');">HiveMind</div>
+<div id="menu_selected_1.1" class="selectedmenuitemgroup" style="display: block;">
+<div class="menuitem">
+<a href="index.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="downloads.html">Downloads</a>
+</div>
+<div onclick="SwitchMenu('menu_1.1.3', 'skin/')" id="menu_1.1.3Title" class="menutitle">Reference</div>
+<div id="menu_1.1.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="services.html">Services</a>
+</div>
+<div class="menuitem">
+<a href="configurations.html">Configurations</a>
+</div>
+<div class="menuitem">
+<a href="hivedoc.html">HiveDoc</a>
+</div>
+<div class="menuitem">
+<a href="descriptor.html">Module  Descriptor</a>
+</div>
+<div class="menuitem">
+<a href="rules.html">Contribution Processing Rules</a>
+</div>
+<div class="menuitem">
+<a href="dependencies.html">Dependencies</a>
+</div>
+<div class="menuitem">
+<a href="conditional.html">Conditional Contributions</a>
+</div>
+<div class="menuitem">
+<a href="serializing.html">Serializing Services</a>
+</div>
+<div class="menuitem">
+<a href="instance-initialization.html">Instance Initialization</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.1.4', 'skin/')" id="menu_1.1.4Title" class="menutitle">Project Information</div>
+<div id="menu_1.1.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="changes.html">Change Log</a>
+</div>
+<div class="menuitem">
+<a href="todo.html">TODO</a>
+</div>
+<div class="menuitem">
+<a href="mailinglists.html">Mailing Lists</a>
+</div>
+<div class="menuitem">
+<a href="http://issues.apache.org/jira/secure/BrowseProject.jspa?id=10500">Bugs</a>
+</div>
+<div class="menuitem">
+<a href="subversion.html">Subversion Access</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_selected_1.1.5', 'skin/')" id="menu_selected_1.1.5Title" class="menutitle" style="background-image: url('skin/images/chapter_open.gif');">Tutorials and Information</div>
+<div id="menu_selected_1.1.5" class="selectedmenuitemgroup" style="display: block;">
+<div class="menupage">
+<div class="menupagetitle">Bootstrapping the Registry</div>
+</div>
+<div class="menuitem">
+<a href="ioc.html">Inversion Of Control</a>
+</div>
+<div class="menuitem">
+<a href="localization.html">Localization</a>
+</div>
+<div class="menuitem">
+<a href="multithreading.html">Multi-Threading</a>
+</div>
+<div class="menuitem">
+<a href="filter.html">Servlets</a>
+</div>
+<div class="menuitem">
+<a href="override.html">Overriding Services</a>
+</div>
+<div class="menuitem">
+<a href="groovy.html">Groovy Support</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.1.6', 'skin/')" id="menu_1.1.6Title" class="menutitle">Reports</div>
+<div id="menu_1.1.6" class="menuitemgroup">
+<div class="menuitem">
+<a href="license-report.html">License</a>
+</div>
+<div class="menuitem">
+<a href="hivedocs/index.html">HiveDoc</a>
+</div>
+<div class="menuitem">
+<a href="developers.html">Developers</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.2', 'skin/')" id="menu_1.2Title" class="menutitle">Framework</div>
+<div id="menu_1.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind/index.html">Overview</a>
+</div>
+<div onclick="SwitchMenu('menu_1.2.2', 'skin/')" id="menu_1.2.2Title" class="menutitle">Services</div>
+<div id="menu_1.2.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind/BuilderFactory.html">BuilderFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/LoggingInterceptor.html">LoggingInterceptor</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/ShutdownCoordinator.html">ShutdownCoordinator</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/ThreadLocale.html">ThreadLocale</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/ThreadLocalStorage.html">ThreadLocalStorage</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.2.3', 'skin/')" id="menu_1.2.3Title" class="menutitle">Configurations</div>
+<div id="menu_1.2.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind/ApplicationDefaults.html">ApplicationDefaults</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/EagerLoad.html">EagerLoad</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/FactoryDefaults.html">FactoryDefaults</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/ObjectProviders.html">ObjectProviders</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/ServiceModels.html">ServiceModels</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/SymbolSources.html">SymbolSources</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/Translators.html">Translators</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.2.4', 'skin/')" id="menu_1.2.4Title" class="menutitle">Ant Tasks</div>
+<div id="menu_1.2.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind/ant/ConstructRegistry.html">ConstructRegistry</a>
+</div>
+<div class="menuitem">
+<a href="hivemind/ant/ManifestClassPath.html">ManifestClassPath</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.3', 'skin/')" id="menu_1.3Title" class="menutitle">Library</div>
+<div id="menu_1.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-lib/index.html">Overview</a>
+</div>
+<div onclick="SwitchMenu('menu_1.3.2', 'skin/')" id="menu_1.3.2Title" class="menutitle">Services</div>
+<div id="menu_1.3.2" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-lib/BeanFactoryBuilder.html">BeanFactoryBuilder</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/ChainBuilder.html">ChainBuilder</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/ChainFactory.html">ChainFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/DefaultImplementationBuilder.html">DefaultImplementationBuilder</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/EJBProxyFactory.html">EJBProxyFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/MethodInterceptorFactory.html">MethodInterceptorFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/NameLookup.html">NameLookup</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/PlaceholderFactory.html">PlaceholderFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/PipelineFactory.html">PipelineFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/RemoteExceptionCoordinator.html">RemoteExceptionCoordinator</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/ServicePropertyFactory.html">ServicePropertyFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/SpringLookupFactory.html">SpringLookupFactory</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-lib/StrategyFactory.html">StrategyFactory</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.4', 'skin/')" id="menu_1.4Title" class="menutitle">JMX</div>
+<div id="menu_1.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-jmx/index.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/quickstart.html">Quickstart</a>
+</div>
+<div onclick="SwitchMenu('menu_1.4.3', 'skin/')" id="menu_1.4.3Title" class="menutitle">Setup</div>
+<div id="menu_1.4.3" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-jmx/setupOverview.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/setupJMXImplementation.html">JMX Implementation</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/setupMBeanServer.html">MBeanServer</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/setupConnectors.html">Connectors</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.4.4', 'skin/')" id="menu_1.4.4Title" class="menutitle">Usage</div>
+<div id="menu_1.4.4" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-jmx/manageServices.html">Manage Services</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/measurePerformance.html">Measure Performance</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/monitorServices.html">Monitor Services</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-jmx/manageLog4j.html">Manage Log4J</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.4.5', 'skin/')" id="menu_1.4.5Title" class="menutitle">Advanced Topics</div>
+<div id="menu_1.4.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-jmx/multipleApps.html">Multiple Applications in Server</a>
+</div>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.5', 'skin/')" id="menu_1.5Title" class="menutitle">Example Code</div>
+<div id="menu_1.5" class="menuitemgroup">
+<div class="menuitem">
+<a href="hivemind-examples/index.html">Overview</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-examples/calc.html">Calculator</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-examples/panorama.html">Panorama Startup</a>
+</div>
+<div class="menuitem">
+<a href="hivemind-examples/logging.html">Logging Interceptor</a>
+</div>
+</div>
+<div onclick="SwitchMenu('menu_1.6', 'skin/')" id="menu_1.6Title" class="menutitle">Other Resources</div>
+<div id="menu_1.6" class="menuitemgroup">
+<div class="menuitem">
+<a href="http://wiki.apache.org/jakarta-hivemind/">HiveMind Wiki</a>
+</div>
+<div class="menuitem">
+<a href="http://howardlewisship.com/blog/">Tapestry and HiveMind Blog</a>
+</div>
+<div class="menuitem">
+<a href="http://www.theserverside.com/articles/article.tss?l=HivemindBuzz">HiveMind article on TheServerSide</a>
+</div>
+</div>
+<div id="credit"></div>
+<div id="roundbottom">
+<img style="display: none" class="corner" height="15" width="15" alt="" src="skin/images/rc-b-l-15-1body-2menu-3menu.png"></div>
+<div id="credit2"></div>
+</div>
+<div id="content">
+<div class="trail">
+<text>Font size:</text> 
+	          &nbsp;<input value="Reset" class="resetfont" title="Reset text" onclick="ndeSetTextSize('reset'); return false;" type="button">      
+	          &nbsp;<input value="-a" class="smallerfont" title="Shrink text" onclick="ndeSetTextSize('decr'); return false;" type="button">
+	          &nbsp;<input value="+a" class="biggerfont" title="Enlarge text" onclick="ndeSetTextSize('incr'); return false;" type="button">
+</div>
+<h1>Bootstrapping the Registry</h1>
+<div id="minitoc-area">
+<ul class="minitoc">
+<li>
+<a href="#Service+Interfaces+and+Implementations">Service Interfaces and Implementations</a>
+</li>
+<li>
+<a href="#Module+Deployment+Descriptor">Module Deployment Descriptor</a>
+</li>
+<li>
+<a href="#Building+the+Registry">Building the Registry</a>
+</li>
+<li>
+<a href="#Building+the+Example">Building the Example</a>
+</li>
+<li>
+<a href="#Running+the+Examples">Running the Examples</a>
+</li>
+</ul>
+</div>
+    
+<p>Before you can access the configuration points and services defined in
+      your application's module deployment descriptors, you need a registry; here we'll
+      describe how to construct the registry.</p>
+    
+<p>The key class here is <a href="hivemind/apidocs/org/apache/hivemind/impl/RegistryBuilder.html">RegistryBuilder</a>, which contains code for
+      locating and parsing the module deployment descriptors and constructing a
+      registry from the combined data. The descriptors are all found on the class path; they'll include
+      the descriptors for HiveMind itself with descriptors packaged into your application's JARs. 
+      </p>
+      
+      
+<div class="frame note">
+<div class="label">Note</div>
+<div class="content">
+      As HiveMind grows in popularity, we may start to see
+      third party frameworks come bundled with
+      HiveMind module deployment descriptors ... but it's too soon for that, now.  
+      </div>
+</div>
+      
+    
+<p>Let's examine how all this comes together. The layout of the project is
+      shown below.</p>
+    
+<div style="text-align: center;">
+<img class="figure" alt="[Project Layout]" src="images/Bootstrap-ProjectLayout.png"></div>
+    
+<a name="N10021"></a><a name="Service+Interfaces+and+Implementations"></a>
+<h2 class="boxed">Service Interfaces and Implementations</h2>
+<div class="section">
+<p>The first step is to define the service interface:</p>
+<pre class="code">
+package hivemind.examples;
+
+public interface Adder
+{
+    public int add(int arg0, int arg1);
+} </pre>
+<p>Next we need an implementation for that service:</p>
+<pre class="code">
+package hivemind.examples.impl;
+
+import hivemind.examples.Adder;
+
+public class AdderImpl implements Adder
+{
+  public int add(int arg0, int arg1)
+  {
+    return arg0 + arg1;
+  }
+
+} </pre>
+<p>
+    The example includes three additional interfaces and matching implementations:
+    for a Subtracter, Multiplier, Divider, and lastly, a Calculator that combines them:
+    </p>
+<pre class="code">
+package hivemind.examples;
+
+public interface Calculator extends Adder, Subtracter, Multiplier, Divider
+{
+
+}    
+</pre>
+<p>
+The Calculator implementation will require some wiring; it expects that each of the other four
+services (Adder, Subtracter, Multiplier and Divider) will be plugged into it:
+</p>
+<pre class="code">
+package hivemind.examples.impl;
+
+import hivemind.examples.Adder;
+import hivemind.examples.Calculator;
+import hivemind.examples.Divider;
+import hivemind.examples.Multiplier;
+import hivemind.examples.Subtracter;
+
+public class CalculatorImpl implements Calculator
+{
+  private Adder _adder;
+  private Subtracter _subtracter;
+  private Multiplier _multiplier;
+  private Divider _divider;
+
+  public void setAdder(Adder adder)
+  {
+    _adder = adder;
+  }
+
+  public void setDivider(Divider divider)
+  {
+    _divider = divider;
+  }
+
+  public void setMultiplier(Multiplier multiplier)
+  {
+    _multiplier = multiplier;
+  }
+
+  public void setSubtracter(Subtracter subtracter)
+  {
+    _subtracter = subtracter;
+  }
+
+  public int add(int arg0, int arg1)
+  {
+    return _adder.add(arg0, arg1);
+  }
+
+  public int subtract(int arg0, int arg1)
+  {
+    return _subtracter.subtract(arg0, arg1);
+  }
+
+  public int multiply(int arg0, int arg1)
+  {
+    return _multiplier.multiply(arg0, arg1);
+  }
+
+  public int divide(int arg0, int arg1)
+  {
+    return _divider.divide(arg0, arg1);
+  }
+}
+</pre>
+</div>
+
+  
+<a name="N10044"></a><a name="Module+Deployment+Descriptor"></a>
+<h2 class="boxed">Module Deployment Descriptor</h2>
+<div class="section">
+<p>Finally, we need the HiveMind module deployment descriptor, <span class="codefrag">
+        hivemodule.xml</span>.</p>
+<p>
+      The module descriptor creates each of the services in terms of
+      an interface, and an implementation. In addition, each service gets its
+      own logging interceptor.  
+      </p>
+<pre class="code">
+&lt;?xml version="1.0"?&gt;
+&lt;module id="hivemind.examples" version="1.0.0" package="hivemind.examples"&gt;
+  &lt;service-point id="Adder" interface="Adder"&gt;
+    &lt;create-instance class="impl.AdderImpl"/&gt;
+    &lt;interceptor service-id="hivemind.LoggingInterceptor"/&gt;
+  &lt;/service-point&gt;
+  
+  &lt;service-point id="Subtracter" interface="Subtracter"&gt;
+    &lt;create-instance class="impl.SubtracterImpl"/&gt;
+    &lt;interceptor service-id="hivemind.LoggingInterceptor"/&gt;
+  &lt;/service-point&gt;
+  
+  &lt;service-point id="Multiplier" interface="Multiplier"&gt;
+    &lt;create-instance class="impl.MultiplierImpl"/&gt;
+    &lt;interceptor service-id="hivemind.LoggingInterceptor"/&gt;
+  &lt;/service-point&gt;
+  
+  &lt;service-point id="Divider" interface="Divider"&gt;
+    &lt;create-instance class="impl.DividerImpl"/&gt;
+    &lt;interceptor service-id="hivemind.LoggingInterceptor"/&gt;
+  &lt;/service-point&gt;
+  
+  &lt;service-point id="Calculator" interface="Calculator"&gt;
+    &lt;invoke-factory&gt;
+      &lt;!-- Autowires service properties based on interface! --&gt;
+      &lt;construct class="impl.CalculatorImpl"/&gt;
+    &lt;/invoke-factory&gt;
+    &lt;interceptor service-id="hivemind.LoggingInterceptor"/&gt;
+  &lt;/service-point&gt;
+  
+&lt;/module&gt;</pre>
+<p>Here we've chosen to have the module id, <span class="codefrag">hivemind.examples</span>,
+      match the package name but that is not an absolute requirement.</p>
+<p>
+      The interesting part is the use of the <a href="hivemind/BuilderFactory.html">hivemind.BuilderFactory</a> (through 
+      <a href="descriptor.html#invoke-factory">&lt;invoke-factory&gt;</a>) to construct the Calculator service and connect it to the 
+      other four services.
+      </p>
+</div>
+    
+<a name="N10069"></a><a name="Building+the+Registry"></a>
+<h2 class="boxed">Building the Registry</h2>
+<div class="section">
+<p>Before your code can access any services (or configuration points), it
+        must construct the <a href="hivemind/apidocs/org/apache/hivemind/Registry.html">Registry</a>.  The Registry is the application's gateway to the services
+        and configurations managed by HiveMind.</p>
+<pre class="code">
+package hivemind.examples;
+
+import org.apache.hivemind.Registry;
+import org.apache.hivemind.impl.RegistryBuilder;
+
+public class Main
+{
+  public static void main(String[] args)
+  {
+    int arg0 = Integer.parseInt(args[0]);
+    int arg1 = Integer.parseInt(args[1]);
+
+    Registry registry = RegistryBuilder.constructDefaultRegistry();
+
+    Calculator c =
+      (Calculator) registry.getService(Calculator.class);
+
+    System.out.println("Inputs " + arg0 + " and " + arg1);
+
+    System.out.println("Add   : " + c.add(arg0, arg1));
+    System.out.println("Subtract: " + c.subtract(arg0, arg1));
+    System.out.println("Multiply: " + c.multiply(arg0, arg1));
+    System.out.println("Divide  : " + c.divide(arg0, arg1));
+  }
+}
+ </pre>
+<p>
+<a href="hivemind/apidocs/org/apache/hivemind/impl/RegistryBuilder.html">RegistryBuilder</a> contains a static method for constructing a Registry, which
+  is suitable for most situations.</p>
+<p>Now that we have the registry, we can use the Calculator
+        interface as a key for finding the Calculator
+        implementation.  In real applications, where there will often
+        be multiple services implementing
+        the same interface, we would have to specify a fully qualified service id as well.</p>
+<p>Using the reference to the Calculator service, we can finally invoke the 
+        <span class="codefrag">add()</span>, <span class="codefrag">subtract()</span>, <span class="codefrag">multiply()</span> 
+        and <span class="codefrag">divide()</span> methods.</p>
+</div>
+    
+<a name="N10093"></a><a name="Building+the+Example"></a>
+<h2 class="boxed">Building the Example</h2>
+<div class="section">
+<p>Building and running the example using <a class="external" href="http://ant.apache.org/">Ant</a> is a snap; all the details
+        are in the <span class="codefrag">build.xml</span>:</p>
+<pre class="code">
+&lt;?xml version="1.0"?&gt;
+
+&lt;project name="HiveMind Adder Example" default="jar"&gt;
+
+  &lt;property name="java.src.dir" value="src/java"/&gt;
+  &lt;property name="test.src.dir" value="src/test"/&gt;
+  &lt;property name="conf.dir" value="src/conf"/&gt;
+  &lt;property name="descriptor.dir" value="src/descriptor"/&gt;
+  &lt;property name="target.dir" value="target"/&gt;
+  &lt;property name="classes.dir" value="${target.dir}/classes"/&gt;
+  &lt;property name="test.classes.dir" value="${target.dir}/test-classes"/&gt;
+  &lt;property name="example.jar" value="${target.dir}/hivemind-examples.jar"/&gt;
+  &lt;property name="lib.dir" value="lib"/&gt;
+  &lt;property name="junit.temp.dir" value="${target.dir}/junit-temp"/&gt;
+  &lt;property name="junit.reports.dir" value="${target.dir}/junit-reports"/&gt;
+
+  &lt;path id="build.class.path"&gt;
+    &lt;fileset dir="${lib.dir}"&gt;
+      &lt;include name="*.jar"/&gt;
+    &lt;/fileset&gt;
+  &lt;/path&gt;
+      
+  &lt;path id="test.build.class.path"&gt;
+    &lt;path refid="build.class.path"/&gt;
+    &lt;path location="${classes.dir}"/&gt;
+  &lt;/path&gt;
+        
+  &lt;path id="run.class.path"&gt;
+    &lt;path refid="build.class.path"/&gt;
+    &lt;pathelement location="${classes.dir}"/&gt;
+    &lt;pathelement location="${descriptor.dir}"/&gt;
+    &lt;pathelement location="${conf.dir}"/&gt;
+  &lt;/path&gt;
+  
+  &lt;path id="test.run.class.path"&gt;
+    &lt;path refid="run.class.path"/&gt;
+    &lt;path location="${test.classes.dir}"/&gt;
+  &lt;/path&gt;  
+  
+  &lt;target name="clean" description="Delete all derived files."&gt;
+    &lt;delete dir="${target.dir}" quiet="true"/&gt;
+  &lt;/target&gt;
+  
+  &lt;target name="compile" description="Compile all Java code."&gt;  
+    &lt;mkdir dir="${classes.dir}"/&gt;    
+    &lt;javac srcdir="${java.src.dir}" destdir="${classes.dir}" classpathref="build.class.path"/&gt;
+  &lt;/target&gt;
+  
+  &lt;target name="compile-tests" description="Compile test classes." depends="compile"&gt;
+    &lt;mkdir dir="${test.classes.dir}"/&gt;
+    &lt;javac srcdir="${test.src.dir}" destdir="${test.classes.dir}" classpathref="test.build.class.path"/&gt;
+  &lt;/target&gt;
+  
+  &lt;target name="run-tests" description="Run unit tests." depends="compile-tests"&gt;
+  
+    &lt;mkdir dir="${junit.temp.dir}"/&gt;
+    &lt;mkdir dir="${junit.reports.dir}"/&gt;
+
+    &lt;junit haltonfailure="off" failureproperty="junit-failure" tempdir="${junit.temp.dir}"&gt;    
+      &lt;classpath refid="test.run.class.path"/&gt;
+    
+      &lt;formatter type="xml"/&gt;
+      &lt;formatter type="plain"/&gt;
+      &lt;formatter type="brief" usefile="false"/&gt;
+    
+      &lt;batchtest todir="${junit.reports.dir}"&gt;
+        &lt;fileset dir="${test.classes.dir}"&gt;
+          &lt;include name="**/Test*.class"/&gt;
+        &lt;/fileset&gt;
+      &lt;/batchtest&gt;
+    &lt;/junit&gt;
+
+    &lt;fail if="junit-failure" message="Some tests failed."/&gt;
+
+  &lt;/target&gt;
+  
+  &lt;target name="jar" description="Construct the JAR file." depends="compile,run-tests"&gt;
+    &lt;jar destfile="${example.jar}"&gt;
+      &lt;fileset dir="${classes.dir}"/&gt;
+    &lt;fileset dir="${descriptor.dir}"/&gt;
+    &lt;/jar&gt;
+  &lt;/target&gt;
+  
+  &lt;target name="run" depends="compile" description="Run the Adder service."&gt;
+    &lt;java classname="hivemind.examples.Main" classpathref="run.class.path" fork="true"&gt;
+      &lt;arg value="11"/&gt;
+      &lt;arg value="23"/&gt;
+    &lt;/java&gt;
+  &lt;/target&gt;
+
+&lt;/project&gt;
+</pre>
+<p>The important part is to package both the classes and the HiveMind
+        module deployment descriptor into the JAR.</p>
+<p>The only other oddity was to add <span class="codefrag">src/conf</span> to the runtime
+        classpath; this is to include the <span class="codefrag">log4j.properties</span> 
+        configuration file; otherwise Log4J will write console errors about
+        missing configuration.</p>
+</div>
+    
+    
+<a name="N100B4"></a><a name="Running+the+Examples"></a>
+<h2 class="boxed">Running the Examples</h2>
+<div class="section">
+<pre class="code">
+bash-2.05b$ ant run
+Buildfile: build.xml
+
+compile:
+    [mkdir] Created dir: C:\workspace\hivemind-example\target\classes
+    [javac] Compiling 15 source files to C:\workspace\hivemind-example\target\classes
+
+run:
+     [java] Inputs 11 and 23
+     [java] Add     : 34
+     [java] Subtract: -12
+     [java] Multiply: 253
+     [java] Divide  : 0
+
+
+
+BUILD SUCCESSFUL
+Total time: 3 seconds
+</pre>
+</div>
+  
+</div>
+<div class="clearboth">&nbsp;</div>
+</div>
+<div id="footer">
+<div class="lastmodified">
+<script type="text/javascript"><!--
+document.write("<text>Last Published:</text> " + document.lastModified);
+//  --></script>
+</div>
+<div class="copyright">
+        Copyright &copy;
+         2005 Apache Software Foundation</div>
+</div>
+</body>
+</html>

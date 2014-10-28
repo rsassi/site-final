@@ -1,0 +1,94 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="../hivemind.css">
+<title>HiveMind Registry -  Service Point hivemind.management.connector.JMXConnectorServerFactory</title>
+</head>
+<body><div style="background: red"><h1>2009/04/15 - Apache HiveMind has been retired. </h1><h2>For more information, please explore the <a href="http://attic.apache.org/">Attic</a>. </h2></div>
+<div class="title"> Module <a href="../module/hivemind.management.connector.html">hivemind.management.connector</a>
+</div>
+<div class="center-nav">
+<a href="../index.html">Back to master index</a>
+</div>
+<hr>
+<table class="top-level-object" cellspacing="0">
+<tr>
+<th class="object-id"><img src="../public.png" width="20" height="20" alt="[public]"> Service Point hivemind.management.connector.JMXConnectorServerFactory</th><th> Interface: </th><td>org.apache.hivemind.ServiceImplementationFactory</td>
+</tr>
+<tr>
+<td class="description" colspan="3">Used to construct JMXConnectorServer instances (interface JMXConnectorServerMBean).
+    These instances provide jmx remote management capabilities.</td>
+</tr>
+<tr>
+<th colspan="2"> Parameters occurs: </th><td>1</td>
+</tr>
+<tr>
+<th colspan="3" class="section"> Parameters Schema </th>
+</tr>
+<tr>
+<td colspan="3" class="container">
+<table class="nested-object" cellspacing="0">
+<tr>
+<th class="object-id" colspan="3"> Element &lt;connector&gt; </th>
+</tr>
+<tr>
+<td class="description" colspan="3">Specifies parameters needed to construct the JMXConnectorServer.</td>
+</tr>
+<tr>
+<th class="sub-id">Attribute jmx-service-url (required) </th><th> Translator: </th><td><a href="../config/hivemind.Translators.html">string</a></td>
+</tr>
+<tr>
+<td class="description" colspan="3">The address of a JMX API connector server. Syntax corresponds to javax.management.remote.JMXServiceURL</td>
+</tr>
+<tr>
+<th colspan="3" class="section">Conversion Rules</th>
+</tr>
+<tr>
+<td colspan="3" class="container">
+<div class="xml">
+     &lt;conversion <span class="attribute">class</span>="<span class="attribute-value">org.apache.hivemind.management.impl.JMXConnectorServerParameter</span>"
+       &gt; <ul>
+                            
+<li>
+     &lt;map <span class="attribute">attribute</span>="<span class="attribute-value">jmx-service-url</span>"
+       <span class="attribute">property</span>="<span class="attribute-value">jmxServiceURL</span>"
+       /&gt; </li>
+                        
+</ul> &lt;/conversion&gt; </div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<th colspan="3" class="section">Implementation</th>
+</tr>
+<tr>
+<td colspan="3" class="container">
+<div class="xml">
+<ul>
+<li> &lt;invoke-factory <span class="attribute">service-id</span>="<span class="attribute-value"><a href="../services/hivemind.BuilderFactory.html">hivemind.BuilderFactory</a></span>" <span class="attribute">model</span>="<span class="attribute-value"><a href="../config/hivemind.ServiceModels.html">singleton</a></span>"  &gt; <ul>
+                
+<li>
+     &lt;construct <span class="attribute">class</span>="<span class="attribute-value">org.apache.hivemind.management.impl.JMXConnectorServerFactory</span>"
+       &gt; <ul>
+                    
+<li>
+     &lt;service /&gt; </li>
+                
+</ul> &lt;/construct&gt; </li>
+            
+</ul> &lt;/invoke-factory&gt; </li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+<hr>
+<div class="title"> Module <a href="../module/hivemind.management.connector.html">hivemind.management.connector</a>
+</div>
+<div class="center-nav">
+<a href="../index.html">Back to master index</a>
+</div>
+</body>
+</html>
